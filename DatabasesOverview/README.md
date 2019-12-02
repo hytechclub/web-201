@@ -1,0 +1,2 @@
+- https://sqlbolt.com/
+- https://sqlbolt.com/lesson/inserting_rows
