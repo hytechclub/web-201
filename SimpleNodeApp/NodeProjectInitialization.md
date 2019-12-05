@@ -1,6 +1,3 @@
-# File Reader Node.js App - Code-Along
-Follow the instructions to create a small server app using Node.js. Make sure Node.js is installed before continuing.
-
 ## Set-up - GitHub Repository
 >Note: To avoid using git, simply skip these steps and open Visual Studio Code with a new folder
 1. Create a new empty GitHub repository at [github.com/new](https://github.com/new)
@@ -27,29 +24,3 @@ Follow the instructions to create a small server app using Node.js. Make sure No
 1. Press `Enter` for "git repository" to use the default
 1. Skip the "keywords," "author," and "license"
 1. Press `Enter` once more to finish creating the project!
-
-## Running the Server
-1. Create a new file named "app.js" in the current directory
-    - This can be done using VS Code OR using the command line
-1. Open the file in VS Code, and enter the following text:
-    ```js
-    console.log('Hello World');
-    ```
-1. In the terminal, type `node app.js` and press `Enter` to run the command
-1. The script will run, and "Hello World" should appear in the console!
-
-## Final `app.js` Code
-```js
-const fs = require('fs');
-
-function removeE(error, dataString) {
-    if (error) {
-        console.error('Failed to open file');
-    } else {
-        dataString.replace('i', 'a');
-        console.log(dataString);
-    }
-}
-
-
-```
