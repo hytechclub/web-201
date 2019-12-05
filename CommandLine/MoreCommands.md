@@ -1,5 +1,5 @@
 # More Bash Commands
-Do some research (i.e. Googling) to find and define the following commands. For each of them, answer the following questions in a new text file:
+Do some research (e.g. Googling) to find and define the following commands. For each of them, answer the following questions in a new text file:
 - Does this command require arguments? If so, what are they?
 - How could this command be useful?
 

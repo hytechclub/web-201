@@ -20,7 +20,7 @@ Material for the Web 201 Hy-Tech Club course
 - Week 1: Full-stack Web Development Overview + Introduction to the Command Line
 - Week 2: JavaScript Functions (Callbacks)
 - Week 3: JavaScript Objects + JSON
-- Week 4: HTTP Overview
+- Week 4: HTTP Overview + Simple Node Web Server
 - Week 5: Creating Page Templates (EJS)
 - Week 6: Databases (MySQL)
 - Week 7: Building a CRUD App (Express)
