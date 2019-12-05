@@ -17,8 +17,12 @@ Material for the Web 201 Hy-Tech Club course
 - Building a CRUD App (Express)
 
 ## Schedule
-- [JavaScript Fundamentals](JavaScriptFundamentals/): Weeks 1-3
-- [Web Architecture](WebArchitecture/): Weeks 4-6
-- [Node.js](NodeJS/): Weeks 7-8
-- Project Work: Weeks 9-11
-- Project Presentations: Week 12
+- Week 1: Full-stack Web Development Overview + Introduction to the Command Line
+- Week 2: JavaScript Functions (Callbacks)
+- Week 3: JavaScript Objects + JSON
+- Week 4: HTTP Overview
+- Week 5: Creating Page Templates (EJS)
+- Week 6: Databases (MySQL)
+- Week 7: Building a CRUD App (Express)
+- Week 8, 9, 10, 11: Project Work
+- Week 12: Project Presentations

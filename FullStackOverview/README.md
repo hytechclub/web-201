@@ -1,5 +1,5 @@
 # Full-stack Web Development Overview
-Introduce the concepts behind full-stack web development, including:
+This lesson introduces the concepts behind full-stack web development, including:
 - Front-end
 - Back-end
 - Web server
