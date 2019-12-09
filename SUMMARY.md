@@ -1,0 +1,3 @@
+- [JavaScript Functions](JavaScriptFunctions/README.md)
+    - [Callbacks Individual Exercises](CallbacksIndividualExercises.md)
+    - [File Reader Challenge](FileReaderChallenge.md)
