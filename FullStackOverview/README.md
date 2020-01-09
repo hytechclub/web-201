@@ -6,5 +6,8 @@ This lesson introduces the concepts behind full-stack web development, including
 - Database
 - Data transfer
 
-Powerpoint: [FullStackOverview.pptx](FullStackOverview.pptx)
-Kahoot: https://create.kahoot.it/details/full-stack-web-development-overview/8466e95f-e77b-41fc-83e8-5b1f246dd00b
+## Instruction
+- [FullStackOverview.pptx](FullStackOverview.pptx)
+
+## Group Activities
+- Kahoot: https://create.kahoot.it/details/full-stack-web-development-overview/8466e95f-e77b-41fc-83e8-5b1f246dd00b
