@@ -7,11 +7,15 @@ Follow the instructions to create a small console app using Node.js. Make sure N
 1. Open the file in VS Code, and enter the following text:
     ```js
     console.log('Hello World');
+
+    process.exit();
     ```
 1. Open a new terminal in VS Code by selecting `Terminal`->`New Terminal` from the menu
     - Make sure the shell is set to `bash`
 1. In the terminal, type `node app.js` and press `Enter` to run the command
 1. The script will run, and "Hello World" should appear in the console!
+
+>Note: It is important to keep `process.exit()` at the end of the file, so the program ends after executing.
 
 ## ASCII Art Bunny
 1. Comment out the "Hello World" message
@@ -135,4 +139,6 @@ function repeat(callback, numberOfTimes) {
 
 repeat(drawBunny, 3);
 repeat(drawChefHat, 2);
+
+process.exit();
 ```

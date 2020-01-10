@@ -10,7 +10,8 @@ This lesson reviews JavaScript objects, and introduces the ideas of JavaScript a
 - [JsonObjectActivity.md](JsonObjectActivity.md)
 
 ## Individual Practice
-- [FoodsChallenge.md](FoodsChallenge.md)
+- [ObjectsIndividualExercises.md](ObjectsIndividualExercises.md)
+- [FoodJsonChallenges.md](FoodJsonChallenges.md)
 
 #### Resources
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects

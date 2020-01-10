@@ -57,3 +57,9 @@ let movies = [
     - "7:30PM"
     - "9:05PM"
 1. Add the `nextMovie` object to the end of the `movies` array
+
+## CHALLENGE - All Movies
+Use a `for` loop to print out the titles of all movies currently showing
+
+## CHALLENGE - Movies at 9:05PM
+Use a `for` loop to print out the title and runtime of any movie that has a 9:05PM showtime
