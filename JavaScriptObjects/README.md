@@ -6,13 +6,13 @@ This lesson reviews JavaScript objects, and introduces the ideas of JavaScript a
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 ## Instruction
-- [JavaScriptObjects.pptx](JavaScriptObjects.pptx)
-- [ObjectsCodeAlong.md](ObjectsCodeAlong.md)
-- [JavaScriptArrays.pptx](JavaScriptArrays.pptx)
+- [JavaScript Objects PowerPoint](JavaScriptObjects.pptx)
+- [Objects Code-Along](ObjectsCodeAlong.md)
+- [JavaScript Arrays PowerPoint](JavaScriptArrays.pptx)
 
 ## Group Activities
-- [JsonObjectActivity.md](JsonObjectActivity.md)
+- [JSON Object Activity](JsonObjectActivity.md)
 
 ## Individual Practice
-- [ObjectsIndividualExercises.md](ObjectsIndividualExercises.md)
-- [FoodJsonChallenges.md](FoodJsonChallenges.md)
+- [Objects Individual Exercises](ObjectsIndividualExercises.md)
+- [Food JSON Challenges](FoodJsonChallenges.md)
