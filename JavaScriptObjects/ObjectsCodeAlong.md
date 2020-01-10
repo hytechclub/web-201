@@ -7,6 +7,8 @@ Follow the instructions to create a small Node console app that creates and mani
 1. Open the file in VS Code, and enter the following text:
     ```js
     console.log('Welcome to the car app!');
+
+    process.exit();
     ```
 1. Open a new terminal in VS Code by selecting `Terminal`->`New Terminal` from the menu
     - Make sure the shell is set to `bash`
@@ -114,4 +116,6 @@ myCar.owner.city = 'Fargo';
 myCar.owner.state = 'ND';
 
 console.log('Jerry moved and now resides in ' + myCar.owner.city + ', ' + myCar.owner.state);
+
+process.exit();
 ```
