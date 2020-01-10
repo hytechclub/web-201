@@ -1,6 +1,8 @@
 # Callbacks Node.js App: Code-Along
 Follow the instructions to create a small console app using Node.js. Make sure Node.js is installed before continuing.
 
+**Note: Although the language is JavaScript, this is actually the _back-end_ of the stack. Node.js uses the same JavaScript as the front-end, but on the server side.**
+
 ## "Hello World" App
 1. Create a new file named "app.js" in the current directory
     - This can be done using VS Code OR using the command line

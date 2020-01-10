@@ -14,7 +14,7 @@ The lecture introduces the idea of the command line, and gets into a few of the 
 As part of the lecture, show the commands in action with an actual Git Bash or PowerShell instance.
 
 ## More Commands (optional)
-The students can research some slightly more advanced commands using the [MoreCommands](MoreCommands.md) instructions file. For the most part, they should be able to figure them out. There are also some challenges for the students to try. After a time, the instructor should review how each of the commands work.
+The students can research some slightly more advanced commands using the [More Commands](MoreCommands.md) instructions file. For the most part, they should be able to figure them out. There are also some challenges for the students to try. After a time, the instructor should review how each of the commands work.
 
 ### Challenge
 Instruct students to try the [Terminus game](http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html) at bit.ly/terminus-game

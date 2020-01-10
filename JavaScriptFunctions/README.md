@@ -4,9 +4,9 @@ This lesson reviews JavaScript functions, and introduces the idea of using funct
 This lesson also introduces Node.js as a tool to run JavaScript code from the command line.
 
 ## Instruction
-- PowerPoint: [JavaScriptFunctions.pptx](JavaScriptFunctions.pptx)
-- Code-Along: [CallbacksCodeAlong.md](CallbacksCodeAlong.md)
+- [JavaScript Functions PowerPoint](JavaScriptFunctions.pptx)
+- [Callbacks Code-Along](CallbacksCodeAlong.md)
 
 ## Individual Practice
-- Individual Exercises: [CallbacksIndividualExercises.md](CallbacksIndividualExercises.md)
-- Challenge: [FileReaderChallenge.md](FileReaderChallenge.md)
+- [Callbacks Individual Exercises](CallbacksIndividualExercises.md)
+- [File Reader Challenge](FileReaderChallenge.md)
