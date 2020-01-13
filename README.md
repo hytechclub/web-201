@@ -21,8 +21,9 @@ Material for the Web 201 Hy-Tech Club course
 - Week 2: JavaScript Functions (Callbacks)
 - Week 3: JavaScript Objects + JSON
 - Week 4: HTTP Overview + Simple Node Web Server
-- Week 5: Creating Page Templates (EJS)
-- Week 6: Databases (MySQL)
-- Week 7: Building a CRUD App (Express)
-- Week 8, 9, 10, 11: Project Work
+- Week 5: npm, Express
+- Week 6: Creating Page Templates (EJS)
+- Week 7: Databases (MySQL)
+- Week 8: Building a CRUD App
+- Week 9, 10, 11: Project Work
 - Week 12: Project Presentations
