@@ -2,7 +2,8 @@
 A next-level course that covers more complex JavaScript concepts, as well as fundamentals like HTTP, Databases, MVC, client-server architecture, and whatever.
 
 ## Software
-- MySQL
+- MySQL Server
+- MySQL Workbench
 - NodeJS
 - npm
 - Git Bash
@@ -27,22 +28,3 @@ A next-level course that covers more complex JavaScript concepts, as well as fun
 1. Creating Pages for app (EJS)
 1. Creating a Database (MySQL)
 1. Hooking up the pages to the DB
-
-## Work
-VM: 5604 Tech Camp 10.40.11.99
-
-### Simple Node
-https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30
-
-
-### SQL lesson:
-- https://sqlbolt.com/
-- https://sqlbolt.com/lesson/inserting_rows
-
-### Node + SQL
-- https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
-- https://www.youtube.com/watch?v=xn9ef5pod18
-
-EJS for templates
-
-Maybe containers? https://code.visualstudio.com/docs/remote/containers
