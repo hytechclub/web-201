@@ -5,6 +5,8 @@ This lesson illustrates the need for templating, and introduces [EJS](https://ej
 - [People List Starter App](PeopleListStarterApp.md)
 
 ## Instruction
+- [EJS Templates PowerPoint Presentation](EjsTemplates.pptx)
+    - This can be delivered as a lecture, or simply provided as reference material
 - [People List EJS Code-Along](PeopleListEjsCodeAlong.md)
 
 ## Individual Practice
