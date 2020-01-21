@@ -8,7 +8,6 @@ This lesson introduces relational databases, and uses MySQL to show them in acti
 - [SQL Practice Exercises](SqlPracticeExercises.md)
 
 ## Group Activities
-- Some Game or Something
 - [MySQL Workbench Walkthrough](MySqlWorkbenchWalkthrough.md)
 
 ## Individual Practice
