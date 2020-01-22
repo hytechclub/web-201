@@ -1,16 +1,22 @@
 module.exports = {
-    getHomePage: (req, res) => {
-        let query = "SELECT * FROM `players` ORDER BY id ASC"; // query database to get all the players
+    getHomePage: function (request, response) {
+        // Query database to get all the players
+        let query = 'SELECT * FROM players ORDER BY id ASC'; 
 
-        // execute query
-        db.query(query, (err, result) => {
-            if (err) {
-                res.redirect('/');
+        // Reponse to query
+        function queryCallback(error, result) {
+            if (error) {
+                return response.status(500).send(error);
             }
-            res.render('index.ejs', {
-                title: "Welcome to Soccer | View Players",
+
+            let renderData = {
                 players: result
-            });
-        });
+            }
+
+            response.render('index', renderData);
+        }
+
+        // Execute query
+        db.query(query, queryCallback);
     },
 };
