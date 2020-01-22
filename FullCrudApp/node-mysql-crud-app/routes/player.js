@@ -1,83 +1,103 @@
-const fs = require('fs');
-
 module.exports = {
-    addPlayerPage: (req, res) => {
-        res.render('add-player.ejs', {
-            title: "Welcome to Soccer | Add a new player"
-            ,message: ''
+    // Load the form to add a player - GET
+    addPlayerPage: function (request, response) {
+        let renderData = {
+            player: false,
+            add: true
+        };
+
+        // Load the page
+        response.render('edit-player', renderData);
+    },
+
+    // Add a player to the database - POST
+    addPlayer: function (request, response) {
+        // Load values from the POST request
+        let first_name = request.body.first_name;
+        let last_name = request.body.last_name;
+        let position = request.body.position;
+        let number = request.body.number;
+
+        // Query to add the new player to the database
+        let query = `INSERT INTO players (first_name, last_name, position, number)
+            VALUES ('${first_name}', '${last_name}', '${position}', ${number});`;
+
+        db.query(query, function (error, result) {
+            if (error) {
+                // Send server error
+                return response.status(500).send(error);
+            }
+
+            // New player added successfully, reload homepage
+            response.redirect('/');
         });
     },
-    addPlayer: (req, res) => {
-        let message = '';
-        let first_name = req.body.first_name;
-        let last_name = req.body.last_name;
-        let position = req.body.position;
-        let number = req.body.number;
-        let username = req.body.username;
 
-        let usernameQuery = "SELECT * FROM `players` WHERE user_name = '" + username + "'";
+    // Load the form to edit a player - GET
+    editPlayerPage: function (request, response) {
+        // Get player ID from the request
+        let playerId = request.params.id;
 
-        db.query(usernameQuery, (err, result) => {
-            if (err) {
-                return res.status(500).send(err);
+        // Query to find information about the player with the given ID
+        let query = `SELECT * FROM players WHERE id = '${playerId}';`;
+
+        // Execute the query
+        db.query(query, function (error, result) {
+            if (error) {
+                // Send server Error
+                return response.status(500).send(error);
             }
-            if (result.length > 0) {
-                message = 'Username already exists';
-                res.render('add-player.ejs', {
-                    message,
-                    title: "Welcome to Soccer | Add a new player"
-                });
-            } else {
-                // send the player's details to the database
-                let query = "INSERT INTO `players` (first_name, last_name, position, number, user_name) VALUES ('" +
-                    first_name + "', '" + last_name + "', '" + position + "', '" + number + "', '" + username + "')";
-                db.query(query, (err, result) => {
-                    if (err) {
-                        return res.status(500).send(err);
-                    }
-                    res.redirect('/');
-                });
-            }
-        });
-    },
-    editPlayerPage: (req, res) => {
-        let playerId = req.params.id;
-        let query = "SELECT * FROM `players` WHERE id = '" + playerId + "' ";
-        db.query(query, (err, result) => {
-            if (err) {
-                return res.status(500).send(err);
-            }
-            res.render('edit-player.ejs', {
-                title: "Edit  Player"
-                ,player: result[0]
-                ,message: ''
+
+            // Load the page
+            response.render('edit-player', {
+                player: result[0],
+                add: false
             });
         });
     },
-    editPlayer: (req, res) => {
-        let playerId = req.params.id;
-        let first_name = req.body.first_name;
-        let last_name = req.body.last_name;
-        let position = req.body.position;
-        let number = req.body.number;
 
-        let query = "UPDATE `players` SET `first_name` = '" + first_name + "', `last_name` = '" + last_name + "', `position` = '" + position + "', `number` = '" + number + "' WHERE `players`.`id` = '" + playerId + "'";
-        db.query(query, (err, result) => {
+    // Update a player in the database - POST
+    editPlayer: function (request, response) {
+        // Get values from the request
+        let playerId = request.params.id;
+        let first_name = request.body.first_name;
+        let last_name = request.body.last_name;
+        let position = request.body.position;
+        let number = request.body.number;
+
+        // Query to update the existing player
+        let query = `UPDATE players
+            SET first_name = '${first_name}', last_name = '${last_name}', position = '${position}', number = ${number}
+            WHERE id = ${playerId};`;
+
+        // Execute the query
+        db.query(query, function (err, result) {
             if (err) {
-                return res.status(500).send(err);
+                // Send server error
+                return response.status(500).send(err);
             }
-            res.redirect('/');
+
+            // Update successful, return to homepage
+            response.redirect('/');
         });
     },
-    deletePlayer: (req, res) => {
-        let playerId = req.params.id;
-        let deleteUserQuery = 'DELETE FROM players WHERE id = "' + playerId + '"';
 
-        db.query(deleteUserQuery, (err, result) => {
-            if (err) {
-                return res.status(500).send(err);
+    // Delete a player from the database - GET
+    deletePlayer: function (request, response) {
+        // Get player ID from request
+        let playerId = request.params.id;
+
+        // Query to delete the given player
+        let deleteUserQuery = `DELETE FROM players WHERE id = ${playerId};`;
+
+        db.query(deleteUserQuery, function (error, result) {
+            if (error) {
+                // Send server error
+                return response.status(500).send(error);
             }
-            res.redirect('/');
+
+            // Delete successful, return to homepage
+            response.redirect('/');
         });
     }
 };
