@@ -7,8 +7,8 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 // Pull route functions
-const {getHomePage} = require('./routes/index');
-const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
+const index = require('./routes/index');
+const player = require('./routes/player');
 
 // Configuration object
 const dbConfig = {
@@ -37,7 +37,7 @@ db.connect(connectCallback);
 global.db = db;
 
 // Initialize app
-const app = express();
+let app = express();
 
 // Setup middleware
 app.set('view engine', 'ejs');
@@ -45,12 +45,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // parse form data client
 
 // Set routes
-app.get('/', getHomePage);
-app.get('/add', addPlayerPage);
-app.get('/edit/:id', editPlayerPage);
-app.get('/delete/:id', deletePlayer);
-app.post('/add', addPlayer);
-app.post('/edit/:id', editPlayer);
+app.get('/', index.getHomePage);
+app.get('/add', player.addPlayerPage);
+app.get('/edit/:id', player.editPlayerPage);
+app.get('/delete/:id', player.deletePlayer);
+app.post('/add', player.addPlayer);
+app.post('/edit/:id', player.editPlayer);
 
 function listenCallback() {
     console.log(`Listening on http://${hostname}:${port}`);
