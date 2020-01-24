@@ -1,7 +1,7 @@
-<% include partials/header.ejs %>
+<%- include('partials/header'); %>
 <div class="container">
 <% if (add || player) { %>
-    <form class="add-player-form" method="post" action="/<%=add ? 'add' : `edit/${player.id}`%>">
+    <form method="post" action="/<%=add ? 'add' : `edit/${player.id}`%>">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="first-name">First Name</label>

@@ -145,7 +145,7 @@ With many different routes, it is much easier to organize functions in multiple 
     ```js
     module.exports = {
         getHomePage: function (request, response) {
-            response.render('index')
+            response.render('index');
         }
     };
     ```
@@ -162,12 +162,58 @@ The folder structure at this point should look like this:
 ![](https://i.imgur.com/ThGdU4z.png)
 
 ## Connecting to the Database in Node
-- require `mysql`
-- `mysql.createConnection`
-- connect with callback
-- test data
+Update "app.js" so that it is able to connect to the `soccer` database.
+
+1. At the top of the file, import the `mysql` module using `require`
+1. Create a new `const` object named `dbConfig` with the following information:
+    - `host`: localhost
+    - `user`: root
+    - `password`: password
+    - `database`: soccer
+1. Create the database using `mysql.createConnection` and passing in `dbConfig`
+    - Store the database in a `const` named `db`
+1. Define a function named `connectCallback` that takes an `error` parameter.
+1. In the body of `connectCallback`, use `throw` to throw the `error` if there is one
+1. In the body of `connectCallback`, log a message saying the database connection was successful
+1. For testing purposes, in the body of `connectCallback`, send a `SELECT` query to the database, and log the results
+    ```js
+    // test
+    db.query('SELECT * FROM players', function (error, results) {
+        console.log(results);
+    });
+    ```
+1. Add a `db.connect()` call and pass in `connectCallback` as an argument to connect to the database
+1. Finally, set `db` to be a global variable using `global.db = db;`
+1. Run `nodemon` and make sure the data from the `players` table appears!
+
+### Code
 ```js
-db.query('SELECT * FROM players', (err, res) => {
-    console.log(res);
-});
+// Configuration object
+const dbConfig = {
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'soccer'
+}
+
+// Create the database using the config
+const db = mysql.createConnection(dbConfig);
+
+// Function to run on connect
+function connectCallback (error) {
+    if (error) {
+        throw error;
+    }
+
+    console.log('Connected to the database');
+}
+
+// Open the connection to the database
+db.connect(connectCallback);
+
+// Set global db variable
+global.db = db;
 ```
+
+## Next Steps
+[C**R**UD - Read](CrudAppRead.md)
