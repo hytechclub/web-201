@@ -2,7 +2,6 @@ module.exports = {
     // Load the form to add a player - GET
     addPlayerPage: function (request, response) {
         let renderData = {
-            player: false,
             add: true
         };
 
