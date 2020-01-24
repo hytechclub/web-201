@@ -111,7 +111,7 @@ When a user fills out the "Add Player" form and clicks the submit button, it wil
 1. In the "player.js" file, add a new module export property named `addPlayer`
     - Make sure to add a comma after the `addPlayerPage` function
 1. Set the value of `addPlayer` to be a function with `request` and `response` as parameters
-1. In the body of the `addPlayer` function, log a message to the console saying "Add POST"
+1. In the body of the `addPlayer` function, log `request.body` to the console
 1. After the console log, redirect to the homepage with `response.redirect('/')`
 1. In the "app.js" file, under the `app.get` routes, add an `app.post` to hook up the `addPlayer` function to the `/add` route:
     ```js
