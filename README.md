@@ -24,6 +24,6 @@ Material for the Web 201 Hy-Tech Club course
 - Week 5: npm, Express
 - Week 6: Creating Page Templates (EJS)
 - Week 7: Databases (MySQL)
-- Week 8: Building a CRUD App
+- Week 8: Building a CRUD App - Individual work
 - Week 9, 10, 11: Project Work
 - Week 12: Project Presentations

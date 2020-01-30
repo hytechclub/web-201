@@ -1,12 +1,10 @@
 module.exports = {
     // Load the form to add a player - GET
     addPlayerPage: function (request, response) {
-        let renderData = {
-            add: true
-        };
-
         // Load the page
-        response.render('edit-player', renderData);
+        response.render('edit-player', {
+            add: true
+        });
     },
 
     // Add a player to the database - POST
@@ -38,7 +36,7 @@ module.exports = {
         let playerId = request.params.id;
 
         // Query to find information about the player with the given ID
-        let query = `SELECT * FROM players WHERE id = '${playerId}';`;
+        let query = `SELECT * FROM players WHERE id = ${playerId};`;
 
         // Execute the query
         db.query(query, function (error, result) {
@@ -70,10 +68,10 @@ module.exports = {
             WHERE id = ${playerId};`;
 
         // Execute the query
-        db.query(query, function (err, result) {
-            if (err) {
+        db.query(query, function (error, result) {
+            if (error) {
                 // Send server error
-                return response.status(500).send(err);
+                return response.status(500).send(error);
             }
 
             // Update successful, return to homepage
