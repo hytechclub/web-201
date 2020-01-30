@@ -1,4 +1,4 @@
-# CRUD App Setup (Code)
+# CRUD App - Setup (Code)
 Open the "app.js" file, and write code for a basic boiler-plate Express web server.
 
 ## Basic Web Server

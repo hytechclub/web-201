@@ -1,11 +1,11 @@
-# CR**U**D - Update (GET)
+# CR**U**D App - Update (GET)
 Add a form to the web app that will allow the user to edit the information for an existing player in the database. First, create an "Edit Player" route that will be accessible via a GET request.
 
 ## Routing the GET Handler
 The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. This means the user can direct their browser to `http://127.0.0.1:5000/edit/5` and the handler will know that the user is editing the player with an `id` of `5`.
 
 1. In the `module.exports` object in the "player.js" file, define a new `editPlayerPage` function with `request` and `response` parameters
-1. In the body of the `edtPlayerPage` function, log `request.params.id` to the console
+1. In the body of the `editPlayerPage` function, log `request.params.id` to the console
 1. Under the log, use `request.render` to render the "edit-player.ejs" page
     ```js
     editPlayerPage: function (request, response) {
@@ -24,7 +24,7 @@ The GET handler function should query the database to find the information about
 1. Declare a new variable `playerId` and set it to `request.params.id`
 1. Define a new string variable `query` that holds a SQL statement to get all data for the player with the given id:
     ```sql
-    SELECT * FROM players WHERE ${playerId} = 5;
+    SELECT * FROM players WHERE id = ${playerId};
     ```
 1. Call the `db.query` function to execute the statement, passing in `query` and a new anonymous function
 1. Give the anonymous function two parameters: `error` and `result`
@@ -146,7 +146,7 @@ Now that the "Edit Player" page loads properly, the user needs a way to navigate
 1. In the "index.ejs" file, add another `th` to the `table` header row with the text "Action"
 1. Within the `for` loop row, add another `td` under the number `td`
 1. Within the new `td`, add an `a` with the text "Edit" that points the user to `/edit/` with the player's `id`
-1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a button
+1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a green button
     ```html
     <td>
         <a href="/edit/<%= players[i].id %>" class="btn btn-sm btn-success">Edit</a>

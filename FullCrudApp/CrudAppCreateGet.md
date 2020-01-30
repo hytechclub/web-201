@@ -1,4 +1,4 @@
-# **C**RUD - Create (GET)
+# **C**RUD App - Create (GET)
 Add a form to the web app that will allow the user to insert a new player into the database. Create an "Add Player" page that will be accessible via a GET request.
 
 ## Creating the GET Route Handler

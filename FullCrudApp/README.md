@@ -1,10 +1,14 @@
 # Full CRUD App
+Allow the students to individually work on building CRUD apps by following the [CRUD App Walkthrough](CrudAppWalkthrough.md). During this time, instructors should assist students with any issues they have. It may be beneficial to go over certain sections as a class, but for the most part, the students should be able to work at their own pace.
 
-## Video
-https://www.youtube.com/watch?v=xn9ef5pod18
+When the students finish building the CRUD app, they can start on their [Final Projects](../FinalProject/).
 
-## Walkthrough
-https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
+## Final Code
+[CRUD App](https://github.com/markbrendanawicz/crud-app)
+
+## References
+- Video: https://www.youtube.com/watch?v=xn9ef5pod18
+- Walkthrough: https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
 
 ## New Things to Learn
 ### MySQL Workbench
@@ -22,8 +26,8 @@ https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
 ### Routes
 1. `db.query`
 1. `module.exports`
-1. `/:id` as a param
+1. Route parameters
 1. Anonymous functions
 
-## Views
+### Views
 1. Partials
