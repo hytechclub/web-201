@@ -1,4 +1,4 @@
-# C**R**UD - Read (Table)
+# C**R**UD App - Read (Table)
 The goal of the homepage is to display all of the data in a nice tabular format. This is possible using an HTML `table` and some Bootstrap styles.
 
 ## The Table Structure

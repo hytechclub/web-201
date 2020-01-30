@@ -47,7 +47,7 @@ editPlayer: function (request, response) {
 },
 ```
 
-## Hooking Up the Route
+## Hooking up the Route
 1. In the "app.js" file, under the `app.post` route, add another `app.post` to hook up the `editPlayer` function to the `/edit/:id` route:
     ```js
     app.post('/edit/:id', player.editPlayer);

@@ -1,4 +1,4 @@
-# C**R**UD - Read
+# C**R**UD App - Read
 Follow the steps below to allow the web app to display data from the `soccer` database.
 
 ## Getting the Homepage Data
