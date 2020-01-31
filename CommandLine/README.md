@@ -1,4 +1,4 @@
-## Command Line Lesson
+# Command Line Lesson
 This lesson introduces the command line/bash as a general idea. The students should gain some familiarity with the tool, and feel comfortable at least moving around directories. They should understand some basics about how commands work.
 
 ## Warm Up
