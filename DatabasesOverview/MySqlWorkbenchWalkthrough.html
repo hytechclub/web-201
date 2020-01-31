@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Callbacks Individual Exercises · GitBook</title>
+        <title>MySQL Workbench Walkthrough · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FileReaderChallenge.html" />
+    <link rel="next" href="SqlPracticeExercises.html" />
     
     
-    <link rel="prev" href="CallbacksCodeAlong.html" />
+    <link rel="prev" href="StudentDesc.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.4" data-path="../JavaScriptFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptFunctions/StudentDesc.html">
             
                     
                     Lesson 3 - JavaScript Functions (Callbacks)
@@ -146,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="CallbacksCodeAlong.html">
+        <li class="chapter " data-level="1.4.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
-                <a href="CallbacksCodeAlong.html">
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
                     
                     Callbacks Code-Along
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="CallbacksIndividualExercises.html">
+        <li class="chapter " data-level="1.4.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
-                <a href="CallbacksIndividualExercises.html">
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
                     
                     Callbacks Individual Exercises
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="FileReaderChallenge.html">
+        <li class="chapter " data-level="1.4.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
             
-                <a href="FileReaderChallenge.html">
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
             
                     
                     File Reader Challenge
@@ -422,9 +422,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../DatabasesOverview/StudentDesc.html">
+        <li class="chapter " data-level="1.10" data-path="StudentDesc.html">
             
-                <a href="../DatabasesOverview/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Lesson 9 - Databases (MySQL)
@@ -436,9 +436,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+        <li class="chapter active" data-level="1.10.1" data-path="MySqlWorkbenchWalkthrough.html">
             
-                <a href="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+                <a href="MySqlWorkbenchWalkthrough.html">
             
                     
                     MySQL Workbench Walkthrough
@@ -449,9 +449,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../DatabasesOverview/SqlPracticeExercises.html">
+        <li class="chapter " data-level="1.10.2" data-path="SqlPracticeExercises.html">
             
-                <a href="../DatabasesOverview/SqlPracticeExercises.html">
+                <a href="SqlPracticeExercises.html">
             
                     
                     SQL Practice Exercises
@@ -462,9 +462,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../DatabasesOverview/SqlQueryChallenges.html">
+        <li class="chapter " data-level="1.10.3" data-path="SqlQueryChallenges.html">
             
-                <a href="../DatabasesOverview/SqlQueryChallenges.html">
+                <a href="SqlQueryChallenges.html">
             
                     
                     SQL Query Challenges
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Callbacks Individual Exercises</a>
+        <a href=".." >MySQL Workbench Walkthrough</a>
     </h1>
 </div>
 
@@ -674,72 +674,113 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="callbacks-nodejs-app-individual-exercises">Callbacks Node.js App: Individual Exercises</h1>
-<p>Complete the individual exercises to update the Callbacks app!</p>
-<h2 id="ascii-arrow">ASCII Arrow</h2>
+                                <h1 id="mysql-workbench-walkthrough">MySQL Workbench Walkthrough</h1>
+<p><a href="https://www.mysql.com/" target="_blank">MySQL</a> is an open-source relational database management system (RDBMS). MySQL Workbench is a tool that allows database maintainers to interact with the data in a MySQL database.</p>
+<h2 id="connecting-to-mysql">Connecting to MySQL</h2>
 <ol>
-<li>Define a new function named <code>drawArrow</code> that logs an ASCII arrow to the console: <code>&apos;&gt;&gt;------&gt;&apos;</code></li>
-<li>Call the <code>repeat</code> function to repeat the new function 10 times<ul>
-<li>Pass the <code>drawArrow</code> function as the callback argument</li>
-<li>Pass <code>10</code> as the second argument</li>
+<li>Open MySQL Workbench</li>
+<li>Under &quot;MySQL Connections,&quot; select the existing Local instance<br> <img src="https://i.imgur.com/zpoTQRh.png" alt=""></li>
+</ol>
+<p>The important panes in the instance view are the <strong>Navigator</strong>, the <strong>Query</strong>, and the <strong>Output</strong>. Note where each of these is located:
+<img src="https://i.imgur.com/b1TB2dg.png" alt=""></p>
+<p>Most of the work in the Workbench will take place in the <strong>Query</strong> pane, which allows developers to execute SQL queries.</p>
+<h2 id="creating-a-database">Creating a Database</h2>
+<p>The connection currently exists, but there is no database! Follow the steps below to create a new MySQL database.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> db;
+</code></pre>
+</li>
+<li>Click the lightning bolt icon (<img src="https://i.imgur.com/nvOfSLf.png" alt="">) to execute the query</li>
+<li>Check the <strong>Output</strong> pane to make sure the query executed successfully</li>
+<li>In the <strong>Navigator</strong>, flip to the &quot;Schemas&quot; view, and click the refresh icon to verify that the new <code>db</code> database appears!</li>
+</ol>
+<p><img src="https://i.imgur.com/GJHiofr.png" alt=""></p>
+<h2 id="creating-a-table">Creating a Table</h2>
+<p>Now the database exists, but it does not have any tables. Create a table so that the data in the database is organized and meaningful.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">USE</span> db;
+</code></pre>
+</li>
+<li>Highlight the <code>USE db;</code> text and click the lightning bolt to execute the statement<ul>
+<li>This statement tells the engine to use the specified database for all subsequent queries</li>
 </ul>
 </li>
-</ol>
-<h2 id="repeat-two-functions">Repeat Two Functions</h2>
-<ol>
-<li>Define a new function named <code>repeatTwo</code></li>
-<li>The <code>repeatTwo</code> function should have three parameters: <code>callback1</code>, <code>callback2</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the bod of the <code>repeatTwo</code> function</li>
-<li>Update the body of the <code>repeatTwo</code> function so that it calls both the <code>callback1</code> and <code>callback2</code> functions in the <code>while</code> loop</li>
-<li>Finally, call the <code>repeatTwo</code> function to repeat the <code>drawArrow</code> and <code>drawChefHat</code> functions <code>2</code> times</li>
-</ol>
-<h2 id="repeat-with-parameter">Repeat with Parameter</h2>
-<p>Sometimes it is necessary to call callbacks that require parameters. Follow the instructions below to practice.</p>
-<h3 id="defining-a-new-function-with-a-parameter">Defining a New Function with a Parameter</h3>
-<ol>
-<li>Define a new function named <code>exclaim</code></li>
-<li>The <code>exclaim</code> function should have one parameter: <code>message</code></li>
-<li>In the body of the <code>exclaim</code> function, declare a new variable named <code>newMessage</code> using <code>let</code></li>
-<li>Assign the <code>newMessage</code> variable to be the <code>message</code> parameter with an exclamation point (<code>!</code>) at the end of it<ul>
-<li>For example, if <code>message</code> were &quot;hello&quot;, <code>newMessage</code> should be &quot;hello!&quot;</li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> movies (
+     title <span class="hljs-built_in">TEXT</span>,
+     <span class="hljs-keyword">year</span> <span class="hljs-built_in">INTEGER</span>,
+     genre <span class="hljs-built_in">TEXT</span>,
+     director <span class="hljs-built_in">TEXT</span>
+ );
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement creates a new table in the database named <code>movies</code> with <code>title</code>, <code>year</code>, <code>genre</code>, and <code>director</code> as columns</li>
 </ul>
 </li>
-<li>Use <code>console.log</code> to log the <code>newMessage</code> to the console</li>
+<li>In the <strong>Navigator</strong>, in the &quot;Schemas&quot; view, click the refresh icon and check that the <code>movies</code> table appears!</li>
 </ol>
-<h3 id="defining-a-new-function-to-repeat-functions">Defining a New Function to Repeat Functions</h3>
+<p><img src="https://i.imgur.com/33yTnFG.png" alt=""></p>
+<h2 id="inserting-rows">Inserting Rows</h2>
+<p>The table exists, but it currently contains no data! Follow the steps below to add some data to the table.</p>
 <ol>
-<li>Define a new function named <code>repeatWithParameter</code></li>
-<li>The <code>repeatWithParameter</code> function should have three parameters: <code>callback</code>, <code>callbackParameter</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the body of the <code>repeatWithParameter</code> function</li>
-<li>Update the body of the <code>repeatWithParameter</code> function so that it passes the <code>callbackParameter</code> when calling the <code>callback</code> function</li>
-<li>Finally, call the <code>repeatWithParameter</code> function, and make it call the <code>exclaim</code> function <code>3</code> times with a message of &quot;hello&quot;</li>
-</ol>
-<h2 id="challenge---random-function">CHALLENGE - Random Function</h2>
-<ol>
-<li>Define a new function named <code>randomFunction</code></li>
-<li>The <code>randomFunction</code> function should have two parameters: <code>callback1</code>, <code>callback2</code></li>
-<li>In the body of the <code>randomFunction</code> function, declare a variable named <code>randomNumber</code> using <code>let</code></li>
-<li>Use <code>Math.random()</code> to generate a random number between 0 and 1, and store the result in the <code>randomNumber</code> variable</li>
-<li>Use an <code>if</code> statement to check if <code>randomNumber</code> is less than <code>.5</code></li>
-<li>If <code>randomNumber</code> is less than <code>.5</code>, call the <code>callback1</code> function</li>
-<li>Using an <code>else</code>, if <code>randomNumber</code> is NOT less than <code>.5</code>, call the <code>callback2</code> function</li>
-</ol>
-<h2 id="challenge---arrow-length">CHALLENGE - Arrow Length</h2>
-<ol>
-<li>Define a new function named <code>drawArrowLength</code><ul>
-<li>The function should have one parameter: <code>length</code></li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> movies
+ <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&quot;Going Overboard&quot;</span>, <span class="hljs-number">1989</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Valerie Breiman&quot;</span>);
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement</li>
+<li>Use <code>SELECT * FROM movies</code> to check and make sure the movie was successfully added to the table</li>
+<li>Insert another new movie with the following properties:<ul>
+<li>Title: <strong>Sandy Wexler</strong></li>
+<li>Year: <strong>2017</strong></li>
+<li>Genre: <strong>Comedy</strong></li>
+<li>Director: <strong>Steven Brill</strong></li>
 </ul>
 </li>
-<li>In the body of the <code>drawArrowLength</code> function, build a string for the arrow based on the <code>length</code> parameter<ul>
-<li>The number of hyphen characters (<code>-</code>) should match the <code>length</code></li>
-<li>For example, if <code>length</code> were <code>5</code>, the arrow would be <code>&gt;&gt;-----&gt;</code></li>
-<li>If <code>length</code> were <code>2</code>, the arrow would be <code>&gt;&gt;--&gt;</code></li>
+<li>Highlight the <code>SELECT *</code> query and re-execute it to make sure both movies appear!</li>
+</ol>
+<p><img src="https://i.imgur.com/vl4FWNX.png" alt=""></p>
+<h2 id="adding-a-column">Adding a Column</h2>
+<p>In addition to tracking all of the other Movie properties, this table should store the runtime of the movies in minutes.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> movies
+ <span class="hljs-keyword">ADD</span> runtime <span class="hljs-built_in">INTEGER</span>;
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement will add a column to the table</li>
 </ul>
 </li>
-<li>Call the <code>repeatWithParameter</code> function, and make it call the <code>drawArrowLength</code> function <code>3</code> times with an arrow length of <code>4</code></li>
+<li>In the <strong>Navigator</strong>, in the &quot;Schemas&quot; view, click the refresh icon and check that the <code>runtime</code> column appears!</li>
 </ol>
-<h3 id="additional-challenge">Additional Challenge</h3>
-<p>Define a new function named <code>drawChefHatHeight</code> that changes the height of a chef&apos;s hat based on a <code>height</code> parameter. Use the <code>repeatWithParameter</code> method to call the <code>drawChefHatHeight</code> function repeatedly.</p>
+<p><img src="https://i.imgur.com/RobCBFk.png" alt=""></p>
+<h2 id="updating-rows">Updating Rows</h2>
+<p>Now that a new column exists, it is possible to update the existing rows with the more information.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">SET</span> SQL_SAFE_UPDATES = <span class="hljs-number">0</span>;
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement allows developers to update rows without constraint. It is not recommended to use this setting in a real database</li>
+</ul>
+</li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">UPDATE</span> movies
+ <span class="hljs-keyword">SET</span> runtime = <span class="hljs-number">97</span>
+ <span class="hljs-keyword">WHERE</span> title = <span class="hljs-string">&quot;Going Overboard&quot;</span>;
+</code></pre>
+</li>
+<li>Execute the <code>UPDATE</code> statement to set the runtime of &quot;Going Overboard&quot; to <code>97</code></li>
+<li>Use <code>SELECT * FROM movies</code> again to verify that the &quot;Going Overboard&quot; row has the proper runtime</li>
+</ol>
+<h2 id="deleting-a-row">Deleting a Row</h2>
+<p>Rather than updating the row for &quot;Sandy Wexler,&quot; it is possible to simply delete it.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> movies
+ <span class="hljs-keyword">WHERE</span> title = <span class="hljs-string">&quot;Sandy Wexler&quot;</span>;
+</code></pre>
+</li>
+<li>Execute the <code>DELETE</code> statement to remove the row</li>
+<li>Use <code>SELECT * FROM movies</code> again to verify that the &quot;Sandy Wexler&quot; row no longer appears</li>
+</ol>
 
                                 
                                 </section>
@@ -767,12 +808,12 @@
 
             
                 
-                <a href="CallbacksCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Callbacks Code-Along">
+                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 9 - Databases (MySQL)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FileReaderChallenge.html" class="navigation navigation-next " aria-label="Next page: File Reader Challenge">
+                <a href="SqlPracticeExercises.html" class="navigation navigation-next " aria-label="Next page: SQL Practice Exercises">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -783,7 +824,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"next":{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]},"previous":{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","mtime":"2020-01-31T14:42:47.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MySQL Workbench Walkthrough","level":"1.10.1","depth":2,"next":{"title":"SQL Practice Exercises","level":"1.10.2","depth":2,"path":"DatabasesOverview/SqlPracticeExercises.md","ref":"DatabasesOverview/SqlPracticeExercises.md","articles":[]},"previous":{"title":"Lesson 9 - Databases (MySQL)","level":"1.10","depth":1,"path":"DatabasesOverview/StudentDesc.md","ref":"DatabasesOverview/StudentDesc.md","articles":[{"title":"MySQL Workbench Walkthrough","level":"1.10.1","depth":2,"path":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","ref":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","articles":[]},{"title":"SQL Practice Exercises","level":"1.10.2","depth":2,"path":"DatabasesOverview/SqlPracticeExercises.md","ref":"DatabasesOverview/SqlPracticeExercises.md","articles":[]},{"title":"SQL Query Challenges","level":"1.10.3","depth":2,"path":"DatabasesOverview/SqlQueryChallenges.md","ref":"DatabasesOverview/SqlQueryChallenges.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","mtime":"2020-01-31T14:42:47.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Callbacks Individual Exercises · GitBook</title>
+        <title>People List Starter App · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FileReaderChallenge.html" />
+    <link rel="next" href="PeopleListEjsCodeAlong.html" />
     
     
-    <link rel="prev" href="CallbacksCodeAlong.html" />
+    <link rel="prev" href="StudentDesc.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.4" data-path="../JavaScriptFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptFunctions/StudentDesc.html">
             
                     
                     Lesson 3 - JavaScript Functions (Callbacks)
@@ -146,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="CallbacksCodeAlong.html">
+        <li class="chapter " data-level="1.4.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
-                <a href="CallbacksCodeAlong.html">
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
                     
                     Callbacks Code-Along
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="CallbacksIndividualExercises.html">
+        <li class="chapter " data-level="1.4.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
-                <a href="CallbacksIndividualExercises.html">
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
                     
                     Callbacks Individual Exercises
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="FileReaderChallenge.html">
+        <li class="chapter " data-level="1.4.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
             
-                <a href="FileReaderChallenge.html">
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
             
                     
                     File Reader Challenge
@@ -364,9 +364,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../EjsTemplates/StudentDesc.html">
+        <li class="chapter " data-level="1.9" data-path="StudentDesc.html">
             
-                <a href="../EjsTemplates/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Lesson 8 - Creating Page Templates (EJS)
@@ -378,9 +378,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../EjsTemplates/PeopleListStarterApp.html">
+        <li class="chapter active" data-level="1.9.1" data-path="PeopleListStarterApp.html">
             
-                <a href="../EjsTemplates/PeopleListStarterApp.html">
+                <a href="PeopleListStarterApp.html">
             
                     
                     People List Starter App
@@ -391,9 +391,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../EjsTemplates/PeopleListEjsCodeAlong.html">
+        <li class="chapter " data-level="1.9.2" data-path="PeopleListEjsCodeAlong.html">
             
-                <a href="../EjsTemplates/PeopleListEjsCodeAlong.html">
+                <a href="PeopleListEjsCodeAlong.html">
             
                     
                     People List EJS Code-Along
@@ -404,9 +404,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../EjsTemplates/PeopleListEjsIndividualExercises.html">
+        <li class="chapter " data-level="1.9.3" data-path="PeopleListEjsIndividualExercises.html">
             
-                <a href="../EjsTemplates/PeopleListEjsIndividualExercises.html">
+                <a href="PeopleListEjsIndividualExercises.html">
             
                     
                     People List EJS Individual Exercises
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Callbacks Individual Exercises</a>
+        <a href=".." >People List Starter App</a>
     </h1>
 </div>
 
@@ -674,72 +674,159 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="callbacks-nodejs-app-individual-exercises">Callbacks Node.js App: Individual Exercises</h1>
-<p>Complete the individual exercises to update the Callbacks app!</p>
-<h2 id="ascii-arrow">ASCII Arrow</h2>
+                                <h1 id="people-list-starter-app">People List: Starter App</h1>
+<p>Build an Express app to display a list of people, each with their own page containing more information about them. This will help illustrate the need for <strong>templates</strong>, because it will become increasingly tedious to create a page for each individual person.</p>
+<h2 id="getting-started">Getting Started</h2>
 <ol>
-<li>Define a new function named <code>drawArrow</code> that logs an ASCII arrow to the console: <code>&apos;&gt;&gt;------&gt;&apos;</code></li>
-<li>Call the <code>repeat</code> function to repeat the new function 10 times<ul>
-<li>Pass the <code>drawArrow</code> function as the callback argument</li>
-<li>Pass <code>10</code> as the second argument</li>
+<li>Open up a terminal, create a new folder for the People List project, and <code>cd</code> into it</li>
+<li>Run <code>npm init</code>, taking all of the defaults other than setting &quot;app.js&quot; for the entry point</li>
+<li>Install Express with <code>npm install express --save</code></li>
+<li>Create a new file in the People List project folder named &quot;home.html&quot;</li>
+<li>Fill out the &quot;home.html&quot; file with a header, a paragraph, and an empty list</li>
+<li>Create a new file in the People List project folder named &quot;app.js&quot;</li>
+</ol>
+<h2 id="a-basic-express-server">A Basic Express Server</h2>
+<p>Open up the &quot;app.js&quot; file, and add the code for a simple web server.</p>
+<ol>
+<li>Import the <code>express</code> and <code>path</code> modules, storing them in <code>const</code> variables</li>
+<li>Create <code>const</code> variables for the hostname (127.0.0.1) and port (3000)</li>
+<li>Initialize the by calling <code>express()</code> and storing the result in a variable named <code>app</code></li>
+<li>Define a new function named <code>homePage</code> with two parameters: <code>request</code> and <code>response</code></li>
+<li>In the body of the <code>homePage</code> function, use <code>response.sendFile</code> to send &quot;home.html&quot;<ul>
+<li>Use <code>path.join</code> to get the absolute path for &quot;home.html&quot;</li>
+</ul>
+</li>
+<li>Use <code>app.get</code> to specify that requests to the root (<code>&apos;/&apos;</code>) should call the <code>homePage</code> callback</li>
+<li>Define a function named <code>listenCallback</code>, and in the body, log the hostname and port</li>
+<li>Finally, use <code>app.listen</code> to listen on the proper <code>port</code> and <code>hostname</code>, and pass <code>listenCallback</code> as the callback</li>
+<li>Run the app with <code>node app.js</code>, and navigate to <a href="http://127.0.0.1:3000" target="_blank">http://127.0.0.1:3000</a> to make sure it is running!</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">let</span> app = express();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">homePage</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.sendFile(path.join(__dirname, <span class="hljs-string">&apos;home.html&apos;</span>));
+}
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+app.listen(port, hostname, listenCallback);
+</code></pre>
+<h2 id="creating-a-person-page">Creating a Person Page</h2>
+<p>The people for this website should come from the <a href="people.json" target="_blank">people.json</a> file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.</p>
+<ol>
+<li>Create a new file in the People List project folder named &quot;people0.html&quot;</li>
+<li>Fill out the &quot;people0.html&quot; file with the HTML provided below<ul>
+<li>Note that this person is the first in the <a href="people.json" target="_blank">people.json</a> array</li>
+</ul>
+</li>
+<li>In the &quot;app.js&quot; file, define a new function named <code>personPage</code> with two parameters: <code>request</code> and <code>response</code></li>
+<li>In the body of the <code>personPage</code> function, use <code>response.sendFile</code> to send &quot;person0.html&quot;<ul>
+<li>Use <code>path.join</code> to get the absolute path for &quot;person0.html&quot;</li>
+</ul>
+</li>
+<li>Use <code>app.get</code> to specify that requests to the <code>/person</code> endpoint should call the <code>personPage</code> callback</li>
+<li>In the &quot;home.html&quot; file, add an <code>li</code> to the list, and link to this person page<ul>
+<li>The text should be the person&apos;s name</li>
+<li>The <code>href</code> attribute should be <code>/person</code></li>
 </ul>
 </li>
 </ol>
-<h2 id="repeat-two-functions">Repeat Two Functions</h2>
+<p><strong>person0.html</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+            <span class="hljs-selector-tag">body</span> {
+                <span class="hljs-attribute">background</span>: mediumseagreen;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Person Information<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Name: Dorisa Wonfar<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Occupation: Media Manager I<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;https://robohash.org/facilisvitaeprovident.png?size=50x50&amp;set=set1&apos;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Run the server to make sure the page for Dorisa loads properly!</p>
+<h2 id="adding-multiple-people-with-a-query-parameter">Adding Multiple People with a Query Parameter</h2>
+<p>One person is good, but the app would be much better if it could show multiple people. However, it would be ideal if all of these different people could be surfaced from the same endpoint (<code>/person</code>). It is possible to change the person information based on a query parameter!</p>
 <ol>
-<li>Define a new function named <code>repeatTwo</code></li>
-<li>The <code>repeatTwo</code> function should have three parameters: <code>callback1</code>, <code>callback2</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the bod of the <code>repeatTwo</code> function</li>
-<li>Update the body of the <code>repeatTwo</code> function so that it calls both the <code>callback1</code> and <code>callback2</code> functions in the <code>while</code> loop</li>
-<li>Finally, call the <code>repeatTwo</code> function to repeat the <code>drawArrow</code> and <code>drawChefHat</code> functions <code>2</code> times</li>
-</ol>
-<h2 id="repeat-with-parameter">Repeat with Parameter</h2>
-<p>Sometimes it is necessary to call callbacks that require parameters. Follow the instructions below to practice.</p>
-<h3 id="defining-a-new-function-with-a-parameter">Defining a New Function with a Parameter</h3>
-<ol>
-<li>Define a new function named <code>exclaim</code></li>
-<li>The <code>exclaim</code> function should have one parameter: <code>message</code></li>
-<li>In the body of the <code>exclaim</code> function, declare a new variable named <code>newMessage</code> using <code>let</code></li>
-<li>Assign the <code>newMessage</code> variable to be the <code>message</code> parameter with an exclamation point (<code>!</code>) at the end of it<ul>
-<li>For example, if <code>message</code> were &quot;hello&quot;, <code>newMessage</code> should be &quot;hello!&quot;</li>
+<li>Create a new file in the People List project folder named &quot;person1.html&quot;</li>
+<li>Copy the HTML code from &quot;person0.html&quot; into &quot;person1.html&quot;</li>
+<li>Update &quot;person1.html&quot; so that it properly represents the second person from the <a href="people.json" target="_blank">people.json</a> array<ul>
+<li>The background color should be <code>red</code> because Tammy is dead &#x2639;</li>
 </ul>
 </li>
-<li>Use <code>console.log</code> to log the <code>newMessage</code> to the console</li>
-</ol>
-<h3 id="defining-a-new-function-to-repeat-functions">Defining a New Function to Repeat Functions</h3>
-<ol>
-<li>Define a new function named <code>repeatWithParameter</code></li>
-<li>The <code>repeatWithParameter</code> function should have three parameters: <code>callback</code>, <code>callbackParameter</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the body of the <code>repeatWithParameter</code> function</li>
-<li>Update the body of the <code>repeatWithParameter</code> function so that it passes the <code>callbackParameter</code> when calling the <code>callback</code> function</li>
-<li>Finally, call the <code>repeatWithParameter</code> function, and make it call the <code>exclaim</code> function <code>3</code> times with a message of &quot;hello&quot;</li>
-</ol>
-<h2 id="challenge---random-function">CHALLENGE - Random Function</h2>
-<ol>
-<li>Define a new function named <code>randomFunction</code></li>
-<li>The <code>randomFunction</code> function should have two parameters: <code>callback1</code>, <code>callback2</code></li>
-<li>In the body of the <code>randomFunction</code> function, declare a variable named <code>randomNumber</code> using <code>let</code></li>
-<li>Use <code>Math.random()</code> to generate a random number between 0 and 1, and store the result in the <code>randomNumber</code> variable</li>
-<li>Use an <code>if</code> statement to check if <code>randomNumber</code> is less than <code>.5</code></li>
-<li>If <code>randomNumber</code> is less than <code>.5</code>, call the <code>callback1</code> function</li>
-<li>Using an <code>else</code>, if <code>randomNumber</code> is NOT less than <code>.5</code>, call the <code>callback2</code> function</li>
-</ol>
-<h2 id="challenge---arrow-length">CHALLENGE - Arrow Length</h2>
-<ol>
-<li>Define a new function named <code>drawArrowLength</code><ul>
-<li>The function should have one parameter: <code>length</code></li>
+<li>At the top of the &quot;app.js&quot; file, import the <code>url</code> module, and store it in a <code>const</code><pre><code class="lang-js"> <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+</code></pre>
+</li>
+<li>In the body of the <code>personPage</code> function, obtain the value of a query parameter <code>index</code> and store it in a variable:<pre><code class="lang-js"> <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+ <span class="hljs-keyword">let</span> index = <span class="hljs-built_in">Number</span>(parsedUrl.query.index);
+</code></pre>
+</li>
+<li>Create an <code>if</code> statement to check if <code>index</code> is <code>0</code> or <code>NaN</code><ul>
+<li>If it is, the server should respond to the request by sending &quot;person0.html&quot;</li>
 </ul>
 </li>
-<li>In the body of the <code>drawArrowLength</code> function, build a string for the arrow based on the <code>length</code> parameter<ul>
-<li>The number of hyphen characters (<code>-</code>) should match the <code>length</code></li>
-<li>For example, if <code>length</code> were <code>5</code>, the arrow would be <code>&gt;&gt;-----&gt;</code></li>
-<li>If <code>length</code> were <code>2</code>, the arrow would be <code>&gt;&gt;--&gt;</code></li>
+<li>Use an <code>else if</code> to check if <code>index</code> is <code>1</code><ul>
+<li>If it is, the server should respond to the request by sending &quot;person1.html&quot;</li>
 </ul>
 </li>
-<li>Call the <code>repeatWithParameter</code> function, and make it call the <code>drawArrowLength</code> function <code>3</code> times with an arrow length of <code>4</code></li>
+<li>In the &quot;home.html&quot; file, add a link to this second person by setting the <code>href</code> to <code>/person?index=1</code></li>
+<li>Run the server to make sure each link works properly!</li>
 </ol>
-<h3 id="additional-challenge">Additional Challenge</h3>
-<p>Define a new function named <code>drawChefHatHeight</code> that changes the height of a chef&apos;s hat based on a <code>height</code> parameter. Use the <code>repeatWithParameter</code> method to call the <code>drawChefHatHeight</code> function repeatedly.</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">let</span> app = express();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">homePage</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.sendFile(path.join(__dirname, <span class="hljs-string">&apos;home.html&apos;</span>));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">personPage</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> personFile;
+    <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">let</span> index = <span class="hljs-built_in">Number</span>(parsedUrl.query.index);
+
+    <span class="hljs-keyword">if</span> (index == <span class="hljs-number">0</span> || <span class="hljs-built_in">isNaN</span>(index)) {
+        personFile = <span class="hljs-string">&apos;person0.html&apos;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (index == <span class="hljs-number">1</span>) {
+        personFile = <span class="hljs-string">&apos;person1.html&apos;</span>;
+    }
+
+    <span class="hljs-keyword">let</span> personPath = path.join(__dirname, personFile);
+    response.sendFile(personPath);
+}
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
+app.get(<span class="hljs-string">&apos;/person&apos;</span>, personPage);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+app.listen(port, hostname, listenCallback);
+</code></pre>
+<h2 id="adding-more-people">Adding More People</h2>
+<p>When this part is working, add another HTML page for the third person in the <a href="people.json" target="_blank">people.json</a> array. Make sure to properly route to this new person&apos;s page based on the query parameter in the <code>personPage</code> function, and add a link on the &quot;home.html&quot; page. </p>
 
                                 
                                 </section>
@@ -767,12 +854,12 @@
 
             
                 
-                <a href="CallbacksCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Callbacks Code-Along">
+                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 8 - Creating Page Templates (EJS)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FileReaderChallenge.html" class="navigation navigation-next " aria-label="Next page: File Reader Challenge">
+                <a href="PeopleListEjsCodeAlong.html" class="navigation navigation-next " aria-label="Next page: People List EJS Code-Along">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -783,7 +870,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"next":{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]},"previous":{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","mtime":"2020-01-31T14:42:47.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List Starter App","level":"1.9.1","depth":2,"next":{"title":"People List EJS Code-Along","level":"1.9.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"previous":{"title":"Lesson 8 - Creating Page Templates (EJS)","level":"1.9","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.9.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.9.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.9.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListStarterApp.md","mtime":"2020-01-31T14:42:47.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

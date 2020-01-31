@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Callbacks Individual Exercises · GitBook</title>
+        <title>Simple Server Code Along · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FileReaderChallenge.html" />
+    <link rel="next" href="SimpleServerIndividualExercises.html" />
     
     
-    <link rel="prev" href="CallbacksCodeAlong.html" />
+    <link rel="prev" href="StudentDesc.html" />
     
 
     </head>
@@ -132,9 +132,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.4" data-path="../JavaScriptFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptFunctions/StudentDesc.html">
             
                     
                     Lesson 3 - JavaScript Functions (Callbacks)
@@ -146,9 +146,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="CallbacksCodeAlong.html">
+        <li class="chapter " data-level="1.4.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
-                <a href="CallbacksCodeAlong.html">
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
                     
                     Callbacks Code-Along
@@ -159,9 +159,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="CallbacksIndividualExercises.html">
+        <li class="chapter " data-level="1.4.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
-                <a href="CallbacksIndividualExercises.html">
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
                     
                     Callbacks Individual Exercises
@@ -172,9 +172,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="FileReaderChallenge.html">
+        <li class="chapter " data-level="1.4.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
             
-                <a href="FileReaderChallenge.html">
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
             
                     
                     File Reader Challenge
@@ -261,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../SimpleNodeWebServer/StudentDesc.html">
+        <li class="chapter " data-level="1.7" data-path="StudentDesc.html">
             
-                <a href="../SimpleNodeWebServer/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Lesson 6 - Simple Node Web Server
@@ -275,9 +275,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+        <li class="chapter active" data-level="1.7.1" data-path="SimpleServerCodeAlong.html">
             
-                <a href="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+                <a href="SimpleServerCodeAlong.html">
             
                     
                     Simple Server Code Along
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+        <li class="chapter " data-level="1.7.2" data-path="SimpleServerIndividualExercises.html">
             
-                <a href="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+                <a href="SimpleServerIndividualExercises.html">
             
                     
                     Simple Server Individual Exercises
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Callbacks Individual Exercises</a>
+        <a href=".." >Simple Server Code Along</a>
     </h1>
 </div>
 
@@ -674,72 +674,156 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="callbacks-nodejs-app-individual-exercises">Callbacks Node.js App: Individual Exercises</h1>
-<p>Complete the individual exercises to update the Callbacks app!</p>
-<h2 id="ascii-arrow">ASCII Arrow</h2>
+                                <h1 id="simple-server-code-along">Simple Server: Code Along</h1>
+<p>Follow the instructions to create a simple web server using Node.js.</p>
+<h2 id="getting-started">Getting Started</h2>
 <ol>
-<li>Define a new function named <code>drawArrow</code> that logs an ASCII arrow to the console: <code>&apos;&gt;&gt;------&gt;&apos;</code></li>
-<li>Call the <code>repeat</code> function to repeat the new function 10 times<ul>
-<li>Pass the <code>drawArrow</code> function as the callback argument</li>
-<li>Pass <code>10</code> as the second argument</li>
+<li>Create a new file named &quot;server.js&quot; in the current directory</li>
+<li>Add the line to import the <code>http</code> module:<pre><code class="lang-js"> <span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+</code></pre>
+</li>
+<li>Add a couple of constants to store the host and port (e.g., where the server connects on the computer)</li>
+<li>Write a message to the console saying &quot;starting up&quot;</li>
+<li>Run the program with <code>node server.js</code> to make sure it works so far</li>
+</ol>
+<blockquote>
+<p>Note: The web server does not have a <code>process.exit()</code> statement because it should keep running indefinitely. To kill the process, use <code>Ctrl</code>+<code>C</code> in the Terminal.</p>
+</blockquote>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Starting up...&apos;</span>)
+</code></pre>
+<h2 id="creating-the-server-and-listening">Creating the Server and Listening</h2>
+<p>Now, write the code to make a server!</p>
+<ol>
+<li>Define a new function named <code>serverCallback</code><ul>
+<li>This function will be used to respond to any incoming requests from the web browser</li>
 </ul>
 </li>
-</ol>
-<h2 id="repeat-two-functions">Repeat Two Functions</h2>
-<ol>
-<li>Define a new function named <code>repeatTwo</code></li>
-<li>The <code>repeatTwo</code> function should have three parameters: <code>callback1</code>, <code>callback2</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the bod of the <code>repeatTwo</code> function</li>
-<li>Update the body of the <code>repeatTwo</code> function so that it calls both the <code>callback1</code> and <code>callback2</code> functions in the <code>while</code> loop</li>
-<li>Finally, call the <code>repeatTwo</code> function to repeat the <code>drawArrow</code> and <code>drawChefHat</code> functions <code>2</code> times</li>
-</ol>
-<h2 id="repeat-with-parameter">Repeat with Parameter</h2>
-<p>Sometimes it is necessary to call callbacks that require parameters. Follow the instructions below to practice.</p>
-<h3 id="defining-a-new-function-with-a-parameter">Defining a New Function with a Parameter</h3>
-<ol>
-<li>Define a new function named <code>exclaim</code></li>
-<li>The <code>exclaim</code> function should have one parameter: <code>message</code></li>
-<li>In the body of the <code>exclaim</code> function, declare a new variable named <code>newMessage</code> using <code>let</code></li>
-<li>Assign the <code>newMessage</code> variable to be the <code>message</code> parameter with an exclamation point (<code>!</code>) at the end of it<ul>
-<li>For example, if <code>message</code> were &quot;hello&quot;, <code>newMessage</code> should be &quot;hello!&quot;</li>
+<li>Add two parameters to the <code>serverCallback</code> function: <code>request</code> and `response</li>
+<li>In the body of the <code>serverCallback</code> function, set the <code>statusCode</code> property of the <code>response</code> object to <code>200</code><ul>
+<li>This means success!</li>
 </ul>
 </li>
-<li>Use <code>console.log</code> to log the <code>newMessage</code> to the console</li>
-</ol>
-<h3 id="defining-a-new-function-to-repeat-functions">Defining a New Function to Repeat Functions</h3>
-<ol>
-<li>Define a new function named <code>repeatWithParameter</code></li>
-<li>The <code>repeatWithParameter</code> function should have three parameters: <code>callback</code>, <code>callbackParameter</code>, and <code>numberOfTimes</code></li>
-<li>Copy the body of the existing <code>repeat</code> function, and paste it into the body of the <code>repeatWithParameter</code> function</li>
-<li>Update the body of the <code>repeatWithParameter</code> function so that it passes the <code>callbackParameter</code> when calling the <code>callback</code> function</li>
-<li>Finally, call the <code>repeatWithParameter</code> function, and make it call the <code>exclaim</code> function <code>3</code> times with a message of &quot;hello&quot;</li>
-</ol>
-<h2 id="challenge---random-function">CHALLENGE - Random Function</h2>
-<ol>
-<li>Define a new function named <code>randomFunction</code></li>
-<li>The <code>randomFunction</code> function should have two parameters: <code>callback1</code>, <code>callback2</code></li>
-<li>In the body of the <code>randomFunction</code> function, declare a variable named <code>randomNumber</code> using <code>let</code></li>
-<li>Use <code>Math.random()</code> to generate a random number between 0 and 1, and store the result in the <code>randomNumber</code> variable</li>
-<li>Use an <code>if</code> statement to check if <code>randomNumber</code> is less than <code>.5</code></li>
-<li>If <code>randomNumber</code> is less than <code>.5</code>, call the <code>callback1</code> function</li>
-<li>Using an <code>else</code>, if <code>randomNumber</code> is NOT less than <code>.5</code>, call the <code>callback2</code> function</li>
-</ol>
-<h2 id="challenge---arrow-length">CHALLENGE - Arrow Length</h2>
-<ol>
-<li>Define a new function named <code>drawArrowLength</code><ul>
-<li>The function should have one parameter: <code>length</code></li>
+<li>After setting the status code, call the <code>end</code> function on the <code>response</code> object</li>
+<li>Outside of the <code>serverCallback</code> function, use <code>http.createServer</code> and pass in <code>serverCallback</code> to create the server<ul>
+<li>Store the server in a constant variable named <code>server</code></li>
 </ul>
 </li>
-<li>In the body of the <code>drawArrowLength</code> function, build a string for the arrow based on the <code>length</code> parameter<ul>
-<li>The number of hyphen characters (<code>-</code>) should match the <code>length</code></li>
-<li>For example, if <code>length</code> were <code>5</code>, the arrow would be <code>&gt;&gt;-----&gt;</code></li>
-<li>If <code>length</code> were <code>2</code>, the arrow would be <code>&gt;&gt;--&gt;</code></li>
+<li>Use <code>server.listen</code> to specify the post and hostname (set as constants previously)</li>
+<li>Check out the Network tab at <a href="http://127.0.0.1:3000" target="_blank">http://127.0.0.1:3000</a> to see the HTTP response come through!</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serverCallback</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.statusCode = <span class="hljs-number">200</span>;
+    response.end();
+}
+
+<span class="hljs-keyword">const</span> server = http.createServer(serverCallback);
+
+server.listen(port, hostname);
+</code></pre>
+<h2 id="adding-a-callback-for-listening">Adding a Callback for Listening</h2>
+<p>Before continuing, it is important for the server to log its activity to the console.</p>
+<ol>
+<li>Define a new function named <code>listenCallback</code></li>
+<li>In the body of the function, display a message in the console saying where the server is running<ul>
+<li>Use string interpolation to put <code>hostname</code> and <code>port</code> within a template string </li>
 </ul>
 </li>
-<li>Call the <code>repeatWithParameter</code> function, and make it call the <code>drawArrowLength</code> function <code>3</code> times with an arrow length of <code>4</code></li>
+<li>In the <code>server.listen</code> function call, add <code>listenCallback</code> as an argument</li>
 </ol>
-<h3 id="additional-challenge">Additional Challenge</h3>
-<p>Define a new function named <code>drawChefHatHeight</code> that changes the height of a chef&apos;s hat based on a <code>height</code> parameter. Use the <code>repeatWithParameter</code> method to call the <code>drawChefHatHeight</code> function repeatedly.</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Server running at http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+server.listen(port, hostname, listenCallback);
+</code></pre>
+<h2 id="creating-an-html-response">Creating an HTML Response</h2>
+<p>While the server is technically functioning, it&apos;s not doing much yet. Follow the steps below to make the server actually send some HTML!</p>
+<ol>
+<li>In the body of the <code>serverCallback</code> function, use the <code>setHeader</code> function of the <code>response</code> object to set the Content Type to HTML</li>
+<li>Under that, use <code>response.write</code> to write some HTML - <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></li>
+<li>Reload the page to see the HTML!</li>
+</ol>
+<p>Obviously, this is a very simple HTML page, but it is simply an example. It is easy to extrapolate this basic structure and create much more elaborate HTML pages.</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serverCallback</span>(<span class="hljs-params">request, response</span>) </span>{
+  response.statusCode = <span class="hljs-number">200</span>;
+  response.setHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  response.end();
+}
+</code></pre>
+<h2 id="using-query-parameters-to-change-the-response">Using Query Parameters to Change the Response</h2>
+<p>To make the server a little more dynamic, add the ability to respond to query parameters! The page should say &quot;Hello World&quot; if the user passes along <code>world=1</code>, and &quot;There is no world&quot; for any other value (or no value).</p>
+<ol>
+<li>At the very top of the &quot;server.js&quot; file, import the <code>url</code> module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+</code></pre>
+</li>
+<li>Get the <code>url</code> property from the <code>request</code> object using <code>request.url</code>, and store it in a variable</li>
+<li>Parse the URL into an object using the <code>url.parse</code> function, passing in the request URL and <code>true</code>, and store the object in a variable</li>
+<li>Get the <code>query</code> property of the URL object, and from that, get the <code>world</code> property. Store this in a variable</li>
+<li>If the world parameter is <code>1</code>, use <code>reponse.write</code> to write &quot;Hello World&quot; in an HTML header</li>
+<li>If the world parameter is anything else, use <code>reponse.write</code> to write &quot;There is no world&quot; in an HTML header</li>
+<li>Use <code>response.end()</code> to end the response</li>
+<li>Open up the web browser, and try going to <a href="http://127.0.0.1:3000?world=1" target="_blank">http://127.0.0.1:3000?world=1</a> to see the query parameters in action!</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serverCallback</span>(<span class="hljs-params">request, response</span>) </span>{
+  response.statusCode = <span class="hljs-number">200</span>;
+  response.setHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>);
+
+  <span class="hljs-keyword">let</span> requestUrl = request.url;
+  <span class="hljs-keyword">let</span> parsedUrl = url.parse(requestUrl, <span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">let</span> worldParam = parsedUrl.query.world;
+
+  <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+    response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  } <span class="hljs-keyword">else</span> {
+    response.write(<span class="hljs-string">&quot;&lt;h1&gt;There is no world&lt;/h1&gt;&quot;</span>);
+  }
+
+  response.end();
+}
+</code></pre>
+<h2 id="final-code">Final Code</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serverCallback</span>(<span class="hljs-params">request, response</span>) </span>{
+  response.statusCode = <span class="hljs-number">200</span>;
+  response.setHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>);
+
+  <span class="hljs-keyword">let</span> requestUrl = request.url;
+  <span class="hljs-keyword">let</span> parsedUrl = url.parse(requestUrl, <span class="hljs-literal">true</span>);
+  <span class="hljs-keyword">let</span> worldParam = parsedUrl.query.world;
+
+  <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+    response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  } <span class="hljs-keyword">else</span> {
+    response.write(<span class="hljs-string">&quot;&lt;h1&gt;There is no world&lt;/h1&gt;&quot;</span>);
+  }
+
+  response.end();
+}
+
+<span class="hljs-keyword">const</span> server = http.createServer(serverCallback);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Server running at http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+server.listen(port, hostname, listenCallback);
+</code></pre>
 
                                 
                                 </section>
@@ -767,12 +851,12 @@
 
             
                 
-                <a href="CallbacksCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Callbacks Code-Along">
+                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 6 - Simple Node Web Server">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FileReaderChallenge.html" class="navigation navigation-next " aria-label="Next page: File Reader Challenge">
+                <a href="SimpleServerIndividualExercises.html" class="navigation navigation-next " aria-label="Next page: Simple Server Individual Exercises">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -783,7 +867,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"next":{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]},"previous":{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","mtime":"2020-01-31T14:42:47.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Code Along","level":"1.7.1","depth":2,"next":{"title":"Simple Server Individual Exercises","level":"1.7.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]},"previous":{"title":"Lesson 6 - Simple Node Web Server","level":"1.7","depth":1,"path":"SimpleNodeWebServer/StudentDesc.md","ref":"SimpleNodeWebServer/StudentDesc.md","articles":[{"title":"Simple Server Code Along","level":"1.7.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},{"title":"Simple Server Individual Exercises","level":"1.7.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","mtime":"2020-01-31T14:42:47.544Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-31T14:43:35.170Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
