@@ -1,4 +1,4 @@
-- [L1 - Full-stack Web Development Overview](FullStackOverview/StudentDesc.md)
+- [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
 - [L2 - Introduction to the Command Line](CommandLine/StudentDesc.md)
 - [L3 - JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
     - [Callbacks Code-Along](JavaScriptFunctions/CallbacksCodeAlong.md)
