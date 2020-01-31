@@ -1,5 +1,5 @@
 # People List EJS: Code-Along
-The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in [people.json](people.json). If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!
+The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in <a href="people.json" target="_blank">people.json</a>. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!
 
 **EJS** (**E**mbedded **J**ava**S**cript) allows developers to use JavaScript directly in HTML templates, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!
 
@@ -32,7 +32,7 @@ Make the following updates to the "app.js" file.
 1. Run the server, and make sure the homepage still loads along with the first person page (currently ignoring the index)
 
 ## Passing the JSON Person
-The goal is to have the program dynamically generate an HTML page for each person in the [people.json](people.json) file. To do that, it is necessary to pull the correct person object from the `people.json` array based on the index, and pass it into the template.
+The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the `people.json` array based on the index, and pass it into the template.
 
 1. At the top of the file, import the `fs` module, storing it in a `const` variable
     ```js

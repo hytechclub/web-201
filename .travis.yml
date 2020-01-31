@@ -2,6 +2,7 @@ language: generic
 
 script:
 - npm install -g gitbook-cli
+- npm install gitbook-plugin-toggle-chapters
 - gitbook build
 deploy:
   local_dir: _book

@@ -47,11 +47,11 @@ app.listen(port, hostname, listenCallback);
 ```
 
 ## Creating a Person Page
-The people for this website should come from the [people.json](people.json) file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.
+The people for this website should come from the <a href="people.json" target="_blank">people.json</a> file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.
 
 1. Create a new file in the People List project folder named "people0.html"
 1. Fill out the "people0.html" file with the HTML provided below
-    - Note that this person is the first in the [people.json](people.json) array
+    - Note that this person is the first in the <a href="people.json" target="_blank">people.json</a> array
 1. In the "app.js" file, define a new function named `personPage` with two parameters: `request` and `response`
 1. In the body of the `personPage` function, use `response.sendFile` to send "person0.html"
     - Use `path.join` to get the absolute path for "person0.html"
@@ -86,7 +86,7 @@ One person is good, but the app would be much better if it could show multiple p
 
 1. Create a new file in the People List project folder named "person1.html"
 1. Copy the HTML code from "person0.html" into "person1.html"
-1. Update "person1.html" so that it properly represents the second person from the [people.json](people.json) array
+1. Update "person1.html" so that it properly represents the second person from the <a href="people.json" target="_blank">people.json</a> array
     - The background color should be `red` because Tammy is dead ☹
 1. At the top of the "app.js" file, import the `url` module, and store it in a `const`
     ```js
@@ -145,4 +145,4 @@ app.listen(port, hostname, listenCallback);
 ```
 
 ## Adding More People
-When this part is working, add another HTML page for the third person in the [people.json](people.json) array. Make sure to properly route to this new person's page based on the query parameter in the `personPage` function, and add a link on the "home.html" page. 
+When this part is working, add another HTML page for the third person in the <a href="people.json" target="_blank">people.json</a> array. Make sure to properly route to this new person's page based on the query parameter in the `personPage` function, and add a link on the "home.html" page. 
