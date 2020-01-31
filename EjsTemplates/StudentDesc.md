@@ -5,7 +5,7 @@
 - [People List EJS Code-Along](PeopleListEjsCodeAlong.md)
 
 ## Warm-up Practice
-- <a href="people.json" target="_blank">people.json</a>
+- <a href="people.json" target="_blank">people.json</a> (right click to download)
 - [People List Starter App](PeopleListStarterApp.md)
 
 ## Individual Practice

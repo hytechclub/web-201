@@ -47,7 +47,7 @@ app.listen(port, hostname, listenCallback);
 ```
 
 ## Creating a Person Page
-The people for this website should come from the <a href="people.json" target="_blank">people.json</a> file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.
+The people for this website should come from the **people.json** file. Right click the <a href="people.json" target="_blank">people.json</a> link to download it into the same directory as the "app.js" file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.
 
 1. Create a new file in the People List project folder named "people0.html"
 1. Fill out the "people0.html" file with the HTML provided below

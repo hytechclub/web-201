@@ -40,7 +40,7 @@ Write a query to find all movies that were released in a year that included othe
 Write a query to find all movies that share a director with another movie. If two movies were directed by the same person, they should both be present in the results.
 
 ## Challenge 6 - SQL Bolt
-Complete all of the challenges on [SQLBolt](https://sqlbolt.com)
+Complete all of the challenges on [SQLBolt](https://sqlbolt.com).
 
 ## Challenge 7 - Foreign Keys
 Learn about [foreign keys](https://www.mysqltutorial.org/mysql-foreign-key/). Apply that knowledge to create a `directors` table that links to the `movies` table.

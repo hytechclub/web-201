@@ -45,10 +45,12 @@ Use the `elmerFudd` function in the `fs.readFile` call to hook it up to the text
 
 ## Writing a File Translation
 >Reference: https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+
 Use `fs.writeFile` to write the file translation into a new file. After the file has been successfully written, write a message to the console telling the user the operation was successful.
 
 ## Dealing with User Input
 > Reference: https://nodejs.org/api/readline.html
+
 Use the `readline` module to receive input from the user. Ask the user for the following information:
 - Path to the file to read
 - Path to the file to write

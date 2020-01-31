@@ -1,5 +1,5 @@
 # Food JSON Challenges
-Complete the following challenges using the [foods.json](foods.json) file. The file contains a JSON array with objects that represent chain restaurants and their menu items.
+Complete the following challenges using the **foods.json** file. The file contains a JSON array with objects that represent chain restaurants and their menu items.
 
 ### Starting Code
 Create a new file named "food.js" and add the following code:
@@ -9,7 +9,7 @@ let rawdata = fs.readFileSync('foods.json');
 let foods = JSON.parse(rawdata);
 ```
 
-This code takes the array from the [foods.json](foods.json) file and converts it into a JavaScript object `foods`. After this step, the `foods` variable becomes an array that contains all of the JSON data.
+Right click the <a href="foods.json" target="_blank">foods.json</a> link to download it and put it in the same folder as the "food.js" file. This code takes the array from the **foods.json** file and converts it into a JavaScript object `foods`. After this step, the `foods` variable becomes an array that contains all of the JSON data.
 
 ## Challenges
 For each of the challenges, write code to search the `foods` array and print out the results for the query. Try to make it as user-friendly as possible. For example, the output could look something like this:

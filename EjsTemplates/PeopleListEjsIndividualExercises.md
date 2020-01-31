@@ -27,7 +27,7 @@ Update the People List application by completing the following exercises.
 1. If the `sort` query parameter is anything else, send the normal array
 1. Add links on the `/home` page to sort/unsort the list of people
 
-### CHALLENGE - Making Pagination Work
+### Challenge - Making Pagination Work
 Update the `/home` page so that, if clicking a person link while in `sort` mode, the pagination on the `/person` page will respect the alphabetic order.
 
 ## CHALLENGE - Editable Occupations
