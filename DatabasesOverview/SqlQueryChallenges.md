@@ -39,8 +39,8 @@ Write a query to find all movies that were released in a year that included othe
 ## Challenge 5 - Same Directors
 Write a query to find all movies that share a director with another movie. If two movies were directed by the same person, they should both be present in the results.
 
-## Beyond
-- Complete all of the challenges on [SQLBolt](https://sqlbolt.com)
-- Create a new table `directors` with information about directors, including a unique `id`
-- Update the `movies` table so that instead of storing the director's name, it stores the director's id
-- Add more data
+## Challenge 6 - SQL Bolt
+Complete all of the challenges on [SQLBolt](https://sqlbolt.com)
+
+## Challenge 7 - Foreign Keys
+Learn about [foreign keys](https://www.mysqltutorial.org/mysql-foreign-key/). Apply that knowledge to create a `directors` table that links to the `movies` table.
