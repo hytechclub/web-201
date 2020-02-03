@@ -1,6 +1,9 @@
 # Web 201: Full-stack Web Development
 Welcome to the Web 201 Hy-Tech Club course!
 
+## Point Redemption
+Points can be redeemed for a variety of [rewards](Rewards.md).
+
 ## Schedule
 - Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
 - Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
