@@ -679,24 +679,24 @@
 <p>When a user fills out the &quot;Add Player&quot; form and clicks the submit button, it will send a POST request to <code>/add</code> (as specified in the attributes of the form). The data will be labeled based on the <code>name</code> attributes of the <code>input</code> elements. The server should take that POST request, and use the data to insert a new player into the <code>players</code> table in the database.</p>
 <h2 id="hooking-up-an-add-player-request-handler">Hooking up an &quot;Add Player&quot; Request Handler</h2>
 <ol>
-<li>In the &quot;player.js&quot; file, add a new module export property named <code>addPlayer</code><ul>
+<li>In the <strong>player.js</strong> file, add a new module export property named <code>addPlayer</code><ul>
 <li>Make sure to add a comma after the <code>addPlayerPage</code> function</li>
 </ul>
 </li>
 <li>Set the value of <code>addPlayer</code> to be a function with <code>request</code> and <code>response</code> as parameters</li>
 <li>In the body of the <code>addPlayer</code> function, log <code>request.body</code> to the console</li>
 <li>After the console log, redirect to the homepage with <code>response.redirect(&apos;/&apos;)</code></li>
-<li>In the &quot;app.js&quot; file, under the <code>app.set</code>, tell the <code>app</code> to use the proper middleware to handle POST data:<pre><code class="lang-js"> app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+<li>In the <strong>app.js</strong> file, under the <code>app.set</code>, tell the <code>app</code> to use the proper middleware to handle POST data:<pre><code class="lang-js"> app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
  app.use(express.json());
 </code></pre>
 </li>
-<li>In the &quot;app.js&quot; file, under the <code>app.get</code> routes, add an <code>app.post</code> to hook up the <code>addPlayer</code> function to the <code>/add</code> route:<pre><code class="lang-js"> app.post(<span class="hljs-string">&apos;/add&apos;</span>, player.addPlayer);
+<li>In the <strong>app.js</strong> file, under the <code>app.get</code> routes, add an <code>app.post</code> to hook up the <code>addPlayer</code> function to the <code>/add</code> route:<pre><code class="lang-js"> app.post(<span class="hljs-string">&apos;/add&apos;</span>, player.addPlayer);
 </code></pre>
 </li>
 <li>Load up the &quot;Add Player&quot; page, submit the form, and verify that the form data is properly logged in the console!</li>
 </ol>
 <h2 id="handling-the-post-data">Handling the POST Data</h2>
-<p>Update the <code>addPlayer</code> function in &quot;player.js&quot; so that it takes the player data from the POST request and adds it to the database.</p>
+<p>Update the <code>addPlayer</code> function in <strong>player.js</strong> so that it takes the player data from the POST request and adds it to the database.</p>
 <ol>
 <li>Remove all code from the body of the <code>addPlayer</code> function</li>
 <li>Declare a new variable <code>first_name</code> and set it to the &quot;First Name&quot; data from the form:<pre><code class="lang-js"> <span class="hljs-keyword">let</span> first_name = request.body.first_name;
@@ -717,7 +717,7 @@
 <li>If there is no error in the callback, that means the <code>INSERT INTO</code> was successful; redirect to the homepage with <code>response.redirect</code></li>
 <li>Load up the &quot;Add Player&quot; page, submit the form, and verify that the data appears in the database!</li>
 </ol>
-<h2 id="playerjs">&quot;player.js&quot;</h2>
+<h2 id="playerjs"><strong>player.js</strong></h2>
 <pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
     <span class="hljs-comment">// Load the form to add a player - GET</span>
     addPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
@@ -794,7 +794,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create (POST)","level":"1.11.6","depth":2,"next":{"title":"Update (GET)","level":"1.11.7","depth":2,"path":"FullCrudApp/CrudAppUpdateGet.md","ref":"FullCrudApp/CrudAppUpdateGet.md","articles":[]},"previous":{"title":"Create (GET)","level":"1.11.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppCreatePost.md","mtime":"2020-02-03T16:58:11.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T16:58:50.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create (POST)","level":"1.11.6","depth":2,"next":{"title":"Update (GET)","level":"1.11.7","depth":2,"path":"FullCrudApp/CrudAppUpdateGet.md","ref":"FullCrudApp/CrudAppUpdateGet.md","articles":[]},"previous":{"title":"Create (GET)","level":"1.11.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppCreatePost.md","mtime":"2020-02-03T17:23:14.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T17:24:04.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

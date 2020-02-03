@@ -683,12 +683,12 @@
 <li>For testing purposes, add an HTML header to the file saying &quot;Add Player&quot;</li>
 </ul>
 </li>
-<li>In the routes folder, create a new file named &quot;player.js&quot;</li>
-<li>In the &quot;player.js&quot; file, set <code>module.exports</code> equal to a new empty object</li>
+<li>In the routes folder, create a new file named <strong>player.js</strong></li>
+<li>In the <strong>player.js</strong> file, set <code>module.exports</code> equal to a new empty object</li>
 <li>In the <code>module.exports</code> object, set a property named <code>addPlayerPage</code> to a new function with <code>request</code> and <code>response</code> parameters</li>
 <li>In the body of the <code>addPlayerPage</code> function, call <code>response.render</code> and pass in &quot;edit-player&quot;</li>
 </ol>
-<h3 id="playerjs">&quot;player.js&quot;</h3>
+<h3 id="playerjs"><strong>player.js</strong></h3>
 <pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
     <span class="hljs-comment">// Load the form to add a player - GET</span>
     addPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
@@ -700,9 +700,9 @@
 <h2 id="hooking-up-the-route">Hooking up the Route</h2>
 <p>Update the app so that <code>/add</code> loads up the &quot;Add Player&quot; page, and there is a link to <code>/add</code> in the nav bar.</p>
 <ol>
-<li>In the &quot;app.js&quot; file, under the <code>index</code> module, <code>require</code> the <code>./routes/player</code> module and put it in <code>const player</code></li>
+<li>In the <strong>app.js</strong> file, under the <code>index</code> module, <code>require</code> the <code>./routes/player</code> module and put it in <code>const player</code></li>
 <li>Under the <code>app.get</code> call, add another <code>app.get</code> to hook up <code>/add</code> to <code>player.addPlayerPage</code></li>
-<li>In the &quot;header.ejs&quot; file, add an <code>a</code> to the navbar that links to the <code>/add</code> page<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;float-right&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/add&quot;</span>&gt;</span>Add a Player<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<li>In the <strong>header.ejs</strong> file, add an <code>a</code> to the navbar that links to the <code>/add</code> page<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;float-right&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/add&quot;</span>&gt;</span>Add a Player<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 </li>
 <li>Load up the homepage, click the &quot;Add a Player&quot; link, and verify that the route loads the  HTML from &quot;edit-player.ejs&quot;</li>
@@ -710,7 +710,7 @@
 <h2 id="filling-out-the-add-player-ejs">Filling out the &quot;Add Player&quot; EJS</h2>
 <p>Update the &quot;edit-player.ejs&quot; file so that it properly renders an HTML form that takes in Soccer Player information.</p>
 <ol>
-<li>Replace the test HTML in &quot;edit-player.ejs&quot; with EJS to include the &quot;header.ejs&quot; partial</li>
+<li>Replace the test HTML in &quot;edit-player.ejs&quot; with EJS to include the <strong>header.ejs</strong> partial</li>
 <li>Create a <code>div</code> with a <code>class</code> of &quot;container&quot;</li>
 <li>Within the &quot;container&quot; <code>div</code>, create a <code>form</code> that will POST to <code>add/</code> on submit<ul>
 <li>Set its <code>method</code> to <code>&quot;post&quot;</code></li>
@@ -827,7 +827,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create (GET)","level":"1.11.5","depth":2,"next":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"previous":{"title":"Read (Table)","level":"1.11.4","depth":2,"path":"FullCrudApp/CrudAppReadTable.md","ref":"FullCrudApp/CrudAppReadTable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppCreateGet.md","mtime":"2020-02-03T16:58:11.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T16:58:50.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create (GET)","level":"1.11.5","depth":2,"next":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"previous":{"title":"Read (Table)","level":"1.11.4","depth":2,"path":"FullCrudApp/CrudAppReadTable.md","ref":"FullCrudApp/CrudAppReadTable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppCreateGet.md","mtime":"2020-02-03T17:23:14.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T17:24:04.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

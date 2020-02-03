@@ -679,7 +679,7 @@
 <h2 id="routing-the-get-handler">Routing the GET Handler</h2>
 <p>The GET request for the &quot;Edit Player&quot; page requires a player <code>id</code> to render. The <code>id</code> can be passed as a <a href="http://expressjs.com/en/guide/routing.html#route-parameters" target="_blank">route parameter</a> in Express. This means the user can direct their browser to <code>http://127.0.0.1:5000/edit/5</code> and the handler will know that the user is editing the player with an <code>id</code> of <code>5</code>.</p>
 <ol>
-<li>In the <code>module.exports</code> object in the &quot;player.js&quot; file, define a new <code>editPlayerPage</code> function with <code>request</code> and <code>response</code> parameters</li>
+<li>In the <code>module.exports</code> object in the <strong>player.js</strong> file, define a new <code>editPlayerPage</code> function with <code>request</code> and <code>response</code> parameters</li>
 <li>In the body of the <code>editPlayerPage</code> function, log <code>request.params.id</code> to the console</li>
 <li>Under the log, use <code>request.render</code> to render the &quot;edit-player.ejs&quot; page<pre><code class="lang-js"> editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
      <span class="hljs-built_in">console</span>.log(request.params.id);
@@ -687,7 +687,7 @@
  }
 </code></pre>
 </li>
-<li>In the &quot;app.js&quot; file, under the <code>app.get</code> calls, add another <code>app.get</code> to hook up <code>/edit:id</code> to <code>player.editPlayerPage</code><ul>
+<li>In the <strong>app.js</strong> file, under the <code>app.get</code> calls, add another <code>app.get</code> to hook up <code>/edit:id</code> to <code>player.editPlayerPage</code><ul>
 <li>This means that whatever comes after the <code>edit/</code> will be mapped to the <code>id</code> property of <code>params</code> in the handler</li>
 </ul>
 </li>
@@ -743,7 +743,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 <p>Currently, the &quot;edit-player.ejs&quot; file can only handle adding new players. Update the EJS so that it will dynamically handle adding <em>or</em> editing players. If it is editing an existing player, the player data should be auto-filled in the form.</p>
 <h3 id="passing-the-add-flag">Passing the <code>add</code> Flag</h3>
 <ol>
-<li>In the &quot;player.js&quot; file, find the <code>addPlayerPage</code> function</li>
+<li>In the <strong>player.js</strong> file, find the <code>addPlayerPage</code> function</li>
 <li>Update the <code>response.render</code> call, and pass in <code>{ add: true }</code> for the data parameter</li>
 <li>In the <code>editPlayerPage</code> function, update the <code>response.render</code> call and pass in <code>add: false</code><ul>
 <li>This will allow the EJS to render differently for the &quot;Add Player&quot; page and the &quot;Edit Player&quot; page</li>
@@ -820,7 +820,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 <h2 id="adding-the-edit-buttons">Adding the Edit Buttons</h2>
 <p>Now that the &quot;Edit Player&quot; page loads properly, the user needs a way to navigate to it! Add &quot;Edit&quot; buttons to each player in the home page table.</p>
 <ol>
-<li>In the &quot;index.ejs&quot; file, add another <code>th</code> to the <code>table</code> header row with the text &quot;Action&quot;</li>
+<li>In the <strong>index.ejs</strong> file, add another <code>th</code> to the <code>table</code> header row with the text &quot;Action&quot;</li>
 <li>Within the <code>for</code> loop row, add another <code>td</code> under the number <code>td</code></li>
 <li>Within the new <code>td</code>, add an <code>a</code> with the text &quot;Edit&quot; that points the user to <code>/edit/</code> with the player&apos;s <code>id</code></li>
 <li>Set the <code>class</code> attribute of the <code>a</code> to &quot;btn btn-sm btn-success&quot; to make it appear like a green button<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
@@ -875,7 +875,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update (GET)","level":"1.11.7","depth":2,"next":{"title":"Update (POST)","level":"1.11.8","depth":2,"path":"FullCrudApp/CrudAppUpdatePost.md","ref":"FullCrudApp/CrudAppUpdatePost.md","articles":[]},"previous":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppUpdateGet.md","mtime":"2020-02-03T16:58:11.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T16:58:50.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update (GET)","level":"1.11.7","depth":2,"next":{"title":"Update (POST)","level":"1.11.8","depth":2,"path":"FullCrudApp/CrudAppUpdatePost.md","ref":"FullCrudApp/CrudAppUpdatePost.md","articles":[]},"previous":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppUpdateGet.md","mtime":"2020-02-03T17:23:14.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T17:24:04.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

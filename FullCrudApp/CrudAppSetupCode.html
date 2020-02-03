@@ -675,7 +675,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="crud-app---setup-code">CRUD App - Setup (Code)</h1>
-<p>Open the &quot;app.js&quot; file, and write code for a basic boiler-plate Express web server.</p>
+<p>Open the <strong>app.js</strong> file, and write code for a basic boiler-plate Express web server.</p>
 <h2 id="basic-web-server">Basic Web Server</h2>
 <ol>
 <li>Require the <code>express</code> module</li>
@@ -717,30 +717,30 @@ app.listen(port, hostname, listenCallback);
 <h3 id="views-folder---ejs">Views Folder - EJS</h3>
 <ol>
 <li>In the project folder, create a new folder named &quot;views&quot;</li>
-<li>In the &quot;views&quot; folder, create a new file named &quot;index.ejs&quot;</li>
-<li>For now, put <code>&lt;h1&gt;TEST&lt;/h1&gt;</code> in &quot;index.ejs&quot; for testing purposes</li>
-<li>In the &quot;app.js&quot; file, set the app&apos;s view engine to EJS<pre><code class="lang-js"> app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
+<li>In the &quot;views&quot; folder, create a new file named <strong>index.ejs</strong></li>
+<li>For now, put <code>&lt;h1&gt;TEST&lt;/h1&gt;</code> in <strong>index.ejs</strong> for testing purposes</li>
+<li>In the <strong>app.js</strong> file, set the app&apos;s view engine to EJS<pre><code class="lang-js"> app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
 </code></pre>
 </li>
 <li>For now, in the <code>getHomePage</code> function, replace the <code>response.send</code> statement with <code>response.render(&apos;index&apos;);</code></li>
 <li>Load up the homepage in a browser, and verify that the &quot;TEST&quot; message appears!</li>
 </ol>
 <h3 id="routes-folder">Routes Folder</h3>
-<p>With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use <code>module.exports</code> in the separate files, and <code>require</code> in the &quot;app.js&quot; file.</p>
+<p>With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use <code>module.exports</code> in the separate files, and <code>require</code> in the <strong>app.js</strong> file.</p>
 <ol>
 <li>In the project folder, create a new folder named &quot;routes&quot;</li>
-<li>In the &quot;routes&quot; folder, create a new file named &quot;index.js&quot;</li>
-<li>In the &quot;index.js&quot; file, set the <code>module.exports</code> property to an empty object</li>
+<li>In the &quot;routes&quot; folder, create a new file named <strong>index.js</strong></li>
+<li>In the <strong>index.js</strong> file, set the <code>module.exports</code> property to an empty object</li>
 <li>Add a property named <code>getHomePage</code> to the <code>module.exports</code> object, and set its value to a function</li>
-<li>Make the function the same as the <code>getHomePage</code> function from &quot;app.js&quot;<pre><code class="lang-js"> <span class="hljs-built_in">module</span>.exports = {
+<li>Make the function the same as the <code>getHomePage</code> function from <strong>app.js</strong><pre><code class="lang-js"> <span class="hljs-built_in">module</span>.exports = {
      getHomePage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
          response.render(<span class="hljs-string">&apos;index&apos;</span>);
      }
  };
 </code></pre>
 </li>
-<li>In the &quot;app.js&quot; file, remove the <code>getHomePage</code> function definition</li>
-<li>In the place of the <code>getHomePage</code> function definition, use <code>require</code> to pull in the &quot;index.js&quot; module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/index&apos;</span>);
+<li>In the <strong>app.js</strong> file, remove the <code>getHomePage</code> function definition</li>
+<li>In the place of the <code>getHomePage</code> function definition, use <code>require</code> to pull in the <strong>index.js</strong> module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/index&apos;</span>);
 </code></pre>
 </li>
 <li>In the <code>app.get</code> homepage route, replace <code>getHomePage</code> with <code>index.getHomePage</code></li>
@@ -749,7 +749,7 @@ app.listen(port, hostname, listenCallback);
 <p>The folder structure at this point should look like this:</p>
 <p><img src="https://i.imgur.com/ThGdU4z.png" alt=""></p>
 <h2 id="connecting-to-the-database-in-node">Connecting to the Database in Node</h2>
-<p>Update &quot;app.js&quot; so that it is able to connect to the <code>soccer</code> database.</p>
+<p>Update <strong>app.js</strong> so that it is able to connect to the <code>soccer</code> database.</p>
 <ol>
 <li>At the top of the file, import the <code>mysql</code> module using <code>require</code></li>
 <li>Create a new <code>const</code> object named <code>dbConfig</code> with the following information:<ul>
@@ -848,7 +848,7 @@ global.db = db;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup (Code)","level":"1.11.2","depth":2,"next":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"previous":{"title":"Setup","level":"1.11.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetupCode.md","mtime":"2020-02-03T16:58:11.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T16:58:50.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup (Code)","level":"1.11.2","depth":2,"next":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"previous":{"title":"Setup","level":"1.11.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetupCode.md","mtime":"2020-02-03T17:23:14.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T17:24:04.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

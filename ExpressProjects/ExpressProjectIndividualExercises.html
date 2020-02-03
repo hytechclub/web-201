@@ -674,21 +674,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="express-web-server-individual-exercises">Express Web Server: Individual Exercises</h1>
+                                <h1 id="express-web-server-project-individual-exercises">Express Web Server Project: Individual Exercises</h1>
 <p>Complete the following exercises to update the Express project and personalize it.</p>
 <h2 id="a-new-home">A New &quot;Home&quot;</h2>
 <ol>
-<li>Create a new HTML file named &quot;home.html&quot; in the project directory</li>
-<li>In the &quot;home.html&quot; file, add some HTML to create a custom page welcoming the user<ul>
+<li>Create a new HTML file named <strong>home.html</strong> in the project directory</li>
+<li>In the <strong>home.html</strong> file, add some HTML to create a custom page welcoming the user<ul>
 <li>It should have a link to the &quot;info&quot; page</li>
 <li>It can also have pictures and introductory information</li>
 </ul>
 </li>
-<li>Update the server code so that when the user hits the <code>&apos;/&apos;</code> endpoint, it sends the &quot;home.html&quot; page</li>
+<li>Update the server code so that when the user hits the <code>&apos;/&apos;</code> endpoint, it sends the <strong>home.html</strong> page</li>
 <li>Run the server and test it out to make sure the homepage appears</li>
 </ol>
 <h2 id="an-info-form">An Info Form</h2>
-<p>In the &quot;info.html&quot; file, there should be an HTML form that will allow the user to enter information to be received by the server.</p>
+<p>In the <strong>info.html</strong> file, there should be an HTML form that will allow the user to enter information to be received by the server.</p>
 <ol>
 <li>At the bottom of the <code>body</code> of the info file, add a <code>&lt;form&gt;&lt;/form&gt;</code> element<ul>
 <li>Set the <code>action</code> attribute of the form to point back to the current place: <code>&apos;/info&apos;</code></li>
@@ -702,9 +702,9 @@
 <li>Under the <code>input</code>, add another <code>&lt;input /&gt;</code> with type <code>submit</code> and value <code>Submit</code></li>
 </ol>
 <h3 id="receiving-the-form-request">Receiving the Form Request</h3>
-<p>In the &quot;app.js&quot; file, in the <code>infoCallback</code> function, there should be code to properly handle GET requests from the new form. The form information will be sent as query parameters.</p>
+<p>In the <strong>app.js</strong> file, in the <code>infoCallback</code> function, there should be code to properly handle GET requests from the new form. The form information will be sent as query parameters.</p>
 <ol>
-<li>At the top of the &quot;app.js&quot; file, import the <code>url</code> module, and store it in a <code>const</code> named <code>url</code></li>
+<li>At the top of the <strong>app.js</strong> file, import the <code>url</code> module, and store it in a <code>const</code> named <code>url</code></li>
 <li>In the body of the <code>infoCallback</code> function, under the <code>infoPath</code> variable declaration, parse the url using <code>url.parse</code><ul>
 <li>Store this in a variable named <code>parsedUrl</code></li>
 </ul>
@@ -715,22 +715,22 @@
 <h2 id="dynamic-pages">Dynamic Pages</h2>
 <p>Now that the server is receiving the form data, it&apos;s possible to respond dynamically!</p>
 <ol>
-<li>Create a new HTML file named &quot;coolInfo.html&quot; in the project directory</li>
-<li>Fill out the &quot;coolInfo.html&quot; file with some cool information</li>
-<li>At the bottom of the HTML body, copy and paste the entire <code>form</code> element from &quot;info.html&quot;<ul>
+<li>Create a new HTML file named <strong>coolInfo.html</strong> in the project directory</li>
+<li>Fill out the <strong>coolInfo.html</strong> file with some cool information</li>
+<li>At the bottom of the HTML body, copy and paste the entire <code>form</code> element from <strong>info.html</strong><ul>
 <li>Copying and pasting like this is not ideal, but it works for now</li>
 </ul>
 </li>
 </ol>
 <h3 id="showing-the-cool-page">Showing the Cool Page</h3>
 <ol>
-<li>Switch back to the &quot;app.js&quot; file, and find the <code>infoCallback</code> function</li>
+<li>Switch back to the <strong>app.js</strong> file, and find the <code>infoCallback</code> function</li>
 <li>Under the <code>parsedUrl</code> variable declaration, get the <code>infoType</code> from the <code>query</code> object, and store it in a variable<ul>
 <li>This should hold whatever the user entered in the form</li>
 </ul>
 </li>
 <li>Create an <code>if</code> statement to check whether the <code>infoType</code> query parameter was &quot;cool&quot;</li>
-<li>If the user <em>did</em> enter &quot;cool&quot;, set the <code>infoPath</code> to point to the new &quot;coolInfo.html&quot; file</li>
+<li>If the user <em>did</em> enter &quot;cool&quot;, set the <code>infoPath</code> to point to the new <strong>coolInfo.html</strong> file</li>
 <li>Load up the server and enter &quot;cool&quot; on the <code>/info</code> page to see the content change dynamically!</li>
 </ol>
 <h2 id="more-info-pages">More Info Pages</h2>
@@ -778,7 +778,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Express Project Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"Express POST Challenge","level":"1.8.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]},"previous":{"title":"Express Project Code-Along","level":"1.8.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectIndividualExercises.md","mtime":"2020-02-03T16:58:11.784Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T16:58:50.492Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Express Project Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"Express POST Challenge","level":"1.8.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]},"previous":{"title":"Express Project Code-Along","level":"1.8.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectIndividualExercises.md","mtime":"2020-02-03T17:23:14.732Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T17:24:04.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

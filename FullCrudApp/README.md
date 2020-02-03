@@ -19,7 +19,7 @@ When the students finish building the CRUD app, they can start on their [Final P
 1. Install the `mysql` npm package
 1. `nodemon`
 
-### "app.js"
+### **app.js**
 1. `mysql.createConnection`
 1. `db.connect`
 
