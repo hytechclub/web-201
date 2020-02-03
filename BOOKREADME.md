@@ -1,7 +1,21 @@
 # Web 201: Full-stack Web Development
 Welcome to the Web 201 Hy-Tech Club course!
 
-## Point Redemption
+## Schedule
+- Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
+- Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
+- Week 3: [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
+- Week 4: [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
+- Week 5: [npm, Express](ExpressProjects/StudentDesc.md)
+- Week 6: [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
+- Week 7: [Databases (MySQL)](DatabasesOverview/StudentDesc.md)
+- Week 8-12: [Building a CRUD App](FullCrudApp/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
+
+
+## Points
+Earn points throughout the semester by asking good questions, answering questions, helping others, working hard, and behaving well!
+
+### Rewards
 Points can be redeemed for a variety of rewards.
 
 | Points | Reward |
@@ -12,13 +26,3 @@ Points can be redeemed for a variety of rewards.
 | 5 | Old picture of an instructor |
 | 10 | Choose a song |
 | 15 | Choose a video |
-
-## Schedule
-- Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
-- Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
-- Week 3: [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
-- Week 4: [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
-- Week 5: [npm, Express](ExpressProjects/StudentDesc.md)
-- Week 6: [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
-- Week 7: [Databases (MySQL)](DatabasesOverview/StudentDesc.md)
-- Week 8-12: [Building a CRUD App](FullCrudApp/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
