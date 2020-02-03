@@ -5,7 +5,7 @@
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 - <a href="JavaScriptArrays.pptx" target="_blank">JavaScript Arrays PowerPoint Presentation</a>
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-- [Objects Code Along](ObjectsCodeAlong.md)
+- [Objects Code-Along](ObjectsCodeAlong.md)
 
 ## Individual Practice
 - [Objects Individual Exercises](ObjectsIndividualExercises.md)

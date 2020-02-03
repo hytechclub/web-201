@@ -1,4 +1,4 @@
-# Simple Server: Code Along
+# Simple Server: Code-Along
 Follow the instructions to create a simple web server using Node.js.
 
 ## Getting Started
