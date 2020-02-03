@@ -2,7 +2,16 @@
 Welcome to the Web 201 Hy-Tech Club course!
 
 ## Point Redemption
-Points can be redeemed for a variety of [rewards](Rewards.md).
+Points can be redeemed for a variety of rewards.
+
+| Points | Reward |
+| -- | -- |
+| 1 | Extra piece of candy |
+| 2 | Shoot a basket |
+| 3 | Short game with an instructor (e.g. [Connect 4](https://www.mathsisfun.com/games/connect4.html), [Soccer](https://www.agame.com/game/1-on-1-soccer-classic)) |
+| 5 | Old picture of an instructor |
+| 10 | Choose a song |
+| 15 | Choose a video |
 
 ## Schedule
 - Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
