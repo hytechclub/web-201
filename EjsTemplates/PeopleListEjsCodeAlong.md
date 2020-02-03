@@ -7,11 +7,11 @@ The current People List app works for a small number of people, but it becomes i
 1. Open a terminal, and `cd` into the People List project folder
 1. Run `npm install ejs --save` to install EJS and add it to the project
 1. In the People List project folder, create a new folder named "views"
-1. Move the "home.html" file and "person0.html" file into the "views" folder
-1. Rename the files to "home.ejs" and "person.ejs"
+1. Move the **home.html** file and **person0.html** file into the "views" folder
+1. Rename the files to **home.ejs** and **person.ejs**
 
-### "app.js" Updates
-Make the following updates to the "app.js" file.
+### **app.js** Updates
+Make the following updates to the **app.js** file.
 
 1. Remove the `path` module import as it is no longer necessary
 1. After the `app` variable is initialized, use the code below to set the "view engine" to "ejs"
@@ -53,11 +53,11 @@ The goal is to have the program dynamically generate an HTML page for each perso
         person: currentPerson
     });
     ```
-1. In the "person.ejs" file, add `<%= JSON.stringify(person) %>` somewhere for testing purposes
+1. In the **person.ejs** file, add `<%= JSON.stringify(person) %>` somewhere for testing purposes
 1. Run the server, load the `/person` page, and make sure that the object displayed changes based on the `index` query parameter!
 
 ## Updating the Person Page Template
-Now that the `person` object is available in the "person.ejs" template, all that's left is updating the template to use the object properties!
+Now that the `person` object is available in the **person.ejs** template, all that's left is updating the template to use the object properties!
 
 1. Replace the existing name with a dynamic piece of code that gets the `first_name` from the `person`, and adds the `last_name` of the `person`
     - Use `<%=` to start the EJS segment
@@ -126,13 +126,13 @@ The background color should be green if the person is alive, and red if the pers
 Now that the person page dynamically loads each individual person, update the home page so that the list of links is generated dynamically too!
 
 ### Setting up the Loop
-1. In the "app.js" file, update the `homePage` function so that it passes `peopleJson` when rendering the page
+1. In the **app.js** file, update the `homePage` function so that it passes `peopleJson` when rendering the page
     ```js
     response.render('home', {
         people: peopleJson
     });
     ```
-1. In the "home.ejs" file, remove all of the `li` elements
+1. In the **home.ejs** file, remove all of the `li` elements
     - They will be dynamically generated!
 1. Within the `ul`, add an EJS segment containing a `for` loop that will loop through all of the people in the `people` array
     ```html
@@ -180,7 +180,7 @@ Now that the person page dynamically loads each individual person, update the ho
 ```
 
 
-## Final "app.js" Code
+## Final **app.js** Code
 ```js
 const express = require('express');
 const url = require('url');

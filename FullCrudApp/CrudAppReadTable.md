@@ -23,10 +23,10 @@ First, create the HTML table structure without using any actual data. This will 
     - Midfielder
     - 15
 1. At the bottom of the file, under the closing `div` tag, add closing tags for `div`, `body`, and `html`
-    - These were opened in the "header.ejs" file
+    - These were opened in the **header.ejs** file
 1. Load up the homepage and verify that the table appears properly!
 
-### "index.ejs"
+### **index.ejs**
 ```html
 <%- include('partials/header'); %>
 <div>
@@ -88,7 +88,7 @@ If there are no players in the database, a message saying "No players found" sho
 1. Delete all players from the `players` table
 1. Load up the homepage again to verify that the table does not appear, and the message does!
 
-### "index.ejs"
+### **index.ejs**
 ```html
 <%- include('partials/header'); %>
 <div>

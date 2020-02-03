@@ -2,7 +2,7 @@
 Now that the "Edit Player" page loads properly, all that's left is making it actually update the player data. Create a handler function that updates the database, and hook it up to the `/edit/:id` endpoint.
 
 ## Creating the Handler Function
-1. In the "player.js" file, add a new function to the `module.exports` object named `editPlayer`
+1. In the **player.js** file, add a new function to the `module.exports` object named `editPlayer`
 1. Make the function take in two parameters: `request` and `response`
 1. In the body of the function, declare a new variable `playerId` and set it to `request.params.id`
     - This will be the route parameter from the URL
@@ -48,7 +48,7 @@ editPlayer: function (request, response) {
 ```
 
 ## Hooking up the Route
-1. In the "app.js" file, under the `app.post` route, add another `app.post` to hook up the `editPlayer` function to the `/edit/:id` route:
+1. In the **app.js** file, under the `app.post` route, add another `app.post` to hook up the `editPlayer` function to the `/edit/:id` route:
     ```js
     app.post('/edit/:id', player.editPlayer);
     ```

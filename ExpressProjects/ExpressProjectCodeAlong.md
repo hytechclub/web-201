@@ -11,7 +11,7 @@ Follow the steps below to create an npm project that uses Express to run a simpl
 1. Enter a proper name for "package name" and press `Enter`
 1. Simply press `Enter` for "version" to take the default
 1. Enter a description and press `Enter`
-1. For "entry point," type in "app.js"
+1. For "entry point," type in **app.js**
     - This will be the starting file for the web server
 1. Skip the "test command," "git repository," "keywords," "author," and "license" by pressing `Enter` without typing anything
 1. Press `Enter` once more to finish creating the project!
@@ -28,10 +28,10 @@ Follow the steps below to create an npm project that uses Express to run a simpl
     }
 1. Additionally, notice that a "node_modules" directory and a "package-lock.json" file should have been generated
     - The "node_modules" folder contains all the code necessary for all dependencies, and "package-lock.json" handles versioning for dependencies
-1. In the directory, create a new file named "app.js"
+1. In the directory, create a new file named **app.js**
 
 ## Creating a Simple Express Web App
-At first, creating an Express web server is a lot like creating a web server with the `http` module. However, the capabilities of the Express framework make it much easier to go beyond the basics. Start building the server in the "app.js" file by following the steps below.
+At first, creating an Express web server is a lot like creating a web server with the `http` module. However, the capabilities of the Express framework make it much easier to go beyond the basics. Start building the server in the **app.js** file by following the steps below.
 
 1. Import the `express` module using `require`, and store it in a `const` variable named `express`
 1. Create `const` variables for `hostname` and `port`
@@ -88,9 +88,9 @@ app.get('/info', infoCallback);
 ## Sending HTML Files
 So far the webpages are not very exciting, but it would be very annoying put a lot of HTML into a template string. Instead, Express makes it possible to send a whole HTML file as a response!
 
-1. Create a new file in the project directory named "info.html"
+1. Create a new file in the project directory named **info.html**
 1. Fill out some basic HTML in the file
-1. At the top of the "app.js" file, import the `path` module and store it in a variable
+1. At the top of the **app.js** file, import the `path` module and store it in a variable
     ```js
     const path = require('path');
     ```
@@ -100,7 +100,7 @@ So far the webpages are not very exciting, but it would be very annoying put a l
     let infoPath = path.join(__dirname, 'info.html');
     ```
 1. Use `response.sendFile` to pass HTML file to the response
-1. Load up the server and check out the `/info` endpoint to make sure the "info.html" file renders properly!
+1. Load up the server and check out the `/info` endpoint to make sure the **info.html** file renders properly!
 
 ## Final Code
 ```js

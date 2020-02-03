@@ -4,7 +4,7 @@ Follow the instructions to create a small console app using Node.js. Make sure N
 **Note: Although the language is JavaScript, this is actually the _back-end_ of the stack. Node.js uses the same JavaScript as the front-end, but on the server side.**
 
 ## "Hello World" App
-1. Create a new file named "app.js" in the current directory
+1. Create a new file named **app.js** in the current directory
     - This can be done using VS Code OR using the command line
 1. Open the file in VS Code, and enter the following text:
     ```js
@@ -21,7 +21,7 @@ Follow the instructions to create a small console app using Node.js. Make sure N
 
 ## ASCII Art Bunny
 1. Comment out the "Hello World" message
-1. In the "app.js" file, define a function named `drawBunny` (no parameters)
+1. In the **app.js** file, define a function named `drawBunny` (no parameters)
 1. In the body of the `drawBunny` function, add a `console.log` statement
 1. Use [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) to create a multi-line bunny and log it to the console:
     ```

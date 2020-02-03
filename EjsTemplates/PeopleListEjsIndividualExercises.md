@@ -2,7 +2,7 @@
 Update the People List application by completing the following exercises.
 
 ## Updating the Person Page Styles
-1. In the "person.ejs" file, set the font to "Chiller" if the person is dead
+1. In the **person.ejs** file, set the font to "Chiller" if the person is dead
 1. Set the font to "Arial" if the person is alive
 1. If the person has "Engineer" in their job title, set the text color to yellow
     - Reference: [https://www.w3schools.com/jsref/jsref_includes.asp](https://www.w3schools.com/jsref/jsref_includes.asp)
@@ -13,16 +13,16 @@ Update the People List application by completing the following exercises.
 1. Update the image so that it points to the given person's avatar
 
 ## Adding Pagination
-1. In the "app.js" file, in the `personPage` function, add an `index` property to the object passed to `response.render`
+1. In the **app.js** file, in the `personPage` function, add an `index` property to the object passed to `response.render`
     - The value should be the `index` from the query parameter
-1. In the "person.ejs" file, at the bottom, add an `a` that links to the previous page
+1. In the **person.ejs** file, at the bottom, add an `a` that links to the previous page
     - The `href` should be `/person?index=` with the previous index
 1. Under the "previous page" link, add another `a` that links to the next page
 1. Use EJS to create an `if` statement that shows the "previous page" link only if the current `index` is not `0`
 1. Use EJS to create an `if` statement that shows the "next page" link only if the current `index` is not the last item in the list
 
 ## Alphabetic List Sorting
-1. In the "app.js" file, in the `homePage` function, add code to handle a `sort` query parameter
+1. In the **app.js** file, in the `homePage` function, add code to handle a `sort` query parameter
 1. If the `sort` query parameter is `true`, send over the array of people _sorted_ in alphabetical order
 1. If the `sort` query parameter is anything else, send the normal array
 1. Add links on the `/home` page to sort/unsort the list of people

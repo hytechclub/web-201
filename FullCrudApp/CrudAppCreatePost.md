@@ -4,17 +4,17 @@ Create a POST request handler that will take the data from the "Add Player" form
 When a user fills out the "Add Player" form and clicks the submit button, it will send a POST request to `/add` (as specified in the attributes of the form). The data will be labeled based on the `name` attributes of the `input` elements. The server should take that POST request, and use the data to insert a new player into the `players` table in the database.
 
 ## Hooking up an "Add Player" Request Handler
-1. In the "player.js" file, add a new module export property named `addPlayer`
+1. In the **player.js** file, add a new module export property named `addPlayer`
     - Make sure to add a comma after the `addPlayerPage` function
 1. Set the value of `addPlayer` to be a function with `request` and `response` as parameters
 1. In the body of the `addPlayer` function, log `request.body` to the console
 1. After the console log, redirect to the homepage with `response.redirect('/')`
-1. In the "app.js" file, under the `app.set`, tell the `app` to use the proper middleware to handle POST data:
+1. In the **app.js** file, under the `app.set`, tell the `app` to use the proper middleware to handle POST data:
     ```js
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
     ```
-1. In the "app.js" file, under the `app.get` routes, add an `app.post` to hook up the `addPlayer` function to the `/add` route:
+1. In the **app.js** file, under the `app.get` routes, add an `app.post` to hook up the `addPlayer` function to the `/add` route:
     ```js
     app.post('/add', player.addPlayer);
     ```
@@ -22,7 +22,7 @@ When a user fills out the "Add Player" form and clicks the submit button, it wil
 
 
 ## Handling the POST Data
-Update the `addPlayer` function in "player.js" so that it takes the player data from the POST request and adds it to the database.
+Update the `addPlayer` function in **player.js** so that it takes the player data from the POST request and adds it to the database.
 
 1. Remove all code from the body of the `addPlayer` function
 1. Declare a new variable `first_name` and set it to the "First Name" data from the form:
@@ -43,7 +43,7 @@ Update the `addPlayer` function in "player.js" so that it takes the player data 
 1. If there is no error in the callback, that means the `INSERT INTO` was successful; redirect to the homepage with `response.redirect`
 1. Load up the "Add Player" page, submit the form, and verify that the data appears in the database!
 
-## "player.js"
+## **player.js**
 ```js
 module.exports = {
     // Load the form to add a player - GET

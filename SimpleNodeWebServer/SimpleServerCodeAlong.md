@@ -2,7 +2,7 @@
 Follow the instructions to create a simple web server using Node.js.
 
 ## Getting Started
-1. Create a new file named "server.js" in the current directory
+1. Create a new file named **server.js** in the current directory
 1. Add the line to import the `http` module:
     ```js
     const http = require('http');
@@ -88,7 +88,7 @@ function serverCallback(request, response) {
 ## Using Query Parameters to Change the Response
 To make the server a little more dynamic, add the ability to respond to query parameters! The page should say "Hello World" if the user passes along `world=1`, and "There is no world" for any other value (or no value).
 
-1. At the very top of the "server.js" file, import the `url` module
+1. At the very top of the **server.js** file, import the `url` module
     ```js
     const url = require('url');
     ```

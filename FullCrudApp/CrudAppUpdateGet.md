@@ -4,7 +4,7 @@ Add a form to the web app that will allow the user to edit the information for a
 ## Routing the GET Handler
 The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. This means the user can direct their browser to `http://127.0.0.1:5000/edit/5` and the handler will know that the user is editing the player with an `id` of `5`.
 
-1. In the `module.exports` object in the "player.js" file, define a new `editPlayerPage` function with `request` and `response` parameters
+1. In the `module.exports` object in the **player.js** file, define a new `editPlayerPage` function with `request` and `response` parameters
 1. In the body of the `editPlayerPage` function, log `request.params.id` to the console
 1. Under the log, use `request.render` to render the "edit-player.ejs" page
     ```js
@@ -13,7 +13,7 @@ The GET request for the "Edit Player" page requires a player `id` to render. The
         response.render('edit-player');
     }
     ```
-1. In the "app.js" file, under the `app.get` calls, add another `app.get` to hook up `/edit:id` to `player.editPlayerPage`
+1. In the **app.js** file, under the `app.get` calls, add another `app.get` to hook up `/edit:id` to `player.editPlayerPage`
     - This means that whatever comes after the `edit/` will be mapped to the `id` property of `params` in the handler
 1. Navigate to the `/edit/5` route and verify that `5` is properly logged in the console as the `id`!
 
@@ -66,7 +66,7 @@ editPlayerPage: function (request, response) {
 Currently, the "edit-player.ejs" file can only handle adding new players. Update the EJS so that it will dynamically handle adding _or_ editing players. If it is editing an existing player, the player data should be auto-filled in the form.
 
 ### Passing the `add` Flag
-1. In the "player.js" file, find the `addPlayerPage` function
+1. In the **player.js** file, find the `addPlayerPage` function
 1. Update the `response.render` call, and pass in `{ add: true }` for the data parameter
 1. In the `editPlayerPage` function, update the `response.render` call and pass in `add: false`
     - This will allow the EJS to render differently for the "Add Player" page and the "Edit Player" page
@@ -143,7 +143,7 @@ Currently, the "edit-player.ejs" file can only handle adding new players. Update
 ## Adding the Edit Buttons
 Now that the "Edit Player" page loads properly, the user needs a way to navigate to it! Add "Edit" buttons to each player in the home page table.
 
-1. In the "index.ejs" file, add another `th` to the `table` header row with the text "Action"
+1. In the **index.ejs** file, add another `th` to the `table` header row with the text "Action"
 1. Within the `for` loop row, add another `td` under the number `td`
 1. Within the new `td`, add an `a` with the text "Edit" that points the user to `/edit/` with the player's `id`
 1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a green button

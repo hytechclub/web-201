@@ -2,7 +2,7 @@
 Follow the instructions to create a small Node console app that creates and manipulates a JavaScript object.
 
 ## Starter App
-1. Create a new file named "object.js" in the current directory
+1. Create a new file named **object.js** in the current directory
     - This can be done using VS Code OR using the command line
 1. Open the file in VS Code, and enter the following text:
     ```js

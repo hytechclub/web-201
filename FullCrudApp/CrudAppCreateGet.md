@@ -6,12 +6,12 @@ To properly handle the GET request for the "Add Player" page, it is necessary to
 
 1. In the "views" folder, create a new file named "edit-player.ejs"
     - For testing purposes, add an HTML header to the file saying "Add Player"
-1. In the routes folder, create a new file named "player.js"
-1. In the "player.js" file, set `module.exports` equal to a new empty object
+1. In the routes folder, create a new file named **player.js**
+1. In the **player.js** file, set `module.exports` equal to a new empty object
 1. In the `module.exports` object, set a property named `addPlayerPage` to a new function with `request` and `response` parameters
 1. In the body of the `addPlayerPage` function, call `response.render` and pass in "edit-player"
 
-### "player.js"
+### **player.js**
 ```js
 module.exports = {
     // Load the form to add a player - GET
@@ -25,9 +25,9 @@ module.exports = {
 ## Hooking up the Route
 Update the app so that `/add` loads up the "Add Player" page, and there is a link to `/add` in the nav bar.
 
-1. In the "app.js" file, under the `index` module, `require` the `./routes/player` module and put it in `const player`
+1. In the **app.js** file, under the `index` module, `require` the `./routes/player` module and put it in `const player`
 1. Under the `app.get` call, add another `app.get` to hook up `/add` to `player.addPlayerPage`
-1. In the "header.ejs" file, add an `a` to the navbar that links to the `/add` page
+1. In the **header.ejs** file, add an `a` to the navbar that links to the `/add` page
     ```html
     <a class="float-right" href="/add">Add a Player</a>
     ```
@@ -36,7 +36,7 @@ Update the app so that `/add` loads up the "Add Player" page, and there is a lin
 ## Filling out the "Add Player" EJS
 Update the "edit-player.ejs" file so that it properly renders an HTML form that takes in Soccer Player information.
 
-1. Replace the test HTML in "edit-player.ejs" with EJS to include the "header.ejs" partial
+1. Replace the test HTML in "edit-player.ejs" with EJS to include the **header.ejs** partial
 1. Create a `div` with a `class` of "container"
 1. Within the "container" `div`, create a `form` that will POST to `add/` on submit
     - Set its `method` to `"post"`

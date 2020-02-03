@@ -21,13 +21,13 @@
     - This will tell Git to ignore the "node_modules" folder
 1. Install a new package named `nodemon` globally with `npm install -g nodemon`
     - `nodemon` is a magical command line tool that rebuilds a Node app with every change
-1. Create a file in the project folder named "app.js"
-1. For testing purposes, add a `console.log('Hello World')` in "app.js"
+1. Create a file in the project folder named **app.js**
+1. For testing purposes, add a `console.log('Hello World')` in **app.js**
 1. In the terminal, run the following command:
     ```
     nodemon
     ```
-1. Make a change to the "app.js" code, and notice that the app is rebuilt automatically!
+1. Make a change to the **app.js** code, and notice that the app is rebuilt automatically!
 
 The folder structure so far should look like this:
 
