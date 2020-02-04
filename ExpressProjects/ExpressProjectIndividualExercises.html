@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L2 - Introduction to the Command Line · GitBook</title>
+        <title>Express Project Individual Exercises · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScriptFunctions/StudentDesc.html" />
+    <link rel="next" href="ExpressPostChallenge.html" />
     
     
-    <link rel="prev" href="../FullStackOverview/StudentDesc.html" />
+    <link rel="prev" href="ExpressProjectCodeAlong.html" />
     
 
     </head>
@@ -119,9 +119,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.3" data-path="../CommandLine/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../CommandLine/StudentDesc.html">
             
                     
                     L2 - Introduction to the Command Line
@@ -306,9 +306,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../ExpressProjects/StudentDesc.html">
+        <li class="chapter " data-level="1.8" data-path="StudentDesc.html">
             
-                <a href="../ExpressProjects/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L7 - npm, Express
@@ -320,9 +320,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../ExpressProjects/ExpressProjectCodeAlong.html">
+        <li class="chapter " data-level="1.8.1" data-path="ExpressProjectCodeAlong.html">
             
-                <a href="../ExpressProjects/ExpressProjectCodeAlong.html">
+                <a href="ExpressProjectCodeAlong.html">
             
                     
                     Express Project Code-Along
@@ -333,9 +333,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../ExpressProjects/ExpressProjectIndividualExercises.html">
+        <li class="chapter active" data-level="1.8.2" data-path="ExpressProjectIndividualExercises.html">
             
-                <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
+                <a href="ExpressProjectIndividualExercises.html">
             
                     
                     Express Project Individual Exercises
@@ -346,9 +346,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.3" data-path="../ExpressProjects/ExpressPostChallenge.html">
+        <li class="chapter " data-level="1.8.3" data-path="ExpressPostChallenge.html">
             
-                <a href="../ExpressProjects/ExpressPostChallenge.html">
+                <a href="ExpressPostChallenge.html">
             
                     
                     Express POST Challenge
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L2 - Introduction to the Command Line</a>
+        <a href=".." >Express Project Individual Exercises</a>
     </h1>
 </div>
 
@@ -674,15 +674,67 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="web-201---introduction-to-the-command-line">Web 201 - Introduction to the Command Line</h1>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="CommandLine.pptx" target="_blank">Command Line PowerPoint Presentation</a></li>
+                                <h1 id="express-web-server-project-individual-exercises">Express Web Server Project: Individual Exercises</h1>
+<p>Complete the following exercises to update the Express project and personalize it.</p>
+<h2 id="a-new-home">A New &quot;Home&quot;</h2>
+<ol>
+<li>Create a new HTML file named <strong>home.html</strong> in the project directory</li>
+<li>In the <strong>home.html</strong> file, add some HTML to create a custom page welcoming the user<ul>
+<li>It should have a link to the &quot;info&quot; page</li>
+<li>It can also have pictures and introductory information</li>
 </ul>
-<h2 id="individual-practice">Individual Practice</h2>
-<ul>
-<li><a href="http://www.mprat.org/Terminus/" target="_blank">Terminus Game</a></li>
+</li>
+<li>Update the server code so that when the user hits the <code>&apos;/&apos;</code> endpoint, it sends the <strong>home.html</strong> page</li>
+<li>Run the server and test it out to make sure the homepage appears</li>
+</ol>
+<h2 id="an-info-form">An Info Form</h2>
+<p>In the <strong>info.html</strong> file, there should be an HTML form that will allow the user to enter information to be received by the server.</p>
+<ol>
+<li>At the bottom of the <code>body</code> of the info file, add a <code>&lt;form&gt;&lt;/form&gt;</code> element<ul>
+<li>Set the <code>action</code> attribute of the form to point back to the current place: <code>&apos;/info&apos;</code></li>
 </ul>
+</li>
+<li>Within the form, add a <code>&lt;p&gt;&lt;/p&gt;</code> that says &quot;What type of information would you like?&quot;</li>
+<li>Under the <code>p</code>, add a text <code>&lt;input /&gt;</code><ul>
+<li>Set the <code>name</code> attribute of the input to <code>&apos;infoType&apos;</code></li>
+</ul>
+</li>
+<li>Under the <code>input</code>, add another <code>&lt;input /&gt;</code> with type <code>submit</code> and value <code>Submit</code></li>
+</ol>
+<h3 id="receiving-the-form-request">Receiving the Form Request</h3>
+<p>In the <strong>app.js</strong> file, in the <code>infoCallback</code> function, there should be code to properly handle GET requests from the new form. The form information will be sent as query parameters.</p>
+<ol>
+<li>At the top of the <strong>app.js</strong> file, import the <code>url</code> module, and store it in a <code>const</code> named <code>url</code></li>
+<li>In the body of the <code>infoCallback</code> function, under the <code>infoPath</code> variable declaration, parse the url using <code>url.parse</code><ul>
+<li>Store this in a variable named <code>parsedUrl</code></li>
+</ul>
+</li>
+<li>Log the <code>query</code> property from the <code>parsedUrl</code> object</li>
+<li>Load up the server, navigate to the <code>/info</code> page, and submit the form to see the <code>query</code> object in the console!</li>
+</ol>
+<h2 id="dynamic-pages">Dynamic Pages</h2>
+<p>Now that the server is receiving the form data, it&apos;s possible to respond dynamically!</p>
+<ol>
+<li>Create a new HTML file named <strong>coolInfo.html</strong> in the project directory</li>
+<li>Fill out the <strong>coolInfo.html</strong> file with some cool information</li>
+<li>At the bottom of the HTML body, copy and paste the entire <code>form</code> element from <strong>info.html</strong><ul>
+<li>Copying and pasting like this is not ideal, but it works for now</li>
+</ul>
+</li>
+</ol>
+<h3 id="showing-the-cool-page">Showing the Cool Page</h3>
+<ol>
+<li>Switch back to the <strong>app.js</strong> file, and find the <code>infoCallback</code> function</li>
+<li>Under the <code>parsedUrl</code> variable declaration, get the <code>infoType</code> from the <code>query</code> object, and store it in a variable<ul>
+<li>This should hold whatever the user entered in the form</li>
+</ul>
+</li>
+<li>Create an <code>if</code> statement to check whether the <code>infoType</code> query parameter was &quot;cool&quot;</li>
+<li>If the user <em>did</em> enter &quot;cool&quot;, set the <code>infoPath</code> to point to the new <strong>coolInfo.html</strong> file</li>
+<li>Load up the server and enter &quot;cool&quot; on the <code>/info</code> page to see the content change dynamically!</li>
+</ol>
+<h2 id="more-info-pages">More Info Pages</h2>
+<p>Create additional HTML pages, and make the <code>infoCallback</code> function properly route to them based on input from the user!</p>
 
                                 
                                 </section>
@@ -710,12 +762,12 @@
 
             
                 
-                <a href="../FullStackOverview/StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L1 - Full-stack Overview">
+                <a href="ExpressProjectCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Express Project Code-Along">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScriptFunctions/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L3 - JavaScript Functions (Callbacks)">
+                <a href="ExpressPostChallenge.html" class="navigation navigation-next " aria-label="Next page: Express POST Challenge">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -726,7 +778,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L2 - Introduction to the Command Line","level":"1.3","depth":1,"next":{"title":"L3 - JavaScript Functions (Callbacks)","level":"1.4","depth":1,"path":"JavaScriptFunctions/StudentDesc.md","ref":"JavaScriptFunctions/StudentDesc.md","articles":[{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]}]},"previous":{"title":"L1 - Full-stack Overview","level":"1.2","depth":1,"path":"FullStackOverview/StudentDesc.md","ref":"FullStackOverview/StudentDesc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CommandLine/StudentDesc.md","mtime":"2020-02-04T20:30:54.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Express Project Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"Express POST Challenge","level":"1.8.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]},"previous":{"title":"Express Project Code-Along","level":"1.8.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectIndividualExercises.md","mtime":"2020-02-04T20:30:54.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L2 - Introduction to the Command Line · GitBook</title>
+        <title>Simple Server Individual Exercises · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScriptFunctions/StudentDesc.html" />
+    <link rel="next" href="../ExpressProjects/StudentDesc.html" />
     
     
-    <link rel="prev" href="../FullStackOverview/StudentDesc.html" />
+    <link rel="prev" href="SimpleServerCodeAlong.html" />
     
 
     </head>
@@ -119,9 +119,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.3" data-path="../CommandLine/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../CommandLine/StudentDesc.html">
             
                     
                     L2 - Introduction to the Command Line
@@ -261,9 +261,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../SimpleNodeWebServer/StudentDesc.html">
+        <li class="chapter " data-level="1.7" data-path="StudentDesc.html">
             
-                <a href="../SimpleNodeWebServer/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L6 - Simple Node Web Server
@@ -275,9 +275,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+        <li class="chapter " data-level="1.7.1" data-path="SimpleServerCodeAlong.html">
             
-                <a href="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+                <a href="SimpleServerCodeAlong.html">
             
                     
                     Simple Server Code-Along
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+        <li class="chapter active" data-level="1.7.2" data-path="SimpleServerIndividualExercises.html">
             
-                <a href="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+                <a href="SimpleServerIndividualExercises.html">
             
                     
                     Simple Server Individual Exercises
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L2 - Introduction to the Command Line</a>
+        <a href=".." >Simple Server Individual Exercises</a>
     </h1>
 </div>
 
@@ -674,15 +674,114 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="web-201---introduction-to-the-command-line">Web 201 - Introduction to the Command Line</h1>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="CommandLine.pptx" target="_blank">Command Line PowerPoint Presentation</a></li>
+                                <h1 id="simple-server-individual-exercises">Simple Server: Individual Exercises</h1>
+<p>Using the &quot;Hello World&quot; web server as a starting point, complete the following exercises.</p>
+<h2 id="message-query-parameter">Message Query Parameter</h2>
+<ol>
+<li>Use the parsed URL object to obtain the value of a query parameter <code>msg</code>, and store it in a variable</li>
+<li>Use a template string and string interpolation to create an HTML paragraph element with the text &quot;You said <code>&lt;msg&gt;</code>&quot; and write it to the <code>response</code> object</li>
+<li>If the user did not specify a <code>msg</code> query parameter, say &quot;You said nothing&quot; instead<ul>
+<li>This can be determined by checking if <code>msg</code> is equal to <code>undefined</code></li>
 </ul>
-<h2 id="individual-practice">Individual Practice</h2>
-<ul>
-<li><a href="http://www.mprat.org/Terminus/" target="_blank">Terminus Game</a></li>
+</li>
+</ol>
+<h2 id="background-color-query-parameter">Background Color Query Parameter</h2>
+<ol>
+<li>Use the parsed URL object to obtain the value of a query parameter <code>bg</code>, and store it in a variable</li>
+<li>Write a <code>&lt;style&gt;&lt;/style&gt;</code> HTML element to the <code>response</code> object that sets the background color of the whole page to be what the user specified with the query parameter</li>
+</ol>
+<h2 id="background-color-links">Background Color Links</h2>
+<ol>
+<li>Use a template string to create an HTML anchor element within a paragraph<ul>
+<li>Set the <code>href</code> attribute of the <code>a</code> element to &quot;?orange&quot;</li>
+<li>Set the text of the <code>a</code> element to &quot;Make background orange&quot;</li>
 </ul>
+</li>
+<li>Write the <code>a</code> paragraph to the <code>response</code> object</li>
+<li>Repeat the steps above to create links for &quot;lavender&quot; and &quot;yellow&quot; in addition to orange</li>
+</ol>
+<h3 id="challenge">Challenge</h3>
+<ol>
+<li>Create an array of color strings, including <code>&apos;orange&apos;, &apos;lavender&apos;, &apos;yellow&apos;</code></li>
+<li>Use a <code>for</code> loop to dynamically generate the anchor elements based on the color array, and write all of them to the <code>response</code></li>
+</ol>
+<h2 id="challenge---pages-of-people">CHALLENGE - Pages of People</h2>
+<p>Use this code for the <code>names</code> array:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> names = [
+  <span class="hljs-string">&apos;Wesley Malecha&apos;</span>,
+  <span class="hljs-string">&apos;Glenna Hillman&apos;</span>,
+  <span class="hljs-string">&apos;Shenita Cheney&apos;</span>,
+  <span class="hljs-string">&apos;Ja Woodside&apos;</span>,
+  <span class="hljs-string">&apos;Rafael Wolken&apos;</span>,
+  <span class="hljs-string">&apos;Samuel Studer&apos;</span>,
+  <span class="hljs-string">&apos;Nadene Rita&apos;</span>,
+  <span class="hljs-string">&apos;Kathie Crosland&apos;</span>,
+  <span class="hljs-string">&apos;Roxanna Scogin&apos;</span>,
+  <span class="hljs-string">&apos;Stan Croxton&apos;</span>,
+  <span class="hljs-string">&apos;Yuki Hosch&apos;</span>,
+  <span class="hljs-string">&apos;Shantae Dirksen&apos;</span>,
+  <span class="hljs-string">&apos;Harriette Berthelot&apos;</span>,
+  <span class="hljs-string">&apos;Jennie Parman&apos;</span>,
+  <span class="hljs-string">&apos;Louanne Oland&apos;</span>,
+  <span class="hljs-string">&apos;Ebony Bushey&apos;</span>,
+  <span class="hljs-string">&apos;Tom Sanger&apos;</span>,
+  <span class="hljs-string">&apos;Shemeka Righter&apos;</span>,
+  <span class="hljs-string">&apos;Jetta Zaremba&apos;</span>,
+  <span class="hljs-string">&apos;Adrianne Commons&apos;</span>,
+  <span class="hljs-string">&apos;Clay Renninger&apos;</span>,
+  <span class="hljs-string">&apos;Raleigh Howley&apos;</span>,
+  <span class="hljs-string">&apos;Maryln Leven&apos;</span>,
+  <span class="hljs-string">&apos;Dominica Paik&apos;</span>,
+  <span class="hljs-string">&apos;Peter Yocum&apos;</span>,
+  <span class="hljs-string">&apos;Gabriela Kubala&apos;</span>,
+  <span class="hljs-string">&apos;Gino Phinney&apos;</span>,
+  <span class="hljs-string">&apos;Lavona Vidal&apos;</span>,
+  <span class="hljs-string">&apos;Angelique Fontanez&apos;</span>,
+  <span class="hljs-string">&apos;Waldo Hagwood&apos;</span>,
+  <span class="hljs-string">&apos;Jacquie Mellon&apos;</span>,
+  <span class="hljs-string">&apos;Velva Vitagliano&apos;</span>,
+  <span class="hljs-string">&apos;Eun Flora&apos;</span>,
+  <span class="hljs-string">&apos;Virgil Trimble&apos;</span>,
+  <span class="hljs-string">&apos;Kurt Mallon&apos;</span>,
+  <span class="hljs-string">&apos;Donella Mcardle&apos;</span>,
+  <span class="hljs-string">&apos;Maud Guider&apos;</span>,
+  <span class="hljs-string">&apos;Holli Champlin&apos;</span>,
+  <span class="hljs-string">&apos;Rosalie Rook&apos;</span>,
+  <span class="hljs-string">&apos;Ina Leonard&apos;</span>,
+  <span class="hljs-string">&apos;Eliseo Spoto&apos;</span>,
+  <span class="hljs-string">&apos;Teisha Wilhoit&apos;</span>,
+  <span class="hljs-string">&apos;Lachelle Augustus&apos;</span>,
+  <span class="hljs-string">&apos;Kristel Dennis&apos;</span>,
+  <span class="hljs-string">&apos;Jeannetta Oller&apos;</span>,
+  <span class="hljs-string">&apos;Scottie Steptoe&apos;</span>,
+  <span class="hljs-string">&apos;Margit Stockwell&apos;</span>,
+  <span class="hljs-string">&apos;Minh Blau&apos;</span>,
+  <span class="hljs-string">&apos;Maegan Burling&apos;</span>,
+  <span class="hljs-string">&apos;Floria Bakley&apos;</span>
+];
+</code></pre>
+<p>There are 50 total names, and there should be 10 names appearing on each page. This way, names 1-10 will appear on page 1, names 11-20 will appear on page 2, and so on. There should be dynamically-generated links at the bottom of the list to go to the &quot;Next Page&quot; or the &quot;Previous Page&quot; depending on the current page. For example, if the user is on page 2, the &quot;Next Page&quot; link should send them to page 3, and the &quot;Previous Page&quot; link should send them to page 1. If there is no next page or previous page, no link should appear.</p>
+<ol>
+<li>Create a <code>names</code> array that contains 50 names (above)</li>
+<li>Use the parsed URL object to obtain the value of a query parameter <code>page</code></li>
+<li>Convert the parameter value into a number using the <code>Number()</code> function, and store it in a variable</li>
+<li>Use the <code>isNan()</code> function to check if the value is a number, and if it is not, set it to <code>1</code></li>
+<li>If the page value is less than 1 or greater than 5, set it to <code>1</code></li>
+<li>Write an <code>h3</code> with the text &quot;People&quot; to the response</li>
+<li>Write the opening tag of a <code>ul</code> to the response</li>
+<li>Use a <code>for</code> loop to dynamically write the appropriate names, each within an <code>li</code> element, to the response<ul>
+<li>There should be <code>10</code> names total</li>
+<li>The starting point should be based on the current <code>page</code></li>
+</ul>
+</li>
+<li>Write the closing tag of the <code>ul</code></li>
+<li>If appropriate, create an HTML link that links to the previous page, and write it to the response</li>
+<li>If appropriate, create an HTML link that links to the next page, and write it to the response</li>
+</ol>
+<h2 id="post-request-with-a-form">POST Request with a Form</h2>
+<p>Figure out how to use an HTML form to make a POST request to the server. </p>
+<h2 id="anything-else">Anything Else!</h2>
+<p>Think about what is possible with HTML pages and query parameters and try to create something new. </p>
 
                                 
                                 </section>
@@ -710,12 +809,12 @@
 
             
                 
-                <a href="../FullStackOverview/StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L1 - Full-stack Overview">
+                <a href="SimpleServerCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Simple Server Code-Along">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScriptFunctions/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L3 - JavaScript Functions (Callbacks)">
+                <a href="../ExpressProjects/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L7 - npm, Express">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -726,7 +825,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L2 - Introduction to the Command Line","level":"1.3","depth":1,"next":{"title":"L3 - JavaScript Functions (Callbacks)","level":"1.4","depth":1,"path":"JavaScriptFunctions/StudentDesc.md","ref":"JavaScriptFunctions/StudentDesc.md","articles":[{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]}]},"previous":{"title":"L1 - Full-stack Overview","level":"1.2","depth":1,"path":"FullStackOverview/StudentDesc.md","ref":"FullStackOverview/StudentDesc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CommandLine/StudentDesc.md","mtime":"2020-02-04T20:30:54.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.7.2","depth":2,"next":{"title":"L7 - npm, Express","level":"1.8","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Project Code-Along","level":"1.8.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Project Individual Exercises","level":"1.8.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.8.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.7.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2020-02-04T20:30:54.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

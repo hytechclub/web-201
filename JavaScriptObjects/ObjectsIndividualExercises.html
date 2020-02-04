@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L2 - Introduction to the Command Line · GitBook</title>
+        <title>Objects Individual Exercises · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScriptFunctions/StudentDesc.html" />
+    <link rel="next" href="FoodJsonChallenges.html" />
     
     
-    <link rel="prev" href="../FullStackOverview/StudentDesc.html" />
+    <link rel="prev" href="ObjectsCodeAlong.html" />
     
 
     </head>
@@ -119,9 +119,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.3" data-path="../CommandLine/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../CommandLine/StudentDesc.html">
             
                     
                     L2 - Introduction to the Command Line
@@ -190,9 +190,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../JavaScriptObjects/StudentDesc.html">
+        <li class="chapter " data-level="1.5" data-path="StudentDesc.html">
             
-                <a href="../JavaScriptObjects/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L4 - JavaScript Objects / JSON
@@ -204,9 +204,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../JavaScriptObjects/ObjectsCodeAlong.html">
+        <li class="chapter " data-level="1.5.1" data-path="ObjectsCodeAlong.html">
             
-                <a href="../JavaScriptObjects/ObjectsCodeAlong.html">
+                <a href="ObjectsCodeAlong.html">
             
                     
                     Objects Code-Along
@@ -217,9 +217,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
+        <li class="chapter active" data-level="1.5.2" data-path="ObjectsIndividualExercises.html">
             
-                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
+                <a href="ObjectsIndividualExercises.html">
             
                     
                     Objects Individual Exercises
@@ -230,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
+        <li class="chapter " data-level="1.5.3" data-path="FoodJsonChallenges.html">
             
-                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
+                <a href="FoodJsonChallenges.html">
             
                     
                     Food JSON Challenges
@@ -659,7 +659,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L2 - Introduction to the Command Line</a>
+        <a href=".." >Objects Individual Exercises</a>
     </h1>
 </div>
 
@@ -674,15 +674,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="web-201---introduction-to-the-command-line">Web 201 - Introduction to the Command Line</h1>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="CommandLine.pptx" target="_blank">Command Line PowerPoint Presentation</a></li>
+                                <h1 id="javascript-objects-individual-exercises">JavaScript Objects: Individual Exercises</h1>
+<p>Complete the exercises below to practice working with JavaScript objects and arrays. Start with the following <code>movies</code> array:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> movies = [
+    {
+        title: <span class="hljs-string">&apos;Mulan&apos;</span>,
+        runtime: <span class="hljs-number">97</span>,
+        showtimes: [
+            <span class="hljs-string">&apos;5:40PM&apos;</span>,
+            <span class="hljs-string">&apos;7:25PM&apos;</span>,
+            <span class="hljs-string">&apos;10:05PM&apos;</span>,
+        ]
+    },
+    {
+        title: <span class="hljs-string">&apos;Godzilla vs. Kong&apos;</span>,
+        runtime: <span class="hljs-number">102</span>,
+        showtimes: [
+            <span class="hljs-string">&apos;5:30PM&apos;</span>,
+            <span class="hljs-string">&apos;6:50PM&apos;</span>,
+            <span class="hljs-string">&apos;7:20PM&apos;</span>,
+            <span class="hljs-string">&apos;9:05PM&apos;</span>,
+            <span class="hljs-string">&apos;10:10PM&apos;</span>
+        ]
+    },
+    {
+        title: <span class="hljs-string">&apos;Fargo&apos;</span>,
+        runtime: <span class="hljs-number">98</span>,
+        showtimes: [
+            <span class="hljs-string">&apos;11:59PM&apos;</span>,
+        ]
+    },
+]
+</code></pre>
+<h2 id="get-the-first-movie-title-and-runtime">Get the First Movie Title and Runtime</h2>
+<ol>
+<li>Get the title of the first movie in the <code>movies</code> array, and store it in a variable.</li>
+<li>Get the runtime of the first movie in the <code>movies</code> array, and store it in a variable.</li>
+<li>Display a message to the user telling them the name of the movie, and how long it is. Make sure to specify that the runtime is in minutes.</li>
+</ol>
+<h2 id="add-a-showtime-to-the-third-movie">Add a Showtime to the Third Movie</h2>
+<ol>
+<li>Get the third movie object from the <code>movies</code> array, and store it in a variable.</li>
+<li>Add a showtime of &quot;9:45PM&quot; to the showtimes array for the third movie</li>
+</ol>
+<h2 id="swap-theaters">Swap Theaters</h2>
+<ol>
+<li>Change the theater number for the second movie to <code>3</code></li>
+<li>Change the theater number for the third movie to <code>2</code></li>
+</ol>
+<h2 id="another-movie">Another Movie</h2>
+<ol>
+<li>Outside of the original <code>movies</code> array, create a new object named <code>nextMovie</code></li>
+<li>The object should have the following properties:<ul>
+<li><code>title</code> - &quot;Spider-Man: Into the Spider-Verse&quot;</li>
+<li><code>runtime</code> - <code>117</code></li>
+<li><code>theater</code> - <code>4</code></li>
 </ul>
-<h2 id="individual-practice">Individual Practice</h2>
-<ul>
-<li><a href="http://www.mprat.org/Terminus/" target="_blank">Terminus Game</a></li>
+</li>
+<li>The object should also have a <code>showtimes</code> property, which is an array containing:<ul>
+<li>&quot;6:15PM&quot;</li>
+<li>&quot;7:30PM&quot;</li>
+<li>&quot;9:05PM&quot;</li>
 </ul>
+</li>
+<li>Add the <code>nextMovie</code> object to the end of the <code>movies</code> array</li>
+</ol>
+<h2 id="challenge---all-movies">CHALLENGE - All Movies</h2>
+<p>Use a <code>for</code> loop to print out the titles of all movies currently showing</p>
+<h2 id="challenge---movies-at-905pm">CHALLENGE - Movies at 9:05PM</h2>
+<p>Use a <code>for</code> loop to print out the title and runtime of any movie that has a 9:05PM showtime</p>
 
                                 
                                 </section>
@@ -710,12 +770,12 @@
 
             
                 
-                <a href="../FullStackOverview/StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L1 - Full-stack Overview">
+                <a href="ObjectsCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Objects Code-Along">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScriptFunctions/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L3 - JavaScript Functions (Callbacks)">
+                <a href="FoodJsonChallenges.html" class="navigation navigation-next " aria-label="Next page: Food JSON Challenges">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -726,7 +786,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L2 - Introduction to the Command Line","level":"1.3","depth":1,"next":{"title":"L3 - JavaScript Functions (Callbacks)","level":"1.4","depth":1,"path":"JavaScriptFunctions/StudentDesc.md","ref":"JavaScriptFunctions/StudentDesc.md","articles":[{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]}]},"previous":{"title":"L1 - Full-stack Overview","level":"1.2","depth":1,"path":"FullStackOverview/StudentDesc.md","ref":"FullStackOverview/StudentDesc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CommandLine/StudentDesc.md","mtime":"2020-02-04T20:30:54.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects Individual Exercises","level":"1.5.2","depth":2,"next":{"title":"Food JSON Challenges","level":"1.5.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]},"previous":{"title":"Objects Code-Along","level":"1.5.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsIndividualExercises.md","mtime":"2020-02-04T20:30:54.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:31:37.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
