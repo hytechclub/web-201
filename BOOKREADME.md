@@ -24,5 +24,8 @@ Points can be redeemed for a variety of rewards.
 | 2 | Shoot a basket for an extra point|
 | 3 | Short game with an instructor (e.g. [Connect 4](https://www.mathsisfun.com/games/connect4.html), [Soccer](https://www.agame.com/game/1-on-1-soccer-classic)) |
 | 5 | An instructor has to show you an old picture of themselves |
-| 10 | Choose an appropriate song to play in class |
-| 15 | Choose an appropraite video to watch in class |
+| 10 | Choose an appropriate (<5min) song to play in class |
+| 15 | Choose an appropriate (<5min) video to watch in class |
+| 17 | J will write you a haiku |
+| 20 | Full-size candy bar |
+| 500 | Nintendo Switch |
