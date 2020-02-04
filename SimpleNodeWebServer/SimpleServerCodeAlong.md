@@ -28,7 +28,7 @@ Now, write the code to make a server!
 
 1. Define a new function named `serverCallback`
     - This function will be used to respond to any incoming requests from the web browser
-1. Add two parameters to the `serverCallback` function: `request` and `response
+1. Add two parameters to the `serverCallback` function: `request` and `response`
 1. In the body of the `serverCallback` function, set the `statusCode` property of the `response` object to `200`
     - This means success!
 1. After setting the status code, call the `end` function on the `response` object

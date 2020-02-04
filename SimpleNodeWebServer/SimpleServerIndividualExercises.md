@@ -86,7 +86,7 @@ There are 50 total names, and there should be 10 names appearing on each page. T
 1. Convert the parameter value into a number using the `Number()` function, and store it in a variable
 1. Use the `isNan()` function to check if the value is a number, and if it is not, set it to `1`
 1. If the page value is less than 1 or greater than 5, set it to `1`
-1. Wrote an `h3` with the text "People" to the response
+1. Write an `h3` with the text "People" to the response
 1. Write the opening tag of a `ul` to the response
 1. Use a `for` loop to dynamically write the appropriate names, each within an `li` element, to the response
     - There should be `10` names total
