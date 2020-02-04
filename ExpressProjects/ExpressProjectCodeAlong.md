@@ -18,7 +18,7 @@ Follow the steps below to create an npm project that uses Express to run a simpl
 
 ## Initializing an Express Project
 1. In the terminal, enter `npm install express --save`
-1. After the command is run, check the "package.json" file to make sure Express was properly added as a dependency:
+1. After the command is run, check the "package.json" file to make sure Express was properly added as a dependency:  
     ```js
     {
         // ...
@@ -26,6 +26,7 @@ Follow the steps below to create an npm project that uses Express to run a simpl
             "express": "^4.17.1"
         }
     }
+    ```
 1. Additionally, notice that a "node_modules" directory and a "package-lock.json" file should have been generated
     - The "node_modules" folder contains all the code necessary for all dependencies, and "package-lock.json" handles versioning for dependencies
 1. In the directory, create a new file named **app.js**
