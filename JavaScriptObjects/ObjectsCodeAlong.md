@@ -79,7 +79,7 @@ console.log('Jerry painted the car. The car is now ' + myCar.color);
 ### Updating the Owner's Residence
 1. On the next line, use dot notation to set the `city` property of the `owner` of `myCar` to "Fargo"
     - Use a chained dot notation to access the `city` from the `myCar` object
-1. Use dot notatino again to set the `state` property of the `owner` of `myCar` to "ND"
+1. Use dot notation again to set the `state` property of the `owner` of `myCar` to "ND"
 1. Use another `console.log` to show a message saying Jerry moved. It should give his current city and state of residence
 
 ```js
