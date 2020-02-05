@@ -707,11 +707,14 @@
 </ol>
 <h2 id="passing-the-json-person">Passing the JSON Person</h2>
 <p>The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the <code>people.json</code> array based on the index, and pass it into the template.</p>
+<blockquote>
+<p>Note: The <strong>people.json</strong> file must be saved in the same directory as the <strong>app.js</strong> file</p>
+</blockquote>
 <ol>
 <li>At the top of the file, import the <code>fs</code> module, storing it in a <code>const</code> variable<pre><code class="lang-js"> <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
 </code></pre>
 </li>
-<li>Use <code>fs.readFileSync</code> and <code>JSON.parse</code> to put the <code>people.json</code> array into a variable named <code>peopleJson</code><pre><code class="lang-js"> <span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;../people.json&apos;</span>);
+<li>Use <code>fs.readFileSync</code> and <code>JSON.parse</code> to put the <code>people.json</code> array into a variable named <code>peopleJson</code><pre><code class="lang-js"> <span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
  <span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
 </code></pre>
 </li>
@@ -740,30 +743,30 @@
 <li>Check the <code>/person</code> page with some different <code>index</code> values to see it update dynamically!</li>
 </ol>
 <h3 id="changing-the-background-color">Changing the Background Color</h3>
-<p>The background color should be green if the person is alive, and red if the person is dead. It is possible to use <code>if</code> statements in EJS segments to accomplish this.</p>
+<p>The background color should be green if the person is alive, and red if the person is dead. It is possible to use <code>if</code> statements in EJS scriptlets to accomplish this.</p>
 <ol>
-<li>Remove everything from the <code>head</code> element, and add an EJS segment using <code>&lt;%</code> and <code>%&gt;</code><ul>
+<li>Remove everything from the <code>head</code> element, and add an EJS scriptlet using <code>&lt;%</code> and <code>%&gt;</code><ul>
 <li>For control flow, use <code>&lt;%</code> with no equals sign because no JavaScript should render to the template</li>
 <li>Instead of rendering within EJS, these statements use HTML dynamically</li>
 </ul>
 </li>
-<li>Within the EJS segment, enter the first line of an <code>if</code> statement checking <code>person.alive</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> (<span class="hljs-attr">person.alive</span>) { %&gt;</span>
+<li>Within the EJS scriptlet, enter the first line of an <code>if</code> statement checking <code>person.alive</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> (<span class="hljs-attr">person.alive</span>) { %&gt;</span>
 </code></pre>
 </li>
-<li>Under the EJS segment, in the &quot;body&quot; of the <code>if</code> statement, add a <code>style</code> element with the CSS to set the background color of the page to <code>mediumseagreen</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<li>Under the EJS scriptlet, in the &quot;body&quot; of the <code>if</code> statement, add a <code>style</code> element with the CSS to set the background color of the page to <code>mediumseagreen</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
      <span class="hljs-selector-tag">body</span> {
          <span class="hljs-attribute">background</span>: mediumseagreen;
      }
  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 </code></pre>
 </li>
-<li>Under the HTML, add another EJS segment to close off the <code>if</code> statement: <code>&lt;% } %&gt;</code></li>
+<li>Under the HTML, add another EJS scriptlet to close off the <code>if</code> statement: <code>&lt;% } %&gt;</code></li>
 <li>Load up the <code>/person</code> page, and make sure only alive people have green backgrounds!</li>
-<li>In the <code>if</code> closing EJS segment, add an <code>else</code> to handle dead people<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> } <span class="hljs-attr">else</span> { %&gt;</span>
+<li>In the <code>if</code> closing EJS scriptlet, add an <code>else</code> to handle dead people<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> } <span class="hljs-attr">else</span> { %&gt;</span>
 </code></pre>
 </li>
-<li>Under the EJS segment, in the &quot;body&quot; of the else, add a <code>style</code> element with the CSS to set the background color of the page to <code>red</code></li>
-<li>Under the HTML, add another EJS segment to close off the <code>else</code> statement</li>
+<li>Under the EJS scriptlet, in the &quot;body&quot; of the else, add a <code>style</code> element with the CSS to set the background color of the page to <code>red</code></li>
+<li>Under the HTML, add another EJS scriptlet to close off the <code>else</code> statement</li>
 <li>Load up the <code>/person</code> page, and make sure that dead people have red backgrounds!</li>
 </ol>
 <h3 id="code">Code</h3>
@@ -804,10 +807,11 @@
 <li>They will be dynamically generated!</li>
 </ul>
 </li>
-<li><p>Within the <code>ul</code>, add an EJS segment containing a <code>for</code> loop that will loop through all of the people in the <code>people</code> array
- ```html
- &lt;% for (let i = 0; i &lt; people.length; i++) { %&gt;</p>
-<p> &lt;% } %&gt;</p>
+<li><p>Within the <code>ul</code>, add an EJS scriptlet containing a <code>for</code> loop that will loop through all of the people in the <code>people</code> array</p>
+<pre><code class="lang-html"> &lt;% for (let i = 0; i &lt; people.length; i++) { %&gt;
+
+ &lt;% } %&gt;
+</code></pre>
 </li>
 <li>In the &quot;body&quot; of the <code>for</code> loop, add an <code>li</code></li>
 <li>In the <code>li</code>, add an EJS segment to render the current index in the <code>for</code> loop: <code>&lt;%= i %&gt;</code></li>
@@ -854,7 +858,7 @@
 <span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
 <span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
 
-<span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;../people.json&apos;</span>);
+<span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
 <span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
 
 <span class="hljs-keyword">let</span> app = express();
@@ -928,7 +932,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"People List EJS Code-Along","level":"1.9.2","depth":2,"next":{"title":"People List EJS Individual Exercises","level":"1.9.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]},"previous":{"title":"People List Starter App","level":"1.9.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsCodeAlong.md","mtime":"2020-02-04T20:41:30.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-04T20:42:05.702Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List EJS Code-Along","level":"1.9.2","depth":2,"next":{"title":"People List EJS Individual Exercises","level":"1.9.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]},"previous":{"title":"People List Starter App","level":"1.9.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsCodeAlong.md","mtime":"2020-02-05T13:29:54.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T13:30:30.141Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
