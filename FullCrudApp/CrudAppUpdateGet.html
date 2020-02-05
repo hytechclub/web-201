@@ -677,11 +677,11 @@
                                 <h1 id="crud-app---update-get">CR<strong>U</strong>D App - Update (GET)</h1>
 <p>Add a form to the web app that will allow the user to edit the information for an existing player in the database. First, create an &quot;Edit Player&quot; route that will be accessible via a GET request.</p>
 <h2 id="routing-the-get-handler">Routing the GET Handler</h2>
-<p>The GET request for the &quot;Edit Player&quot; page requires a player <code>id</code> to render. The <code>id</code> can be passed as a <a href="http://expressjs.com/en/guide/routing.html#route-parameters" target="_blank">route parameter</a> in Express. This means the user can direct their browser to <code>http://127.0.0.1:3000/edit/5</code> and the handler will know that the user is editing the player with an <code>id</code> of <code>5</code>.</p>
+<p>The GET request for the &quot;Edit Player&quot; page requires a player <code>id</code> to render. The <code>id</code> can be passed as a <a href="http://expressjs.com/en/guide/routing.html#route-parameters" target="_blank">route parameter</a> in Express. The user should be able to direct their browser to <code>http://127.0.0.1:3000/edit/5</code> and the handler will know that the user would like to edit the player with an <code>id</code> of <code>5</code>.</p>
 <ol>
 <li>In the <code>module.exports</code> object in the <strong>player.js</strong> file, define a new <code>editPlayerPage</code> function with <code>request</code> and <code>response</code> parameters</li>
 <li>In the body of the <code>editPlayerPage</code> function, log <code>request.params.id</code> to the console</li>
-<li>Under the log, use <code>request.render</code> to render the &quot;edit-player.ejs&quot; page<pre><code class="lang-js"> editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+<li>Under the log, use <code>request.render</code> to render the <strong>edit-player.ejs</strong> page:<pre><code class="lang-js"> editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
      <span class="hljs-built_in">console</span>.log(request.params.id);
      response.render(<span class="hljs-string">&apos;edit-player&apos;</span>);
  }
@@ -708,7 +708,7 @@
 <li><code>result[0]</code> will contain the data for the player with the given <code>id</code></li>
 </ul>
 </li>
-<li>Under the log, render the &quot;edit-player.ejs&quot; page, and pass in a data object with <code>player: result[0]</code><ul>
+<li>Under the log, render the <strong>edit-player.ejs</strong> page, and pass in a data object with <code>player: result[0]</code><ul>
 <li>This will give the EJS template access to the player&apos;s data</li>
 </ul>
 </li>
@@ -740,7 +740,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 }
 </code></pre>
 <h2 id="updating-the-ejs">Updating the EJS</h2>
-<p>Currently, the &quot;edit-player.ejs&quot; file can only handle adding new players. Update the EJS so that it will dynamically handle adding <em>or</em> editing players. If it is editing an existing player, the player data should be auto-filled in the form.</p>
+<p>Currently, the <strong>edit-player.ejs</strong> file can only handle adding new players. Update the EJS so that it will dynamically handle adding <em>or</em> editing players. If it is editing an existing player, the player data should be auto-filled in the form.</p>
 <h3 id="passing-the-add-flag">Passing the <code>add</code> Flag</h3>
 <ol>
 <li>In the <strong>player.js</strong> file, find the <code>addPlayerPage</code> function</li>
@@ -752,18 +752,18 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 </ol>
 <h3 id="updating-the-ejs-file">Updating the EJS File</h3>
 <ol>
-<li>In the &quot;edit-player.ejs&quot; file, find the <code>input</code> for &quot;First Name&quot; and add a <code>value</code> attribute</li>
+<li>In the <strong>edit-player.ejs</strong> file, find the <code>input</code> for &quot;First Name&quot; and add a <code>value</code> attribute</li>
 <li>Set the <code>value</code> attribute to an EJS segment that takes the <code>first_name</code> property from the <code>player</code> object</li>
-<li>Using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">ternary operator</a>, update the EJS segment so that if <code>add</code> is <code>true</code>, it returns an empty string<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=add</span> ? &apos;&apos; <span class="hljs-attr">:</span> <span class="hljs-attr">player.first_name</span>%&gt;</span>
+<li>Using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_blank">ternary operator</a>, update the EJS segment so that if <code>add</code> is <code>true</code>, it returns an empty string:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=add</span> ? &apos;&apos; <span class="hljs-attr">:</span> <span class="hljs-attr">player.first_name</span>%&gt;</span>
 </code></pre>
 </li>
 <li>Make similar updates for the &quot;Last Name&quot; and &quot;Number&quot; <code>input</code> elements</li>
 <li>For the &quot;Position&quot; <code>select</code>, create a new <code>option</code> with the <code>selected</code> attribute containing an EJS segment with <code>player.position</code></li>
 <li>Wrap the new <code>option</code> in an EJS scriptlet with an <code>if (!add)</code> so that it only appears while editing an existing player</li>
-<li>In the &quot;Submit&quot; button <code>input</code>, replace &quot;Add&quot; with an EJS segment that could be either &quot;Add&quot; or &quot;Update&quot;<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">add</span> ? &apos;<span class="hljs-attr">Add</span>&apos; <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">Update</span>&apos; %&gt;</span>
+<li>In the &quot;Submit&quot; button <code>input</code>, replace &quot;Add&quot; with an EJS segment that could be either &quot;Add&quot; or &quot;Update&quot;:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">add</span> ? &apos;<span class="hljs-attr">Add</span>&apos; <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">Update</span>&apos; %&gt;</span>
 </code></pre>
 </li>
-<li>In the main <code>form</code> element, update the <code>action</code> attribute so that it can either go to <code>/add</code> OR <code>/edit/{player.id}</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=add</span> ? &apos;<span class="hljs-attr">add</span>&apos; <span class="hljs-attr">:</span> `<span class="hljs-attr">edit</span>/${<span class="hljs-attr">player.id</span>}`%&gt;</span>
+<li>In the main <code>form</code> element, update the <code>action</code> attribute so that it can either go to <code>/add</code> OR <code>/edit/{player.id}</code>:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=add</span> ? &apos;<span class="hljs-attr">add</span>&apos; <span class="hljs-attr">:</span> `<span class="hljs-attr">edit</span>/${<span class="hljs-attr">player.id</span>}`%&gt;</span>
 </code></pre>
 </li>
 <li>Wrap the entire <code>form</code> element in an EJS scriptlet with an <code>if (add || player)</code><ul>
@@ -774,7 +774,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 <li>Load up the &quot;Edit Player&quot; page for a given <code>id</code>, and verify that the proper player information appears</li>
 <li>Load up the &quot;Add Player&quot; page, and verify that everything still works the same way</li>
 </ol>
-<h4 id="edit-playerejs">&quot;edit-player.ejs&quot;</h4>
+<h4 id="edit-playerejs"><strong>edit-player.ejs</strong></h4>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">include</span>(&apos;<span class="hljs-attr">partials</span>/<span class="hljs-attr">header</span>&apos;) %&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> (<span class="hljs-attr">add</span> || <span class="hljs-attr">player</span>) { %&gt;</span>
@@ -823,7 +823,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
 <li>In the <strong>index.ejs</strong> file, add another <code>th</code> to the <code>table</code> header row with the text &quot;Action&quot;</li>
 <li>Within the <code>for</code> loop row, add another <code>td</code> under the number <code>td</code></li>
 <li>Within the new <code>td</code>, add an <code>a</code> with the text &quot;Edit&quot; that points the user to <code>/edit/</code> with the player&apos;s <code>id</code></li>
-<li>Set the <code>class</code> attribute of the <code>a</code> to &quot;btn btn-sm btn-success&quot; to make it appear like a green button<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+<li>Set the <code>class</code> attribute of the <code>a</code> to &quot;btn btn-sm btn-success&quot; to make it appear like a green button:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/edit/&lt;%= players[i].id %&gt;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-sm btn-success&quot;</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
  <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
 </code></pre>
@@ -875,7 +875,7 @@ editPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update (GET)","level":"1.11.7","depth":2,"next":{"title":"Update (POST)","level":"1.11.8","depth":2,"path":"FullCrudApp/CrudAppUpdatePost.md","ref":"FullCrudApp/CrudAppUpdatePost.md","articles":[]},"previous":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppUpdateGet.md","mtime":"2020-02-05T14:15:22.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T14:15:57.469Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update (GET)","level":"1.11.7","depth":2,"next":{"title":"Update (POST)","level":"1.11.8","depth":2,"path":"FullCrudApp/CrudAppUpdatePost.md","ref":"FullCrudApp/CrudAppUpdatePost.md","articles":[]},"previous":{"title":"Create (POST)","level":"1.11.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppUpdateGet.md","mtime":"2020-02-05T14:34:47.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T14:35:27.357Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
