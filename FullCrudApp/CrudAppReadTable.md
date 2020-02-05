@@ -65,7 +65,7 @@ Now that the table structure is in place, update the EJS code so that it actuall
 1. Load up the homepage, and verify that the table is populated with data from the database!
 
 ### Code
-```js
+```html
 <% for (let i = 0; i < players.length; i++) { %>
     <tr>
         <td><%= players[i].id %></td>
@@ -89,7 +89,7 @@ If there are no players in the database, a message saying "No players found" sho
 1. Load up the homepage again to verify that the table does not appear, and the message does!
 
 ### **index.ejs**
-```js
+```html
 <%- include('partials/header'); %>
 <div>
 <% if (players.length > 0) { %>
