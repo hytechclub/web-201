@@ -685,7 +685,7 @@
 <li>Set up the <code>/</code> route to respond with the <code>getHomePage</code> function</li>
 <li>Define a function named <code>listenCallback</code> that logs the location of the server (hostname and port)</li>
 <li>Use <code>app.listen</code> and pass in the <code>port</code>, <code>hostname</code>, and <code>listenCallback</code></li>
-<li>Use <code>nodemon</code> to run the server, and verify that the &quot;Hello World&quot; message appears!</li>
+<li>Use <code>nodemon</code> to run the server, open the <a href="http://127.0.0.1:3000" target="_blank">homepage</a>, and verify that the &quot;Hello World&quot; message appears!</li>
 </ol>
 <h3 id="code">Code</h3>
 <pre><code class="lang-js"><span class="hljs-comment">// Imports</span>
@@ -693,7 +693,7 @@
 
 <span class="hljs-comment">// Set hosting information</span>
 <span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
-<span class="hljs-keyword">const</span> port = <span class="hljs-number">5000</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
 
 <span class="hljs-comment">// Initialize app</span>
 <span class="hljs-keyword">let</span> app = express();
@@ -795,6 +795,11 @@ app.listen(port, hostname, listenCallback);
     }
 
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Connected to the database&apos;</span>);
+
+    <span class="hljs-comment">// test</span>
+    db.query(<span class="hljs-string">&apos;SELECT * FROM players&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, results</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(results);
+    });
 }
 
 <span class="hljs-comment">// Open the connection to the database</span>
@@ -848,7 +853,7 @@ global.db = db;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup (Code)","level":"1.11.2","depth":2,"next":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"previous":{"title":"Setup","level":"1.11.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetupCode.md","mtime":"2020-02-05T13:29:54.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T13:30:30.141Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup (Code)","level":"1.11.2","depth":2,"next":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"previous":{"title":"Setup","level":"1.11.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetupCode.md","mtime":"2020-02-05T14:10:07.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T14:10:44.592Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
