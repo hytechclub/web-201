@@ -2,7 +2,7 @@
 Add a form to the web app that will allow the user to edit the information for an existing player in the database. First, create an "Edit Player" route that will be accessible via a GET request.
 
 ## Routing the GET Handler
-The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. This means the user can direct their browser to `http://127.0.0.1:5000/edit/5` and the handler will know that the user is editing the player with an `id` of `5`.
+The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. This means the user can direct their browser to `http://127.0.0.1:3000/edit/5` and the handler will know that the user is editing the player with an `id` of `5`.
 
 1. In the `module.exports` object in the **player.js** file, define a new `editPlayerPage` function with `request` and `response` parameters
 1. In the body of the `editPlayerPage` function, log `request.params.id` to the console

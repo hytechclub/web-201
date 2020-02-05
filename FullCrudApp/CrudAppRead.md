@@ -5,13 +5,13 @@ Follow the steps below to allow the web app to display data from the `soccer` da
 Update the `getHomePage` function in the **index.js** file so that it pulls data from the database and renders it in the response.
 
 1. Remove the current body of the `getHomePage` function
-1. Create a new string variable named `query` that has SQL to find all players ordered by their `id`
+1. Create a new string variable named `query` that has SQL to find all players ordered by their `id`:
     ```sql
     SELECT * FROM players ORDER BY id ASC;
     ```
 1. In the body of the `getHomePage` function, define a new function named `queryCallback` that takes `error` and `result` as parameters
     - Note, this is a function defined _within_ another function!
-1. In the body of the `queryCallback` function, check if `error` exists, and send a server error if it does
+1. In the body of the `queryCallback` function, check if `error` exists, and send a server error if it does:
     ```js
     return response.status(500).send(error);
     ```

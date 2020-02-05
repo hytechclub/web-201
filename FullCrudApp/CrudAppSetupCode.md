@@ -9,7 +9,7 @@ Open the **app.js** file, and write code for a basic boiler-plate Express web se
 1. Set up the `/` route to respond with the `getHomePage` function
 1. Define a function named `listenCallback` that logs the location of the server (hostname and port)
 1. Use `app.listen` and pass in the `port`, `hostname`, and `listenCallback`
-1. Use `nodemon` to run the server, and verify that the "Hello World" message appears!
+1. Use `nodemon` to run the server, open the [homepage](http://127.0.0.1:3000), and verify that the "Hello World" message appears!
 
 ### Code
 ```js
@@ -18,7 +18,7 @@ const express = require('express');
 
 // Set hosting information
 const hostname = '127.0.0.1';
-const port = 5000;
+const port = 3000;
 
 // Initialize app
 let app = express();
@@ -124,6 +124,11 @@ function connectCallback (error) {
     }
 
     console.log('Connected to the database');
+    
+    // test
+    db.query('SELECT * FROM players', function (error, results) {
+        console.log(results);
+    });
 }
 
 // Open the connection to the database
