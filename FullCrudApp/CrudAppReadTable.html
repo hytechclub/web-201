@@ -746,14 +746,14 @@
 <li>Load up the homepage, and verify that the table is populated with data from the database!</li>
 </ol>
 <h3 id="code">Code</h3>
-<pre><code class="lang-js">&lt;% <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; players.length; i++) { %&gt;
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">players</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.id</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">players</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.first_name</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">players</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.last_name</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">players</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.position</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">players</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.number</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
+<pre><code class="lang-html">&lt;% for (let i = 0; i &lt; players.length; i++) { %&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;%= players[i].id %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].first_name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].last_name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].position %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].number %&gt;&lt;/td&gt;
+    &lt;/tr&gt;
 &lt;% } %&gt;
 </code></pre>
 <h2 id="conditional-display">Conditional Display</h2>
@@ -768,7 +768,7 @@
 <li>Load up the homepage again to verify that the table does not appear, and the message does!</li>
 </ol>
 <h3 id="indexejs"><strong>index.ejs</strong></h3>
-<pre><code class="lang-js">&lt;%- include(&apos;partials/header&apos;); %&gt;
+<pre><code class="lang-html">&lt;%- include(&apos;partials/header&apos;); %&gt;
 &lt;div&gt;
 &lt;% if (players.length &gt; 0) { %&gt;
     &lt;table class=&quot;table&quot;&gt;
@@ -846,7 +846,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Read (Table)","level":"1.11.4","depth":2,"next":{"title":"Create (GET)","level":"1.11.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},"previous":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppReadTable.md","mtime":"2020-02-05T14:10:07.399Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T14:10:44.592Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Read (Table)","level":"1.11.4","depth":2,"next":{"title":"Create (GET)","level":"1.11.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},"previous":{"title":"Read","level":"1.11.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppReadTable.md","mtime":"2020-02-05T14:15:22.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-05T14:15:57.469Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
