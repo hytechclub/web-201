@@ -80,7 +80,7 @@ Currently, the "edit-player.ejs" file can only handle adding new players. Update
     ```
 1. Make similar updates for the "Last Name" and "Number" `input` elements
 1. For the "Position" `select`, create a new `option` with the `selected` attribute containing an EJS segment with `player.position`
-1. Wrap the new `option` in an EJS snippet with an `if (!add)` so that it only appears while editing an existing player
+1. Wrap the new `option` in an EJS scriptlet with an `if (!add)` so that it only appears while editing an existing player
 1. In the "Submit" button `input`, replace "Add" with an EJS segment that could be either "Add" or "Update"
     ```html
     <%= add ? 'Add' : 'Update' %>
@@ -89,9 +89,9 @@ Currently, the "edit-player.ejs" file can only handle adding new players. Update
     ```html
     <%=add ? 'add' : `edit/${player.id}`%>
     ```
-1. Wrap the entire `form` element in an EJS snippet with an `if (add || player)`
+1. Wrap the entire `form` element in an EJS scriptlet with an `if (add || player)`
     - This means if the user attempts to edit a player that does not exist, the form will not render
-1. Under the `form`, add an `else` EJS snippet with a `p` that says "Player Not Found."
+1. Under the `form`, add an `else` EJS scriptlet with a `p` that says "Player Not Found."
 1. Load up the "Edit Player" page for a given `id`, and verify that the proper player information appears
 1. Load up the "Add Player" page, and verify that everything still works the same way
 

@@ -34,13 +34,15 @@ Make the following updates to the **app.js** file.
 ## Passing the JSON Person
 The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the `people.json` array based on the index, and pass it into the template.
 
+>Note: The **people.json** file must be saved in the same directory as the **app.js** file
+
 1. At the top of the file, import the `fs` module, storing it in a `const` variable
     ```js
     const fs = require('fs');
     ```
 1. Use `fs.readFileSync` and `JSON.parse` to put the `people.json` array into a variable named `peopleJson`
     ```js
-    let rawdata = fs.readFileSync('../people.json');
+    let rawdata = fs.readFileSync('people.json');
     let peopleJson = JSON.parse(rawdata);
     ```
 1. In the body of the `personPage` function, use the `index` query parameter to get the correct person from the `peopleJson` array
@@ -68,16 +70,16 @@ Now that the `person` object is available in the **person.ejs** template, all th
 1. Check the `/person` page with some different `index` values to see it update dynamically!
 
 ### Changing the Background Color
-The background color should be green if the person is alive, and red if the person is dead. It is possible to use `if` statements in EJS segments to accomplish this.
+The background color should be green if the person is alive, and red if the person is dead. It is possible to use `if` statements in EJS scriptlets to accomplish this.
 
-1. Remove everything from the `head` element, and add an EJS segment using `<%` and `%>`
+1. Remove everything from the `head` element, and add an EJS scriptlet using `<%` and `%>`
     - For control flow, use `<%` with no equals sign because no JavaScript should render to the template
     - Instead of rendering within EJS, these statements use HTML dynamically
-1. Within the EJS segment, enter the first line of an `if` statement checking `person.alive`
+1. Within the EJS scriptlet, enter the first line of an `if` statement checking `person.alive`
     ```html
     <% if (person.alive) { %>
     ```
-1. Under the EJS segment, in the "body" of the `if` statement, add a `style` element with the CSS to set the background color of the page to `mediumseagreen`
+1. Under the EJS scriptlet, in the "body" of the `if` statement, add a `style` element with the CSS to set the background color of the page to `mediumseagreen`
     ```html
     <style>
         body {
@@ -85,14 +87,14 @@ The background color should be green if the person is alive, and red if the pers
         }
     </style>
     ```
-1. Under the HTML, add another EJS segment to close off the `if` statement: `<% } %>`
+1. Under the HTML, add another EJS scriptlet to close off the `if` statement: `<% } %>`
 1. Load up the `/person` page, and make sure only alive people have green backgrounds!
-1. In the `if` closing EJS segment, add an `else` to handle dead people
+1. In the `if` closing EJS scriptlet, add an `else` to handle dead people
     ```html
     <% } else { %>
     ```
-1. Under the EJS segment, in the "body" of the else, add a `style` element with the CSS to set the background color of the page to `red`
-1. Under the HTML, add another EJS segment to close off the `else` statement
+1. Under the EJS scriptlet, in the "body" of the else, add a `style` element with the CSS to set the background color of the page to `red`
+1. Under the HTML, add another EJS scriptlet to close off the `else` statement
 1. Load up the `/person` page, and make sure that dead people have red backgrounds!
 
 ### Code
@@ -134,11 +136,12 @@ Now that the person page dynamically loads each individual person, update the ho
     ```
 1. In the **home.ejs** file, remove all of the `li` elements
     - They will be dynamically generated!
-1. Within the `ul`, add an EJS segment containing a `for` loop that will loop through all of the people in the `people` array
+1. Within the `ul`, add an EJS scriptlet containing a `for` loop that will loop through all of the people in the `people` array
     ```html
     <% for (let i = 0; i < people.length; i++) { %>
 
     <% } %>
+    ```
 1. In the "body" of the `for` loop, add an `li`
 1. In the `li`, add an EJS segment to render the current index in the `for` loop: `<%= i %>`
 1. Load up the homepage, and make sure the proper number of list items appears!
@@ -189,7 +192,7 @@ const fs = require('fs');
 const hostname = '127.0.0.1';
 const port = 3000;
 
-let rawdata = fs.readFileSync('../people.json');
+let rawdata = fs.readFileSync('people.json');
 let peopleJson = JSON.parse(rawdata);
 
 let app = express();
