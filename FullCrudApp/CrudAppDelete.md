@@ -6,7 +6,7 @@ The last step for the CRUD app is allowing the user to delete rows from the data
 
 1. In the `module.exports` object in the **player.js** file, define a new `deletePlayer` function with `request` and `response` parameters
 1. In the body of the `deletePlayer` function, log `request.params.id` to the console
-1. Under the log, use `request.redirect` to redirect to the homepage
+1. Under the log, use `request.redirect` to redirect to the homepage:
     ```js
     deletePlayer: function (request, response) {
         console.log(request.params.id);
@@ -58,7 +58,7 @@ The `/delete` endpoint works, but it would be much easier for the user to delete
 
 1. In the **index.ejs** file, within the last `td` from the `for` loop, add an `a` element with the text "Delete"
 1. Set the `href` attribute of the `a` to `/delete/` with the player's `id`
-1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a red button
+1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a red button:
     ```html
     <a href="/delete/<%= players[i].id %>" class="btn btn-sm btn-danger">Delete</a>
     ```

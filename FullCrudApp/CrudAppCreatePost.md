@@ -30,7 +30,7 @@ Update the `addPlayer` function in **player.js** so that it takes the player dat
     let first_name = request.body.first_name;
     ```
 1. Declare and set new variables for the other form data: `last_name`, `position`, `number`
-1. Make a new string variable `query` holding an SQL `INSERT INTO` statement
+1. Make a new string variable `query` holding an SQL `INSERT INTO` statement, e.g.:
     ```sql
     INSERT INTO players (first_name, last_name, position, number)
     VALUES ('Megan', 'Rapinoe', 'Midfielder', 15);

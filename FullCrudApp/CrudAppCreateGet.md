@@ -31,12 +31,12 @@ Update the app so that `/add` loads up the "Add Player" page, and there is a lin
     ```html
     <a class="float-right" href="/add">Add a Player</a>
     ```
-1. Load up the homepage, click the "Add a Player" link, and verify that the route loads the  HTML from "edit-player.ejs"
+1. Load up the homepage, click the "Add a Player" link, and verify that the route loads the  HTML from **edit-player.ejs**
 
 ## Filling out the "Add Player" EJS
-Update the "edit-player.ejs" file so that it properly renders an HTML form that takes in Soccer Player information.
+Update the **edit-player.ejs** file so that it properly renders an HTML form that takes in Soccer Player information.
 
-1. Replace the test HTML in "edit-player.ejs" with EJS to include the **header.ejs** partial
+1. Replace the test HTML in **edit-player.ejs** with EJS to include the **header.ejs** partial
 1. Create a `div` with a `class` of "container"
 1. Within the "container" `div`, create a `form` that will POST to `add/` on submit
     - Set its `method` to `"post"`

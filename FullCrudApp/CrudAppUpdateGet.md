@@ -2,11 +2,11 @@
 Add a form to the web app that will allow the user to edit the information for an existing player in the database. First, create an "Edit Player" route that will be accessible via a GET request.
 
 ## Routing the GET Handler
-The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. This means the user can direct their browser to `http://127.0.0.1:3000/edit/5` and the handler will know that the user is editing the player with an `id` of `5`.
+The GET request for the "Edit Player" page requires a player `id` to render. The `id` can be passed as a [route parameter](http://expressjs.com/en/guide/routing.html#route-parameters) in Express. The user should be able to direct their browser to `http://127.0.0.1:3000/edit/5` and the handler will know that the user would like to edit the player with an `id` of `5`.
 
 1. In the `module.exports` object in the **player.js** file, define a new `editPlayerPage` function with `request` and `response` parameters
 1. In the body of the `editPlayerPage` function, log `request.params.id` to the console
-1. Under the log, use `request.render` to render the "edit-player.ejs" page
+1. Under the log, use `request.render` to render the **edit-player.ejs** page:
     ```js
     editPlayerPage: function (request, response) {
         console.log(request.params.id);
@@ -31,7 +31,7 @@ The GET handler function should query the database to find the information about
 1. In the body of the anonymous function, if there is an error, return a 500 server error with the error message
 1. If there is no error in the callback, log `result[0]` to the console
     - `result[0]` will contain the data for the player with the given `id`
-1. Under the log, render the "edit-player.ejs" page, and pass in a data object with `player: result[0]`
+1. Under the log, render the **edit-player.ejs** page, and pass in a data object with `player: result[0]`
     - This will give the EJS template access to the player's data
 1. Direct a web browser to the `edit/:id` endpoint, and verify that the data for the player with the `id` is correct!
 
@@ -63,7 +63,7 @@ editPlayerPage: function (request, response) {
 ```
 
 ## Updating the EJS
-Currently, the "edit-player.ejs" file can only handle adding new players. Update the EJS so that it will dynamically handle adding _or_ editing players. If it is editing an existing player, the player data should be auto-filled in the form.
+Currently, the **edit-player.ejs** file can only handle adding new players. Update the EJS so that it will dynamically handle adding _or_ editing players. If it is editing an existing player, the player data should be auto-filled in the form.
 
 ### Passing the `add` Flag
 1. In the **player.js** file, find the `addPlayerPage` function
@@ -72,20 +72,20 @@ Currently, the "edit-player.ejs" file can only handle adding new players. Update
     - This will allow the EJS to render differently for the "Add Player" page and the "Edit Player" page
 
 ### Updating the EJS File
-1. In the "edit-player.ejs" file, find the `input` for "First Name" and add a `value` attribute
+1. In the **edit-player.ejs** file, find the `input` for "First Name" and add a `value` attribute
 1. Set the `value` attribute to an EJS segment that takes the `first_name` property from the `player` object
-1. Using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), update the EJS segment so that if `add` is `true`, it returns an empty string
+1. Using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), update the EJS segment so that if `add` is `true`, it returns an empty string:
     ```html
     <%=add ? '' : player.first_name%>
     ```
 1. Make similar updates for the "Last Name" and "Number" `input` elements
 1. For the "Position" `select`, create a new `option` with the `selected` attribute containing an EJS segment with `player.position`
 1. Wrap the new `option` in an EJS scriptlet with an `if (!add)` so that it only appears while editing an existing player
-1. In the "Submit" button `input`, replace "Add" with an EJS segment that could be either "Add" or "Update"
+1. In the "Submit" button `input`, replace "Add" with an EJS segment that could be either "Add" or "Update":
     ```html
     <%= add ? 'Add' : 'Update' %>
     ```
-1. In the main `form` element, update the `action` attribute so that it can either go to `/add` OR `/edit/{player.id}`
+1. In the main `form` element, update the `action` attribute so that it can either go to `/add` OR `/edit/{player.id}`:
     ```html
     <%=add ? 'add' : `edit/${player.id}`%>
     ```
@@ -95,7 +95,7 @@ Currently, the "edit-player.ejs" file can only handle adding new players. Update
 1. Load up the "Edit Player" page for a given `id`, and verify that the proper player information appears
 1. Load up the "Add Player" page, and verify that everything still works the same way
 
-#### "edit-player.ejs"
+#### **edit-player.ejs**
 ```html
 <%- include('partials/header') %>
 <div class="container">
@@ -146,7 +146,7 @@ Now that the "Edit Player" page loads properly, the user needs a way to navigate
 1. In the **index.ejs** file, add another `th` to the `table` header row with the text "Action"
 1. Within the `for` loop row, add another `td` under the number `td`
 1. Within the new `td`, add an `a` with the text "Edit" that points the user to `/edit/` with the player's `id`
-1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a green button
+1. Set the `class` attribute of the `a` to "btn btn-sm btn-success" to make it appear like a green button:
     ```html
     <td>
         <a href="/edit/<%= players[i].id %>" class="btn btn-sm btn-success">Edit</a>
