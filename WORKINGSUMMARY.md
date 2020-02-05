@@ -1,2 +1,0 @@
-- [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
-- [L2 - Introduction to the Command Line](CommandLine/StudentDesc.md)
