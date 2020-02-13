@@ -27,6 +27,7 @@ Points can be redeemed for a variety of rewards.
 | 10 | Choose an appropriate (<5min) song to play in class |
 | 10 | J will sing to the class |
 | 15 | Choose an appropriate (<5min) video to watch in class |
+| 15 | The class plays a student-made Kahoot |
 | 17 | J will write you a haiku |
 | 20 | Full-size candy bar |
 | 25 | J will bring a guitar and serenade the class |
