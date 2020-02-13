@@ -1,0 +1,365 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>File Reader Challenge · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="CallbacksIndividualExercises.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../FullStackOverview/StudentDesc.html">
+            
+                <a href="../FullStackOverview/StudentDesc.html">
+            
+                    
+                    L1 - Full-stack Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../CommandLine/StudentDesc.html">
+            
+                <a href="../CommandLine/StudentDesc.html">
+            
+                    
+                    L2 - Introduction to the Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="StudentDesc.html">
+            
+                <a href="StudentDesc.html">
+            
+                    
+                    L3 - JavaScript Functions (Callbacks)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="CallbacksIndividualExercises.html">
+            
+                <a href="CallbacksIndividualExercises.html">
+            
+                    
+                    Callbacks Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="FileReaderChallenge.html">
+            
+                <a href="FileReaderChallenge.html">
+            
+                    
+                    File Reader Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >File Reader Challenge</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="file-reader-challenge">File Reader Challenge</h1>
+<p>Create a Node.js app that reads from a text file and manipulates the data. This challenge illustrates the need for callbacks, because the <code>fs</code> module requires a callback to receive the data from a file!</p>
+<h3 id="documentation">Documentation</h3>
+<p><a href="https://nodejs.org/api/fs.html" target="_blank">https://nodejs.org/api/fs.html</a></p>
+<h2 id="creating-files">Creating Files</h2>
+<ol>
+<li>In Visual Studio Code, create a new text file named <code>TextInfo.txt</code></li>
+<li>Edit <code>TextInfo.txt</code> so it contains some interesting text</li>
+<li>In the same folder as <code>TextInfo.txt</code>, create a new JavaScript file named <code>FileReader.js</code></li>
+</ol>
+<h2 id="preparing-to-read-files">Preparing to Read Files</h2>
+<p>Open the <code>FileReader.js</code> file for editing.</p>
+<ol>
+<li>At the top of the file, use the following command to include the File System module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+</code></pre>
+</li>
+<li>Underneath the <code>require</code>, define a new function named <code>yellFile</code></li>
+<li>The <code>yellFile</code> function should take two parameters: <code>error</code> and <code>dataString</code><ul>
+<li>For now, simply use <code>console.log</code> in the body of the <code>yellFile</code> function to say &quot;here&quot;</li>
+</ul>
+</li>
+<li>Underneath the <code>yellFile</code> function definition, use <code>fs.readFile</code> to read the text file<ul>
+<li>The <code>path</code> argument should be <code>&apos;TextInfo.txt&apos;</code></li>
+<li>The <code>options</code> argument should be <code>&apos;utf-8&apos;</code></li>
+<li>The <code>callback</code> argument should be <code>yellFile</code></li>
+</ul>
+</li>
+<li>Open a Terminal, and make sure to be in the correct directory</li>
+<li>Enter the command <code>node FileReader.js</code> to run the code and make sure &quot;here&quot; appears!</li>
+</ol>
+<h2 id="yelling-the-file-contents">Yelling the File Contents</h2>
+<p>The <code>yellFile</code> function should take the contents of the text file (as long as it can successfully open the file), and display them to the user in all caps.</p>
+<ol>
+<li>Remove the <code>console.log</code> from the body of the <code>yellFile</code> function</li>
+<li>If there is an error (stored in the <code>error</code> parameter) reading the file, display a message to the user using <code>console.error</code></li>
+<li>If there is NOT an error, convert text from the file (stored in the <code>dataString</code> parameter) to all uppercase</li>
+<li>Display the uppercase text to the user with <code>console.log</code></li>
+<li>Run the code to see the text file contents in all caps!</li>
+</ol>
+<h2 id="elmer-fudd-translator">Elmer Fudd Translator</h2>
+<p>Define a new function named <code>elmerFudd</code> that takes a string and converts it to &quot;Elmer Fudd Speak.&quot; Take a look at <a href="https://funtranslations.com/fudd" target="_blank">funtranslations.com/fudd</a> to see it in action. The translation should apply the following changes to the text:</p>
+<ul>
+<li>Replace every &apos;th&apos; with a &apos;d&apos;</li>
+<li>Replace every &apos;r&apos; with a &apos;w&apos;</li>
+<li>Replace every &apos;l&apos; with a &apos;w&apos;</li>
+</ul>
+<p>Use the <code>elmerFudd</code> function in the <code>fs.readFile</code> call to hook it up to the text file!</p>
+<h2 id="writing-a-file-translation">Writing a File Translation</h2>
+<blockquote>
+<p>Reference: <a href="https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback" target="_blank">https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback</a></p>
+</blockquote>
+<p>Use <code>fs.writeFile</code> to write the file translation into a new file. After the file has been successfully written, write a message to the console telling the user the operation was successful.</p>
+<h2 id="dealing-with-user-input">Dealing with User Input</h2>
+<blockquote>
+<p>Reference: <a href="https://nodejs.org/api/readline.html" target="_blank">https://nodejs.org/api/readline.html</a></p>
+</blockquote>
+<p>Use the <code>readline</code> module to receive input from the user. Ask the user for the following information:</p>
+<ul>
+<li>Path to the file to read</li>
+<li>Path to the file to write</li>
+<li>Which function to perform (yelling or Elmer Fudd translation)</li>
+</ul>
+<p>Then, use the information the user enters to execute the program.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CallbacksIndividualExercises.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Callbacks Individual Exercises">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"File Reader Challenge","level":"1.4.2","depth":2,"previous":{"title":"Callbacks Individual Exercises","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/FileReaderChallenge.md","mtime":"2020-02-13T18:59:31.904Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-13T19:00:08.864Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
