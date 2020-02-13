@@ -3,7 +3,7 @@ Welcome to the Web 201 Hy-Tech Club course!
 
 ## Schedule
 - Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
-- Week 2: JavaScript Functions (Callbacks)
+- Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
 - Week 3: JavaScript Objects / JSON
 - Week 4: HTTP Overview + Simple Node Web Server
 - Week 5: npm, Express

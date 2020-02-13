@@ -1,2 +1,5 @@
 - [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
 - [L2 - Introduction to the Command Line](CommandLine/StudentDesc.md)
+- [L3 - JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
+    - [Callbacks Individual Exercises](JavaScriptFunctions/CallbacksIndividualExercises.md)
+    - [File Reader Challenge](JavaScriptFunctions/FileReaderChallenge.md)
