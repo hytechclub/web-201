@@ -25,7 +25,11 @@ Points can be redeemed for a variety of rewards.
 | 3 | Short game with an instructor (e.g. [Connect 4](https://www.mathsisfun.com/games/connect4.html), [Soccer](https://www.agame.com/game/1-on-1-soccer-classic)) |
 | 5 | An instructor has to show you an old picture of themselves |
 | 10 | Choose an appropriate (<5min) song to play in class |
+| 10 | J will sing to the class |
 | 15 | Choose an appropriate (<5min) video to watch in class |
 | 17 | J will write you a haiku |
 | 20 | Full-size candy bar |
+| 25 | J will bring a guitar and serenade the class |
+| 30 | J will draw you a portrait of yourself |
+| 35 | Pete will shave his beard |
 | 500 | Nintendo Switch |
