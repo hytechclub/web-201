@@ -22,7 +22,7 @@ Points can be redeemed for a variety of rewards.
 | -- | -- |
 | 1 | Extra piece of candy |
 | 2 | Shoot a basket for an extra point|
-| 3 | Short game with an instructor (e.g. [Connect 4](https://www.mathsisfun.com/games/connect4.html), [Soccer](https://www.agame.com/game/1-on-1-soccer-classic)) |
+| 3 | Short game with an instructor (e.g. [Connect 4](https://www.mathsisfun.com/games/connect4.html), [Online Soccer](https://www.agame.com/game/1-on-1-soccer-classic)) |
 | 5 | An instructor has to show you an old picture of themselves |
 | 10 | Choose an appropriate (<5min) song to play in class |
 | 10 | J will sing to the class |
