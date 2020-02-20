@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L3 - JavaScript Functions (Callbacks) · GitBook</title>
+        <title>Food JSON Challenges · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CallbacksCodeAlong.html" />
     
-    
-    <link rel="prev" href="../CommandLine/StudentDesc.html" />
+    <link rel="prev" href="ObjectsIndividualExercises.html" />
     
 
     </head>
@@ -132,9 +130,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.4" data-path="../JavaScriptFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptFunctions/StudentDesc.html">
             
                     
                     L3 - JavaScript Functions (Callbacks)
@@ -146,9 +144,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="CallbacksCodeAlong.html">
+        <li class="chapter " data-level="1.4.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
-                <a href="CallbacksCodeAlong.html">
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
                     
                     Callbacks Code-Along
@@ -159,9 +157,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="CallbacksIndividualExercises.html">
+        <li class="chapter " data-level="1.4.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
-                <a href="CallbacksIndividualExercises.html">
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
                     
                     Callbacks Individual Exercises
@@ -172,9 +170,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="FileReaderChallenge.html">
+        <li class="chapter " data-level="1.4.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
             
-                <a href="FileReaderChallenge.html">
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
             
                     
                     File Reader Challenge
@@ -190,9 +188,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../JavaScriptObjects/StudentDesc.html">
+        <li class="chapter " data-level="1.5" data-path="StudentDesc.html">
             
-                <a href="../JavaScriptObjects/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L4 - JavaScript Objects / JSON
@@ -204,9 +202,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
+        <li class="chapter " data-level="1.5.1" data-path="ObjectsIndividualExercises.html">
             
-                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
+                <a href="ObjectsIndividualExercises.html">
             
                     
                     Objects Individual Exercises
@@ -217,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
+        <li class="chapter active" data-level="1.5.2" data-path="FoodJsonChallenges.html">
             
-                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
+                <a href="FoodJsonChallenges.html">
             
                     
                     Food JSON Challenges
@@ -265,7 +263,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L3 - JavaScript Functions (Callbacks)</a>
+        <a href=".." >Food JSON Challenges</a>
     </h1>
 </div>
 
@@ -280,20 +278,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="web-201---javascript-functions-callbacks">Web 201 - JavaScript Functions (Callbacks)</h1>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="JavaScriptFunctions.pptx" target="_blank">JavaScript Functions PowerPoint Presentation</a></li>
-<li><a href="CallbacksCodeAlong.html">Callbacks Code-Along</a></li>
-</ul>
-<h2 id="individual-practice">Individual Practice</h2>
-<ul>
-<li><a href="CallbacksIndividualExercises.html">Callbacks Individual Exercises</a></li>
-</ul>
+                                <h1 id="food-json-challenges">Food JSON Challenges</h1>
+<p>Complete the following challenges using the <strong>foods.json</strong> file. The file contains a JSON array with objects that represent chain restaurants and their menu items.</p>
+<h3 id="starting-code">Starting Code</h3>
+<p>Create a new file named <strong>food.js</strong> and add the following code:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;foods.json&apos;</span>);
+<span class="hljs-keyword">let</span> foods = <span class="hljs-built_in">JSON</span>.parse(rawdata);
+</code></pre>
+<p>Right click the <a href="foods.json" target="_blank">foods.json</a> link to download it and put it in the same folder as the <strong>food.js</strong> file. This code takes the array from the <strong>foods.json</strong> file and converts it into a JavaScript object <code>foods</code>. After this step, the <code>foods</code> variable becomes an array that contains all of the JSON data.</p>
 <h2 id="challenges">Challenges</h2>
-<ul>
-<li><a href="FileReaderChallenge.html">File Reader Challenge</a></li>
+<p>For each of the challenges, write code to search the <code>foods</code> array and print out the results for the query. Try to make it as user-friendly as possible. For example, the output could look something like this:</p>
+<pre><code>--Highest Calorie Counts--
+Chipotle: Chorizo Burrito
+Panera: Mac and Cheese Breadbowl
+...
+</code></pre><ol>
+<li>Find the item with the highest calorie count from each restaurant</li>
+<li>Find the item with the lowest calorie count from each restaurant</li>
+<li>Find the total number of items offered at each restaurant<ul>
+<li>Make sure to ignore any food item that has a <code>correctedTerm</code> property, because those are duplicates</li>
 </ul>
+</li>
+<li>Find and list all of the restaurants that offer burgers (i.e., have a food item with a <code>foodType</code> of &quot;Burger&quot;)</li>
+<li>Find and list all of the restaurants that offer breakfast</li>
+<li>For each restaurant, find and list every item that has more than 1000 calories</li>
+</ol>
+<h2 id="super-challenge---calorie-calculator">Super Challenge - Calorie Calculator</h2>
+<p>Create a new file named <strong>calories.js</strong> that will serve as a separate node application. This application should ask a user for a restaurant, then ask them for items they ordered at the restaurant. Then, it should use the <code>foods</code> object to find each food item and calculate the total number of calories for the order. It should tell the user the total calorie count.</p>
+<p>For help receiving input from the user, check out the documentation for Node&apos;s <a href="https://nodejs.org/api/readline.html#readline_readline" target="_blank"><code>readline</code> module</a>. It uses callbacks to allow programs to respond to a user&apos;s input after prompting them with a question.</p>
 
                                 
                                 </section>
@@ -321,14 +334,10 @@
 
             
                 
-                <a href="../CommandLine/StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L2 - Introduction to the Command Line">
+                <a href="ObjectsIndividualExercises.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Objects Individual Exercises">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="CallbacksCodeAlong.html" class="navigation navigation-next " aria-label="Next page: Callbacks Code-Along">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -337,7 +346,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L3 - JavaScript Functions (Callbacks)","level":"1.4","depth":1,"next":{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},"previous":{"title":"L2 - Introduction to the Command Line","level":"1.3","depth":1,"path":"CommandLine/StudentDesc.md","ref":"CommandLine/StudentDesc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/StudentDesc.md","mtime":"2020-02-20T17:31:04.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-20T17:31:47.278Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Food JSON Challenges","level":"1.5.2","depth":2,"previous":{"title":"Objects Individual Exercises","level":"1.5.1","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/FoodJsonChallenges.md","mtime":"2020-02-20T17:31:04.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-20T17:31:47.278Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
