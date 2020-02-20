@@ -34,12 +34,13 @@ let movies = [
 ```
 
 ## Get the First Movie Title and Runtime
-1. Get the title of the first movie in the `movies` array, and store it in a variable.
-1. Get the runtime of the first movie in the `movies` array, and store it in a variable.
-1. Display a message to the user telling them the name of the movie, and how long it is. Make sure to specify that the runtime is in minutes.
+1. Get the title of the first movie in the `movies` array, and store it in a variable
+1. Get the runtime of the first movie in the `movies` array, and store it in a variable
+1. Display a message to the user telling them the name of the movie, and how long it is
+    - Make sure to specify that the runtime is in minutes
 
 ## Add a Showtime to the Third Movie
-1. Get the third movie object from the `movies` array, and store it in a variable.
+1. Get the third movie object from the `movies` array, and store it in a variable
 1. Add a showtime of "9:45PM" to the showtimes array for the third movie
 
 ## Swap Theaters
