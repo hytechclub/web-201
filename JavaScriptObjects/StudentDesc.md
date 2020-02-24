@@ -6,6 +6,9 @@
 - <a href="JavaScriptArrays.pptx" target="_blank">JavaScript Arrays PowerPoint Presentation</a>
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
+## Activities
+- Objects Code-Along
+
 ## Individual Practice
 - [Objects Individual Exercises](ObjectsIndividualExercises.md)
 
