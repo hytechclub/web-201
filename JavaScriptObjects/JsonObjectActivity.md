@@ -8,7 +8,7 @@ let results = [
         name: 'Alice',
         age: 34,
         contactInfo: {
-            phoneNumber: '1234567890'
+            phoneNumber: '1234567890',
             emailAddress: 'Alice@alice.com',
         }
     },
@@ -16,7 +16,7 @@ let results = [
         name: 'Rudiger',
         age: 10,
         contactInfo: {
-            phoneNumber: '1115553226'
+            phoneNumber: '1115553226',
             emailAddress: 'Person@people.com',
         }
     },
@@ -24,7 +24,7 @@ let results = [
         name: 'Pat',
         age: 67,
         contactInfo: {
-            phoneNumber: '2128702309'
+            phoneNumber: '2128702309',
             emailAddress: 'Pat@hotmail.com',
         }
     }
