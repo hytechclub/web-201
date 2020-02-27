@@ -9,7 +9,7 @@ Add the ability for the user to use a new query parameter `msg` whose value will
 1. Use `response.write` to write the message into the HTML response in the form "You said `<msg>`"
 
 ### Mini-Challenge: Empty `msg` Parameter
-If the user did not specify a `msg` query parameter, make the page say "You said nothing" instead. It is possible to check for empty query parameters with `== undefined`.
+If the user did not specify a `msg` query parameter, make the page say "You said nothing" instead. It is possible to check for empty query parameters with `=== undefined`.
 
 ## Background Color Query Parameter
 1. Use the parsed URL object to obtain the value of a query parameter `bg`, and store it in a variable
