@@ -2,10 +2,14 @@
 Using the "Hello World" web server as a starting point, complete the following exercises.
 
 ## Message Query Parameter
-1. Use the parsed URL object to obtain the value of a query parameter `msg`, and store it in a variable
-1. Use a template string and string interpolation to create an HTML paragraph element with the text "You said `<msg>`" and write it to the `response` object
-1. If the user did not specify a `msg` query parameter, say "You said nothing" instead
-    - This can be determined by checking if `msg` is equal to `undefined`
+Add the ability for the user to use a new query parameter `msg` whose value will appear in the HTML response. For example, they should be able to go to [http://127.0.0.1:3000?msg=hello](http://127.0.0.1:3000?msg=hello) and see a page that contains the text "You said hello" in the HTML.
+
+1. In the `serverCallback` function, find the `parsedUrl` object
+1. Get the value of the `msg` query parameter, and store it in a variable
+1. Use `response.write` to write the message into the HTML response in the form "You said `<msg>`"
+
+### Mini-Challenge: Empty `msg` Parameter
+If the user did not specify a `msg` query parameter, make the page say "You said nothing" instead. It is possible to check for empty query parameters with `== undefined`.
 
 ## Background Color Query Parameter
 1. Use the parsed URL object to obtain the value of a query parameter `bg`, and store it in a variable
