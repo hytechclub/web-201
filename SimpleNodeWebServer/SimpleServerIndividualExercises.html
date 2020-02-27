@@ -339,14 +339,14 @@
                                 <h1 id="simple-server-individual-exercises">Simple Server: Individual Exercises</h1>
 <p>Using the &quot;Hello World&quot; web server as a starting point, complete the following exercises.</p>
 <h2 id="message-query-parameter">Message Query Parameter</h2>
+<p>Add the ability for the user to use a new query parameter <code>msg</code> whose value will appear in the HTML response. For example, they should be able to go to <a href="http://127.0.0.1:3000?msg=hello" target="_blank">http://127.0.0.1:3000?msg=hello</a> and see a page that contains the text &quot;You said hello&quot; in the HTML.</p>
 <ol>
-<li>Use the parsed URL object to obtain the value of a query parameter <code>msg</code>, and store it in a variable</li>
-<li>Use a template string and string interpolation to create an HTML paragraph element with the text &quot;You said <code>&lt;msg&gt;</code>&quot; and write it to the <code>response</code> object</li>
-<li>If the user did not specify a <code>msg</code> query parameter, say &quot;You said nothing&quot; instead<ul>
-<li>This can be determined by checking if <code>msg</code> is equal to <code>undefined</code></li>
-</ul>
-</li>
+<li>In the <code>serverCallback</code> function, find the <code>parsedUrl</code> object</li>
+<li>Get the value of the <code>msg</code> query parameter, and store it in a variable</li>
+<li>Use <code>response.write</code> to write the message into the HTML response in the form &quot;You said <code>&lt;msg&gt;</code>&quot;</li>
 </ol>
+<h3 id="mini-challenge-empty-msg-parameter">Mini-Challenge: Empty <code>msg</code> Parameter</h3>
+<p>If the user did not specify a <code>msg</code> query parameter, make the page say &quot;You said nothing&quot; instead. It is possible to check for empty query parameters with <code>== undefined</code>.</p>
 <h2 id="background-color-query-parameter">Background Color Query Parameter</h2>
 <ol>
 <li>Use the parsed URL object to obtain the value of a query parameter <code>bg</code>, and store it in a variable</li>
@@ -483,7 +483,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.7.1","depth":2,"previous":{"title":"L6 - Simple Node Web Server","level":"1.7","depth":1,"path":"SimpleNodeWebServer/StudentDesc.md","ref":"SimpleNodeWebServer/StudentDesc.md","articles":[{"title":"Simple Server Individual Exercises","level":"1.7.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2020-02-27T12:34:17.512Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T12:34:55.236Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.7.1","depth":2,"previous":{"title":"L6 - Simple Node Web Server","level":"1.7","depth":1,"path":"SimpleNodeWebServer/StudentDesc.md","ref":"SimpleNodeWebServer/StudentDesc.md","articles":[{"title":"Simple Server Individual Exercises","level":"1.7.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2020-02-27T16:47:58.256Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-27T16:48:34.395Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
