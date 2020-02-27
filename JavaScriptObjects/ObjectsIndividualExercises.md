@@ -6,6 +6,7 @@ let movies = [
     {
         title: 'Mulan',
         runtime: 97,
+        theater: 1,
         showtimes: [
             '5:40PM',
             '7:25PM',
@@ -15,6 +16,7 @@ let movies = [
     {
         title: 'Godzilla vs. Kong',
         runtime: 102,
+        theater: 2,
         showtimes: [
             '5:30PM',
             '6:50PM',
@@ -26,6 +28,7 @@ let movies = [
     {
         title: 'Fargo',
         runtime: 98,
+        theater: 3,
         showtimes: [
             '11:59PM',
         ]
