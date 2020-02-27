@@ -2,7 +2,9 @@
 
 ## Reference
 - https://nodejs.org/en/docs/guides/getting-started-guide/
-- [Simple Server Code-Along](SimpleServerCodeAlong.md)
+
+## Activity
+- Simple Server Code-Along
 
 ## Individual Practice
 - [Simple Server Individual Exercises](SimpleServerIndividualExercises.md)

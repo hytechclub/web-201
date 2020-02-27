@@ -1,5 +1,8 @@
 # JSON Object Activity
-Given an array of person objects, ask students how to get or set the data. Every student should have a chance to answer a question. The questions can be asked via a game (like Around the World), or Popcorn (when a student answers a question correctly, they decide which student answers the next question), or simply by calling randomly. Students should be able to answer the questions verbally.
+Given an array of person objects, ask students how to get or set the data.
+
+## Gameplay
+Call two students at a time up to the whiteboard to face off. Ask a question, and whoever writes the correct answer on the whiteboard first wins a piece of candy. Then, repeat the process with a different question and two new students. Optionally, students can challenge each other. Ensure that every student answers at least one question before allowing repeat students.
 
 ## Object
 ```js

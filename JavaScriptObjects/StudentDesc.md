@@ -7,7 +7,7 @@
     - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 ## Activities
-- Objects Code-Along
+- [Objects Code-Along](ObjectsCodeAlong.md)
 
 ## Individual Practice
 - [Objects Individual Exercises](ObjectsIndividualExercises.md)

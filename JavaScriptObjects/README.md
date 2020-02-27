@@ -8,6 +8,7 @@ This lesson reviews JavaScript objects, and introduces the ideas of JavaScript a
 ## Instruction
 - [JavaScript Objects PowerPoint](JavaScriptObjects.pptx)
 - [Objects Code-Along](ObjectsCodeAlong.md)
+    - Note that it can be beneficial to let the students lead this activity - allow them to choose the data for the car
 - [JavaScript Arrays PowerPoint](JavaScriptArrays.pptx)
 
 ## Group Activities
