@@ -10,4 +10,8 @@
     - [Food JSON Challenges](JavaScriptObjects/FoodJsonChallenges.md)
 - [L5 - HTTP Overview](HttpOverview/StudentDesc.md)
 - [L6 - Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
+    - [Simple Server Code-Along](SimpleNodeWebServer/SimpleServerCodeAlong.md)
     - [Simple Server Individual Exercises](SimpleNodeWebServer/SimpleServerIndividualExercises.md)
+- [L7 - npm, Express](ExpressProjects/StudentDesc.md)
+    - [Express Project Individual Exercises](ExpressProjects/ExpressProjectIndividualExercises.md)
+    - [Express POST Challenge](ExpressProjects/ExpressPostChallenge.md)
