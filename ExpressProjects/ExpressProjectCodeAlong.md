@@ -37,11 +37,11 @@ At first, creating an Express web server is a lot like creating a web server wit
 1. Import the `express` module using `require`, and store it in a `const` variable named `express`
 1. Create `const` variables for `hostname` and `port`
 1. Initialize an Express app by calling the `express` module as a function, and store it in a variable named `app`
-1. Define a new function named `indexCallback` that has `request` and `response` as parameters
-1. In the body of the `indexCallback` function, use `response.send` to display 'Hello World!' to the user
-1. Use `app.get` to specify that when a browser goes to the root of the server (`'/'`), `indexCallback` should run
+1. Define a new function named `handleHomeRequest` that has `request` and `response` as parameters
+1. In the body of the `handleHomeRequest` function, use `response.send` to display 'Hello World!' to the user
+1. Use `app.get` to specify that when a browser goes to the root of the server (`'/'`), `handleHomeRequest` should run
     ```js
-    app.get('/', indexCallback);
+    app.get('/', handleHomeRequest);
     ```
 1. Define a new function named `listenCallback` that logs a message to the console with the location of the web server
 1. Finally, use `app.listen` to listen on the appropriate port on the host, and call `listenCallback` when listening
@@ -56,11 +56,11 @@ const port = 3000;
 
 let app = express();
 
-function indexCallback(request, response) {
+function handleHomeRequest(request, response) {
     response.send('Hello World!');
 }
 
-app.get('/', indexCallback);
+app.get('/', handleHomeRequest);
 
 function listenCallback() {
     console.log(`Listening on http://${hostname}:${port}`);
@@ -72,18 +72,18 @@ app.listen(port, hostname, listenCallback);
 ## Adding Multiple Endpoints
 It is much simpler to add additional HTTP endpoints using the Express framework!
 
-1. Define a new function named `infoCallback` that has `request` and `response` as parameters
-1. In the body of the `infoCallback` function, use `response.send` to show an HTML header to the user that says "Info"
-1. Use `app.get` to specify that when a browser goes to the `'/info'` endpoint, `infoCallback` should run
+1. Define a new function named `handleInfoRequest` that has `request` and `response` as parameters
+1. In the body of the `handleInfoRequest` function, use `response.send` to show an HTML header to the user that says "Info"
+1. Use `app.get` to specify that when a browser goes to the `'/info'` endpoint, `handleInfoRequest` should run
 1. Test out the new endpoint by running `node app.js` again and visiting [http://127.0.0.1:3000/info](http://127.0.0.1:3000/info)
 
 ### Code
 ```js
-function infoCallback(request, response) {
+function handleInfoRequest(request, response) {
     response.send('<h1>Info</h1>');
 }
 
-app.get('/info', infoCallback);
+app.get('/info', handleInfoRequest);
 ```
 
 ## Sending HTML Files
@@ -95,7 +95,7 @@ So far the webpages are not very exciting, but it would be very annoying put a l
     ```js
     const path = require('path');
     ```
-1. In the `infoCallback` function, remove the `response.send` statement
+1. In the `handleInfoRequest` function, remove the `response.send` statement
 1. Use `path.join` to combine `__dirname` and `'info.html'` to get the absolute path of the HTML file and store it in a variable
     ```js
     let infoPath = path.join(__dirname, 'info.html');
@@ -113,17 +113,17 @@ const port = 3000;
 
 let app = express();
 
-function indexCallback(request, response) {
+function handleHomeRequest(request, response) {
     response.send('Hello World!');
 }
 
-function infoCallback(request, response) {
+function handleInfoRequest(request, response) {
     let infoPath = path.join(__dirname, 'info.html');
     response.sendFile(infoPath);
 }
 
-app.get('/', indexCallback);
-app.get('/info', infoCallback);
+app.get('/', handleHomeRequest);
+app.get('/info', handleInfoRequest);
 
 function listenCallback() {
     console.log(`Listening on http://${hostname}:${port}`);
