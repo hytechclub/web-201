@@ -2,24 +2,46 @@
 Using the "Hello World" web server as a starting point, complete the following exercises.
 
 ## Message Query Parameter
-Add the ability for the user to use a new query parameter `msg` whose value will appear in the HTML response. For example, they should be able to go to [http://127.0.0.1:3000?msg=hello](http://127.0.0.1:3000?msg=hello) and see a page that contains the text "You said hello" in the HTML.
+Add the ability for the user to use a new query parameter `msg` whose value will appear on the page. For example, they should be able to go to [http://127.0.0.1:3000?msg=hello](http://127.0.0.1:3000?msg=hello) and see a page that contains the text "You said hello" in the HTML. This should work for any value, e.g. `?msg=hi`, `?msg=goodbye`, `?msg=whatever`, etc.
 
-1. In the `serverCallback` function, find the `parsedUrl` object
-1. Get the value of the `msg` query parameter, and store it in a variable
-1. Use `response.write` to write the message into the HTML response in the form "You said `<msg>`"
+>HINT: No `if` statement is required for this exercise!
 
-### Mini-Challenge: Empty `msg` Parameter
-If the user did not specify a `msg` query parameter, make the page say "You said nothing" instead. It is possible to check for empty query parameters with `=== undefined`.
+1. In the `handleRequest` function, find the `parsedUrl` object
+  - The `parsedUrl` object should have a property of `msg` for the query parameter
+1. Get the value of the `msg` query parameter, and store it in a new variable
+1. Use `response.write` to write the message into the HTML response: `'You said ' + msg`
 
 ## Background Color Query Parameter
-1. Use the parsed URL object to obtain the value of a query parameter `bg`, and store it in a variable
-1. Write a `<style></style>` HTML element to the `response` object that sets the background color of the whole page to be what the user specified with the query parameter
+Use a new query parameter, `bg`, to dynamically set the background color of the page. For example, the user should be able to go to [http://127.0.0.1:3000?bg=red](http://127.0.0.1:3000?bg=red) and see a page with a red background. This should work for any color.
+
+The HTML to change the background color looks like this:
+
+```html
+<style>
+	body {
+		background-color: red;
+  }
+</style>
+```
+
+1. In the `handleRequest` function, use the `queryParams` object to obtain the value of a query parameter `bg`, and store it in a variable
+  - This is just like getting the value of the `msg` or `world` query parameter
+1. Create a new variable containing the `<style></style>` tag within a template string (surrounded with `\``)
+1. Update the template string so that instead of `red`, the color is whatever the user specified with `bg`
+  - HINT: replace `red` in the `style` tag with `${bg}`
+1. Use `response.write` to write the _entire_ `<style></style>` tag to the response!
 
 ## Background Color Links
-1. Use a template string to create an HTML anchor element within a paragraph
-    - Set the `href` attribute of the `a` element to "?orange"
-    - Set the text of the `a` element to "Make background orange"
-1. Write the `a` paragraph to the `response` object
+Instead of making the user type the query parameter into the URL, create links on the page that contain the query parameter for them!
+
+A link would look like this:
+
+```html
+<p><a href="?orange">Make background orange</a><p>
+```
+
+1. Create a new variable containing the `<p></p>` element as a string
+1. Write the `<p></p>` element to the `response` object with `response.write` 
 1. Repeat the steps above to create links for "lavender" and "yellow" in addition to orange
 
 ### Challenge

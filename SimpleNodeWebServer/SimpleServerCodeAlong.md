@@ -26,25 +26,25 @@ console.log('Starting up...')
 ## Creating the Server and Listening
 Now, write the code to make a server!
 
-1. Define a new function named `serverCallback`
+1. Define a new function named `handleRequest`
     - This function will be used to respond to any incoming requests from the web browser
-1. Add two parameters to the `serverCallback` function: `request` and `response`
-1. In the body of the `serverCallback` function, set the `statusCode` property of the `response` object to `200`
+1. Add two parameters to the `handleRequest` function: `request` and `response`
+1. In the body of the `handleRequest` function, set the `statusCode` property of the `response` object to `200`
     - This means success!
 1. After setting the status code, call the `end` function on the `response` object
-1. Outside of the `serverCallback` function, use `http.createServer` and pass in `serverCallback` to create the server
+1. Outside of the `handleRequest` function, use `http.createServer` and pass in `handleRequest` to create the server
     - Store the server in a constant variable named `server`
 1. Use `server.listen` to specify the post and hostname (set as constants previously)
 1. Check out the Network tab at [http://127.0.0.1:3000](http://127.0.0.1:3000) to see the HTTP response come through!
 
 ### Code
 ```js
-function serverCallback(request, response) {
+function handleRequest(request, response) {
     response.statusCode = 200;
     response.end();
 }
 
-const server = http.createServer(serverCallback);
+const server = http.createServer(handleRequest);
 
 server.listen(port, hostname);
 ```
@@ -69,7 +69,7 @@ server.listen(port, hostname, listenCallback);
 ## Creating an HTML Response
 While the server is technically functioning, it's not doing much yet. Follow the steps below to make the server actually send some HTML!
 
-1. In the body of the `serverCallback` function, use the `setHeader` function of the `response` object to set the Content Type to HTML
+1. In the body of the `handleRequest` function, use the `setHeader` function of the `response` object to set the Content Type to HTML
 1. Under that, use `response.write` to write some HTML - `<h1>Hello World</h1>`
 1. Reload the page to see the HTML!
 
@@ -77,7 +77,7 @@ Obviously, this is a very simple HTML page, but it is simply an example. It is e
 
 ### Code
 ```js
-function serverCallback(request, response) {
+function handleRequest(request, response) {
   response.statusCode = 200;
   response.setHeader('Content-Type', 'text/html');
   response.write('<h1>Hello World</h1>');
@@ -102,13 +102,15 @@ To make the server a little more dynamic, add the ability to respond to query pa
 
 ### Code
 ```js
-function serverCallback(request, response) {
+function handleRequest(request, response) {
   response.statusCode = 200;
   response.setHeader('Content-Type', 'text/html');
 
   let requestUrl = request.url;
   let parsedUrl = url.parse(requestUrl, true);
-  let worldParam = parsedUrl.query.world;
+  let queryParams = parsedUrl.query;
+  console.log(queryParams);
+  let worldParam = queryParams.world;
 
   if (worldParam == 1) {
     response.write('<h1>Hello World</h1>');
@@ -128,13 +130,15 @@ const url = require('url');
 const hostname = '127.0.0.1';
 const port = 3000;
 
-function serverCallback(request, response) {
+function handleRequest(request, response) {
   response.statusCode = 200;
   response.setHeader('Content-Type', 'text/html');
 
   let requestUrl = request.url;
   let parsedUrl = url.parse(requestUrl, true);
-  let worldParam = parsedUrl.query.world;
+  let queryParams = parsedUrl.query;
+  console.log(queryParams);
+  let worldParam = queryParams.world;
 
   if (worldParam == 1) {
     response.write('<h1>Hello World</h1>');
@@ -145,7 +149,7 @@ function serverCallback(request, response) {
   response.end();
 }
 
-const server = http.createServer(serverCallback);
+const server = http.createServer(handleRequest);
 
 function listenCallback() {
   console.log(`Server running at http://${hostname}:${port}`);
