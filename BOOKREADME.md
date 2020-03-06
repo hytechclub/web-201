@@ -6,7 +6,7 @@ Welcome to the Web 201 Hy-Tech Club course!
 - Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
 - Week 3: [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
 - Week 4: [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
-- Week 5: npm, Express
+- Week 5: [npm, Express](ExpressProjects/StudentDesc.md)
 - Week 6: Creating Page Templates (EJS)
 - Week 7: Databases (MySQL)
 - Week 8-12: Building a CRUD App + Final Project
