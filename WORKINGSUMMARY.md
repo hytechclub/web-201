@@ -15,3 +15,7 @@
 - [L7 - npm, Express](ExpressProjects/StudentDesc.md)
     - [Express Project Individual Exercises](ExpressProjects/ExpressProjectIndividualExercises.md)
     - [Express POST Challenge](ExpressProjects/ExpressPostChallenge.md)
+- [L8 - Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
+    - [People List Starter App](EjsTemplates/PeopleListStarterApp.md)
+    - [People List EJS Code-Along](EjsTemplates/PeopleListEjsCodeAlong.md)
+    - [People List EJS Individual Exercises](EjsTemplates/PeopleListEjsIndividualExercises.md)

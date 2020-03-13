@@ -5,7 +5,7 @@
 - ["Hello World" Express Walkthrough](https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30)
 
 ## Activity
-- Express Project Code-Along
+- [Express Project Code-Along](ExpressProjectCodeAlong.md)
 
 ## Individual Practice
 - [Express Project Individual Exercises](ExpressProjectIndividualExercises.md)
