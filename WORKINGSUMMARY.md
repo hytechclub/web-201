@@ -1,3 +1,4 @@
+- [Software Setup](SoftwareSetup.md)
 - [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
 - [L2 - Introduction to the Command Line](CommandLine/StudentDesc.md)
 - [L3 - JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)

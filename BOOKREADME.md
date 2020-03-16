@@ -11,6 +11,8 @@ Welcome to the Web 201 Hy-Tech Club course!
 - Week 7: Databases (MySQL)
 - Week 8-12: Building a CRUD App + Final Project
 
+## Software Setup
+[Software Setup](SoftwareSetup.md)
 
 ## Points
 Earn points throughout the semester by asking good questions, answering questions, helping others, working hard, and behaving well!
