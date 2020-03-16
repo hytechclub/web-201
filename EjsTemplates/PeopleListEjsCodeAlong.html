@@ -1,0 +1,768 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>People List EJS Code-Along · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PeopleListEjsIndividualExercises.html" />
+    
+    
+    <link rel="prev" href="PeopleListStarterApp.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SoftwareSetup.html">
+            
+                <a href="../SoftwareSetup.html">
+            
+                    
+                    Software Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../FullStackOverview/StudentDesc.html">
+            
+                <a href="../FullStackOverview/StudentDesc.html">
+            
+                    
+                    L1 - Full-stack Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../CommandLine/StudentDesc.html">
+            
+                <a href="../CommandLine/StudentDesc.html">
+            
+                    
+                    L2 - Introduction to the Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../JavaScriptFunctions/StudentDesc.html">
+            
+                <a href="../JavaScriptFunctions/StudentDesc.html">
+            
+                    
+                    L3 - JavaScript Functions (Callbacks)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
+            
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
+            
+                    
+                    Callbacks Code-Along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
+            
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
+            
+                    
+                    Callbacks Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
+            
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
+            
+                    
+                    File Reader Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../JavaScriptObjects/StudentDesc.html">
+            
+                <a href="../JavaScriptObjects/StudentDesc.html">
+            
+                    
+                    L4 - JavaScript Objects / JSON
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScriptObjects/ObjectsCodeAlong.html">
+            
+                <a href="../JavaScriptObjects/ObjectsCodeAlong.html">
+            
+                    
+                    Objects Code-Along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
+            
+                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
+            
+                    
+                    Objects Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
+            
+                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
+            
+                    
+                    Food JSON Challenges
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../HttpOverview/StudentDesc.html">
+            
+                <a href="../HttpOverview/StudentDesc.html">
+            
+                    
+                    L5 - HTTP Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SimpleNodeWebServer/StudentDesc.html">
+            
+                <a href="../SimpleNodeWebServer/StudentDesc.html">
+            
+                    
+                    L6 - Simple Node Web Server
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+            
+                <a href="../SimpleNodeWebServer/SimpleServerCodeAlong.html">
+            
+                    
+                    Simple Server Code-Along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+            
+                <a href="../SimpleNodeWebServer/SimpleServerIndividualExercises.html">
+            
+                    
+                    Simple Server Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ExpressProjects/StudentDesc.html">
+            
+                <a href="../ExpressProjects/StudentDesc.html">
+            
+                    
+                    L7 - npm, Express
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ExpressProjects/ExpressProjectIndividualExercises.html">
+            
+                <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
+            
+                    
+                    Express Project Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ExpressProjects/ExpressPostChallenge.html">
+            
+                <a href="../ExpressProjects/ExpressPostChallenge.html">
+            
+                    
+                    Express POST Challenge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="StudentDesc.html">
+            
+                <a href="StudentDesc.html">
+            
+                    
+                    L8 - Creating Page Templates (EJS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="PeopleListStarterApp.html">
+            
+                <a href="PeopleListStarterApp.html">
+            
+                    
+                    People List Starter App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.2" data-path="PeopleListEjsCodeAlong.html">
+            
+                <a href="PeopleListEjsCodeAlong.html">
+            
+                    
+                    People List EJS Code-Along
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="PeopleListEjsIndividualExercises.html">
+            
+                <a href="PeopleListEjsIndividualExercises.html">
+            
+                    
+                    People List EJS Individual Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >People List EJS Code-Along</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="people-list-ejs-code-along">People List EJS: Code-Along</h1>
+<p>The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in <a href="people.json" target="_blank">people.json</a>. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!</p>
+<p><strong>EJS</strong> (<strong>E</strong>mbedded <strong>J</strong>ava<strong>S</strong>cript) allows developers to use JavaScript directly in HTML templates, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!</p>
+<h2 id="setting-up">Setting Up</h2>
+<ol>
+<li>Open a terminal, and <code>cd</code> into the People List project folder</li>
+<li>Run <code>npm install ejs --save</code> to install EJS and add it to the project</li>
+<li>In the People List project folder, create a new folder named &quot;views&quot;</li>
+<li>Move the <strong>home.html</strong> file and <strong>person0.html</strong> file into the &quot;views&quot; folder</li>
+<li>Rename the files to <strong>home.ejs</strong> and <strong>person.ejs</strong></li>
+</ol>
+<h3 id="appjs-updates"><strong>app.js</strong> Updates</h3>
+<p>Make the following updates to the <strong>app.js</strong> file.</p>
+<ol>
+<li>Remove the <code>path</code> module import as it is no longer necessary</li>
+<li>After the <code>app</code> variable is initialized, use the code below to set the &quot;view engine&quot; to &quot;ejs&quot;<pre><code class="lang-js"> app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
+</code></pre>
+</li>
+<li>In the body of the <code>homePage</code> function, remove the current command and replace it with <code>response.render(&apos;home&apos;);</code></li>
+<li>In the <code>personPage</code> function, replace the render with <code>response.render(&apos;person&apos;)</code></li>
+<li><p>Remove everything from the <code>personPage</code> function except for the part where the <code>index</code> query parameter is obtained</p>
+<pre><code class="lang-js"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">personPage</span>(<span class="hljs-params">request, response</span>) </span>{
+     <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+     <span class="hljs-keyword">let</span> index = <span class="hljs-built_in">Number</span>(parsedUrl.query.index);
+
+     response.render(<span class="hljs-string">&apos;person&apos;</span>);
+ }
+</code></pre>
+</li>
+<li>Run the server, and make sure the homepage still loads along with the first person page (currently ignoring the index)</li>
+</ol>
+<h2 id="passing-the-json-person">Passing the JSON Person</h2>
+<p>The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the <code>people.json</code> array based on the index, and pass it into the template.</p>
+<blockquote>
+<p>Note: The <strong>people.json</strong> file must be saved in the same directory as the <strong>app.js</strong> file</p>
+</blockquote>
+<ol>
+<li>At the top of the file, import the <code>fs</code> module, storing it in a <code>const</code> variable<pre><code class="lang-js"> <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+</code></pre>
+</li>
+<li>Use <code>fs.readFileSync</code> and <code>JSON.parse</code> to put the <code>people.json</code> array into a variable named <code>peopleJson</code><pre><code class="lang-js"> <span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
+ <span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
+</code></pre>
+</li>
+<li>In the body of the <code>personPage</code> function, use the <code>index</code> query parameter to get the correct person from the <code>peopleJson</code> array<pre><code class="lang-js"> <span class="hljs-keyword">let</span> currentPerson = peopleJson[index];
+</code></pre>
+</li>
+<li>In the <code>response.render</code> function call, pass in a second parameter that is a new object with a <code>person</code> property of <code>currentPerson</code><pre><code class="lang-js"> response.render(<span class="hljs-string">&apos;person&apos;</span>, {
+     person: currentPerson
+ });
+</code></pre>
+</li>
+<li>In the <strong>person.ejs</strong> file, add <code>&lt;%= JSON.stringify(person) %&gt;</code> somewhere for testing purposes</li>
+<li>Run the server, load the <code>/person</code> page, and make sure that the object displayed changes based on the <code>index</code> query parameter!</li>
+</ol>
+<h2 id="updating-the-person-page-template">Updating the Person Page Template</h2>
+<p>Now that the <code>person</code> object is available in the <strong>person.ejs</strong> template, all that&apos;s left is updating the template to use the object properties!</p>
+<ol>
+<li>Replace the existing name with a dynamic piece of code that gets the <code>first_name</code> from the <code>person</code>, and adds the <code>last_name</code> of the <code>person</code><ul>
+<li>Use <code>&lt;%=</code> to start the EJS segment</li>
+<li>Use <code>%&gt;</code> to end the EJS segment</li>
+<li>All the JavaScript in between those tags will be rendered in the HTML file!</li>
+</ul>
+</li>
+<li>Replace the existing occupation with another dynamic EJS segment using <code>person.occupation</code></li>
+<li>Replace the image source (between <code>&apos;&apos;</code>) with another dynamic EJS segment using <code>person.avatar</code></li>
+<li>Check the <code>/person</code> page with some different <code>index</code> values to see it update dynamically!</li>
+</ol>
+<h3 id="changing-the-background-color">Changing the Background Color</h3>
+<p>The background color should be green if the person is alive, and red if the person is dead. It is possible to use <code>if</code> statements in EJS scriptlets to accomplish this.</p>
+<ol>
+<li>Remove everything from the <code>head</code> element, and add an EJS scriptlet using <code>&lt;%</code> and <code>%&gt;</code><ul>
+<li>For control flow, use <code>&lt;%</code> with no equals sign because no JavaScript should render to the template</li>
+<li>Instead of rendering within EJS, these statements use HTML dynamically</li>
+</ul>
+</li>
+<li>Within the EJS scriptlet, enter the first line of an <code>if</code> statement checking <code>person.alive</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> (<span class="hljs-attr">person.alive</span>) { %&gt;</span>
+</code></pre>
+</li>
+<li>Under the EJS scriptlet, in the &quot;body&quot; of the <code>if</code> statement, add a <code>style</code> element with the CSS to set the background color of the page to <code>mediumseagreen</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+     <span class="hljs-selector-tag">body</span> {
+         <span class="hljs-attribute">background</span>: mediumseagreen;
+     }
+ </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+</li>
+<li>Under the HTML, add another EJS scriptlet to close off the <code>if</code> statement: <code>&lt;% } %&gt;</code></li>
+<li>Load up the <code>/person</code> page, and make sure only alive people have green backgrounds!</li>
+<li>In the <code>if</code> closing EJS scriptlet, add an <code>else</code> to handle dead people<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%</span> } <span class="hljs-attr">else</span> { %&gt;</span>
+</code></pre>
+</li>
+<li>Under the EJS scriptlet, in the &quot;body&quot; of the else, add a <code>style</code> element with the CSS to set the background color of the page to <code>red</code></li>
+<li>Under the HTML, add another EJS scriptlet to close off the <code>else</code> statement</li>
+<li>Load up the <code>/person</code> page, and make sure that dead people have red backgrounds!</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">if</span> (<span class="hljs-attr">person.alive</span>) { %&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+            <span class="hljs-selector-tag">body</span> {
+                <span class="hljs-attribute">background</span>: mediumseagreen;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%</span> } <span class="hljs-attr">else</span> { %&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+            <span class="hljs-selector-tag">body</span> {
+                <span class="hljs-attribute">background</span>: red;
+            }
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">%</span> } %&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Person Information<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Name: <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">person.first_name</span> + &apos; &apos; + <span class="hljs-attr">person.last_name</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Occupation: <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">person.job</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;&lt;%= person.avatar %&gt;&apos;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="updating-the-home-page-template">Updating the Home Page Template</h2>
+<p>Now that the person page dynamically loads each individual person, update the home page so that the list of links is generated dynamically too!</p>
+<h3 id="setting-up-the-loop">Setting up the Loop</h3>
+<ol>
+<li>In the <strong>app.js</strong> file, update the <code>homePage</code> function so that it passes <code>peopleJson</code> when rendering the page<pre><code class="lang-js"> response.render(<span class="hljs-string">&apos;home&apos;</span>, {
+     people: peopleJson
+ });
+</code></pre>
+</li>
+<li>In the <strong>home.ejs</strong> file, remove all of the <code>li</code> elements<ul>
+<li>They will be dynamically generated!</li>
+</ul>
+</li>
+<li><p>Within the <code>ul</code>, add an EJS scriptlet containing a <code>for</code> loop that will loop through all of the people in the <code>people</code> array</p>
+<pre><code class="lang-html"> &lt;% for (let i = 0; i &lt; people.length; i++) { %&gt;
+
+ &lt;% } %&gt;
+</code></pre>
+</li>
+<li>In the &quot;body&quot; of the <code>for</code> loop, add an <code>li</code></li>
+<li>In the <code>li</code>, add an EJS segment to render the current index in the <code>for</code> loop: <code>&lt;%= i %&gt;</code></li>
+<li>Load up the homepage, and make sure the proper number of list items appears!</li>
+</ol>
+<h3 id="creating-the-person-links">Creating the Person Links</h3>
+<ol>
+<li>Around the <code>i</code> EJS segment, add an <code>a</code> element that will link to the person with the given <code>i</code> index<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;/person?index=&lt;%= i %&gt;&apos;</span>&gt;</span>Person<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+</li>
+<li>Update the text of the Person link so that it also provides the index</li>
+<li>Update the text of the Person link so that it contains the first name of the person at the given index</li>
+<li>Update the text of the Person link so that it contains both the first <em>and</em> the last name of the person<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;/person?index=&lt;%= i %&gt;&apos;</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">people</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.first_name</span> + &apos; &apos; + <span class="hljs-attr">people</span>[<span class="hljs-attr">i</span>]<span class="hljs-attr">.last_name</span> %&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+</li>
+<li>Load up the homepage, and make sure the links function properly!</li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-html">&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;People List&lt;/h1&gt;
+        &lt;p&gt;Welcome to the list of people&lt;/p&gt;
+        &lt;ul&gt;
+        &lt;% for (let i = 0; i &lt; people.length; i++) { %&gt;
+            &lt;li&gt;
+                &lt;a href=&apos;/person?index=&lt;%= i %&gt;&apos;&gt;
+                    &lt;%= people[i].first_name + &apos; &apos; + people[i].last_name %&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;% } %&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="final-appjs-code">Final <strong>app.js</strong> Code</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
+<span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
+
+<span class="hljs-keyword">let</span> app = express();
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">homePage</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.render(<span class="hljs-string">&apos;home&apos;</span>, {
+        people: peopleJson
+    });
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">personPage</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">let</span> index = <span class="hljs-built_in">Number</span>(parsedUrl.query.index);
+    <span class="hljs-keyword">let</span> currentPerson = peopleJson[index];
+
+    response.render(<span class="hljs-string">&apos;person&apos;</span>, {
+        person: currentPerson
+    });
+}
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
+app.get(<span class="hljs-string">&apos;/person&apos;</span>, personPage);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+app.listen(port, hostname, listenCallback);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="PeopleListStarterApp.html" class="navigation navigation-prev " aria-label="Previous page: People List Starter App">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PeopleListEjsIndividualExercises.html" class="navigation navigation-next " aria-label="Next page: People List EJS Individual Exercises">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"People List EJS Code-Along","level":"1.10.2","depth":2,"next":{"title":"People List EJS Individual Exercises","level":"1.10.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]},"previous":{"title":"People List Starter App","level":"1.10.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsCodeAlong.md","mtime":"2020-03-16T13:05:33.248Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-16T13:06:11.073Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
