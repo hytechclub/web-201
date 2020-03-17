@@ -1,7 +1,22 @@
 # Web 201: Full-stack Web Development
 Welcome to the Web 201 Hy-Tech Club course!
 
+## Online Learning
+- Watch the software setup video to set up all the necessary software at home
+- Recordings for lectures and code-alongs will be posted to [this playlist](https://www.youtube.com/playlist?list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u)
+- Office Hours will be held via [Zoom](https://hyland.zoom.us/j/645204151) on Wednesdays from 5:30PM-6:30PM
+
+### Weekly Plan
+Each week, follow the same type of agenda we normally would follow in class:
+
+1. **Lecture**: watch any lecture recordings before Office Hours on Wednesday
+1. **Code-Along**: watch any code-along recordings before Office Hours, OR start watching when Office Hours start so you can ask the instructors questions as you complete the activity
+1. **Individual Exercises**: work on the individual exercises during Office Hours and ask the instructors questions as you complete the activities, OR complete the activities before Office Hours and login to Zoom to ask your questions
+1. **Challenges**: work on the challenges after completing the code-along
+
 ## Schedule
+Follow the links below to view each week of material.
+
 - Week 1: [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Introduction to the Command Line](CommandLine/StudentDesc.md)
 - Week 2: [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
 - Week 3: [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
