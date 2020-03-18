@@ -2,9 +2,10 @@
 Welcome to the Web 201 Hy-Tech Club course!
 
 ## Online Learning
-- Watch the software setup video to set up all the necessary software at home
+- Watch [the software setup video](https://www.youtube.com/watch?v=Xdwo_0QULNg&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=14&t=0s) to set up all the necessary software at home
 - Recordings for lectures and code-alongs will be posted to [this playlist](https://www.youtube.com/playlist?list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u)
 - Office Hours will be held via [Zoom](https://hyland.zoom.us/j/645204151) on Wednesdays from 5:30PM-6:30PM
+- Fork [this GitHub repository](https://github.com/hylandtechoutreach/web-201-student) and push all work to the fork
 
 ### Weekly Plan
 Each week, follow the same type of agenda we normally would follow in class:
