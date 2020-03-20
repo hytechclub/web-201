@@ -17,7 +17,7 @@ If you are working on this from home, follow these steps:
 - <a href="EjsTemplates.pptx" target="_blank">EJS Templates PowerPoint Presentation</a>
 
 ## Code-Along
-- Video
+- [Video](https://www.youtube.com/watch?v=wAu0G8ppEdE&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=21&t=0s)
 - [People List EJS Code-Along](PeopleListEjsCodeAlong.md)
 
 ## Individual Practice
