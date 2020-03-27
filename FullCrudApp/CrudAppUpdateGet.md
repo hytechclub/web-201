@@ -13,7 +13,7 @@ The GET request for the "Edit Player" page requires a player `id` to render. The
         response.render('edit-player');
     }
     ```
-1. In the **app.js** file, under the `app.get` calls, add another `app.get` to hook up `/edit:id` to `player.editPlayerPage`
+1. In the **app.js** file, under the `app.get` calls, add another `app.get` to hook up `/edit/:id` to `player.editPlayerPage`
     - This means that whatever comes after the `edit/` will be mapped to the `id` property of `params` in the handler
 1. Navigate to the `/edit/5` route and verify that `5` is properly logged in the console as the `id`!
 
