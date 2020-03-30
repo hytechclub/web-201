@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Objects Code-Along · GitBook</title>
+        <title>SQL Query Challenges · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ObjectsIndividualExercises.html" />
     
-    
-    <link rel="prev" href="StudentDesc.html" />
+    <link rel="prev" href="MySqlWorkbenchWalkthrough.html" />
     
 
     </head>
@@ -203,9 +201,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.6" data-path="../JavaScriptObjects/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptObjects/StudentDesc.html">
             
                     
                     L4 - JavaScript Objects / JSON
@@ -217,9 +215,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="ObjectsCodeAlong.html">
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScriptObjects/ObjectsCodeAlong.html">
             
-                <a href="ObjectsCodeAlong.html">
+                <a href="../JavaScriptObjects/ObjectsCodeAlong.html">
             
                     
                     Objects Code-Along
@@ -230,9 +228,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="ObjectsIndividualExercises.html">
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
-                <a href="ObjectsIndividualExercises.html">
+                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
                     
                     Objects Individual Exercises
@@ -243,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="FoodJsonChallenges.html">
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
             
-                <a href="FoodJsonChallenges.html">
+                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
             
                     
                     Food JSON Challenges
@@ -422,9 +420,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../DatabasesOverview/StudentDesc.html">
+        <li class="chapter " data-level="1.11" data-path="StudentDesc.html">
             
-                <a href="../DatabasesOverview/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L9 - Databases (MySQL)
@@ -436,9 +434,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../DatabasesOverview/SqlPracticeExercises.html">
+        <li class="chapter " data-level="1.11.1" data-path="SqlPracticeExercises.html">
             
-                <a href="../DatabasesOverview/SqlPracticeExercises.html">
+                <a href="SqlPracticeExercises.html">
             
                     
                     SQL Practice Exercises
@@ -449,9 +447,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+        <li class="chapter " data-level="1.11.2" data-path="MySqlWorkbenchWalkthrough.html">
             
-                <a href="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+                <a href="MySqlWorkbenchWalkthrough.html">
             
                     
                     MySQL Workbench Walkthrough
@@ -462,9 +460,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../DatabasesOverview/SqlQueryChallenges.html">
+        <li class="chapter active" data-level="1.11.3" data-path="SqlQueryChallenges.html">
             
-                <a href="../DatabasesOverview/SqlQueryChallenges.html">
+                <a href="SqlQueryChallenges.html">
             
                     
                     SQL Query Challenges
@@ -510,7 +508,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Objects Code-Along</a>
+        <a href=".." >SQL Query Challenges</a>
     </h1>
 </div>
 
@@ -525,140 +523,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="javascript-objects-code-along">JavaScript Objects: Code-Along</h1>
-<p>Follow the instructions to create a small Node console app that creates and manipulates a JavaScript object.</p>
-<h2 id="starter-app">Starter App</h2>
-<ol>
-<li>Create a new file named <strong>object.js</strong> in the current directory<ul>
-<li>This can be done using VS Code OR using the command line</li>
-</ul>
-</li>
-<li><p>Open the file in VS Code, and enter the following text:</p>
-<pre><code class="lang-js"> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Welcome to the car app!&apos;</span>);
-
- process.exit();
+                                <h1 id="sql-query-challenges">SQL Query Challenges</h1>
+<p>Complete the following challenges in MySQL Workbench using the <code>movies</code> table in the <code>db</code> database.</p>
+<h3 id="getting-started">Getting Started</h3>
+<p>Execute the following SQL query to add some additional data to the table:</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> movies
+<span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&quot;Billy Madison&quot;</span>, <span class="hljs-number">1995</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Tamra Davis&quot;</span>, <span class="hljs-number">90</span>),
+    (<span class="hljs-string">&quot;The Wedding Singer&quot;</span>, <span class="hljs-number">1998</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Frank Coraci&quot;</span>, <span class="hljs-number">96</span>),
+    (<span class="hljs-string">&quot;Reign Over Me&quot;</span>, <span class="hljs-number">2007</span>, <span class="hljs-string">&quot;Drama&quot;</span>, <span class="hljs-string">&quot;Mike Binder&quot;</span>, <span class="hljs-number">124</span>),
+    (<span class="hljs-string">&quot;Grown Ups 2&quot;</span>, <span class="hljs-number">2013</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Dennis Dugan&quot;</span>, <span class="hljs-number">101</span>),
+    (<span class="hljs-string">&quot;Spanglish&quot;</span>, <span class="hljs-number">2004</span>, <span class="hljs-string">&quot;Drama&quot;</span>, <span class="hljs-string">&quot;James L. Brooks&quot;</span>, <span class="hljs-number">131</span>),
+    (<span class="hljs-string">&quot;Uncut Gems&quot;</span>, <span class="hljs-number">2019</span>, <span class="hljs-string">&quot;Thriller&quot;</span>, <span class="hljs-string">&quot;Josh Safdie &amp; Benny Safdie&quot;</span>, <span class="hljs-number">135</span>),
+    (<span class="hljs-string">&quot;I Am Chris Farley&quot;</span>, <span class="hljs-number">2015</span>, <span class="hljs-string">&quot;Documentary&quot;</span>, <span class="hljs-string">&quot;Brent Hodge &amp; Derik Murray&quot;</span>, <span class="hljs-number">96</span>),
+    (<span class="hljs-string">&quot;The Waterboy&quot;</span>, <span class="hljs-number">1998</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Frank Coraci&quot;</span>, <span class="hljs-number">90</span>),
+    (<span class="hljs-string">&quot;Mr. Deeds&quot;</span>, <span class="hljs-number">2002</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Steven Brill&quot;</span>, <span class="hljs-number">96</span>);
 </code></pre>
-</li>
-<li>Open a new terminal in VS Code by selecting <code>Terminal</code>-&gt;<code>New Terminal</code> from the menu<ul>
-<li>Make sure the shell is set to <code>bash</code></li>
+<p>Run <code>SELECT * FROM movies</code> to make sure all of the new rows were successfully added.</p>
+<h2 id="challenge-1---order">Challenge 1 - Order</h2>
+<p>Write queries to return all of the movies sorted in the following ways:</p>
+<ul>
+<li>Newest to Oldest</li>
+<li>Alphabetical</li>
+<li>Shortest to Longest</li>
 </ul>
-</li>
-<li>In the terminal, type <code>node object.js</code> and press <code>Enter</code> to run the command</li>
-<li>The script will run, and &quot;Welcome to the car app!&quot; should appear in the console!</li>
-</ol>
-<h2 id="defining-the-object">Defining the Object</h2>
-<ol>
-<li>On the next line, create a new object variable named <code>myCar</code><ul>
-<li>Use <code>let</code>, the object name, <code>=</code>, and <code>{}</code></li>
+<h2 id="challenge-2---non-comedies">Challenge 2 - Non-Comedies</h2>
+<p>Write a query to return the title of all non-comedy movies</p>
+<h2 id="challenge-3---decades">Challenge 3 - Decades</h2>
+<p>Write queries to return only the movies from the following year ranges:</p>
+<ul>
+<li>1990-1999</li>
+<li>2000-2009</li>
+<li>2010-2019</li>
 </ul>
-</li>
-<li>Add a <code>color</code> property with a value of <code>&apos;tan&apos;</code><ul>
-<li>Use the property name, <code>:</code>, the value, and <code>,</code></li>
-</ul>
-</li>
-<li>Add additional properties with the following values:<ul>
-<li><code>year</code> - 1987</li>
-<li><code>make</code> - Oldsmobile</li>
-<li><code>model</code> - Cutlass Ciera</li>
-</ul>
-</li>
-</ol>
-<h3 id="adding-the-owner">Adding the Owner</h3>
-<ol>
-<li>In the <code>myCar</code> object definition, add another property: <code>owner</code></li>
-<li>The value of the <code>owner</code> property will be another object! Start by setting the value to an empty object (<code>{}</code>)</li>
-<li>Within the <code>owner</code> object, add properties with the following values:<ul>
-<li><code>firstName</code> - Jerry</li>
-<li><code>lastName</code> - Lundegaard</li>
-<li><code>city</code> - Minneapolis</li>
-<li><code>state</code> - MN</li>
-</ul>
-</li>
-</ol>
-<p>The owner object should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> myCar = {
-    color: <span class="hljs-string">&apos;tan&apos;</span>,
-    year: <span class="hljs-number">1987</span>,
-    make: <span class="hljs-string">&apos;Oldsmobile&apos;</span>,
-    model: <span class="hljs-string">&apos;Cutlass Ciera&apos;</span>,
-    owner: {
-        firstName: <span class="hljs-string">&apos;Jerry&apos;</span>,
-        lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
-        city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
-        state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
-}
-</code></pre>
-<h2 id="accessing-the-object-properties">Accessing the Object Properties</h2>
-<p>Now that the object has been created, it is possible to access the data to read or change it.</p>
-<h3 id="displaying-the-current-information">Displaying the Current Information</h3>
-<ol>
-<li>Use a <code>console.log</code> statement to print out a message with the color of the car<ul>
-<li>Start the message with &quot;The car is &quot;</li>
-<li>Use dot notation to access the <code>color</code> property of <code>myCar</code></li>
-</ul>
-</li>
-<li>Use another <code>console.log</code> statement to print out a message with the first name of the owner<ul>
-<li>Start the message with &quot;The car is owned by &quot;</li>
-<li>Use dot notation to access the <code>owner</code> property of <code>myCar</code></li>
-<li>Then, use dot notation <em>again</em> to access the <code>firstName</code> property of <code>owner</code> (this can be chained)</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is &apos;</span> + myCar.color);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is owned by &apos;</span> + myCar.owner.firstName);
-</code></pre>
-<h3 id="updating-the-color">Updating the Color</h3>
-<ol>
-<li>On the next line, use dot notation to set the <code>color</code> property of <code>myCar</code> to red</li>
-<li>Use a <code>console.log</code> to show a message saying &quot;Jerry painted the car. The car is now &quot; ... and access the new color</li>
-</ol>
-<pre><code class="lang-js">myCar.color = <span class="hljs-string">&apos;red&apos;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry painted the car. The car is now &apos;</span> + myCar.color);
-</code></pre>
-<h3 id="updating-the-owners-residence">Updating the Owner&apos;s Residence</h3>
-<ol>
-<li>On the next line, use dot notation to set the <code>city</code> property of the <code>owner</code> of <code>myCar</code> to &quot;Fargo&quot;<ul>
-<li>Use a chained dot notation to access the <code>city</code> from the <code>myCar</code> object</li>
-</ul>
-</li>
-<li>Use dot notation again to set the <code>state</code> property of the <code>owner</code> of <code>myCar</code> to &quot;ND&quot;</li>
-<li>Use another <code>console.log</code> to show a message saying Jerry moved. It should give his current city and state of residence</li>
-</ol>
-<pre><code class="lang-js">myCar.owner.city = <span class="hljs-string">&apos;Fargo&apos;</span>;
-myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
-</code></pre>
-<h2 id="final-code">Final Code</h2>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Welcome to the car app!&apos;</span>)
-
-<span class="hljs-keyword">let</span> myCar = {
-    color: <span class="hljs-string">&apos;tan&apos;</span>,
-    year: <span class="hljs-number">1987</span>,
-    make: <span class="hljs-string">&apos;Oldsmobile&apos;</span>,
-    model: <span class="hljs-string">&apos;Cutlass Ciera&apos;</span>,
-    owner: {
-        firstName: <span class="hljs-string">&apos;Jerry&apos;</span>,
-        lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
-        city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
-        state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
-}
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is &apos;</span> + myCar.color);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is owned by &apos;</span> + myCar.owner.firstName);
-
-myCar.color = <span class="hljs-string">&apos;red&apos;</span>
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry painted the car. The car is now &apos;</span> + myCar.color);
-
-myCar.owner.city = <span class="hljs-string">&apos;Fargo&apos;</span>;
-myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
-
-process.exit();
-</code></pre>
+<h2 id="challenge-4---same-years">Challenge 4 - Same Years</h2>
+<p>Write a query to find all movies that were released in a year that included other movie releases. If two movies were released in the same year, they should both be present in the results.</p>
+<h2 id="challenge-5---same-directors">Challenge 5 - Same Directors</h2>
+<p>Write a query to find all movies that share a director with another movie. If two movies were directed by the same person, they should both be present in the results.</p>
+<h2 id="challenge-6---sql-bolt">Challenge 6 - SQL Bolt</h2>
+<p>Complete all of the challenges on <a href="https://sqlbolt.com" target="_blank">SQLBolt</a>.</p>
+<h2 id="challenge-7---foreign-keys">Challenge 7 - Foreign Keys</h2>
+<p>Learn about <a href="https://www.mysqltutorial.org/mysql-foreign-key/" target="_blank">foreign keys</a>. Apply that knowledge to create a <code>directors</code> table that links to the <code>movies</code> table.</p>
 
                                 
                                 </section>
@@ -686,14 +590,10 @@ process.exit();
 
             
                 
-                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L4 - JavaScript Objects / JSON">
+                <a href="MySqlWorkbenchWalkthrough.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MySQL Workbench Walkthrough">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="ObjectsIndividualExercises.html" class="navigation navigation-next " aria-label="Next page: Objects Individual Exercises">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -702,7 +602,7 @@ process.exit();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"next":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},"previous":{"title":"L4 - JavaScript Objects / JSON","level":"1.6","depth":1,"path":"JavaScriptObjects/StudentDesc.md","ref":"JavaScriptObjects/StudentDesc.md","articles":[{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsCodeAlong.md","mtime":"2020-03-30T14:27:05.800Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T14:27:44.096Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SQL Query Challenges","level":"1.11.3","depth":2,"previous":{"title":"MySQL Workbench Walkthrough","level":"1.11.2","depth":2,"path":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","ref":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DatabasesOverview/SqlQueryChallenges.md","mtime":"2020-03-30T14:27:05.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T14:27:44.096Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

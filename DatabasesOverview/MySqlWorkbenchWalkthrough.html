@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Objects Code-Along · GitBook</title>
+        <title>MySQL Workbench Walkthrough · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ObjectsIndividualExercises.html" />
+    <link rel="next" href="SqlQueryChallenges.html" />
     
     
-    <link rel="prev" href="StudentDesc.html" />
+    <link rel="prev" href="SqlPracticeExercises.html" />
     
 
     </head>
@@ -203,9 +203,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.6" data-path="../JavaScriptObjects/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptObjects/StudentDesc.html">
             
                     
                     L4 - JavaScript Objects / JSON
@@ -217,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="ObjectsCodeAlong.html">
+        <li class="chapter " data-level="1.6.1" data-path="../JavaScriptObjects/ObjectsCodeAlong.html">
             
-                <a href="ObjectsCodeAlong.html">
+                <a href="../JavaScriptObjects/ObjectsCodeAlong.html">
             
                     
                     Objects Code-Along
@@ -230,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="ObjectsIndividualExercises.html">
+        <li class="chapter " data-level="1.6.2" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
-                <a href="ObjectsIndividualExercises.html">
+                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
                     
                     Objects Individual Exercises
@@ -243,9 +243,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="FoodJsonChallenges.html">
+        <li class="chapter " data-level="1.6.3" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
             
-                <a href="FoodJsonChallenges.html">
+                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
             
                     
                     Food JSON Challenges
@@ -422,9 +422,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../DatabasesOverview/StudentDesc.html">
+        <li class="chapter " data-level="1.11" data-path="StudentDesc.html">
             
-                <a href="../DatabasesOverview/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L9 - Databases (MySQL)
@@ -436,9 +436,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1" data-path="../DatabasesOverview/SqlPracticeExercises.html">
+        <li class="chapter " data-level="1.11.1" data-path="SqlPracticeExercises.html">
             
-                <a href="../DatabasesOverview/SqlPracticeExercises.html">
+                <a href="SqlPracticeExercises.html">
             
                     
                     SQL Practice Exercises
@@ -449,9 +449,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+        <li class="chapter active" data-level="1.11.2" data-path="MySqlWorkbenchWalkthrough.html">
             
-                <a href="../DatabasesOverview/MySqlWorkbenchWalkthrough.html">
+                <a href="MySqlWorkbenchWalkthrough.html">
             
                     
                     MySQL Workbench Walkthrough
@@ -462,9 +462,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3" data-path="../DatabasesOverview/SqlQueryChallenges.html">
+        <li class="chapter " data-level="1.11.3" data-path="SqlQueryChallenges.html">
             
-                <a href="../DatabasesOverview/SqlQueryChallenges.html">
+                <a href="SqlQueryChallenges.html">
             
                     
                     SQL Query Challenges
@@ -510,7 +510,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Objects Code-Along</a>
+        <a href=".." >MySQL Workbench Walkthrough</a>
     </h1>
 </div>
 
@@ -525,140 +525,113 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="javascript-objects-code-along">JavaScript Objects: Code-Along</h1>
-<p>Follow the instructions to create a small Node console app that creates and manipulates a JavaScript object.</p>
-<h2 id="starter-app">Starter App</h2>
+                                <h1 id="mysql-workbench-walkthrough">MySQL Workbench Walkthrough</h1>
+<p><a href="https://www.mysql.com/" target="_blank">MySQL</a> is an open-source relational database management system (RDBMS). MySQL Workbench is a tool that allows database maintainers to interact with the data in a MySQL database.</p>
+<h2 id="connecting-to-mysql">Connecting to MySQL</h2>
 <ol>
-<li>Create a new file named <strong>object.js</strong> in the current directory<ul>
-<li>This can be done using VS Code OR using the command line</li>
-</ul>
-</li>
-<li><p>Open the file in VS Code, and enter the following text:</p>
-<pre><code class="lang-js"> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Welcome to the car app!&apos;</span>);
-
- process.exit();
+<li>Open MySQL Workbench</li>
+<li>Under &quot;MySQL Connections,&quot; select the existing Local instance<br> <img src="https://i.imgur.com/zpoTQRh.png" alt=""></li>
+</ol>
+<p>The important panes in the instance view are the <strong>Navigator</strong>, the <strong>Query</strong>, and the <strong>Output</strong>. Note where each of these is located:
+<img src="https://i.imgur.com/b1TB2dg.png" alt=""></p>
+<p>Most of the work in the Workbench will take place in the <strong>Query</strong> pane, which allows developers to execute SQL queries.</p>
+<h2 id="creating-a-database">Creating a Database</h2>
+<p>The connection currently exists, but there is no database! Follow the steps below to create a new MySQL database.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> db;
 </code></pre>
 </li>
-<li>Open a new terminal in VS Code by selecting <code>Terminal</code>-&gt;<code>New Terminal</code> from the menu<ul>
-<li>Make sure the shell is set to <code>bash</code></li>
-</ul>
-</li>
-<li>In the terminal, type <code>node object.js</code> and press <code>Enter</code> to run the command</li>
-<li>The script will run, and &quot;Welcome to the car app!&quot; should appear in the console!</li>
+<li>Click the lightning bolt icon (<img src="https://i.imgur.com/nvOfSLf.png" alt="">) to execute the query</li>
+<li>Check the <strong>Output</strong> pane to make sure the query executed successfully</li>
+<li>In the <strong>Navigator</strong>, flip to the &quot;Schemas&quot; view, and click the refresh icon to verify that the new <code>db</code> database appears!</li>
 </ol>
-<h2 id="defining-the-object">Defining the Object</h2>
+<p><img src="https://i.imgur.com/GJHiofr.png" alt=""></p>
+<h2 id="creating-a-table">Creating a Table</h2>
+<p>Now the database exists, but it does not have any tables. Create a table so that the data in the database is organized and meaningful.</p>
 <ol>
-<li>On the next line, create a new object variable named <code>myCar</code><ul>
-<li>Use <code>let</code>, the object name, <code>=</code>, and <code>{}</code></li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">USE</span> db;
+</code></pre>
+</li>
+<li>Highlight the <code>USE db;</code> text and click the lightning bolt to execute the statement<ul>
+<li>This statement tells the engine to use the specified database for all subsequent queries</li>
 </ul>
 </li>
-<li>Add a <code>color</code> property with a value of <code>&apos;tan&apos;</code><ul>
-<li>Use the property name, <code>:</code>, the value, and <code>,</code></li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> movies (
+     title <span class="hljs-built_in">TEXT</span>,
+     <span class="hljs-keyword">year</span> <span class="hljs-built_in">INTEGER</span>,
+     genre <span class="hljs-built_in">TEXT</span>,
+     director <span class="hljs-built_in">TEXT</span>
+ );
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement creates a new table in the database named <code>movies</code> with <code>title</code>, <code>year</code>, <code>genre</code>, and <code>director</code> as columns</li>
 </ul>
 </li>
-<li>Add additional properties with the following values:<ul>
-<li><code>year</code> - 1987</li>
-<li><code>make</code> - Oldsmobile</li>
-<li><code>model</code> - Cutlass Ciera</li>
-</ul>
-</li>
+<li>In the <strong>Navigator</strong>, in the &quot;Schemas&quot; view, click the refresh icon and check that the <code>movies</code> table appears!</li>
 </ol>
-<h3 id="adding-the-owner">Adding the Owner</h3>
+<p><img src="https://i.imgur.com/33yTnFG.png" alt=""></p>
+<h2 id="inserting-rows">Inserting Rows</h2>
+<p>The table exists, but it currently contains no data! Follow the steps below to add some data to the table.</p>
 <ol>
-<li>In the <code>myCar</code> object definition, add another property: <code>owner</code></li>
-<li>The value of the <code>owner</code> property will be another object! Start by setting the value to an empty object (<code>{}</code>)</li>
-<li>Within the <code>owner</code> object, add properties with the following values:<ul>
-<li><code>firstName</code> - Jerry</li>
-<li><code>lastName</code> - Lundegaard</li>
-<li><code>city</code> - Minneapolis</li>
-<li><code>state</code> - MN</li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> movies
+ <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&quot;Going Overboard&quot;</span>, <span class="hljs-number">1989</span>, <span class="hljs-string">&quot;Comedy&quot;</span>, <span class="hljs-string">&quot;Valerie Breiman&quot;</span>);
+</code></pre>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement</li>
+<li>Use <code>SELECT * FROM movies</code> to check and make sure the movie was successfully added to the table</li>
+<li>Insert another new movie with the following properties:<ul>
+<li>Title: <strong>Sandy Wexler</strong></li>
+<li>Year: <strong>2017</strong></li>
+<li>Genre: <strong>Comedy</strong></li>
+<li>Director: <strong>Steven Brill</strong></li>
 </ul>
 </li>
+<li>Highlight the <code>SELECT *</code> query and re-execute it to make sure both movies appear!</li>
 </ol>
-<p>The owner object should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> myCar = {
-    color: <span class="hljs-string">&apos;tan&apos;</span>,
-    year: <span class="hljs-number">1987</span>,
-    make: <span class="hljs-string">&apos;Oldsmobile&apos;</span>,
-    model: <span class="hljs-string">&apos;Cutlass Ciera&apos;</span>,
-    owner: {
-        firstName: <span class="hljs-string">&apos;Jerry&apos;</span>,
-        lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
-        city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
-        state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
-}
-</code></pre>
-<h2 id="accessing-the-object-properties">Accessing the Object Properties</h2>
-<p>Now that the object has been created, it is possible to access the data to read or change it.</p>
-<h3 id="displaying-the-current-information">Displaying the Current Information</h3>
+<p><img src="https://i.imgur.com/vl4FWNX.png" alt=""></p>
+<h2 id="adding-a-column">Adding a Column</h2>
+<p>In addition to tracking all of the other Movie properties, this table should store the runtime of the movies in minutes.</p>
 <ol>
-<li>Use a <code>console.log</code> statement to print out a message with the color of the car<ul>
-<li>Start the message with &quot;The car is &quot;</li>
-<li>Use dot notation to access the <code>color</code> property of <code>myCar</code></li>
-</ul>
-</li>
-<li>Use another <code>console.log</code> statement to print out a message with the first name of the owner<ul>
-<li>Start the message with &quot;The car is owned by &quot;</li>
-<li>Use dot notation to access the <code>owner</code> property of <code>myCar</code></li>
-<li>Then, use dot notation <em>again</em> to access the <code>firstName</code> property of <code>owner</code> (this can be chained)</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is &apos;</span> + myCar.color);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is owned by &apos;</span> + myCar.owner.firstName);
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> movies
+ <span class="hljs-keyword">ADD</span> runtime <span class="hljs-built_in">INTEGER</span>;
 </code></pre>
-<h3 id="updating-the-color">Updating the Color</h3>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement will add a column to the table</li>
+</ul>
+</li>
+<li>In the <strong>Navigator</strong>, in the &quot;Schemas&quot; view, click the refresh icon and check that the <code>runtime</code> column appears!</li>
+</ol>
+<p><img src="https://i.imgur.com/RobCBFk.png" alt=""></p>
+<h2 id="updating-rows">Updating Rows</h2>
+<p>Now that a new column exists, it is possible to update the existing rows with the more information.</p>
 <ol>
-<li>On the next line, use dot notation to set the <code>color</code> property of <code>myCar</code> to red</li>
-<li>Use a <code>console.log</code> to show a message saying &quot;Jerry painted the car. The car is now &quot; ... and access the new color</li>
-</ol>
-<pre><code class="lang-js">myCar.color = <span class="hljs-string">&apos;red&apos;</span>
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry painted the car. The car is now &apos;</span> + myCar.color);
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">SET</span> SQL_SAFE_UPDATES = <span class="hljs-number">0</span>;
 </code></pre>
-<h3 id="updating-the-owners-residence">Updating the Owner&apos;s Residence</h3>
-<ol>
-<li>On the next line, use dot notation to set the <code>city</code> property of the <code>owner</code> of <code>myCar</code> to &quot;Fargo&quot;<ul>
-<li>Use a chained dot notation to access the <code>city</code> from the <code>myCar</code> object</li>
+</li>
+<li>Highlight the newly added text and click the lightning bolt to execute the statement<ul>
+<li>This statement allows developers to update rows without constraint. It is not recommended to use this setting in a real database</li>
 </ul>
 </li>
-<li>Use dot notation again to set the <code>state</code> property of the <code>owner</code> of <code>myCar</code> to &quot;ND&quot;</li>
-<li>Use another <code>console.log</code> to show a message saying Jerry moved. It should give his current city and state of residence</li>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">UPDATE</span> movies
+ <span class="hljs-keyword">SET</span> runtime = <span class="hljs-number">97</span>
+ <span class="hljs-keyword">WHERE</span> title = <span class="hljs-string">&quot;Going Overboard&quot;</span>;
+</code></pre>
+</li>
+<li>Execute the <code>UPDATE</code> statement to set the runtime of &quot;Going Overboard&quot; to <code>97</code></li>
+<li>Use <code>SELECT * FROM movies</code> again to verify that the &quot;Going Overboard&quot; row has the proper runtime</li>
 </ol>
-<pre><code class="lang-js">myCar.owner.city = <span class="hljs-string">&apos;Fargo&apos;</span>;
-myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
+<h2 id="deleting-a-row">Deleting a Row</h2>
+<p>Rather than updating the row for &quot;Sandy Wexler,&quot; it is possible to simply delete it.</p>
+<ol>
+<li>In the <strong>Query</strong> pane, enter the following SQL:<pre><code class="lang-sql"> <span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> movies
+ <span class="hljs-keyword">WHERE</span> title = <span class="hljs-string">&quot;Sandy Wexler&quot;</span>;
 </code></pre>
-<h2 id="final-code">Final Code</h2>
-<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Welcome to the car app!&apos;</span>)
-
-<span class="hljs-keyword">let</span> myCar = {
-    color: <span class="hljs-string">&apos;tan&apos;</span>,
-    year: <span class="hljs-number">1987</span>,
-    make: <span class="hljs-string">&apos;Oldsmobile&apos;</span>,
-    model: <span class="hljs-string">&apos;Cutlass Ciera&apos;</span>,
-    owner: {
-        firstName: <span class="hljs-string">&apos;Jerry&apos;</span>,
-        lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
-        city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
-        state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
-}
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is &apos;</span> + myCar.color);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is owned by &apos;</span> + myCar.owner.firstName);
-
-myCar.color = <span class="hljs-string">&apos;red&apos;</span>
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry painted the car. The car is now &apos;</span> + myCar.color);
-
-myCar.owner.city = <span class="hljs-string">&apos;Fargo&apos;</span>;
-myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
-
-process.exit();
-</code></pre>
+</li>
+<li>Execute the <code>DELETE</code> statement to remove the row</li>
+<li>Use <code>SELECT * FROM movies</code> again to verify that the &quot;Sandy Wexler&quot; row no longer appears</li>
+</ol>
 
                                 
                                 </section>
@@ -686,12 +659,12 @@ process.exit();
 
             
                 
-                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L4 - JavaScript Objects / JSON">
+                <a href="SqlPracticeExercises.html" class="navigation navigation-prev " aria-label="Previous page: SQL Practice Exercises">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ObjectsIndividualExercises.html" class="navigation navigation-next " aria-label="Next page: Objects Individual Exercises">
+                <a href="SqlQueryChallenges.html" class="navigation navigation-next " aria-label="Next page: SQL Query Challenges">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -702,7 +675,7 @@ process.exit();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"next":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},"previous":{"title":"L4 - JavaScript Objects / JSON","level":"1.6","depth":1,"path":"JavaScriptObjects/StudentDesc.md","ref":"JavaScriptObjects/StudentDesc.md","articles":[{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsCodeAlong.md","mtime":"2020-03-30T14:27:05.800Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T14:27:44.096Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MySQL Workbench Walkthrough","level":"1.11.2","depth":2,"next":{"title":"SQL Query Challenges","level":"1.11.3","depth":2,"path":"DatabasesOverview/SqlQueryChallenges.md","ref":"DatabasesOverview/SqlQueryChallenges.md","articles":[]},"previous":{"title":"SQL Practice Exercises","level":"1.11.1","depth":2,"path":"DatabasesOverview/SqlPracticeExercises.md","ref":"DatabasesOverview/SqlPracticeExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DatabasesOverview/MySqlWorkbenchWalkthrough.md","mtime":"2020-03-30T14:27:05.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T14:27:44.096Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
