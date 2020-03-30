@@ -6,7 +6,7 @@ Welcome to the Web 201 Hy-Tech Club course!
 - Fork [this GitHub repository](https://github.com/hylandtechoutreach/web-201-student) and push all work to the fork
     - Check out [this video](https://www.youtube.com/watch?v=zQ_ECv1pkoc&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=18) for step-by-step guidance
 - Recordings for lectures and code-alongs will be posted to [this playlist](https://www.youtube.com/playlist?list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u)
-- Office Hours will be held via [Zoom](https://hyland.zoom.us/j/645204151) on Wednesdays from 5:30PM-6:30PM
+- Office Hours will be held via [Zoom](https://hyland.zoom.us/j/123237170) on Wednesdays from 5:30PM-6:30PM
 - E-mail [web201@hyland.com](mailto:web201@hyland.com) with any questions
 
 ### Weekly Plan
