@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Express POST Challenge · GitBook</title>
+        <title>Final Project · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../EjsTemplates/StudentDesc.html" />
     
-    
-    <link rel="prev" href="ExpressProjectIndividualExercises.html" />
+    <link rel="prev" href="../FullCrudApp/CrudAppDelete.html" />
     
 
     </head>
@@ -319,9 +317,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.9" data-path="../ExpressProjects/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../ExpressProjects/StudentDesc.html">
             
                     
                     L7 - npm, Express
@@ -333,9 +331,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="ExpressProjectIndividualExercises.html">
+        <li class="chapter " data-level="1.9.1" data-path="../ExpressProjects/ExpressProjectIndividualExercises.html">
             
-                <a href="ExpressProjectIndividualExercises.html">
+                <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
             
                     
                     Express Project Individual Exercises
@@ -346,9 +344,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.2" data-path="ExpressPostChallenge.html">
+        <li class="chapter " data-level="1.9.2" data-path="../ExpressProjects/ExpressPostChallenge.html">
             
-                <a href="ExpressPostChallenge.html">
+                <a href="../ExpressProjects/ExpressPostChallenge.html">
             
                     
                     Express POST Challenge
@@ -616,9 +614,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="../FinalProject/FinalProject.html">
+        <li class="chapter active" data-level="1.13" data-path="FinalProject.html">
             
-                <a href="../FinalProject/FinalProject.html">
+                <a href="FinalProject.html">
             
                     
                     Final Project
@@ -659,7 +657,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Express POST Challenge</a>
+        <a href=".." >Final Project</a>
     </h1>
 </div>
 
@@ -674,28 +672,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="express-post-challenge">Express POST Challenge</h1>
-<p>Create a new page on the server that will require the user to enter a password in order to show a secret file. Use an endpoint on the server to properly respond to POST requests with the password information.</p>
+                                <h1 id="final-project">Final Project</h1>
+<p>Build a CRUD App using Node.js, Express, EJS, and MySQL.</p>
+<h2 id="background">Background</h2>
+<p>Before starting the final project, complete the <a href="../FullCrudApp/CrudAppWalkthrough.html">CRUD App Walkthrough</a>. Feel free to use the final code from the walkthrough as a starting point for the project. However, <strong>the app should keep track of a different type of data</strong>.</p>
 <h2 id="requirements">Requirements</h2>
+<p>A user should be able to:</p>
 <ul>
-<li>The user should be able to go to <a href="http://127.0.0.1:3000/gate" target="_blank">http://127.0.0.1:3000/gate</a> to see a place where they can enter a password</li>
-<li>If they enter the correct password and submit, the same endpoint should load new (secret) HTML content</li>
-<li>If they enter the wrong password, the current page should reload</li>
+<li><strong>C</strong>reate rows in the database</li>
+<li><strong>R</strong>ead data from the database</li>
+<li><strong>U</strong>pdate existing rows in the database</li>
+<li><strong>D</strong>elete rows from the database</li>
 </ul>
-<h2 id="implementation">Implementation</h2>
+<h3 id="implementation">Implementation</h3>
 <ul>
-<li>Create two HTML files - one where the user can enter a password, and one with the secret content</li>
-<li>Use an HTML form to send a POST request from the browser to the server<ul>
-<li>Resource: <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data" target="_blank">https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data</a></li>
+<li>Store the project in a <a href="https://github.com/new" target="_blank">new GitHub repository</a></li>
+<li>Create at least one (1) new database table</li>
+<li>Create at least one (1) new page for the application</li>
+<li>Create at least one (1) new route for the application</li>
+<li>Update the styles for the application</li>
 </ul>
-</li>
-<li>Use the built-in body parsing utilities from Express to properly parse the incoming POST request on the server<ul>
-<li>Resource: <a href="https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters" target="_blank">https://stackoverflow.com/questions/5710358/how-to-retrieve-post-query-parameters</a></li>
+<h2 id="presentations">Presentations</h2>
+<p>Students will present their projects at the last meeting. Presentations should include:</p>
+<ul>
+<li>Background about the idea behind the app</li>
+<li>An overview of the app&apos;s functionality</li>
+<li>An explanation of any new topics learned</li>
+<li>A brief look into any relevant or interesting parts of the code </li>
 </ul>
-</li>
-<li>The basic initial page should use <code>app.get</code> to respond to GET requests</li>
-<li>The secret response should use <code>app.post</code> to respond to POST requests</li>
-<li>The actual endpoint for both should be the same: <code>&apos;/gate&apos;</code></li>
+<h2 id="ideas">Ideas</h2>
+<p>This list of ideas is in no way comprehensive; feel free to go beyond and do something completely different!</p>
+<h3 id="enhancement-ideas">Enhancement Ideas</h3>
+<ul>
+<li>A message asking &quot;Are you sure you want to delete this object?&quot;</li>
+<li>Custom styles for table rows based on data</li>
+<li>A separate &quot;Information&quot; page for each database object</li>
+<li>Sortable data table</li>
+<li>Images for each database object</li>
+<li>Preventing users from adding duplicates to the database</li>
+<li>A new database table that links to the main table via <a href="https://www.mysqltutorial.org/mysql-foreign-key/" target="_blank">foreign key</a></li>
+</ul>
+<h3 id="full-project-ideas">Full Project Ideas</h3>
+<ul>
+<li>To-Do List Application</li>
+<li>Recipe Application</li>
+<li>Blog Application</li>
+<li>Marketplace Application (e.g. craigslist)</li>
+<li>Social Media Application (e.g. Twitter)</li>
+<li>Movie Review Application (e.g. Letterboxd)</li>
 </ul>
 
                                 
@@ -724,14 +748,10 @@
 
             
                 
-                <a href="ExpressProjectIndividualExercises.html" class="navigation navigation-prev " aria-label="Previous page: Express Project Individual Exercises">
+                <a href="../FullCrudApp/CrudAppDelete.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Delete">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../EjsTemplates/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L8 - Creating Page Templates (EJS)">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -740,7 +760,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Express POST Challenge","level":"1.9.2","depth":2,"next":{"title":"L8 - Creating Page Templates (EJS)","level":"1.10","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.10.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.10.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.10.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"previous":{"title":"Express Project Individual Exercises","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressPostChallenge.md","mtime":"2020-03-30T16:09:06.260Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T16:09:46.724Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Final Project","level":"1.13","depth":1,"previous":{"title":"Delete","level":"1.12.9","depth":2,"path":"FullCrudApp/CrudAppDelete.md","ref":"FullCrudApp/CrudAppDelete.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FinalProject/FinalProject.md","mtime":"2020-03-30T16:09:06.264Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-30T16:09:46.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
