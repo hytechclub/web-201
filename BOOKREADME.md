@@ -26,8 +26,8 @@ Follow the links below to view each week of material.
 - Week 4: [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
 - Week 5: [npm, Express](ExpressProjects/StudentDesc.md)
 - Week 6: [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
-- Week 7: Databases (MySQL)
-- Week 8-12: Building a CRUD App + Final Project
+- Week 7: [Databases (MySQL)](DatabasesOverview/StudentDesc.md)
+- Week 8-12: [Building a CRUD App](FullCrudApp/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
 
 ## Software Setup
 [Software Setup](SoftwareSetup.md)
