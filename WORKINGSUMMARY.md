@@ -20,3 +20,7 @@
     - [People List Starter App](EjsTemplates/PeopleListStarterApp.md)
     - [People List EJS Code-Along](EjsTemplates/PeopleListEjsCodeAlong.md)
     - [People List EJS Individual Exercises](EjsTemplates/PeopleListEjsIndividualExercises.md)
+- [L9 - Databases (MySQL)](DatabasesOverview/StudentDesc.md)
+    - [SQL Practice Exercises](DatabasesOverview/SqlPracticeExercises.md)
+    - [MySQL Workbench Walkthrough](DatabasesOverview/MySqlWorkbenchWalkthrough.md)
+    - [SQL Query Challenges](DatabasesOverview/SqlQueryChallenges.md)
