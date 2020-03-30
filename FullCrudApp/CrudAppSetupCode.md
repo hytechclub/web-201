@@ -1,5 +1,6 @@
 # CRUD App - Setup (Code)
-Open the **app.js** file, and write code for a basic boiler-plate Express web server.
+- [Video](https://www.youtube.com/watch?v=NIVMyyBSM1k&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=31)
+- Open the **app.js** file, and write code for a basic boiler-plate Express web server.
 
 ## Basic Web Server
 1. Require the `express` module

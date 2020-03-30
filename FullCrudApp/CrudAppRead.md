@@ -1,5 +1,6 @@
 # C**R**UD App - Read
-Follow the steps below to allow the web app to display data from the `soccer` database.
+- [Video](https://www.youtube.com/watch?v=nC80SRCzRwU&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=32)
+- Follow the steps below to allow the web app to display data from the `soccer` database.
 
 ## Getting the Homepage Data
 Update the `getHomePage` function in the **index.js** file so that it pulls data from the database and renders it in the response.

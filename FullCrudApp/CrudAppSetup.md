@@ -1,4 +1,6 @@
 # CRUD App - Setup
+- [Video](https://www.youtube.com/watch?v=PJ3kV8I8DSE&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=31&t=0s)
+
 ## GitHub Repository
 1. Create a new empty GitHub repository at [github.com/new](https://github.com/new)
     - Fill out a proper name and description
