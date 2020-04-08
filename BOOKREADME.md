@@ -6,6 +6,7 @@ Welcome to the Web 201 Hy-Tech Club course!
 - Fork [this GitHub repository](https://github.com/hylandtechoutreach/web-201-student) and push all work to the fork
     - Check out [this video](https://www.youtube.com/watch?v=zQ_ECv1pkoc&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=18) for step-by-step guidance
 - Recordings for lectures and code-alongs will be posted to [this playlist](https://www.youtube.com/playlist?list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u)
+- Join the [Campfire Chat Room](https://hylandsoftware.campfirenow.com/4856b) chat with instructors and other students
 - Office Hours will be held via [Zoom](https://hyland.zoom.us/j/874336552?pwd=ZEgwQVg5UTVVTjkrR3FuU2tEMUdwUT09) on Wednesdays from 5:30PM-6:30PM
     - If asked, the password for the meeting is **web201**
 - E-mail [web201@hyland.com](mailto:web201@hyland.com) with any questions
