@@ -1,6 +1,6 @@
 # **C**RUD App - Create (POST)
 - [Video](https://www.youtube.com/watch?v=aTndTNIx498&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=50)
-Create a POST request handler that will take the data from the "Add Player" form and insert the new player into the `players` table. 
+- Create a POST request handler that will take the data from the "Add Player" form and insert the new player into the `players` table. 
 
 When a user fills out the "Add Player" form and clicks the submit button, it will send a POST request to `/add` (as specified in the attributes of the form). The data will be labeled based on the `name` attributes of the `input` elements. The server should take that POST request, and use the data to insert a new player into the `players` table in the database.
 
