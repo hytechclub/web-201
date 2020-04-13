@@ -1,4 +1,5 @@
 # CR**U**D App - Update (POST)
+- [Video](https://youtu.be/_UM73ykkxfU?t=737)
 Now that the "Edit Player" page loads properly, all that's left is making it actually update the player data. Create a handler function that updates the database, and hook it up to the `/edit/:id` endpoint.
 
 ## Creating the Handler Function

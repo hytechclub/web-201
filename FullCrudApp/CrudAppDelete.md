@@ -1,4 +1,5 @@
 # CRU**D** App - Delete
+- [Video](https://www.youtube.com/watch?v=vSxTtVtl8Go&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=52)
 The last step for the CRUD app is allowing the user to delete rows from the database. Add this ability with a GET request that includes a player's `id` as a route parameter.
 
 ## Routing the GET Handler

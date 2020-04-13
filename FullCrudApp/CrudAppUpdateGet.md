@@ -1,4 +1,5 @@
 # CR**U**D App - Update (GET)
+- [Video](https://www.youtube.com/watch?v=_UM73ykkxfU&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=51)
 Add a form to the web app that will allow the user to edit the information for an existing player in the database. First, create an "Edit Player" route that will be accessible via a GET request.
 
 ## Routing the GET Handler
