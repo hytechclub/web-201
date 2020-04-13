@@ -1,6 +1,7 @@
 # C**R**UD App - Read (Table)
 - [Video](https://youtu.be/nC80SRCzRwU?t=367)
-- The goal of the homepage is to display all of the data in a nice tabular format. This is possible using an HTML `table` and some Bootstrap styles.
+
+The goal of the homepage is to display all of the data in a nice tabular format. This is possible using an HTML `table` and some Bootstrap styles.
 
 ## The Table Structure
 First, create the HTML table structure without using any actual data. This will make it easier to visualize the data.

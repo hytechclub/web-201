@@ -1,6 +1,7 @@
 # **C**RUD App - Create (GET)
 - [Video](https://www.youtube.com/watch?v=b61RQfN5gOY&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=50&t=0s)
-- Add a form to the web app that will allow the user to insert a new player into the database. Create an "Add Player" page that will be accessible via a GET request.
+
+Add a form to the web app that will allow the user to insert a new player into the database. Create an "Add Player" page that will be accessible via a GET request.
 
 ## Creating the GET Route Handler
 To properly handle the GET request for the "Add Player" page, it is necessary to build a handler function that renders the EJS.
