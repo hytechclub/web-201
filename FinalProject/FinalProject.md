@@ -41,11 +41,6 @@ The presentation should include:
 - There will be a defined schedule and order for each student to present
 - **If a student does not present a final project, they may not be able to move onto the next level of Hy-Tech Club**
 
-- Background about the idea behind the app
-- An overview of the app's functionality
-- An explanation of any new topics learned
-- A brief look into any relevant or interesting parts of the code 
-
 ## Ideas
 This list of ideas is in no way comprehensive; feel free to go beyond and do something completely different!
 
