@@ -1,4 +1,4 @@
-# Web 201 - Databases Overview
+# Databases Overview
 
 ## Online Learning
 If you are working on this from home, follow these steps:

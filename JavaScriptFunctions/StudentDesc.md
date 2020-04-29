@@ -1,4 +1,4 @@
-# Web 201 - JavaScript Functions (Callbacks)
+# JavaScript Functions (Callbacks)
 
 ## Reference
 - <a href="JavaScriptFunctions.pptx" target="_blank">JavaScript Functions PowerPoint Presentation</a>

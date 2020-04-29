@@ -1,4 +1,4 @@
-# Web 201 - EJS Templates
+# EJS Templates
 
 ## Online Learning
 If you are working on this from home, follow these steps:

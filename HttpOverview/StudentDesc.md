@@ -1,4 +1,4 @@
-# Web 201 - HTTP Overview
+# HTTP Overview
 
 ## Reference
 - <a href="HttpOverview.pptx" target="_blank">HTTP Overview PowerPoint Presentation</a>

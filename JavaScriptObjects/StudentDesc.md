@@ -1,4 +1,4 @@
-# Web 201 - JavaScript Objects / JSON
+# JavaScript Objects / JSON
 
 ## Reference
 - <a href="JavaScriptObjects.pptx" target="_blank">JavaScript Objects PowerPoint Presentation</a>

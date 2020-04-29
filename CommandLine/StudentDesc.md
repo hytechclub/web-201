@@ -1,4 +1,4 @@
-# Web 201 - Introduction to the Command Line
+# Introduction to the Command Line
 
 ## Reference
 - <a href="CommandLine.pptx" target="_blank">Command Line PowerPoint Presentation</a>
