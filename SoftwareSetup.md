@@ -1,4 +1,6 @@
-# Web 201 Software
+# Web 201 Software Setup
+
+[Video](https://www.youtube.com/watch?v=Xdwo_0QULNg&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=14&t=0s)
 
 The Web 201 course uses the following software:
 
