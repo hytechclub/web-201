@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Objects Individual Exercises · GitBook</title>
+        <title>Express Project Code-Along · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="FoodJsonChallenges.html" />
+    <link rel="next" href="ExpressProjectIndividualExercises.html" />
     
     
-    <link rel="prev" href="ObjectsCodeAlong.html" />
+    <link rel="prev" href="StudentDesc.html" />
     
 
     </head>
@@ -216,9 +216,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.7" data-path="../JavaScriptObjects/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptObjects/StudentDesc.html">
             
                     
                     L4 - JavaScript Objects / JSON
@@ -230,9 +230,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="ObjectsCodeAlong.html">
+        <li class="chapter " data-level="1.7.1" data-path="../JavaScriptObjects/ObjectsCodeAlong.html">
             
-                <a href="ObjectsCodeAlong.html">
+                <a href="../JavaScriptObjects/ObjectsCodeAlong.html">
             
                     
                     Objects Code-Along
@@ -243,9 +243,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="ObjectsIndividualExercises.html">
+        <li class="chapter " data-level="1.7.2" data-path="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
-                <a href="ObjectsIndividualExercises.html">
+                <a href="../JavaScriptObjects/ObjectsIndividualExercises.html">
             
                     
                     Objects Individual Exercises
@@ -256,9 +256,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="FoodJsonChallenges.html">
+        <li class="chapter " data-level="1.7.3" data-path="../JavaScriptObjects/FoodJsonChallenges.html">
             
-                <a href="FoodJsonChallenges.html">
+                <a href="../JavaScriptObjects/FoodJsonChallenges.html">
             
                     
                     Food JSON Challenges
@@ -332,9 +332,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../ExpressProjects/StudentDesc.html">
+        <li class="chapter " data-level="1.10" data-path="StudentDesc.html">
             
-                <a href="../ExpressProjects/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L7 - npm, Express
@@ -346,9 +346,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../ExpressProjects/ExpressProjectCodeAlong.html">
+        <li class="chapter active" data-level="1.10.1" data-path="ExpressProjectCodeAlong.html">
             
-                <a href="../ExpressProjects/ExpressProjectCodeAlong.html">
+                <a href="ExpressProjectCodeAlong.html">
             
                     
                     Express Project Code-Along
@@ -359,9 +359,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../ExpressProjects/ExpressProjectIndividualExercises.html">
+        <li class="chapter " data-level="1.10.2" data-path="ExpressProjectIndividualExercises.html">
             
-                <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
+                <a href="ExpressProjectIndividualExercises.html">
             
                     
                     Express Project Individual Exercises
@@ -372,9 +372,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../ExpressProjects/ExpressPostChallenge.html">
+        <li class="chapter " data-level="1.10.3" data-path="ExpressPostChallenge.html">
             
-                <a href="../ExpressProjects/ExpressPostChallenge.html">
+                <a href="ExpressPostChallenge.html">
             
                     
                     Express POST Challenge
@@ -685,7 +685,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Objects Individual Exercises</a>
+        <a href=".." >Express Project Code-Along</a>
     </h1>
 </div>
 
@@ -700,81 +700,139 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="javascript-objects-individual-exercises">JavaScript Objects: Individual Exercises</h1>
-<p>Complete the exercises below to practice working with JavaScript objects and arrays. Start with the following <code>movies</code> array:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> movies = [
-    {
-        title: <span class="hljs-string">&apos;Mulan&apos;</span>,
-        runtime: <span class="hljs-number">97</span>,
-        theater: <span class="hljs-number">1</span>,
-        showtimes: [
-            <span class="hljs-string">&apos;5:40PM&apos;</span>,
-            <span class="hljs-string">&apos;7:25PM&apos;</span>,
-            <span class="hljs-string">&apos;10:05PM&apos;</span>,
-        ]
-    },
-    {
-        title: <span class="hljs-string">&apos;Godzilla vs. Kong&apos;</span>,
-        runtime: <span class="hljs-number">102</span>,
-        theater: <span class="hljs-number">2</span>,
-        showtimes: [
-            <span class="hljs-string">&apos;5:30PM&apos;</span>,
-            <span class="hljs-string">&apos;6:50PM&apos;</span>,
-            <span class="hljs-string">&apos;7:20PM&apos;</span>,
-            <span class="hljs-string">&apos;9:05PM&apos;</span>,
-            <span class="hljs-string">&apos;10:10PM&apos;</span>
-        ]
-    },
-    {
-        title: <span class="hljs-string">&apos;Fargo&apos;</span>,
-        runtime: <span class="hljs-number">98</span>,
-        theater: <span class="hljs-number">3</span>,
-        showtimes: [
-            <span class="hljs-string">&apos;11:59PM&apos;</span>,
-        ]
-    },
-]
+                                <h1 id="express-web-server-project-code-along">Express Web Server Project: Code-Along</h1>
+<p>Follow the steps below to create an npm project that uses Express to run a simple web server.</p>
+<h2 id="creating-an-npm-project">Creating an npm Project</h2>
+<ol>
+<li>In Visual Studio Code, select &quot;Terminal&quot; from the menu, and select &quot;New Terminal&quot; from the dropdown<ul>
+<li>Make sure the terminal is a Git Bash instance</li>
+</ul>
+</li>
+<li>Create a new folder for the project with <code>mkdir</code></li>
+<li>Change the current directory to the new folder with <code>cd</code></li>
+<li>Type <code>npm init</code> and press <code>Enter</code> to run the command<ul>
+<li>This command will walk the user through the steps of initializing an npm project</li>
+</ul>
+</li>
+<li>Enter a proper name for &quot;package name&quot; and press <code>Enter</code></li>
+<li>Simply press <code>Enter</code> for &quot;version&quot; to take the default</li>
+<li>Enter a description and press <code>Enter</code></li>
+<li>For &quot;entry point,&quot; type in <strong>app.js</strong><ul>
+<li>This will be the starting file for the web server</li>
+</ul>
+</li>
+<li>Skip the &quot;test command,&quot; &quot;git repository,&quot; &quot;keywords,&quot; &quot;author,&quot; and &quot;license&quot; by pressing <code>Enter</code> without typing anything</li>
+<li>Press <code>Enter</code> once more to finish creating the project!</li>
+</ol>
+<h2 id="initializing-an-express-project">Initializing an Express Project</h2>
+<ol>
+<li>In the terminal, enter <code>npm install express --save</code></li>
+<li>After the command is run, check the &quot;package.json&quot; file to make sure Express was properly added as a dependency:  <pre><code class="lang-js"> {
+     <span class="hljs-comment">// ...</span>
+     <span class="hljs-string">&quot;dependencies&quot;</span>: {
+         <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>
+     }
+ }
 </code></pre>
-<h2 id="get-the-first-movie-title-and-runtime">Get the First Movie Title and Runtime</h2>
-<ol>
-<li>Get the title of the first movie in the <code>movies</code> array, and store it in a variable</li>
-<li>Get the runtime of the first movie in the <code>movies</code> array, and store it in a variable</li>
-<li>Display a message to the user telling them the name of the movie, and how long it is<ul>
-<li>Make sure to specify that the runtime is in minutes</li>
+</li>
+<li>Additionally, notice that a &quot;node_modules&quot; directory and a &quot;package-lock.json&quot; file should have been generated<ul>
+<li>The &quot;node_modules&quot; folder contains all the code necessary for all dependencies, and &quot;package-lock.json&quot; handles versioning for dependencies</li>
 </ul>
 </li>
+<li>In the directory, create a new file named <strong>app.js</strong></li>
 </ol>
-<h2 id="add-a-showtime-to-the-third-movie">Add a Showtime to the Third Movie</h2>
+<h2 id="creating-a-simple-express-web-app">Creating a Simple Express Web App</h2>
+<p>At first, creating an Express web server is a lot like creating a web server with the <code>http</code> module. However, the capabilities of the Express framework make it much easier to go beyond the basics. Start building the server in the <strong>app.js</strong> file by following the steps below.</p>
 <ol>
-<li>Get the third movie object from the <code>movies</code> array, and store it in a variable</li>
-<li>Add a showtime of &quot;9:45PM&quot; to the showtimes array for the third movie</li>
-</ol>
-<h2 id="swap-theaters">Swap Theaters</h2>
-<ol>
-<li>Change the theater number for the second movie to <code>3</code></li>
-<li>Change the theater number for the third movie to <code>2</code></li>
-</ol>
-<h2 id="another-movie">Another Movie</h2>
-<ol>
-<li>Outside of the original <code>movies</code> array, create a new object named <code>nextMovie</code></li>
-<li>The object should have the following properties:<ul>
-<li><code>title</code> - &quot;Spider-Man: Into the Spider-Verse&quot;</li>
-<li><code>runtime</code> - <code>117</code></li>
-<li><code>theater</code> - <code>4</code></li>
-</ul>
+<li>Import the <code>express</code> module using <code>require</code>, and store it in a <code>const</code> variable named <code>express</code></li>
+<li>Create <code>const</code> variables for <code>hostname</code> and <code>port</code></li>
+<li>Initialize an Express app by calling the <code>express</code> module as a function, and store it in a variable named <code>app</code></li>
+<li>Define a new function named <code>handleHomeRequest</code> that has <code>request</code> and <code>response</code> as parameters</li>
+<li>In the body of the <code>handleHomeRequest</code> function, use <code>response.send</code> to display &apos;Hello World!&apos; to the user</li>
+<li>Use <code>app.get</code> to specify that when a browser goes to the root of the server (<code>&apos;/&apos;</code>), <code>handleHomeRequest</code> should run<pre><code class="lang-js"> app.get(<span class="hljs-string">&apos;/&apos;</span>, handleHomeRequest);
+</code></pre>
 </li>
-<li>The object should also have a <code>showtimes</code> property, which is an array containing:<ul>
-<li>&quot;6:15PM&quot;</li>
-<li>&quot;7:30PM&quot;</li>
-<li>&quot;9:05PM&quot;</li>
-</ul>
-</li>
-<li>Add the <code>nextMovie</code> object to the end of the <code>movies</code> array</li>
+<li>Define a new function named <code>listenCallback</code> that logs a message to the console with the location of the web server</li>
+<li>Finally, use <code>app.listen</code> to listen on the appropriate port on the host, and call <code>listenCallback</code> when listening</li>
+<li>Test out the server by running it with <code>node app.js</code> and visiting <a href="http://127.0.0.1:3000/" target="_blank">http://127.0.0.1:3000/</a></li>
 </ol>
-<h2 id="challenge---all-movies">CHALLENGE - All Movies</h2>
-<p>Use a <code>for</code> loop to print out the titles of all movies currently showing</p>
-<h2 id="challenge---movies-at-905pm">CHALLENGE - Movies at 9:05PM</h2>
-<p>Use a <code>for</code> loop to print out the title and runtime of any movie that has a 9:05PM showtime</p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">let</span> app = express();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleHomeRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.send(<span class="hljs-string">&apos;Hello World!&apos;</span>);
+}
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, handleHomeRequest);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+app.listen(port, hostname, listenCallback);
+</code></pre>
+<h2 id="adding-multiple-endpoints">Adding Multiple Endpoints</h2>
+<p>It is much simpler to add additional HTTP endpoints using the Express framework!</p>
+<ol>
+<li>Define a new function named <code>handleInfoRequest</code> that has <code>request</code> and <code>response</code> as parameters</li>
+<li>In the body of the <code>handleInfoRequest</code> function, use <code>response.send</code> to show an HTML header to the user that says &quot;Info&quot;</li>
+<li>Use <code>app.get</code> to specify that when a browser goes to the <code>&apos;/info&apos;</code> endpoint, <code>handleInfoRequest</code> should run</li>
+<li>Test out the new endpoint by running <code>node app.js</code> again and visiting <a href="http://127.0.0.1:3000/info" target="_blank">http://127.0.0.1:3000/info</a></li>
+</ol>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleInfoRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.send(<span class="hljs-string">&apos;&lt;h1&gt;Info&lt;/h1&gt;&apos;</span>);
+}
+
+app.get(<span class="hljs-string">&apos;/info&apos;</span>, handleInfoRequest);
+</code></pre>
+<h2 id="sending-html-files">Sending HTML Files</h2>
+<p>So far the webpages are not very exciting, but it would be very annoying put a lot of HTML into a template string. Instead, Express makes it possible to send a whole HTML file as a response!</p>
+<ol>
+<li>Create a new file in the project directory named <strong>info.html</strong></li>
+<li>Fill out some basic HTML in the file</li>
+<li>At the top of the <strong>app.js</strong> file, import the <code>path</code> module and store it in a variable<pre><code class="lang-js"> <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+</code></pre>
+</li>
+<li>In the <code>handleInfoRequest</code> function, remove the <code>response.send</code> statement</li>
+<li>Use <code>path.join</code> to combine <code>__dirname</code> and <code>&apos;info.html&apos;</code> to get the absolute path of the HTML file and store it in a variable<pre><code class="lang-js"> <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
+</code></pre>
+</li>
+<li>Use <code>response.sendFile</code> to pass HTML file to the response</li>
+<li>Load up the server and check out the <code>/info</code> endpoint to make sure the <strong>info.html</strong> file renders properly!</li>
+</ol>
+<h2 id="final-code">Final Code</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+
+<span class="hljs-keyword">let</span> app = express();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleHomeRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.send(<span class="hljs-string">&apos;Hello World!&apos;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleInfoRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
+    response.sendFile(infoPath);
+}
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, handleHomeRequest);
+app.get(<span class="hljs-string">&apos;/info&apos;</span>, handleInfoRequest);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+}
+
+app.listen(port, hostname, listenCallback);
+</code></pre>
 
                                 
                                 </section>
@@ -802,12 +860,12 @@
 
             
                 
-                <a href="ObjectsCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Objects Code-Along">
+                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: L7 - npm, Express">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="FoodJsonChallenges.html" class="navigation navigation-next " aria-label="Next page: Food JSON Challenges">
+                <a href="ExpressProjectIndividualExercises.html" class="navigation navigation-next " aria-label="Next page: Express Project Individual Exercises">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -818,7 +876,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects Individual Exercises","level":"1.7.2","depth":2,"next":{"title":"Food JSON Challenges","level":"1.7.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]},"previous":{"title":"Objects Code-Along","level":"1.7.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsIndividualExercises.md","mtime":"2020-04-30T11:01:05.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-30T11:01:43.443Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Express Project Code-Along","level":"1.10.1","depth":2,"next":{"title":"Express Project Individual Exercises","level":"1.10.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},"previous":{"title":"L7 - npm, Express","level":"1.10","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Project Code-Along","level":"1.10.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Project Individual Exercises","level":"1.10.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.10.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"WORKINGSUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectCodeAlong.md","mtime":"2020-04-30T11:01:05.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-30T11:01:43.443Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
