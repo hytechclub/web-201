@@ -1,5 +1,5 @@
 # CRUD App Walkthrough
-Follow the steps in this guide to build a CRUD app using Node.js, Express, EJS, and MySQL.
+Follow the steps in this guide to build a CRUD app using Node.js, Express, EJS, and MySQL. Before beginning, make sure to [properly set up the necessary software](../SoftwareSetup.md).
 
 1. [Setup](CrudAppSetup.md)
 1. [Setup (Code)](CrudAppSetupCode.md)
