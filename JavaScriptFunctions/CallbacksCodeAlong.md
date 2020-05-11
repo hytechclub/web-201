@@ -3,6 +3,9 @@ Follow the instructions to create a small console app using Node.js. Make sure N
 
 **Note: Although the language is JavaScript, this is actually the _back-end_ of the stack. Node.js uses the same JavaScript as the front-end, but on the server side.**
 
+## Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KSv4SYZawKc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## "Hello World" App
 1. Create a new file named **app.js** in the current directory
     - This can be done using VS Code OR using the command line
