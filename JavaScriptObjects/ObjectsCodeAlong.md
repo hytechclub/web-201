@@ -2,21 +2,17 @@
 Follow the instructions to create a small Node console app that creates and manipulates a JavaScript object.
 
 ## Starter App
+1. Create a new [Node.js Repl project](https://repl.it/new/nodejs)
 1. Create a new file named **object.js** in the current directory
-    - This can be done using VS Code OR using the command line
-1. Open the file in VS Code, and enter the following text:
+1. Open the file, and enter the following text:
     ```js
     console.log('Welcome to the car app!');
-
-    process.exit();
     ```
-1. Open a new terminal in VS Code by selecting `Terminal`->`New Terminal` from the menu
-    - Make sure the shell is set to `bash`
-1. In the terminal, type `node object.js` and press `Enter` to run the command
-1. The script will run, and "Welcome to the car app!" should appear in the console!
+1. Create a new file named **.replit** and add `run = "node object.js"` to the file
+1. Click the "Run" button, and "Welcome to the car app!" should appear in the console!
 
 ## Defining the Object
-1. On the next line, create a new object variable named `myCar`
+1. On the next line in the **object.js** file, create a new object variable named `myCar`
     - Use `let`, the object name, `=`, and `{}`
 1. Add a `color` property with a value of `'tan'`
     - Use the property name, `:`, the value, and `,`
@@ -116,6 +112,4 @@ myCar.owner.city = 'Fargo';
 myCar.owner.state = 'ND';
 
 console.log('Jerry moved and now resides in ' + myCar.owner.city + ', ' + myCar.owner.state);
-
-process.exit();
 ```
