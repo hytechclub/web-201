@@ -10,7 +10,7 @@ Complete the individual exercises to update the Callbacks app!
 ## Repeat Two Functions
 1. Define a new function named `repeatTwo`
 1. The `repeatTwo` function should have three parameters: `callback1`, `callback2`, and `numberOfTimes`
-1. Copy the body of the existing `repeat` function, and paste it into the bod of the `repeatTwo` function
+1. Copy the body of the existing `repeat` function, and paste it into the body of the `repeatTwo` function
 1. Update the body of the `repeatTwo` function so that it calls both the `callback1` and `callback2` functions in the `while` loop
 1. Finally, call the `repeatTwo` function to repeat the `drawArrow` and `drawChefHat` functions `2` times
 
