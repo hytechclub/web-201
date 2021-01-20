@@ -1,6 +1,5 @@
 # Full-stack Web Development Overview
+Learn how the front-end and back-end of a web application work together to form the entire stack for a website. Review the **Full-stack Overview PowerPoint Presentation** below.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DZz8Wecnaj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-## Reference
-- <a href="FullStackOverview.pptx" target="_blank">Full-stack Overview PowerPoint Presentation</a>
+## Full-stack Overview PowerPoint Presentation
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/FullStackOverview/FullStackOverview.pptx' width='100%' height='450px' frameborder='0'></iframe>

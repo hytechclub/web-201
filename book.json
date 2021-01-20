@@ -1,7 +1,7 @@
 {
     "structure": {
         "readme": "BOOKREADME.md",
-        "summary": "WORKINGSUMMARY.md"
+        "summary": "COMPLETESUMMARY.md"
     },
     "plugins": ["toggle-chapters"]
 }
