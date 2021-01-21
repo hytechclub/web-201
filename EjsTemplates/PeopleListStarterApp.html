@@ -312,7 +312,7 @@
                 <a href="../ExpressProjects/ExpressProjectCodeAlong.html">
             
                     
-                    Express Project Code-Along
+                    Express Server Code-Along
             
                 </a>
             
@@ -325,7 +325,7 @@
                 <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
             
                     
-                    Express Project Individual Exercises
+                    Express Server Individual Exercises
             
                 </a>
             
@@ -617,38 +617,39 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="people-list-starter-app">People List: Starter App</h1>
-<p>Build an Express app to display a list of people, each with their own page containing more information about them. This will help illustrate the need for <strong>templates</strong>, because it will become increasingly tedious to create a page for each individual person.</p>
+<p>Build an Express app to display a list of people, each with their own page containing more information about them. This will help illustrate the need for <strong>templates</strong>, because it will become increasingly tedious to create a page for each individual person. The data for the people is stored in a file named <strong>people.json</strong>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <ol>
-<li>Open up a terminal, create a new folder for the People List project, and <code>cd</code> into it</li>
-<li>Run <code>npm init</code>, taking all of the defaults other than setting <strong>app.js</strong> for the entry point</li>
-<li>Install Express with <code>npm install express --save</code></li>
-<li>Create a new file in the People List project folder named <strong>home.html</strong></li>
-<li>Fill out the <strong>home.html</strong> file with a header, a paragraph, and an empty list</li>
-<li>Create a new file in the People List project folder named <strong>app.js</strong></li>
+<li>Log into Repl.it</li>
+<li>Open and fork the <a href="https://repl.it/@JosephMaxwell/PeopleListStarter" target="_blank">People List Starter Repl Project</a></li>
 </ol>
+<p>Nothing should happen yet. Follow the steps below to start building the server.</p>
 <h2 id="a-basic-express-server">A Basic Express Server</h2>
 <p>Open up the <strong>app.js</strong> file, and add the code for a simple web server.</p>
 <ol>
 <li>Import the <code>express</code> and <code>path</code> modules, storing them in <code>const</code> variables</li>
-<li>Create <code>const</code> variables for the hostname (127.0.0.1) and port (3000)</li>
-<li>Initialize the by calling <code>express()</code> and storing the result in a variable named <code>app</code></li>
-<li>Define a new function named <code>homePage</code> with two parameters: <code>request</code> and <code>response</code></li>
+<li>Create <code>const</code> variables for the hostname (<code>&apos;0.0.0.0&apos;</code>) and port (<code>8080</code>)</li>
+<li>Create a variable named <code>app</code>, set to <code>express()</code></li>
+<li>Define a new function named <code>homePage</code> that has two parameters: <code>request</code> and <code>response</code></li>
 <li>In the body of the <code>homePage</code> function, use <code>response.sendFile</code> to send <strong>home.html</strong><ul>
 <li>Use <code>path.join</code> to get the absolute path for <strong>home.html</strong></li>
 </ul>
 </li>
-<li>Use <code>app.get</code> to specify that requests to the root (<code>&apos;/&apos;</code>) should call the <code>homePage</code> callback</li>
-<li>Define a function named <code>listenCallback</code>, and in the body, log the hostname and port</li>
-<li>Finally, use <code>app.listen</code> to listen on the proper <code>port</code> and <code>hostname</code>, and pass <code>listenCallback</code> as the callback</li>
-<li>Run the app with <code>node app.js</code>, and navigate to <a href="http://127.0.0.1:3000" target="_blank">http://127.0.0.1:3000</a> to make sure it is running!</li>
+<li>Under the function, call <code>app.get</code><ul>
+<li>Pass in <code>&apos;/&apos;</code> and <code>homepage</code> to specify that requests to the root (<code>&apos;/&apos;</code>) should call the <code>homePage</code> callback</li>
+</ul>
+</li>
+<li>Under that, define a function named <code>listenCallback</code></li>
+<li>Add <code>console.log(&apos;Server Running&apos;)</code> to the body of <code>listenCallback</code></li>
+<li>Finally, call <code>app.listen</code> and pass in <code>port</code>, <code>hostname</code>, and `listenCallback</li>
+<li>Run the server and verify that the <strong>home.html</strong> document appears on the homepage!</li>
 </ol>
 <h3 id="code">Code</h3>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
 <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
 
-<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
-<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;0.0.0.0&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">8080</span>;
 
 <span class="hljs-keyword">let</span> app = express();
 
@@ -659,32 +660,15 @@
 app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server Running&apos;</span>);
 }
 
 app.listen(port, hostname, listenCallback);
 </code></pre>
 <h2 id="creating-a-person-page">Creating a Person Page</h2>
-<p>The people for this website should come from the <strong>people.json</strong> file. Right click the <a href="people.json" target="_blank">people.json</a> link to download it into the same directory as the <strong>app.js</strong> file. Note the data that appears for each person: First Name, Last Name, Avatar (image), Job, and Alive (boolean). The Person page should have a representation for all of this information.</p>
-<ol>
-<li>Create a new file in the People List project folder named <strong>people0.html</strong></li>
-<li>Fill out the <strong>people0.html</strong> file with the HTML provided below<ul>
-<li>Note that this person is the first in the <a href="people.json" target="_blank">people.json</a> array</li>
-</ul>
-</li>
-<li>In the <strong>app.js</strong> file, define a new function named <code>personPage</code> with two parameters: <code>request</code> and <code>response</code></li>
-<li>In the body of the <code>personPage</code> function, use <code>response.sendFile</code> to send <strong>person0.html</strong><ul>
-<li>Use <code>path.join</code> to get the absolute path for <strong>person0.html</strong></li>
-</ul>
-</li>
-<li>Use <code>app.get</code> to specify that requests to the <code>/person</code> endpoint should call the <code>personPage</code> callback</li>
-<li>In the <strong>home.html</strong> file, add an <code>li</code> to the list, and link to this person page<ul>
-<li>The text should be the person&apos;s name</li>
-<li>The <code>href</code> attribute should be <code>/person</code></li>
-</ul>
-</li>
-</ol>
-<p><strong>person0.html</strong></p>
+<p>The people for this website should come from the <strong>people.json</strong> file. Note the data that appears for each person: First Name, Last Name, Avatar (image URL), Job, and Alive (boolean). The Person page should have a representation for all of this information.</p>
+<h3 id="adding-the-html">Adding the HTML</h3>
+<p>First, create a new file in the People List project folder named <strong>people0.html</strong>. Fill it with the following HTML:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
@@ -697,17 +681,34 @@ app.listen(port, hostname, listenCallback);
         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Person Information<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Name: Dorisa Wonfar<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Occupation: Media Manager I<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;https://robohash.org/facilisvitaeprovident.png?size=50x50&amp;set=set1&apos;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;https://robohash.org/facilisvitaeprovident.png?size=50x50&amp;set=set1&apos;</span> /&gt;</span>        
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;/&apos;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
+<p>Note that this person is the first from the <strong>people.json</strong> array.</p>
+<h3 id="updating-the-javascript">Updating the JavaScript</h3>
+<p>Next, update the JavaScript to serve the new page.</p>
+<ol>
+<li>In the <strong>app.js</strong> file, define a new function named <code>personPage</code> with two parameters: <code>request</code> and <code>response</code></li>
+<li>In the body of the <code>personPage</code> function, use <code>response.sendFile</code> to send <strong>person0.html</strong><ul>
+<li>Use <code>path.join</code> to get the absolute path for <strong>person0.html</strong></li>
+</ul>
+</li>
+<li>Use <code>app.get</code> to specify that requests to the <code>/person</code> endpoint should call the <code>personPage</code> callback</li>
+<li>In the <strong>home.html</strong> file, add an <code>li</code> to the list, and link to this person page<ul>
+<li>The text should be the person&apos;s name</li>
+<li>The <code>href</code> attribute should be <code>/person</code></li>
+</ul>
+</li>
+</ol>
 <p>Run the server to make sure the page for Dorisa loads properly!</p>
 <h2 id="adding-multiple-people-with-a-query-parameter">Adding Multiple People with a Query Parameter</h2>
 <p>One person is good, but the app would be much better if it could show multiple people. However, it would be ideal if all of these different people could be surfaced from the same endpoint (<code>/person</code>). It is possible to change the person information based on a query parameter!</p>
 <ol>
 <li>Create a new file in the People List project folder named <strong>person1.html</strong></li>
 <li>Copy the HTML code from <strong>person0.html</strong> into <strong>person1.html</strong></li>
-<li>Update <strong>person1.html</strong> so that it properly represents the second person from the <a href="people.json" target="_blank">people.json</a> array<ul>
+<li>Update <strong>person1.html</strong> so that it properly represents the second person from the <strong>people.json</strong> array<ul>
 <li>The background color should be <code>red</code> because Tammy is dead &#x2639;</li>
 </ul>
 </li>
@@ -726,7 +727,9 @@ app.listen(port, hostname, listenCallback);
 <li>If it is, the server should respond to the request by sending <strong>person1.html</strong></li>
 </ul>
 </li>
-<li>In the <strong>home.html</strong> file, add a link to this second person by setting the <code>href</code> to <code>/person?index=1</code></li>
+<li>In the <strong>home.html</strong> file, add a link to this second person by setting the <code>href</code> to <code>/person?index=1</code>:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/person?index=1&quot;</span>&gt;</span>Tammy Dalgliesh<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+</li>
 <li>Run the server to make sure each link works properly!</li>
 </ol>
 <h3 id="code">Code</h3>
@@ -734,8 +737,8 @@ app.listen(port, hostname, listenCallback);
 <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
 <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
 
-<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
-<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;0.0.0.0&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">8080</span>;
 
 <span class="hljs-keyword">let</span> app = express();
 
@@ -762,13 +765,13 @@ app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
 app.get(<span class="hljs-string">&apos;/person&apos;</span>, personPage);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server Running&apos;</span>);
 }
 
 app.listen(port, hostname, listenCallback);
 </code></pre>
 <h2 id="adding-more-people">Adding More People</h2>
-<p>When this part is working, add another HTML page for the third person in the <a href="people.json" target="_blank">people.json</a> array. Make sure to properly route to this new person&apos;s page based on the query parameter in the <code>personPage</code> function, and add a link on the <strong>home.html</strong> page. </p>
+<p>When this part is working, add another HTML page for the third person in the <strong>people.json</strong> array. Make sure to properly route to this new person&apos;s page based on the query parameter in the <code>personPage</code> function, and add a link on the <strong>home.html</strong> page. Add pages for as many of the people as possible!</p>
 
                                 
                                 </section>
@@ -812,7 +815,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"People List Starter App","level":"1.8.1","depth":2,"next":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"previous":{"title":"L7 - Creating Page Templates (EJS)","level":"1.8","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListStarterApp.md","mtime":"2021-01-21T12:45:59.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T12:46:36.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List Starter App","level":"1.8.1","depth":2,"next":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"previous":{"title":"L7 - Creating Page Templates (EJS)","level":"1.8","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListStarterApp.md","mtime":"2021-01-21T21:00:49.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T21:01:27.552Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

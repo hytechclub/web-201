@@ -312,7 +312,7 @@
                 <a href="../ExpressProjects/ExpressProjectCodeAlong.html">
             
                     
-                    Express Project Code-Along
+                    Express Server Code-Along
             
                 </a>
             
@@ -325,7 +325,7 @@
                 <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
             
                     
-                    Express Project Individual Exercises
+                    Express Server Individual Exercises
             
                 </a>
             
@@ -622,41 +622,68 @@
 <ol>
 <li>In the <strong>person.ejs</strong> file, set the font to &quot;Chiller&quot; if the person is dead</li>
 <li>Set the font to &quot;Arial&quot; if the person is alive</li>
-<li>If the person has &quot;Engineer&quot; in their job title, set the text color to yellow<ul>
+<li>Run the program, and verify that the fonts reflect the alive status of each person!</li>
+</ol>
+<h2 id="adding-a-wrench">Adding a Wrench</h2>
+<p>If the person is an engineer of any kind, they should have a wrench icon under their occupation.</p>
+<ol>
+<li>Open the <strong>person.ejs</strong> file</li>
+<li>Make a new line under the <code>&lt;p&gt;</code> that has the person&apos;s occupation</li>
+<li>Create an <code>&lt;%= if () { %&gt; &lt;%= } %&gt;</code> structure</li>
+<li>For the <code>if</code> condition, check if the person&apos;s <code>job</code> contains the text <code>&apos;Engineer&apos;</code><ul>
 <li>Reference: <a href="https://www.w3schools.com/jsref/jsref_includes.asp" target="_blank">https://www.w3schools.com/jsref/jsref_includes.asp</a></li>
 </ul>
 </li>
+<li>In the body of the <code>if</code>, place the wrench emoji in a <code>p</code>:  <pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x1F527;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+</li>
+<li>Run the program, and verify that &quot;Engineer&quot; people have a wrench on their pages!</li>
 </ol>
 <h2 id="moving-the-avatar-to-the-homepage">Moving the Avatar to the Homepage</h2>
 <ol>
-<li>Remove the avatar from the <code>/person</code> page</li>
-<li>On the homepage, update the person list so each <code>li</code> has an image before the name</li>
+<li>Remove the avatar <code>&lt;img&gt;</code> from the <code>/person</code> page</li>
+<li>On the homepage, update the person list so each <code>li</code> has an image before the name:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span><span class="hljs-comment">&lt;!-- etc --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
+</li>
 <li>Update the image so that it points to the given person&apos;s avatar</li>
 </ol>
 <h2 id="adding-pagination">Adding Pagination</h2>
 <ol>
-<li>In the <strong>app.js</strong> file, in the <code>personPage</code> function, add an <code>index</code> property to the object passed to <code>response.render</code><ul>
+<li>In the <strong>app.js</strong> file, in the <code>personPage</code> function, find the <code>response.render</code> call</li>
+<li>Update the object passed to <code>response.render</code> so that it has an <code>idx</code> property<ul>
 <li>The value should be the <code>index</code> from the query parameter</li>
 </ul>
 </li>
 <li>In the <strong>person.ejs</strong> file, at the bottom, add an <code>a</code> that links to the previous page<ul>
-<li>The <code>href</code> should be <code>/person?index=</code> with the previous index</li>
+<li>The <code>href</code> should be <code>/person?index=</code> with the previous index (<code>&lt;%= idx-1 %&gt;</code>)</li>
 </ul>
 </li>
-<li>Under the &quot;previous page&quot; link, add another <code>a</code> that links to the next page</li>
-<li>Use EJS to create an <code>if</code> statement that shows the &quot;previous page&quot; link only if the current <code>index</code> is not <code>0</code></li>
-<li>Use EJS to create an <code>if</code> statement that shows the &quot;next page&quot; link only if the current <code>index</code> is not the last item in the list</li>
+<li>Under the &quot;previous page&quot; link, add another <code>a</code> that links to the next page (<code>&lt;%= idx+1 %&gt;</code>)</li>
+</ol>
+<h3 id="bonus---dynamic-paging">BONUS - Dynamic Paging</h3>
+<ol>
+<li>Use EJS to create an <code>if</code> statement that shows the &quot;previous page&quot; link only if the current <code>idx</code> is greater than <code>0</code></li>
+<li>Use EJS to create an <code>if</code> statement that shows the &quot;next page&quot; link only if the current <code>idx</code> is less than <code>24</code></li>
 </ol>
 <h2 id="alphabetic-list-sorting">Alphabetic List Sorting</h2>
+<blockquote>
+<p>Note: This challenge is very challenging and provides very little guidance.</p>
+</blockquote>
 <ol>
 <li>In the <strong>app.js</strong> file, in the <code>homePage</code> function, add code to handle a <code>sort</code> query parameter</li>
 <li>If the <code>sort</code> query parameter is <code>true</code>, send over the array of people <em>sorted</em> in alphabetical order</li>
 <li>If the <code>sort</code> query parameter is anything else, send the normal array</li>
 <li>Add links on the <code>/home</code> page to sort/unsort the list of people</li>
 </ol>
-<h3 id="challenge---making-pagination-work">Challenge - Making Pagination Work</h3>
+<h3 id="challenge---making-sorted-pagination-work">Challenge - Making Sorted Pagination Work</h3>
 <p>Update the <code>/home</code> page so that, if clicking a person link while in <code>sort</code> mode, the pagination on the <code>/person</code> page will respect the alphabetic order.</p>
 <h2 id="challenge---editable-occupations">CHALLENGE - Editable Occupations</h2>
+<blockquote>
+<p>Note: This challenge is very challenging.</p>
+</blockquote>
 <p>Update the app so that the user can edit a person&apos;s occupation on the <code>/person</code> page.</p>
 <ol>
 <li>On the server, create a new POST request handler that takes a person&apos;s name and their new occupation, and updates the <code>peopleJson</code> object</li>
@@ -705,7 +732,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"next":{"title":"L8 - Databases (Repl.it DB)","level":"1.9","depth":1,"path":"DatabasesReplit/StudentDesc.md","ref":"DatabasesReplit/StudentDesc.md","articles":[]},"previous":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","mtime":"2021-01-21T12:45:59.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T12:46:36.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"next":{"title":"L8 - Databases (Repl.it DB)","level":"1.9","depth":1,"path":"DatabasesReplit/StudentDesc.md","ref":"DatabasesReplit/StudentDesc.md","articles":[]},"previous":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","mtime":"2021-01-21T21:00:49.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T21:01:27.552Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

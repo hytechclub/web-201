@@ -312,7 +312,7 @@
                 <a href="../ExpressProjects/ExpressProjectCodeAlong.html">
             
                     
-                    Express Project Code-Along
+                    Express Server Code-Along
             
                 </a>
             
@@ -325,7 +325,7 @@
                 <a href="../ExpressProjects/ExpressProjectIndividualExercises.html">
             
                     
-                    Express Project Individual Exercises
+                    Express Server Individual Exercises
             
                 </a>
             
@@ -617,12 +617,10 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="people-list-ejs-code-along">People List EJS: Code-Along</h1>
-<p>The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in <a href="people.json" target="_blank">people.json</a>. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!</p>
+<p>The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in <strong>people.json</strong>. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!</p>
 <p><strong>EJS</strong> (<strong>E</strong>mbedded <strong>J</strong>ava<strong>S</strong>cript) allows developers to use JavaScript directly in HTML templates, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!</p>
 <h2 id="setting-up">Setting Up</h2>
 <ol>
-<li>Open a terminal, and <code>cd</code> into the People List project folder</li>
-<li>Run <code>npm install ejs --save</code> to install EJS and add it to the project</li>
 <li>In the People List project folder, create a new folder named &quot;views&quot;</li>
 <li>Move the <strong>home.html</strong> file and <strong>person0.html</strong> file into the &quot;views&quot; folder</li>
 <li>Rename the files to <strong>home.ejs</strong> and <strong>person.ejs</strong></li>
@@ -631,6 +629,7 @@
 <p>Make the following updates to the <strong>app.js</strong> file.</p>
 <ol>
 <li>Remove the <code>path</code> module import as it is no longer necessary</li>
+<li>At the top of the file, add <code>require(&apos;ejs&apos;)</code> to install the library</li>
 <li>After the <code>app</code> variable is initialized, use the code below to set the &quot;view engine&quot; to &quot;ejs&quot;<pre><code class="lang-js"> app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
 </code></pre>
 </li>
@@ -648,7 +647,7 @@
 <li>Run the server, and make sure the homepage still loads along with the first person page (currently ignoring the index)</li>
 </ol>
 <h2 id="passing-the-json-person">Passing the JSON Person</h2>
-<p>The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the <code>people.json</code> array based on the index, and pass it into the template.</p>
+<p>The goal is to have the program dynamically generate an HTML page for each person in the <strong>people.json</strong> file. To do that, it is necessary to pull the correct person object from the <code>people.json</code> array based on the index, and pass it into the template.</p>
 <blockquote>
 <p>Note: The <strong>people.json</strong> file must be saved in the same directory as the <strong>app.js</strong> file</p>
 </blockquote>
@@ -656,8 +655,8 @@
 <li>At the top of the file, import the <code>fs</code> module, storing it in a <code>const</code> variable<pre><code class="lang-js"> <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
 </code></pre>
 </li>
-<li>Use <code>fs.readFileSync</code> and <code>JSON.parse</code> to put the <code>people.json</code> array into a variable named <code>peopleJson</code><pre><code class="lang-js"> <span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
- <span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
+<li>Use <code>fs.readFileSync</code> and <code>JSON.parse</code> to put the <code>people.json</code> array into a variable named <code>peopleJson</code><pre><code class="lang-js"> <span class="hljs-keyword">let</span> rawData = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
+ <span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawData);
 </code></pre>
 </li>
 <li>In the body of the <code>personPage</code> function, use the <code>index</code> query parameter to get the correct person from the <code>peopleJson</code> array<pre><code class="lang-js"> <span class="hljs-keyword">let</span> currentPerson = peopleJson[index];
@@ -672,7 +671,9 @@
 <li>Run the server, load the <code>/person</code> page, and make sure that the object displayed changes based on the <code>index</code> query parameter!</li>
 </ol>
 <h2 id="updating-the-person-page-template">Updating the Person Page Template</h2>
-<p>Now that the <code>person</code> object is available in the <strong>person.ejs</strong> template, all that&apos;s left is updating the template to use the object properties!</p>
+<p>Now that the <code>person</code> object is available in the <strong>person.ejs</strong> template, all that&apos;s left is updating the template to use the object properties! A value from the <code>person</code> object can be implanted in the HTML like so:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">person.PROPERTY</span> %&gt;</span>
+</code></pre>
 <ol>
 <li>Replace the existing name with a dynamic piece of code that gets the <code>first_name</code> from the <code>person</code>, and adds the <code>last_name</code> of the <code>person</code><ul>
 <li>Use <code>&lt;%=</code> to start the EJS segment</li>
@@ -708,7 +709,7 @@
 </code></pre>
 </li>
 <li>Under the EJS scriptlet, in the &quot;body&quot; of the else, add a <code>style</code> element with the CSS to set the background color of the page to <code>red</code></li>
-<li>Under the HTML, add another EJS scriptlet to close off the <code>else</code> statement</li>
+<li>Under the <code>&lt;/style&gt;</code>, add another EJS scriptlet to close off the <code>else</code> statement</li>
 <li>Load up the <code>/person</code> page, and make sure that dead people have red backgrounds!</li>
 </ol>
 <h3 id="code">Code</h3>
@@ -733,6 +734,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Name: <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">person.first_name</span> + &apos; &apos; + <span class="hljs-attr">person.last_name</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Occupation: <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">person.job</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;&lt;%= person.avatar %&gt;&apos;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;/&apos;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
@@ -745,7 +747,7 @@
  });
 </code></pre>
 </li>
-<li>In the <strong>home.ejs</strong> file, remove all of the <code>li</code> elements<ul>
+<li>In the <strong>home.ejs</strong> file, remove any <code>li</code> elements<ul>
 <li>They will be dynamically generated!</li>
 </ul>
 </li>
@@ -796,12 +798,13 @@
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
 <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
 <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ejs&apos;</span>);
 
-<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
-<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;0.0.0.0&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">8080</span>;
 
-<span class="hljs-keyword">let</span> rawdata = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
-<span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawdata);
+<span class="hljs-keyword">let</span> rawData = fs.readFileSync(<span class="hljs-string">&apos;people.json&apos;</span>);
+<span class="hljs-keyword">let</span> peopleJson = <span class="hljs-built_in">JSON</span>.parse(rawData);
 
 <span class="hljs-keyword">let</span> app = express();
 app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
@@ -826,7 +829,7 @@ app.get(<span class="hljs-string">&apos;/&apos;</span>, homePage);
 app.get(<span class="hljs-string">&apos;/person&apos;</span>, personPage);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server running&apos;</span>);
 }
 
 app.listen(port, hostname, listenCallback);
@@ -874,7 +877,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"next":{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]},"previous":{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsCodeAlong.md","mtime":"2021-01-21T12:45:59.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T12:46:36.927Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"next":{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]},"previous":{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListEjsCodeAlong.md","mtime":"2021-01-21T21:00:49.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T21:01:27.552Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
