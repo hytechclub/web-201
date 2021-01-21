@@ -1,11 +1,9 @@
 # People List EJS: Code-Along
-The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in <a href="people.json" target="_blank">people.json</a>. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!
+The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in **people.json**. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!
 
 **EJS** (**E**mbedded **J**ava**S**cript) allows developers to use JavaScript directly in HTML templates, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!
 
 ## Setting Up
-1. Open a terminal, and `cd` into the People List project folder
-1. Run `npm install ejs --save` to install EJS and add it to the project
 1. In the People List project folder, create a new folder named "views"
 1. Move the **home.html** file and **person0.html** file into the "views" folder
 1. Rename the files to **home.ejs** and **person.ejs**
@@ -14,6 +12,7 @@ The current People List app works for a small number of people, but it becomes i
 Make the following updates to the **app.js** file.
 
 1. Remove the `path` module import as it is no longer necessary
+1. At the top of the file, add `require('ejs')` to install the library
 1. After the `app` variable is initialized, use the code below to set the "view engine" to "ejs"
     ```js
     app.set('view engine', 'ejs');
@@ -32,7 +31,7 @@ Make the following updates to the **app.js** file.
 1. Run the server, and make sure the homepage still loads along with the first person page (currently ignoring the index)
 
 ## Passing the JSON Person
-The goal is to have the program dynamically generate an HTML page for each person in the <a href="people.json" target="_blank">people.json</a> file. To do that, it is necessary to pull the correct person object from the `people.json` array based on the index, and pass it into the template.
+The goal is to have the program dynamically generate an HTML page for each person in the **people.json** file. To do that, it is necessary to pull the correct person object from the `people.json` array based on the index, and pass it into the template.
 
 >Note: The **people.json** file must be saved in the same directory as the **app.js** file
 
@@ -42,8 +41,8 @@ The goal is to have the program dynamically generate an HTML page for each perso
     ```
 1. Use `fs.readFileSync` and `JSON.parse` to put the `people.json` array into a variable named `peopleJson`
     ```js
-    let rawdata = fs.readFileSync('people.json');
-    let peopleJson = JSON.parse(rawdata);
+    let rawData = fs.readFileSync('people.json');
+    let peopleJson = JSON.parse(rawData);
     ```
 1. In the body of the `personPage` function, use the `index` query parameter to get the correct person from the `peopleJson` array
     ```js
@@ -59,7 +58,11 @@ The goal is to have the program dynamically generate an HTML page for each perso
 1. Run the server, load the `/person` page, and make sure that the object displayed changes based on the `index` query parameter!
 
 ## Updating the Person Page Template
-Now that the `person` object is available in the **person.ejs** template, all that's left is updating the template to use the object properties!
+Now that the `person` object is available in the **person.ejs** template, all that's left is updating the template to use the object properties! A value from the `person` object can be implanted in the HTML like so:
+
+```html
+<%= person.PROPERTY %>
+```
 
 1. Replace the existing name with a dynamic piece of code that gets the `first_name` from the `person`, and adds the `last_name` of the `person`
     - Use `<%=` to start the EJS segment
@@ -94,7 +97,7 @@ The background color should be green if the person is alive, and red if the pers
     <% } else { %>
     ```
 1. Under the EJS scriptlet, in the "body" of the else, add a `style` element with the CSS to set the background color of the page to `red`
-1. Under the HTML, add another EJS scriptlet to close off the `else` statement
+1. Under the `</style>`, add another EJS scriptlet to close off the `else` statement
 1. Load up the `/person` page, and make sure that dead people have red backgrounds!
 
 ### Code
@@ -120,6 +123,7 @@ The background color should be green if the person is alive, and red if the pers
         <p>Name: <%= person.first_name + ' ' + person.last_name %></p>
         <p>Occupation: <%= person.job %></p>
         <img src='<%= person.avatar %>' />
+        <p><a href='/'>Home</a></p>
     </body>
 </html>
 ```
@@ -134,7 +138,7 @@ Now that the person page dynamically loads each individual person, update the ho
         people: peopleJson
     });
     ```
-1. In the **home.ejs** file, remove all of the `li` elements
+1. In the **home.ejs** file, remove any `li` elements
     - They will be dynamically generated!
 1. Within the `ul`, add an EJS scriptlet containing a `for` loop that will loop through all of the people in the `people` array
     ```html
@@ -188,12 +192,13 @@ Now that the person page dynamically loads each individual person, update the ho
 const express = require('express');
 const url = require('url');
 const fs = require('fs');
+require('ejs');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const hostname = '0.0.0.0';
+const port = 8080;
 
-let rawdata = fs.readFileSync('people.json');
-let peopleJson = JSON.parse(rawdata);
+let rawData = fs.readFileSync('people.json');
+let peopleJson = JSON.parse(rawData);
 
 let app = express();
 app.set('view engine', 'ejs');
@@ -218,7 +223,7 @@ app.get('/', homePage);
 app.get('/person', personPage);
 
 function listenCallback() {
-    console.log(`Listening on http://${hostname}:${port}`);
+    console.log('Server running');
 }
 
 app.listen(port, hostname, listenCallback);
