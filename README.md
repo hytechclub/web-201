@@ -7,6 +7,7 @@ Material for the Web 201 Hy-Tech Club course
 ## Topics
 - [Full-stack Web Development Overview](FullStackOverview/)
 - [Introduction to the Command Line](CommandLine/)
+- [Template Literals](TemplateLiterals/)
 - [JavaScript Functions (Callbacks)](JavaScriptFunctions/)
 - [JavaScript Objects / JSON](JavaScriptObjects/)
 - [HTTP Overview](HttpOverview/)
@@ -17,13 +18,13 @@ Material for the Web 201 Hy-Tech Club course
 - [Building a CRUD App](FullCrudApp/)
 
 ## Schedule
-- Week 1: Full-stack Web Development Overview + Introduction to the Command Line
+- Week 1: Full-stack Web Development Overview + Template Literals
 - Week 2: JavaScript Functions (Callbacks)
 - Week 3: JavaScript Objects / JSON
 - Week 4: HTTP Overview + Simple Node Web Server
-- Week 5: npm, Express
+- Week 5: Express
 - Week 6: Creating Page Templates (EJS)
-- Week 7: Databases (MySQL)
+- Week 7: Databases
 - Week 8: Building a CRUD App
 - Week 9, 10, 11: Project Work
 - Week 12: Project Presentations

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L1 - Full-stack Overview · GitBook</title>
+        <title>Driver's License Individual Exercises · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../TemplateLiterals/StudentDesc.html" />
+    <link rel="next" href="../JavaScriptFunctions/StudentDesc.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="DriversLicenseCodeAlong.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.2" data-path="../FullStackOverview/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../FullStackOverview/StudentDesc.html">
             
                     
                     L1 - Full-stack Overview
@@ -119,9 +119,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../TemplateLiterals/StudentDesc.html">
+        <li class="chapter " data-level="1.3" data-path="StudentDesc.html">
             
-                <a href="../TemplateLiterals/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     L2 - Template Literals
@@ -133,9 +133,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../TemplateLiterals/DriversLicenseCodeAlong.html">
+        <li class="chapter " data-level="1.3.1" data-path="DriversLicenseCodeAlong.html">
             
-                <a href="../TemplateLiterals/DriversLicenseCodeAlong.html">
+                <a href="DriversLicenseCodeAlong.html">
             
                     
                     Driver's License Code-Along
@@ -146,9 +146,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../TemplateLiterals/DriversLicenseIndividualExercises.html">
+        <li class="chapter active" data-level="1.3.2" data-path="DriversLicenseIndividualExercises.html">
             
-                <a href="../TemplateLiterals/DriversLicenseIndividualExercises.html">
+                <a href="DriversLicenseIndividualExercises.html">
             
                     
                     Driver's License Individual Exercises
@@ -646,7 +646,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L1 - Full-stack Overview</a>
+        <a href=".." >Driver's License Individual Exercises</a>
     </h1>
 </div>
 
@@ -661,10 +661,108 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="full-stack-web-development-overview">Full-stack Web Development Overview</h1>
-<p>Learn how the front-end and back-end of a web application work together to form the entire stack for a website. Review the <strong>Full-stack Overview PowerPoint Presentation</strong> below.</p>
-<h2 id="full-stack-overview-powerpoint-presentation">Full-stack Overview PowerPoint Presentation</h2>
-<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/FullStackOverview/FullStackOverview.pptx" width="100%" height="450px" frameborder="0"></iframe>
+                                <h1 id="drivers-license-individual-exercises">Driver&apos;s License: Individual Exercises</h1>
+<p>After completing the <a href="DriversLicenseCodeAlong.html">code-along activity</a>, build on it by working on these exercises.</p>
+<h2 id="new-people">New People</h2>
+<p>Currently, the program should display licenses for two people. Add some more! Call the <code>printLicense</code> function for the following individuals:</p>
+<ul>
+<li>Homer Simpson, 39, not an organ donor</li>
+<li>Lisa Simpson, 8, is an organ donor</li>
+<li>Maggie Simpson, 1, is not an organ donor</li>
+</ul>
+<p>Feel free to add any more people as well! Run the program, and verify that all the new licenses appear properly.</p>
+<h2 id="changing-the-text">Changing the Text</h2>
+<p>One of the nice things about template literals is that it&apos;s easier to update the text. Make the following changes to the way a license is printed in the <code>printLicense</code> function:</p>
+<ol>
+<li>Use <code>&gt;</code> instead of <code>|</code> for the left edge</li>
+<li>Use <code>~</code> instead of <code>/</code> for the top and bottom</li>
+<li>Extend the width of the license card by adding more <code>~</code></li>
+<li>Add a <code>&lt;</code> after each piece of information</li>
+</ol>
+<p>What is printed should end up looking something like this:</p>
+<pre><code>~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&gt; Name: Lisa Simpson &lt;
+&gt; Age: 8 &lt;
+&gt; Donor: true &lt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</code></pre><p>Feel free to add any additional changes as well!</p>
+<h2 id="a-new-parameter">A New Parameter</h2>
+<p>So far, the program displays three pieces of information. Update it so that it displays <em>four</em> pieces of information instead! In addition to the name, age, and organ donor status, display a home state for the license.</p>
+<ol>
+<li>Modify the <code>printLicense</code> function definition with an additional parameter: <code>state</code></li>
+<li>Modify each call to the <code>printLicense</code> function and pass in a state string value</li>
+<li>In the body of the <code>printLicense</code> function, add a line to the template literal:
+ <code>&gt; State: &lt;</code></li>
+<li>Use interpolation to pass the <code>state</code> parameter into the template</li>
+<li>Run the program again, and verify that a state appears with each license!</li>
+</ol>
+<h2 id="ascii-art">ASCII Art</h2>
+<blockquote>
+<p>Note: This challenge may be difficult</p>
+</blockquote>
+<p>In addition to printing out a license, print out a text-based image of each character. Here is some art for all of them:</p>
+<pre><code>                             (####)
+                           (#######)
+                         (#########)
+                        (#########)
+                      (#########)
+                     (#########)
+                    (#########)
+                   (#########)
+                  (########)
+   _____         (#########)
+  /     \       (#########)    |\/\/\/|     /\ /\  /\               /\
+\/\/     |      (#########)    |      |     | V  \/  \---.    .----/  \----.
+ |  (o)(o)       (o)(o)(##)    |      |      \_        /       \          /
+ C   .---_)    ,_C     (##)    | (o)(o)       (o)(o)  &lt;__.   .--\ (o)(o) /__.
+  | |.___|    /____,   (##)    C      _)     _C         /     \     ()     /
+  |  \__/       \     (#)       | ,___|     /____,   )  \      &gt;   (C_)   &lt;
+  /_____\        |    |         |   /         \     /----&apos;    /___\____/___\
+ /_____/ \       OOOOOO        /____\          ooooo             /|    |\
+/         \     /      \      /      \        /     \           /        \
+
+  HOMER          MARGE         BART            LISA               MAGGIE
+</code></pre><p>Note that when using JavaScript template literals, the backslash character (<code>\</code>) will have to be replaced with a double backslash (<code>\\</code>). This is because the backslash is used as an escape sequence.</p>
+<ol>
+<li>Extract each character into a standalone ASCII art string</li>
+<li>Add a new parameter to the <code>printLicense</code> function: <code>picture</code></li>
+<li>In the <code>printLicense</code> function, log the <code>picture</code> string to the console</li>
+<li>Pass in each character&apos;s string to the <code>printLicense</code> function calls</li>
+</ol>
+<p>Feel free to mess around with this, and choose different characters if desired. The main goal is to have some representation of each individual printed on each license!</p>
+<h2 id="birthday-cake">Birthday Cake</h2>
+<blockquote>
+<p>Note: This challenge may be fairly challenging</p>
+</blockquote>
+<p>Create a piece of customizable birthday cake ASCII Art. It should be able to place any name under 19 characters long in the middle of the cake. It should look something like this:</p>
+<pre><code>    i_i_i_i_i_i_i    
+   |  ~ ~ ~ ~ ~  |   
+   |  H a p p y  |   
+ _i|_____________|i_ 
+|^^^^^^^^^^^^^^^^^^^|
+|  ~ ~ ~ ~ ~ ~ ~ ~  |
+|  B i r t h d a y  |
+|                   |
+|   Homer Simpson   |
+|                   |
+~~~~~~~~~~~~~~~~~~~~~
+</code></pre><ol>
+<li>Define a new function named <code>printCake</code></li>
+<li>Make the function take in a <code>name</code> parameter</li>
+<li>In the body of the function, check if the <code>name</code> is short enough<ul>
+<li>If it is not, print a message and return</li>
+</ul>
+</li>
+<li>Pad the name an appropriate amount so that it appears in the middle of the cake<ul>
+<li>e.g., <code>Homer Simpson</code> should become <code>Homer Simpson</code></li>
+</ul>
+</li>
+<li>Create a template literal containing the cake ASCII</li>
+<li>Place the padded name in the proper spot within the string</li>
+<li>Print the string to the console</li>
+</ol>
+<p>Feel free to make changes as desired. These concepts can be applied to any number of ASCII art creations!</p>
+
                                 
                                 </section>
                             
@@ -691,12 +789,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="DriversLicenseCodeAlong.html" class="navigation navigation-prev " aria-label="Previous page: Driver's License Code-Along">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../TemplateLiterals/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L2 - Template Literals">
+                <a href="../JavaScriptFunctions/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L3 - JavaScript Functions (Callbacks)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -707,7 +805,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L1 - Full-stack Overview","level":"1.2","depth":1,"next":{"title":"L2 - Template Literals","level":"1.3","depth":1,"path":"TemplateLiterals/StudentDesc.md","ref":"TemplateLiterals/StudentDesc.md","articles":[{"title":"Driver's License Code-Along","level":"1.3.1","depth":2,"path":"TemplateLiterals/DriversLicenseCodeAlong.md","ref":"TemplateLiterals/DriversLicenseCodeAlong.md","articles":[]},{"title":"Driver's License Individual Exercises","level":"1.3.2","depth":2,"path":"TemplateLiterals/DriversLicenseIndividualExercises.md","ref":"TemplateLiterals/DriversLicenseIndividualExercises.md","articles":[]}]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"BOOKREADME.md","ref":"BOOKREADME.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullStackOverview/StudentDesc.md","mtime":"2021-01-22T20:13:24.697Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-22T20:14:06.151Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Driver's License Individual Exercises","level":"1.3.2","depth":2,"next":{"title":"L3 - JavaScript Functions (Callbacks)","level":"1.4","depth":1,"path":"JavaScriptFunctions/StudentDesc.md","ref":"JavaScriptFunctions/StudentDesc.md","articles":[{"title":"Callbacks Code-Along","level":"1.4.1","depth":2,"path":"JavaScriptFunctions/CallbacksCodeAlong.md","ref":"JavaScriptFunctions/CallbacksCodeAlong.md","articles":[]},{"title":"Callbacks Individual Exercises","level":"1.4.2","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},{"title":"File Reader Challenge","level":"1.4.3","depth":2,"path":"JavaScriptFunctions/FileReaderChallenge.md","ref":"JavaScriptFunctions/FileReaderChallenge.md","articles":[]}]},"previous":{"title":"Driver's License Code-Along","level":"1.3.1","depth":2,"path":"TemplateLiterals/DriversLicenseCodeAlong.md","ref":"TemplateLiterals/DriversLicenseCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"TemplateLiterals/DriversLicenseIndividualExercises.md","mtime":"2021-01-22T20:13:24.773Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-22T20:14:06.151Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
