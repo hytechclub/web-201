@@ -621,6 +621,7 @@
 <h2 id="getting-started">Getting Started</h2>
 <ol>
 <li>Create a new <a href="https://repl.it/new/nodejs" target="_blank">Node.js Repl project</a></li>
+<li>Name it &quot;Simple HTTP Server&quot;</li>
 <li>Create a new file named <strong>server.js</strong> in the current directory</li>
 <li>In the <strong>server.js</strong> file, add the line to import the <code>http</code> module:<pre><code class="lang-js"> <span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
 </code></pre>
@@ -724,25 +725,6 @@ server.listen(port, hostname, listenCallback);
 <p>Now it&apos;s time to test it out. To do so, open the Repl project website in a new tab by clicking the proper icon in the upper right:</p>
 <p><img src="https://i.imgur.com/iFF5Ocl.png" alt=""></p>
 <p>Append <code>?world=1</code> to the end of the URL, and go to the page. Verify that the query parameter is working!</p>
-<h3 id="code">Code</h3>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleRequest</span>(<span class="hljs-params">request, response</span>) </span>{
-  response.statusCode = <span class="hljs-number">200</span>;
-  response.setHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html&apos;</span>);
-
-  <span class="hljs-keyword">let</span> requestUrl = request.url;
-  <span class="hljs-keyword">let</span> parsedUrl = url.parse(requestUrl, <span class="hljs-literal">true</span>);
-  <span class="hljs-keyword">let</span> queryParams = parsedUrl.query;
-  <span class="hljs-keyword">let</span> worldParam = queryParams.world;
-
-  <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
-    response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
-  } <span class="hljs-keyword">else</span> {
-    response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
-  }
-
-  response.end();
-}
-</code></pre>
 <h2 id="final-code">Final Code</h2>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
 <span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
@@ -819,7 +801,7 @@ server.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Simple Server Code-Along","level":"1.6.1","depth":2,"next":{"title":"Simple Server Individual Exercises","level":"1.6.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]},"previous":{"title":"L5 - Simple Node Web Server","level":"1.6","depth":1,"path":"SimpleNodeWebServer/StudentDesc.md","ref":"SimpleNodeWebServer/StudentDesc.md","articles":[{"title":"Simple Server Code-Along","level":"1.6.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},{"title":"Simple Server Individual Exercises","level":"1.6.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","mtime":"2021-01-21T21:00:49.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T21:01:27.552Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Code-Along","level":"1.6.1","depth":2,"next":{"title":"Simple Server Individual Exercises","level":"1.6.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]},"previous":{"title":"L5 - Simple Node Web Server","level":"1.6","depth":1,"path":"SimpleNodeWebServer/StudentDesc.md","ref":"SimpleNodeWebServer/StudentDesc.md","articles":[{"title":"Simple Server Code-Along","level":"1.6.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},{"title":"Simple Server Individual Exercises","level":"1.6.2","depth":2,"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","ref":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","mtime":"2021-01-22T14:10:10.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-22T14:10:49.498Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

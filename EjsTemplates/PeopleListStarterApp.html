@@ -686,7 +686,11 @@ app.listen(port, hostname, listenCallback);
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<p>Note that this person is the first from the <strong>people.json</strong> array.</p>
+<p>Note that this person is the first from the <strong>people.json</strong> array. In addition to adding <strong>people0.html</strong>, update the <strong>home.html</strong> file with a link. The link should be within an <code>li</code> element in the <code>ul</code> element, and should send the user to the <code>/person</code> page.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/person&quot;</span>&gt;</span>Dorisa Wonfar<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+</code></pre>
 <h3 id="updating-the-javascript">Updating the JavaScript</h3>
 <p>Next, update the JavaScript to serve the new page.</p>
 <ol>
@@ -695,14 +699,18 @@ app.listen(port, hostname, listenCallback);
 <li>Use <code>path.join</code> to get the absolute path for <strong>person0.html</strong></li>
 </ul>
 </li>
-<li>Use <code>app.get</code> to specify that requests to the <code>/person</code> endpoint should call the <code>personPage</code> callback</li>
-<li>In the <strong>home.html</strong> file, add an <code>li</code> to the list, and link to this person page<ul>
-<li>The text should be the person&apos;s name</li>
-<li>The <code>href</code> attribute should be <code>/person</code></li>
-</ul>
-</li>
+<li>Outside the function, call <code>app.get</code></li>
+<li>Pass in arguments to specify that requests to the <code>/person</code> endpoint should call the <code>personPage</code> callback</li>
 </ol>
 <p>Run the server to make sure the page for Dorisa loads properly!</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">personPage</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> personFile = personFile = <span class="hljs-string">&apos;person0.html&apos;</span>;
+    <span class="hljs-keyword">let</span> personPath = path.join(__dirname, personFile);
+    response.sendFile(personPath);
+}
+
+app.get(<span class="hljs-string">&apos;/person&apos;</span>, personPage);
+</code></pre>
 <h2 id="adding-multiple-people-with-a-query-parameter">Adding Multiple People with a Query Parameter</h2>
 <p>One person is good, but the app would be much better if it could show multiple people. However, it would be ideal if all of these different people could be surfaced from the same endpoint (<code>/person</code>). It is possible to change the person information based on a query parameter!</p>
 <ol>
@@ -815,7 +823,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"People List Starter App","level":"1.8.1","depth":2,"next":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"previous":{"title":"L7 - Creating Page Templates (EJS)","level":"1.8","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListStarterApp.md","mtime":"2021-01-21T21:00:49.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T21:01:27.552Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"People List Starter App","level":"1.8.1","depth":2,"next":{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},"previous":{"title":"L7 - Creating Page Templates (EJS)","level":"1.8","depth":1,"path":"EjsTemplates/StudentDesc.md","ref":"EjsTemplates/StudentDesc.md","articles":[{"title":"People List Starter App","level":"1.8.1","depth":2,"path":"EjsTemplates/PeopleListStarterApp.md","ref":"EjsTemplates/PeopleListStarterApp.md","articles":[]},{"title":"People List EJS Code-Along","level":"1.8.2","depth":2,"path":"EjsTemplates/PeopleListEjsCodeAlong.md","ref":"EjsTemplates/PeopleListEjsCodeAlong.md","articles":[]},{"title":"People List EJS Individual Exercises","level":"1.8.3","depth":2,"path":"EjsTemplates/PeopleListEjsIndividualExercises.md","ref":"EjsTemplates/PeopleListEjsIndividualExercises.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"EjsTemplates/PeopleListStarterApp.md","mtime":"2021-01-22T14:10:10.195Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-22T14:10:49.498Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
