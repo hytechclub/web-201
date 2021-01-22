@@ -1,7 +1,7 @@
 # People List EJS: Code-Along
 The current People List app works for a small number of people, but it becomes increasingly tedious to add more and more. It is frustrating, because so much of the HTML is repeated, and all of the data exists in **people.json**. If only there were a way to pull the data from the JSON file into the HTML, so the server could dynamically generate each page and update the homepage accordingly... well, there is!
 
-**EJS** (**E**mbedded **J**ava**S**cript) allows developers to use JavaScript directly in HTML templates, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!
+**EJS** (**E**mbedded **J**ava**S**cript) allows developers to use JavaScript directly in HTML _templates_, making them much more dynamic. The server passes a JavaScript object into the HTML based on the specific request and current data. It then renders a specific HTML page to send back up to the client for display!
 
 ## Setting Up
 1. In the People List project folder, create a new folder named "views"
@@ -39,7 +39,7 @@ The goal is to have the program dynamically generate an HTML page for each perso
     ```js
     const fs = require('fs');
     ```
-1. Use `fs.readFileSync` and `JSON.parse` to put the `people.json` array into a variable named `peopleJson`
+1. Under that, use `fs.readFileSync` and `JSON.parse` to put the `people.json` array into a variable named `peopleJson`
     ```js
     let rawData = fs.readFileSync('people.json');
     let peopleJson = JSON.parse(rawData);

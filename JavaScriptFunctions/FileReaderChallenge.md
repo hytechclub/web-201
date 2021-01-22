@@ -1,8 +1,8 @@
 # File Reader Challenge
 Create a Node.js app that reads from a text file and manipulates the data. This challenge illustrates the need for callbacks, because the `fs` module requires a callback to receive the data from a file!
 
-### Documentation
-Review the documentation [here](https://nodejs.org/api/fs.html) before starting the challenge.
+### Examples
+Review the examples [here](https://www.w3schools.com/nodejs/nodejs_filesystem.asp) before starting the challenge. Note how `fs.readFile` works.
 
 ## Setup (Repl.it)
 1. Create a new [Node.js Repl Project](https://repl.it/new/nodejs)

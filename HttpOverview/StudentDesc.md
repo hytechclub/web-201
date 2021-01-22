@@ -1,4 +1,4 @@
-# Full-stack Web Development Overview
+# HTTP Overview
 Learn how [HTTP](https://www.khanacademy.org/computing/ap-computer-science-principles/the-internet/http-html/a/hypertext-transfer-protocol-http) connects the front-end and back-end of a web application. Review the **HTTP Overview PowerPoint Presentation** below.
 
 ## HTTP Overview PowerPoint Presentation

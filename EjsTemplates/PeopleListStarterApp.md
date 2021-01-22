@@ -71,7 +71,13 @@ First, create a new file in the People List project folder named **people0.html*
 </html>
 ```
 
-Note that this person is the first from the **people.json** array.
+Note that this person is the first from the **people.json** array. In addition to adding **people0.html**, update the **home.html** file with a link. The link should be within an `li` element in the `ul` element, and should send the user to the `/person` page.
+
+```html
+<li>
+    <a href="/person">Dorisa Wonfar</a>
+</li>
+```
 
 ### Updating the JavaScript
 Next, update the JavaScript to serve the new page.
@@ -79,12 +85,20 @@ Next, update the JavaScript to serve the new page.
 1. In the **app.js** file, define a new function named `personPage` with two parameters: `request` and `response`
 1. In the body of the `personPage` function, use `response.sendFile` to send **person0.html**
     - Use `path.join` to get the absolute path for **person0.html**
-1. Use `app.get` to specify that requests to the `/person` endpoint should call the `personPage` callback
-1. In the **home.html** file, add an `li` to the list, and link to this person page
-    - The text should be the person's name
-    - The `href` attribute should be `/person`
+1. Outside the function, call `app.get`
+1. Pass in arguments to specify that requests to the `/person` endpoint should call the `personPage` callback
 
 Run the server to make sure the page for Dorisa loads properly!
+
+```js
+function personPage(request, response) {
+    let personFile = personFile = 'person0.html';
+    let personPath = path.join(__dirname, personFile);
+    response.sendFile(personPath);
+}
+
+app.get('/person', personPage);
+```
 
 ## Adding Multiple People with a Query Parameter
 One person is good, but the app would be much better if it could show multiple people. However, it would be ideal if all of these different people could be surfaced from the same endpoint (`/person`). It is possible to change the person information based on a query parameter!

@@ -3,6 +3,7 @@ Follow the instructions to create a simple web server using Node.js.
 
 ## Getting Started
 1. Create a new [Node.js Repl project](https://repl.it/new/nodejs)
+1. Name it "Simple HTTP Server"
 1. Create a new file named **server.js** in the current directory
 1. In the **server.js** file, add the line to import the `http` module:
     ```js
@@ -107,27 +108,6 @@ Now it's time to test it out. To do so, open the Repl project website in a new t
 ![](https://i.imgur.com/iFF5Ocl.png)
 
 Append `?world=1` to the end of the URL, and go to the page. Verify that the query parameter is working!
-
-### Code
-```js
-function handleRequest(request, response) {
-  response.statusCode = 200;
-  response.setHeader('Content-Type', 'text/html');
-
-  let requestUrl = request.url;
-  let parsedUrl = url.parse(requestUrl, true);
-  let queryParams = parsedUrl.query;
-  let worldParam = queryParams.world;
-
-  if (worldParam == 1) {
-    response.write('<h1>Hello World</h1>');
-  } else {
-    response.write('<h1>There is no world</h1>');
-  }
-
-  response.end();
-}
-```
 
 ## Final Code
 ```js

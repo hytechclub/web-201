@@ -6,6 +6,7 @@ Follow the instructions to create a small console app using Node.js.
 ## Setup (Repl.it)
 1. Log into repl.it
 1. Create a [new Node.js project](https://repl.it/new/nodejs)
+1. Name it "Callbacks App"  
 
 ## "Hello World" App
 First, make a simple Node.js app that displays a "Hello World" message in the console.
@@ -90,6 +91,8 @@ So far, the `repeat` function only calls its callback once. Instead, it should h
 1. In the body of the `while` loop, call the `callback` function
 1. Also in the body of the `while` loop, increment `i` by `1`
 1. Finally, update the call to `repeat` and pass in a second argument of `3`
+
+Run the program, and verify that three bunnies appear!
 
 ### Code
 ```js

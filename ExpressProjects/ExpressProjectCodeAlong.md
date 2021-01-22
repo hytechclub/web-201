@@ -3,10 +3,11 @@ Follow the steps below to create an npm project that uses Express to run a simpl
 
 ## Getting Started
 1. Create a new [Node.js Repl project](https://repl.it/new/nodejs)
+1. Name it "Express App"
 1. Create a new file named **app.js** in the current directory
 1. For test purposes, add a `console.log('hello')` statement to **app.js** 
 1. Create another new file, this one named **.replit**
-1. In the **.replit** file, add `run = "node server.js"`
+1. In the **.replit** file, add `run = "node app.js"`
 1. Click the "Run" button to run the program, and make sure it works so far
 
 ## Creating a Simple Express Web App

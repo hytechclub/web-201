@@ -3,6 +3,7 @@ Follow the instructions to create a small Node console app that creates and mani
 
 ## Starter App
 1. Create a new [Node.js Repl project](https://repl.it/new/nodejs)
+1. Name it "Car Objects"
 1. Create a new file named **object.js** in the current directory
 1. Open the file, and enter the following text:
     ```js
