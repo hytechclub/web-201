@@ -138,7 +138,7 @@ if (age > 16) {
 ## Template Literals
 Now it's finally time to learn about [template literals](https://flaviocopes.com/javascript-template-literals/)! Looking at the string printing code right now, it's a little messy. Using **template literals** can help clean them up a lot.
 
-Template Literals are a lot like normal strings, but instead of quotes or double quotes, they use _backticks_ (`\``). They also allow for multi-line strings, and string interpolation. Replace the existing strings with template strings to see how much simpler they make things!
+Template Literals are a lot like normal strings, but instead of quotes or double quotes, they use _backticks_ (`). They also allow for multi-line strings, and string interpolation. Replace the existing strings with template strings to see how much simpler they make things!
 
 ### Interpolation
 The first step is to use _interpolation_. This allows developers to easily place expressions or values within strings, without having to use `+` to concatenate multiple things together! Imagine an example like this:
@@ -160,7 +160,7 @@ Interpolated values begin with `${` and end with `}`. Everything within will be 
 
 Update the code so that it uses template literals instead of normal strings!
 
-1. Replace the quotes `'` with backticks `\`` for each line
+1. Replace the quotes (`'`) with backticks (`) for each line
 1. Remove the `+` and extra strings, so each line is back to being one string
 1. Use `${name}` to insert the `name` value
 1. Do the same for `${age}` and `${donor}`
@@ -211,7 +211,6 @@ Run the program again, and verify that it still works as expected!
 `;
 ```
 
-### Note
 Ultimately, using template literals makes things much easier to scale and maintain. They will come in handy when working with strings in almost any situation!
 
 ## Final Code

@@ -102,7 +102,7 @@ Create a piece of customizable birthday cake ASCII Art. It should be able to pla
 1. In the body of the function, check if the `name` is short enough
     - If it is not, print a message and return
 1. Pad the name an appropriate amount so that it appears in the middle of the cake
-    - e.g., `Homer Simpson` should become `   Homer Simpson   `
+    - e.g., `Homer Simpson` should add three spaces on the left, and three on the right
 1. Create a template literal containing the cake ASCII
 1. Place the padded name in the proper spot within the string
 1. Print the string to the console
