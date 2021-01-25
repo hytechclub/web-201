@@ -1,3 +1,4 @@
+- [Repl.it Setup](ReplSetup.md)
 - [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
 - [L2 - Template Literals](TemplateLiterals/StudentDesc.md)
     - [Driver's License Code-Along](TemplateLiterals/DriversLicenseCodeAlong.md)
