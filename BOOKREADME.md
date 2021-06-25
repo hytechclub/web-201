@@ -2,7 +2,7 @@
 Welcome to the Web 201 Hy-Tech Club course!
 
 ## Repl Setup
-The Web 201 course will use [Repl.it](https://repl.it). Please complete the [Repl.it setup steps](ReplSetup.md) before the course begins.
+The Web 201 course will use [Replit](https://replit.com). Please complete the [Replit setup steps](ReplSetup.md) before the course begins.
 
 ## Zoom Meetings
 The course will meet weekly on TODO via **Zoom** from TODO to TODO ET.
