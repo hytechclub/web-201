@@ -1,24 +1,31 @@
 # Callbacks Node.js App: Code-Along
-Follow the instructions to create a small console app using Node.js. Make sure Node.js is installed before continuing.
+Follow the instructions to create a small console app using Node.js.
 
 **Note: Although the language is JavaScript, this is actually the _back-end_ of the stack. Node.js uses the same JavaScript as the front-end, but on the server side.**
 
-## Video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KSv4SYZawKc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Setup (Repl.it)
+1. Log into repl.it
+1. Create a [new Node.js project](https://repl.it/new/nodejs)
+1. Name it "Callbacks App"  
 
 ## "Hello World" App
+First, make a simple Node.js app that displays a "Hello World" message in the console.
+
 1. Create a new file named **app.js** in the current directory
-    - This can be done using VS Code OR using the command line
-1. Open the file in VS Code, and enter the following text:
+1. Open the file, and enter the following text:
     ```js
     console.log('Hello World');
     ```
-1. Open a new terminal in VS Code by selecting `Terminal`->`New Terminal` from the menu
-    - Make sure the shell is set to `bash`
-1. In the terminal, type `node app.js` and press `Enter` to run the command
-1. The script will run, and "Hello World" should appear in the console!
+1. Create a new file named **.replit** in the current directory
+1. Open the **.replit** file, and enter the following text:
+    ```js
+    run = "node app.js"
+    ```
+1. Click the "Run" button, and verify that the message appears in the console!
 
 ## ASCII Art Bunny
+Next, update the program so that it has something a little more interesting to display.
+
 1. Comment out the "Hello World" message
 1. In the **app.js** file, define a function named `drawBunny` (no parameters)
 1. In the body of the `drawBunny` function, add a `console.log` statement
@@ -84,6 +91,8 @@ So far, the `repeat` function only calls its callback once. Instead, it should h
 1. In the body of the `while` loop, call the `callback` function
 1. Also in the body of the `while` loop, increment `i` by `1`
 1. Finally, update the call to `repeat` and pass in a second argument of `3`
+
+Run the program, and verify that three bunnies appear!
 
 ### Code
 ```js

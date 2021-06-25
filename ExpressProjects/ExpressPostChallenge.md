@@ -1,8 +1,10 @@
 # Express POST Challenge
+>Note: This is meant to be very challenging
+
 Create a new page on the server that will require the user to enter a password in order to show a secret file. Use an endpoint on the server to properly respond to POST requests with the password information.
 
 ## Requirements
-- The user should be able to go to http://127.0.0.1:3000/gate to see a place where they can enter a password
+- The user should be able to go to the base url + `/gate` to see a place where they can enter a password
 - If they enter the correct password and submit, the same endpoint should load new (secret) HTML content
 - If they enter the wrong password, the current page should reload
 

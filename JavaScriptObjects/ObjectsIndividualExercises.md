@@ -1,5 +1,8 @@
 # JavaScript Objects: Individual Exercises
-Complete the exercises below to practice working with JavaScript objects and arrays. Start with the following `movies` array:
+Complete the exercises below to practice working with JavaScript objects and arrays.
+
+## Setup
+To begin, open and fork [this Repl project](https://repl.it/@JosephMaxwell/ObjectsIndividualStarter#app.js). In the **app.js** file, it contains this `movies` array:
 
 ```js
 let movies = [
@@ -36,6 +39,8 @@ let movies = [
 ]
 ```
 
+Use the `movies` array to complete the exercises below. Add code at the bottom of the **app.js** file.
+
 ## Get the First Movie Title and Runtime
 1. Get the title of the first movie in the `movies` array, and store it in a variable
 1. Get the runtime of the first movie in the `movies` array, and store it in a variable
@@ -44,7 +49,7 @@ let movies = [
 
 ## Add a Showtime to the Third Movie
 1. Get the third movie object from the `movies` array, and store it in a variable
-1. Add a showtime of "9:45PM" to the showtimes array for the third movie
+1. Add a showtime of "9:45PM" to the `showtimes` array for the third movie
 
 ## Swap Theaters
 1. Change the theater number for the second movie to `3`

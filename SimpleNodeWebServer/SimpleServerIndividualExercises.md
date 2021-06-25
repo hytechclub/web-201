@@ -1,8 +1,65 @@
 # Simple Server: Individual Exercises
 Using the "Hello World" web server as a starting point, complete the following exercises.
 
+## More HTML
+Currently, the actual HTML for the website is a little sparse. Update the homepage so that it has a little more content.
+
+1. Find the line in the `handleRequest` function with `response.write('<h1>There is no world</h1>')`
+1. Under that, still within the `else` block, add another `response.write`
+1. Pass in `'<p>There are worlds other places</p>'`
+  - This will add a paragraph to the page
+1. Under that, add another `response.write`
+1. For that one, pass in `'<img src="https://i.imgur.com/hrwSaGo.png">'`
+  - This is a picture of the world
+1. Under that, add one more `response.write`
+1. Pass in `'<p><a href="?world=1">World 1</a></p>'`
+  - This will link to the Hello World page
+
+Run the program and refresh the page. Verify that the new HTML appears, and it is possible to go to the Hello World page!
+
+### A Link Back
+Now, from the Hello World page, there is no way back to the main page. Fix this by writing an `<a href="?">Home</a>` element to the response.
+
+1. Find the body of the `if (worldParam == 1)` statement
+1. Under the existing `response.write`, add another `response.write`
+1. Pass in `'<a href="?">Home</a>'`
+  - This will link back to the homepage
+
+Run the program and refresh the page. Verify that it is possible to go back and forth between each page!
+
+### Even More HTML
+Feel free to add as much new HTML as desired. The possibilities are endless!
+
+## A Whole New World
+Now that the two pages have been filled out a little more, it's time to add another page. This one should be accessible with `?world=2` appended to the end of the base URL.
+
+1. Find the `if` and `else` structure within the `handleRequest` function
+1. In between the `if` and `else`, add an `else if`
+1. For the `else if` condition, check if the `worldParam` variable is `2`
+1. In the body of the `else if`, add a `response.write`
+  - Pass in `'<h1>World 2</h1>'`
+
+Run the program and open the website in a new tab. Add `?world=2` to the end of the URL, and verify that the new message appears!
+
+### More New World Content
+Now, fill out the World 2 page a little bit.
+
+1. Under the `response.write` in the `else if` body, add another `response.write`
+1. Pass in `'<img src="https://i.imgur.com/u3wv9H8.png">'`
+  - This is a picture of Super Mario
+1. Under that, add another `response.write`
+1. Pass in `'<p>This is Super Mario World</p>'`
+1. Under that, use `response.write` to write `'<a href="?">Home</a>'`
+
+Run the program again and refresh the `?world=2` page to verify that the new content appears!
+
+### Linking
+Now that the new page exists, it's time to link it from the main page. Add another `response.write` in the `else` block, and pass in `'<p><a href="?world=2">World 2</a></p>'`.
+
+Run the program again, and see how it is possible to navigate between pages!
+
 ## Message Query Parameter
-Add the ability for the user to use a new query parameter `msg` whose value will appear on the page. For example, they should be able to go to [http://127.0.0.1:3000?msg=hello](http://127.0.0.1:3000?msg=hello) and see a page that contains the text "You said hello" in the HTML. This should work for any value, e.g. `?msg=hi`, `?msg=goodbye`, `?msg=whatever`, etc.
+Add the ability for the user to use a new query parameter `msg` whose value will appear on the page. For example, they should be able to go to the Repl project url with `?msg=hello` appended and see a page that contains the text "You said hello" in the HTML. This should work for any value, e.g. `?msg=hi`, `?msg=goodbye`, `?msg=whatever`, etc.
 
 >HINT: No `if` statement is required for this exercise!
 
@@ -12,7 +69,7 @@ Add the ability for the user to use a new query parameter `msg` whose value will
 1. Use `response.write` to write the message into the HTML response: `'You said ' + msg`
 
 ## Background Color Query Parameter
-Use a new query parameter, `bg`, to dynamically set the background color of the page. For example, the user should be able to go to [http://127.0.0.1:3000?bg=red](http://127.0.0.1:3000?bg=red) and see a page with a red background. This should work for any color.
+Use a new query parameter, `bg`, to dynamically set the background color of the page. For example, the user should be able to go to the Repl project url with `?bg=red` appended, and see a page with a red background. This should work for any color.
 
 The HTML to change the background color looks like this:
 

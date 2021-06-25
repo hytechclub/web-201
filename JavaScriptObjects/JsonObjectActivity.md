@@ -2,7 +2,7 @@
 Given an array of person objects, ask students how to get or set the data.
 
 ## Gameplay
-Call two students at a time up to the whiteboard to face off. Ask a question, and whoever writes the correct answer on the whiteboard first wins a piece of candy. Then, repeat the process with a different question and two new students. Optionally, students can challenge each other. Ensure that every student answers at least one question before allowing repeat students.
+Display the `results` array for the students to see. Call two students at a time up to the whiteboard (or to the "virtual stage" during covid) to face off. Ask a question, and whoever writes the correct answer on the whiteboard first (or responds in the chat first) wins a point. Then, repeat the process with a different question and two new students. Optionally, students can challenge each other. Ensure that every student answers at least one question before allowing repeat students.
 
 ## Object
 ```js

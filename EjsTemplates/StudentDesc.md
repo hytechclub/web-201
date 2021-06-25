@@ -1,24 +1,14 @@
 # EJS Templates
+Learn how to use [EJS](https://ejs.co/) templates to dynamically create webpages from data. Start by completing the **People List Warm-up Activity** to practice building an Express app, and prepare for the lesson. Then, review the **EJS Templates PowerPoint Presentation**. After that, complete the **People List EJS Code-Along Activity**, and start working on the **People List EJS Individual Exercises**.
 
-## Online Learning
-If you are working on this from home, follow these steps:
+## People List Warm-up Activity
+Follow the instructions on [this page](PeopleListStarterApp.md) to build an Express app for viewing a list of people.
 
-1. Follow the People List Warm-up guide to build up a starter app before Office Hours
-1. Optional: watch the Lecture video before Office Hours
-1. Watch the Code-Along video and complete the activity before or during Office Hours
-1. Complete the Individual Exercise before or during Office Hours
+## EJS Templates PowerPoint Presentation
+<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/EjsTemplates/EjsTemplates.pptx' width='100%' height='450px' frameborder='0'></iframe>
 
-## People List Warm-up
-- <a href="people.json" target="_blank">people.json</a> (right click to download)
-- [People List Starter App](PeopleListStarterApp.md)
+## People List EJS Code-Along Activity
+Follow the instructions on [this page](PeopleListEjsCodeAlong.md) to build on the People List app, using EJS to dynamically display information.
 
-## Optional: Lecture
-- [Video](https://www.youtube.com/watch?v=fK53DJC3rwY&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=15&t=0s)
-- <a href="EjsTemplates.pptx" target="_blank">EJS Templates PowerPoint Presentation</a>
-
-## Code-Along
-- [Video](https://www.youtube.com/watch?v=wAu0G8ppEdE&list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&index=21&t=0s)
-- [People List EJS Code-Along](PeopleListEjsCodeAlong.md)
-
-## Individual Practice
-- [People List EJS Individual Exercises](PeopleListEjsIndividualExercises.md)
+## People List EJS Individual Exercises
+After the code-along activity, go to [this page](PeopleListEjsIndividualExercises.md) and work on the exercises.

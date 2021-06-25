@@ -7,10 +7,10 @@ This lesson introduces the concepts behind full-stack web development, including
 - Data transfer
 
 ## Instruction
-- [Full-stack Overview PowerPoint](FullStackOverview.pptx)
+- [Full-stack Overview PowerPoint Presentation](FullStackOverview.pptx)
 
 ## Full-stack Example
-It may be beneficial to show what is possible with full-stack web development. If desired, use the [CRUD App](https://github.com/markbrendanawicz/crud-app) to demonstrate the possibilities.
+It may be beneficial to show what is possible with full-stack web development. If desired, use the [CRUD App](https://crudapprepldb.josephmaxwell.repl.co/) to demonstrate the possibilities.
 
 ## Group Activities
 - Kahoot: [https://create.kahoot.it/details/full-stack-web-development-overview/8466e95f-e77b-41fc-83e8-5b1f246dd00b](https://create.kahoot.it/details/full-stack-web-development-overview/8466e95f-e77b-41fc-83e8-5b1f246dd00b)

@@ -1,11 +1,19 @@
 # File Reader Challenge
 Create a Node.js app that reads from a text file and manipulates the data. This challenge illustrates the need for callbacks, because the `fs` module requires a callback to receive the data from a file!
 
-### Documentation
-https://nodejs.org/api/fs.html
+### Examples
+Review the examples [here](https://www.w3schools.com/nodejs/nodejs_filesystem.asp) before starting the challenge. Note how `fs.readFile` works.
+
+## Setup (Repl.it)
+1. Create a new [Node.js Repl Project](https://repl.it/new/nodejs)
+1. In the new project, create a file named **.replit**
+1. In the **.replit** file, add the following text:  
+    ```js
+    run = "node FileReader.js"
+    ```
 
 ## Creating Files
-1. In Visual Studio Code, create a new text file named `TextInfo.txt`
+1. Create a new text file named `TextInfo.txt`
 1. Edit `TextInfo.txt` so it contains some interesting text
 1. In the same folder as `TextInfo.txt`, create a new JavaScript file named `FileReader.js`
 
@@ -23,8 +31,7 @@ Open the `FileReader.js` file for editing.
     - The `path` argument should be `'TextInfo.txt'`
     - The `options` argument should be `'utf-8'`
     - The `callback` argument should be `yellFile`
-1. Open a Terminal, and make sure to be in the correct directory
-1. Enter the command `node FileReader.js` to run the code and make sure "here" appears!
+1. Run the code and make sure "here" appears!
 
 ## Yelling the File Contents
 The `yellFile` function should take the contents of the text file (as long as it can successfully open the file), and display them to the user in all caps.

@@ -1,41 +1,21 @@
-# Express Web Server Project: Code-Along
+# Express Web Server: Code-Along
 Follow the steps below to create an npm project that uses Express to run a simple web server.
 
-## Creating an npm Project
-1. In Visual Studio Code, select "Terminal" from the menu, and select "New Terminal" from the dropdown
-    - Make sure the terminal is a Git Bash instance
-1. Create a new folder for the project with `mkdir`
-1. Change the current directory to the new folder with `cd`
-1. Type `npm init` and press `Enter` to run the command
-    - This command will walk the user through the steps of initializing an npm project
-1. Enter a proper name for "package name" and press `Enter`
-1. Simply press `Enter` for "version" to take the default
-1. Enter a description and press `Enter`
-1. For "entry point," type in **app.js**
-    - This will be the starting file for the web server
-1. Skip the "test command," "git repository," "keywords," "author," and "license" by pressing `Enter` without typing anything
-1. Press `Enter` once more to finish creating the project!
-
-## Initializing an Express Project
-1. In the terminal, enter `npm install express --save`
-1. After the command is run, check the "package.json" file to make sure Express was properly added as a dependency:  
-    ```js
-    {
-        // ...
-        "dependencies": {
-            "express": "^4.17.1"
-        }
-    }
-    ```
-1. Additionally, notice that a "node_modules" directory and a "package-lock.json" file should have been generated
-    - The "node_modules" folder contains all the code necessary for all dependencies, and "package-lock.json" handles versioning for dependencies
-1. In the directory, create a new file named **app.js**
+## Getting Started
+1. Create a new [Node.js Repl project](https://repl.it/new/nodejs)
+1. Name it "Express App"
+1. Create a new file named **app.js** in the current directory
+1. For test purposes, add a `console.log('hello')` statement to **app.js** 
+1. Create another new file, this one named **.replit**
+1. In the **.replit** file, add `run = "node app.js"`
+1. Click the "Run" button to run the program, and make sure it works so far
 
 ## Creating a Simple Express Web App
 At first, creating an Express web server is a lot like creating a web server with the `http` module. However, the capabilities of the Express framework make it much easier to go beyond the basics. Start building the server in the **app.js** file by following the steps below.
 
 1. Import the `express` module using `require`, and store it in a `const` variable named `express`
 1. Create `const` variables for `hostname` and `port`
+    - These should be `'0.0.0.0'` and `8080` respectively
 1. Initialize an Express app by calling the `express` module as a function, and store it in a variable named `app`
 1. Define a new function named `handleHomeRequest` that has `request` and `response` as parameters
 1. In the body of the `handleHomeRequest` function, use `response.send` to display 'Hello World!' to the user
@@ -43,16 +23,18 @@ At first, creating an Express web server is a lot like creating a web server wit
     ```js
     app.get('/', handleHomeRequest);
     ```
-1. Define a new function named `listenCallback` that logs a message to the console with the location of the web server
+1. Define a new function named `listenCallback` that logs a message to the console saying the server is running
 1. Finally, use `app.listen` to listen on the appropriate port on the host, and call `listenCallback` when listening
-1. Test out the server by running it with `node app.js` and visiting [http://127.0.0.1:3000/](http://127.0.0.1:3000/)
+1. Test out the server by clicking the "Run" button
+
+Notice that after clicking "Run", the **package.json** file should automatically be updated to include `express` as a dependency. It should also automatically run the `npm install` command, which will install the `express` module on the server. This is all thanks to Repl.it; without it, a developer would have to do all of this manually!
 
 ### Code
 ```js
 const express = require('express');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const hostname = '0.0.0.0';
+const port = 8080;
 
 let app = express();
 
@@ -63,7 +45,7 @@ function handleHomeRequest(request, response) {
 app.get('/', handleHomeRequest);
 
 function listenCallback() {
-    console.log(`Listening on http://${hostname}:${port}`);
+    console.log('Server running');
 }
 
 app.listen(port, hostname, listenCallback);
@@ -75,7 +57,7 @@ It is much simpler to add additional HTTP endpoints using the Express framework!
 1. Define a new function named `handleInfoRequest` that has `request` and `response` as parameters
 1. In the body of the `handleInfoRequest` function, use `response.send` to show an HTML header to the user that says "Info"
 1. Use `app.get` to specify that when a browser goes to the `'/info'` endpoint, `handleInfoRequest` should run
-1. Test out the new endpoint by running `node app.js` again and visiting [http://127.0.0.1:3000/info](http://127.0.0.1:3000/info)
+1. Test out the new endpoint by clicking the "Run" button, opening the page in a new tab, and appending `/info` to the URL
 
 ### Code
 ```js
@@ -108,8 +90,8 @@ So far the webpages are not very exciting, but it would be very annoying put a l
 const express = require('express');
 const path = require('path');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const hostname = '0.0.0.0';
+const port = 8080;
 
 let app = express();
 
@@ -126,7 +108,7 @@ app.get('/', handleHomeRequest);
 app.get('/info', handleInfoRequest);
 
 function listenCallback() {
-    console.log(`Listening on http://${hostname}:${port}`);
+    console.log('Server Running');
 }
 
 app.listen(port, hostname, listenCallback);
