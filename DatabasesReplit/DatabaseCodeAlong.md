@@ -130,7 +130,7 @@ Now that the database exists, it's time to add some stuff to it. Every time a us
 1. Give the `addVideo` function two parameters: `request` and `response`
 1. Make the `addVideo` function asynchronous by adding `async` in front of the `function` keyword
 
-#### The `addVideo Function - Body
+#### The `addVideo` Function - Body
 1. In the body of the `addVideo` function, create a variable named `parsedUrl`
 1. Set `parsedUrl` to `url.parse(request.url, true)`
     - This contains the data from the form
