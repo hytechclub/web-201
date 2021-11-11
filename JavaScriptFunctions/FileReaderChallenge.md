@@ -51,7 +51,7 @@ Define a new function named `elmerFudd` that takes a string and converts it to "
 Use the `elmerFudd` function in the `fs.readFile` call to hook it up to the text file!
 
 ## Writing a File Translation
->Reference: https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
+>Reference: https://nodejs.org/api/fs.html#fswritefilefile-data-options-callback
 
 Use `fs.writeFile` to write the file translation into a new file. After the file has been successfully written, write a message to the console telling the user the operation was successful.
 
