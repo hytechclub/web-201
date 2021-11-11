@@ -8,4 +8,4 @@ This lesson shows how to use template literals in JavaScript. It also introduces
 - [Driver's License Code-Along](DriversLicenseCodeAlong.md)
 
 ## Individual Practice
-- [Driver's License Individual Exercises](DriversLicensesIndividualExercises.md)
+- [Driver's License Individual Exercises](DriversLicenseIndividualExercises.md)
