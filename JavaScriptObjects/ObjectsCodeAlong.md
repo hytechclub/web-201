@@ -87,7 +87,7 @@ console.log('Jerry moved and now resides in ' + myCar.owner.city + ', ' + myCar.
 
 ## Final Code
 ```js
-console.log('Welcome to the car app!')
+console.log('Welcome to the car app!');
 
 let myCar = {
     color: 'tan',
@@ -100,12 +100,12 @@ let myCar = {
         city: 'Minneapolis',
         state: 'MN'
     }
-}
+};
 
 console.log('The car is ' + myCar.color);
 console.log('The car is owned by ' + myCar.owner.firstName);
 
-myCar.color = 'red'
+myCar.color = 'red';
 
 console.log('Jerry painted the car. The car is now ' + myCar.color);
 
