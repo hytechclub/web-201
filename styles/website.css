@@ -1,3 +1,29 @@
 h2 {
     border-bottom: 1px solid #ddd;
 }
+
+.reveal-checkbox {
+    display: none;
+}
+
+.reveal-label {
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #eee;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.reveal-label + pre {
+    display: none;
+}
+
+.reveal-checkbox:checked + .reveal-label + pre {
+    display: block;
+}
+
+.reveal-checkbox:checked + .reveal-label {
+    display: none;
+}

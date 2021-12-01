@@ -699,6 +699,19 @@
 </li>
 </ol>
 <p>Run the program and refresh the page. Verify that the new HTML appears, and it is possible to go to the Hello World page!</p>
+<input type="checkbox" id="reveal1" class="reveal-checkbox">
+
+<label for="reveal1" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;There are worlds other places&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/hrwSaGo.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=1&quot;&gt;World 1&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+}
+</code></pre>
 <h3 id="a-link-back">A Link Back</h3>
 <p>Now, from the Hello World page, there is no way back to the main page. Fix this by writing an <code>&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;</code> element to the response.</p>
 <ol>
@@ -710,6 +723,20 @@
 </li>
 </ol>
 <p>Run the program and refresh the page. Verify that it is possible to go back and forth between each page!</p>
+<input type="checkbox" id="reveal2" class="reveal-checkbox">
+
+<label for="reveal2" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;There are worlds other places&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/hrwSaGo.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=1&quot;&gt;World 1&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+}
+</code></pre>
 <h3 id="even-more-html">Even More HTML</h3>
 <p>Feel free to add as much new HTML as desired. The possibilities are endless!</p>
 <h2 id="a-whole-new-world">A Whole New World</h2>
@@ -909,7 +936,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-01T19:09:55.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-01T19:10:28.648Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-01T22:03:20.688Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-01T22:03:51.644Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
