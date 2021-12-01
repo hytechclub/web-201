@@ -17,6 +17,21 @@ Currently, the actual HTML for the website is a little sparse. Update the homepa
 
 Run the program and refresh the page. Verify that the new HTML appears, and it is possible to go to the Hello World page!
 
+<input type="checkbox" id="reveal1" class="reveal-checkbox" />
+
+<label for="reveal1" class="reveal-label">Click to Reveal Code</label>
+
+```js
+if (worldParam == 1) {
+  response.write('<h1>Hello World</h1>');
+} else {
+  response.write('<h1>There is no world</h1>');
+  response.write('<p>There are worlds other places</p>');
+  response.write('<img src="https://i.imgur.com/hrwSaGo.png">');
+  response.write('<p><a href="?world=1">World 1</a></p>');
+}
+```
+
 ### A Link Back
 Now, from the Hello World page, there is no way back to the main page. Fix this by writing an `<a href="?">Home</a>` element to the response.
 
@@ -26,6 +41,22 @@ Now, from the Hello World page, there is no way back to the main page. Fix this 
   - This will link back to the homepage
 
 Run the program and refresh the page. Verify that it is possible to go back and forth between each page!
+
+<input type="checkbox" id="reveal2" class="reveal-checkbox" />
+
+<label for="reveal2" class="reveal-label">Click to Reveal Code</label>
+
+```js
+if (worldParam == 1) {
+  response.write('<h1>Hello World</h1>');
+  response.write('<a href="?">Home</a>');
+} else {
+  response.write('<h1>There is no world</h1>');
+  response.write('<p>There are worlds other places</p>');
+  response.write('<img src="https://i.imgur.com/hrwSaGo.png">');
+  response.write('<p><a href="?world=1">World 1</a></p>');
+}
+```
 
 ### Even More HTML
 Feel free to add as much new HTML as desired. The possibilities are endless!
