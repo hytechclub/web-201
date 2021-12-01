@@ -718,6 +718,17 @@
 </ul>
 </li>
 </ol>
+<h3 id="adding-the-features">Adding the Features</h3>
+<ol>
+<li>In the <code>myCar</code> object definition, add another property: <code>features</code></li>
+<li>The value of the <code>features</code> property will be an array! Start by setting the value to an empty array (<code>[]</code>)</li>
+<li>Within the <code>features</code> array, add the following values:<ul>
+<li>&quot;Heated seats&quot;</li>
+<li>&quot;Airbags&quot;</li>
+<li>&quot;Power steering&quot;</li>
+</ul>
+</li>
+</ol>
 <p>The owner object should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> myCar = {
     color: <span class="hljs-string">&apos;tan&apos;</span>,
@@ -729,7 +740,12 @@
         lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
         city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
         state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
+    },
+    features: [
+        <span class="hljs-string">&quot;Heated seats&quot;</span>,
+        <span class="hljs-string">&quot;Airbags&quot;</span>,
+        <span class="hljs-string">&quot;Power steering&quot;</span>
+    ]
 }
 </code></pre>
 <h2 id="accessing-the-object-properties">Accessing the Object Properties</h2>
@@ -772,6 +788,19 @@
 myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
 </code></pre>
+<h3 id="adding-a-feature">Adding a Feature</h3>
+<p>Currently, the car has a few features. Add another one to the array, and then print out the total number of features.</p>
+<ol>
+<li>Create a new variable named <code>carFeatures</code>, and use dot notation to store the <code>features</code> of the car</li>
+<li>On the next line, use <code>push</code> to <em>add</em> a new feature to the list: &quot;Cruise control&quot;</li>
+<li>Create a new variable named <code>featureCount</code>, and use <code>.length</code> to store the number of features of the car</li>
+<li>Under that, use a <code>console.log</code> to show a message with the feature count for the car</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> carFeatures = myCar.features;
+carFeatures.push(<span class="hljs-string">&quot;Cruise control&quot;</span>);
+<span class="hljs-keyword">let</span> featureCount = carFeatures.length;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car has &apos;</span> + featureCount + <span class="hljs-string">&apos; features&apos;</span>);
+</code></pre>
 <h2 id="final-code">Final Code</h2>
 <pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Welcome to the car app!&apos;</span>);
 
@@ -785,7 +814,12 @@ myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
         lastName: <span class="hljs-string">&apos;Lundegaard&apos;</span>,
         city: <span class="hljs-string">&apos;Minneapolis&apos;</span>,
         state: <span class="hljs-string">&apos;MN&apos;</span>
-    }
+    },
+    features: [
+        <span class="hljs-string">&quot;Heated seats&quot;</span>,
+        <span class="hljs-string">&quot;Airbags&quot;</span>,
+        <span class="hljs-string">&quot;Power steering&quot;</span>
+    ]
 };
 
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car is &apos;</span> + myCar.color);
@@ -799,6 +833,11 @@ myCar.owner.city = <span class="hljs-string">&apos;Fargo&apos;</span>;
 myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
 
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Jerry moved and now resides in &apos;</span> + myCar.owner.city + <span class="hljs-string">&apos;, &apos;</span> + myCar.owner.state);
+
+<span class="hljs-keyword">let</span> carFeatures = myCar.features;
+carFeatures.push(<span class="hljs-string">&quot;Cruise control&quot;</span>);
+<span class="hljs-keyword">let</span> featureCount = carFeatures.length;
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;The car has &apos;</span> + featureCount + <span class="hljs-string">&apos; features&apos;</span>);
 </code></pre>
 
                                 
@@ -843,7 +882,7 @@ myCar.owner.state = <span class="hljs-string">&apos;ND&apos;</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"next":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},"previous":{"title":"L4 - JavaScript Objects / JSON","level":"1.6","depth":1,"path":"JavaScriptObjects/StudentDesc.md","ref":"JavaScriptObjects/StudentDesc.md","articles":[{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsCodeAlong.md","mtime":"2021-11-12T14:46:00.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-12T14:46:38.737Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"next":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},"previous":{"title":"L4 - JavaScript Objects / JSON","level":"1.6","depth":1,"path":"JavaScriptObjects/StudentDesc.md","ref":"JavaScriptObjects/StudentDesc.md","articles":[{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsCodeAlong.md","mtime":"2021-12-01T19:09:55.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-01T19:10:28.648Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

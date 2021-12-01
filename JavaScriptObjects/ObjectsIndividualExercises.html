@@ -679,7 +679,7 @@
                                 <h1 id="javascript-objects-individual-exercises">JavaScript Objects: Individual Exercises</h1>
 <p>Complete the exercises below to practice working with JavaScript objects and arrays.</p>
 <h2 id="setup">Setup</h2>
-<p>To begin, open and fork <a href="https://repl.it/@JosephMaxwell/ObjectsIndividualStarter#app.js" target="_blank">this Repl project</a>. In the <strong>app.js</strong> file, it contains this <code>movies</code> array:</p>
+<p>To begin, open and fork <a href="https://replit.com/@HylandOutreach/ObjectsIndividualStarter" target="_blank">this Repl project</a>. In the <strong>app.js</strong> file, it contains this <code>movies</code> array:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> movies = [
     {
         title: <span class="hljs-string">&apos;Mulan&apos;</span>,
@@ -716,8 +716,10 @@
 <p>Use the <code>movies</code> array to complete the exercises below. Add code at the bottom of the <strong>app.js</strong> file.</p>
 <h2 id="get-the-first-movie-title-and-runtime">Get the First Movie Title and Runtime</h2>
 <ol>
-<li>Get the title of the first movie in the <code>movies</code> array, and store it in a variable</li>
-<li>Get the runtime of the first movie in the <code>movies</code> array, and store it in a variable</li>
+<li>Create a new variable named <code>movie1</code></li>
+<li>Get the first movie object in the list (Mulan), and store it in the <code>movie1</code> variable</li>
+<li>Under that, create a new variable named <code>movie1Title</code>, and store the title of <code>movie1</code></li>
+<li>Under that, create a new variable named <code>movie1Runtime</code>, and store the runtime of <code>movie1</code></li>
 <li>Display a message to the user telling them the name of the movie, and how long it is<ul>
 <li>Make sure to specify that the runtime is in minutes</li>
 </ul>
@@ -725,13 +727,23 @@
 </ol>
 <h2 id="add-a-showtime-to-the-third-movie">Add a Showtime to the Third Movie</h2>
 <ol>
-<li>Get the third movie object from the <code>movies</code> array, and store it in a variable</li>
-<li>Add a showtime of &quot;9:45PM&quot; to the <code>showtimes</code> array for the third movie</li>
+<li>Create a new variable named <code>movie3</code></li>
+<li>Get the third movie object from the <code>movies</code> array, and store it the <code>movie3</code> variable</li>
+<li>Under that, create a new variable named <code>movie3Showtimes</code>, and store the <code>showtimes</code> of <code>movie3</code></li>
+<li>Add a showtime of &quot;9:45PM&quot; to <code>movie3Showtimes</code></li>
+<li>Under that, create a new variable named <code>movie3ShowtimesCount</code>, and store the count of the <code>showtimes</code> for <code>movie3</code></li>
+<li>Display a message to the user telling them the number of showtimes for the third movie</li>
 </ol>
 <h2 id="swap-theaters">Swap Theaters</h2>
 <ol>
-<li>Change the theater number for the second movie to <code>3</code></li>
-<li>Change the theater number for the third movie to <code>2</code></li>
+<li>Create a new variable named <code>movie2</code></li>
+<li>Get the second movie object from the <code>movies</code> array, and store it in the <code>movie2</code> variable</li>
+<li>Under that, set the <code>theater</code> property for the second movie to <code>3</code></li>
+<li>Under that, set the <code>theater</code> property for the third movie to <code>2</code></li>
+<li>Display a message to the user telling them which theater the second movie is in<ul>
+<li>Use <code>movie2.theater</code> in the message</li>
+</ul>
+</li>
 </ol>
 <h2 id="another-movie">Another Movie</h2>
 <ol>
@@ -748,7 +760,8 @@
 <li>&quot;9:05PM&quot;</li>
 </ul>
 </li>
-<li>Add the <code>nextMovie</code> object to the end of the <code>movies</code> array</li>
+<li>Under the creation of the <code>nextMovie</code> object, add it to the end of the <code>movies</code> array</li>
+<li>Display a message to the user telling them the title of the fourth movie</li>
 </ol>
 <h2 id="challenge---all-movies">CHALLENGE - All Movies</h2>
 <p>Use a <code>for</code> loop to print out the titles of all movies currently showing</p>
@@ -797,7 +810,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"next":{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]},"previous":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsIndividualExercises.md","mtime":"2021-11-12T14:46:00.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-12T14:46:38.737Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"next":{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]},"previous":{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptObjects/ObjectsIndividualExercises.md","mtime":"2021-12-01T19:09:55.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-01T19:10:28.648Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

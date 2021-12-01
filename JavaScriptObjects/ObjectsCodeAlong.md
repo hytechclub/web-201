@@ -31,6 +31,14 @@ Follow the instructions to create a small Node console app that creates and mani
     - `city` - Minneapolis
     - `state` - MN
 
+### Adding the Features
+1. In the `myCar` object definition, add another property: `features`
+1. The value of the `features` property will be an array! Start by setting the value to an empty array (`[]`)
+1. Within the `features` array, add the following values:
+    - "Heated seats"
+    - "Airbags"
+    - "Power steering"
+
 The owner object should look something like this:
 ```js
 let myCar = {
@@ -43,7 +51,12 @@ let myCar = {
         lastName: 'Lundegaard',
         city: 'Minneapolis',
         state: 'MN'
-    }
+    },
+    features: [
+        "Heated seats",
+        "Airbags",
+        "Power steering"
+    ]
 }
 ```
 
@@ -85,6 +98,21 @@ myCar.owner.state = 'ND';
 console.log('Jerry moved and now resides in ' + myCar.owner.city + ', ' + myCar.owner.state);
 ```
 
+### Adding a Feature
+Currently, the car has a few features. Add another one to the array, and then print out the total number of features.
+
+1. Create a new variable named `carFeatures`, and use dot notation to store the `features` of the car
+1. On the next line, use `push` to _add_ a new feature to the list: "Cruise control"
+1. Create a new variable named `featureCount`, and use `.length` to store the number of features of the car
+1. Under that, use a `console.log` to show a message with the feature count for the car
+
+```js
+let carFeatures = myCar.features;
+carFeatures.push("Cruise control");
+let featureCount = carFeatures.length;
+console.log('The car has ' + featureCount + ' features');
+```
+
 ## Final Code
 ```js
 console.log('Welcome to the car app!');
@@ -99,7 +127,12 @@ let myCar = {
         lastName: 'Lundegaard',
         city: 'Minneapolis',
         state: 'MN'
-    }
+    },
+    features: [
+        "Heated seats",
+        "Airbags",
+        "Power steering"
+    ]
 };
 
 console.log('The car is ' + myCar.color);
@@ -113,4 +146,9 @@ myCar.owner.city = 'Fargo';
 myCar.owner.state = 'ND';
 
 console.log('Jerry moved and now resides in ' + myCar.owner.city + ', ' + myCar.owner.state);
+
+let carFeatures = myCar.features;
+carFeatures.push("Cruise control");
+let featureCount = carFeatures.length;
+console.log('The car has ' + featureCount + ' features');
 ```
