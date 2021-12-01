@@ -7,13 +7,25 @@ This lesson reviews JavaScript objects, and introduces the ideas of JavaScript a
 
 ## Instruction
 - [JavaScript Objects PowerPoint](JavaScriptObjects.pptx)
-- [Objects Code-Along](ObjectsCodeAlong.md)
-    - Note that it can be beneficial to let the students lead this activity - allow them to choose the data for the car
-- [JavaScript Arrays PowerPoint](JavaScriptArrays.pptx)
 
 ## Group Activities
 - [JSON Object Activity](JsonObjectActivity.md)
 
+## Continued Instruction
+- [JavaScript Arrays PowerPoint](JavaScriptArrays.pptx)
+- [Objects Code-Along](ObjectsCodeAlong.md)
+    - Note that it can be beneficial to let the students lead this activity - allow them to choose the data for the car
+
 ## Individual Practice
 - [Objects Individual Exercises](ObjectsIndividualExercises.md)
 - [Food JSON Challenges](FoodJsonChallenges.md)
+
+## Suggested Schedule
+| Activity | Time |
+|-|-|
+| Objects PowerPoint | 10m |
+| Objects Group Activity  | 15m |
+| Arrays PowerPoint | 10m |
+| Break | 5m |
+| Code-Along Activity | 45m |
+| Individual Exercise/Challenge | 35m |

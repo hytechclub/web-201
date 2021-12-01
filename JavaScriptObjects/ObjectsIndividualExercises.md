@@ -2,7 +2,7 @@
 Complete the exercises below to practice working with JavaScript objects and arrays.
 
 ## Setup
-To begin, open and fork [this Repl project](https://repl.it/@JosephMaxwell/ObjectsIndividualStarter#app.js). In the **app.js** file, it contains this `movies` array:
+To begin, open and fork [this Repl project](https://replit.com/@HylandOutreach/ObjectsIndividualStarter). In the **app.js** file, it contains this `movies` array:
 
 ```js
 let movies = [
@@ -42,18 +42,28 @@ let movies = [
 Use the `movies` array to complete the exercises below. Add code at the bottom of the **app.js** file.
 
 ## Get the First Movie Title and Runtime
-1. Get the title of the first movie in the `movies` array, and store it in a variable
-1. Get the runtime of the first movie in the `movies` array, and store it in a variable
+1. Create a new variable named `movie1`
+1. Get the first movie object in the list (Mulan), and store it in the `movie1` variable
+1. Under that, create a new variable named `movie1Title`, and store the title of `movie1`
+1. Under that, create a new variable named `movie1Runtime`, and store the runtime of `movie1`
 1. Display a message to the user telling them the name of the movie, and how long it is
     - Make sure to specify that the runtime is in minutes
 
 ## Add a Showtime to the Third Movie
-1. Get the third movie object from the `movies` array, and store it in a variable
-1. Add a showtime of "9:45PM" to the `showtimes` array for the third movie
+1. Create a new variable named `movie3`
+1. Get the third movie object from the `movies` array, and store it the `movie3` variable
+1. Under that, create a new variable named `movie3Showtimes`, and store the `showtimes` of `movie3`
+1. Add a showtime of "9:45PM" to `movie3Showtimes`
+1. Under that, create a new variable named `movie3ShowtimesCount`, and store the count of the `showtimes` for `movie3`
+1. Display a message to the user telling them the number of showtimes for the third movie
 
 ## Swap Theaters
-1. Change the theater number for the second movie to `3`
-1. Change the theater number for the third movie to `2`
+1. Create a new variable named `movie2`
+1. Get the second movie object from the `movies` array, and store it in the `movie2` variable
+1. Under that, set the `theater` property for the second movie to `3`
+1. Under that, set the `theater` property for the third movie to `2`
+1. Display a message to the user telling them which theater the second movie is in
+    - Use `movie2.theater` in the message
 
 ## Another Movie
 1. Outside of the original `movies` array, create a new object named `nextMovie`
@@ -65,7 +75,8 @@ Use the `movies` array to complete the exercises below. Add code at the bottom o
     - "6:15PM"
     - "7:30PM"
     - "9:05PM"
-1. Add the `nextMovie` object to the end of the `movies` array
+1. Under the creation of the `nextMovie` object, add it to the end of the `movies` array
+1. Display a message to the user telling them the title of the fourth movie
 
 ## CHALLENGE - All Movies
 Use a `for` loop to print out the titles of all movies currently showing
