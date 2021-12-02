@@ -74,7 +74,7 @@ While the server is technically functioning, it's not doing much yet. Follow the
 1. Under that, use `response.write` to write some HTML - `<h1>Hello World</h1>`
 1. Reload the page to see the HTML!
 
-Obviously, this is a very simple HTML page, but it is simply an example. It is easy to extrapolate this basic structure and create much more elaborate HTML pages.
+Obviously, this is a very simple HTML page, but it is simply an example. It is possible to extrapolate this basic structure and create much more elaborate HTML pages.
 
 ### Code
 ```js
