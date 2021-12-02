@@ -751,6 +751,22 @@
 </li>
 </ol>
 <p>Run the program and open the website in a new tab. Add <code>?world=2</code> to the end of the URL, and verify that the new message appears!</p>
+<input type="checkbox" id="reveal3" class="reveal-checkbox">
+
+<label for="reveal3" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">2</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;World 2&lt;/h1&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;There are worlds other places&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/hrwSaGo.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=1&quot;&gt;World 1&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+}
+</code></pre>
 <h3 id="more-new-world-content">More New World Content</h3>
 <p>Now, fill out the World 2 page a little bit.</p>
 <ol>
@@ -764,9 +780,65 @@
 <li>Under that, use <code>response.write</code> to write <code>&apos;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&apos;</code></li>
 </ol>
 <p>Run the program again and refresh the <code>?world=2</code> page to verify that the new content appears!</p>
+<input type="checkbox" id="reveal4" class="reveal-checkbox">
+
+<label for="reveal4" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">2</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;World 2&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/u3wv9H8.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;This is Super Mario World&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;There are worlds other places&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/hrwSaGo.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=1&quot;&gt;World 1&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+}
+</code></pre>
 <h3 id="linking">Linking</h3>
 <p>Now that the new page exists, it&apos;s time to link it from the main page. Add another <code>response.write</code> in the <code>else</code> block, and pass in <code>&apos;&lt;p&gt;&lt;a href=&quot;?world=2&quot;&gt;World 2&lt;/a&gt;&lt;/p&gt;&apos;</code>.</p>
 <p>Run the program again, and see how it is possible to navigate between pages!</p>
+<input type="checkbox" id="reveal5" class="reveal-checkbox">
+
+<label for="reveal5" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">1</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello World&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (worldParam == <span class="hljs-number">2</span>) {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;World 2&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/u3wv9H8.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;This is Super Mario World&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;a href=&quot;?&quot;&gt;Home&lt;/a&gt;&apos;</span>);
+} <span class="hljs-keyword">else</span> {
+  response.write(<span class="hljs-string">&apos;&lt;h1&gt;There is no world&lt;/h1&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;There are worlds other places&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;img src=&quot;https://i.imgur.com/hrwSaGo.png&quot;&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=1&quot;&gt;World 1&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+  response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?world=2&quot;&gt;World 2&lt;/a&gt;&lt;/p&gt;&apos;</span>);
+}
+</code></pre>
+<h3 id="yet-another-world">Yet Another World</h3>
+<p>Add a World 3 to the site.</p>
+<ul>
+<li>It should be accessible by appending <code>?world=3</code> to the base URL</li>
+<li>It should have a header that says World 3</li>
+<li>There should be links to and from the new page and the Home page</li>
+</ul>
+<p>Follow these instructions:</p>
+<ol>
+<li>In the <code>handleResponse</code> function, find the <code>if (worldParam == 1)</code> statement</li>
+<li>Add an <code>else if</code> checking for <code>worldParam == 3</code></li>
+<li>Within that <code>else if</code> body, use <code>response.write</code> to write an <code>h1</code> containing &quot;World 3&quot;</li>
+<li>Under that, add another <code>response.write</code> with a link to the Home page</li>
+<li>In the body of the <code>else</code> clause, make a new line at the bottom</li>
+<li>Add a <code>response.write</code> with a link to the new World 3 page</li>
+<li>Run the program, and verify that it is possible to navigate to the new page!</li>
+</ol>
 <h2 id="message-query-parameter">Message Query Parameter</h2>
 <p>Add the ability for the user to use a new query parameter <code>msg</code> whose value will appear on the page. For example, they should be able to go to the Repl project url with <code>?msg=hello</code> appended and see a page that contains the text &quot;You said hello&quot; in the HTML. This should work for any value, e.g. <code>?msg=hi</code>, <code>?msg=goodbye</code>, <code>?msg=whatever</code>, etc.</p>
 <blockquote>
@@ -780,9 +852,16 @@
 <li>Get the value of the <code>msg</code> query parameter, and store it in a new variable</li>
 <li>Use <code>response.write</code> to write the message into the HTML response: <code>&apos;You said &apos; + msg</code></li>
 </ol>
+<input type="checkbox" id="reveal6" class="reveal-checkbox">
+
+<label for="reveal6" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> msgParam = queryParams.msg;
+response.write(<span class="hljs-string">`&lt;p&gt;You said <span class="hljs-subst">${msgParam}</span>&lt;/p&gt;`</span>);
+</code></pre>
 <h2 id="background-color-query-parameter">Background Color Query Parameter</h2>
 <p>Use a new query parameter, <code>bg</code>, to dynamically set the background color of the page. For example, the user should be able to go to the Repl project url with <code>?bg=red</code> appended, and see a page with a red background. This should work for any color.</p>
-<p>The HTML to change the background color looks like this:</p>
+<p>The HTML/CSS to change the background color looks like this:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
     <span class="hljs-selector-tag">body</span> {
         <span class="hljs-attribute">background-color</span>: red;
@@ -794,13 +873,24 @@
 <li>This is just like getting the value of the <code>msg</code> or <code>world</code> query parameter</li>
 </ul>
 </li>
-<li>Create a new variable containing the <code>&lt;style&gt;&lt;/style&gt;</code> tag within a template string (surrounded with ```)</li>
+<li>Create a new variable named <code>bgParam</code> containing the <code>&lt;style&gt;&lt;/style&gt;</code> tag within a template string (surrounded by ```)</li>
 <li>Update the template string so that instead of <code>red</code>, the color is whatever the user specified with <code>bg</code><ul>
-<li>HINT: replace <code>red</code> in the <code>style</code> tag with <code>${bg}</code></li>
+<li>HINT: replace <code>red</code> in the <code>style</code> tag with <code>${bgParam}</code></li>
 </ul>
 </li>
 <li>Use <code>response.write</code> to write the <em>entire</em> <code>&lt;style&gt;&lt;/style&gt;</code> tag to the response!</li>
 </ol>
+<input type="checkbox" id="reveal7" class="reveal-checkbox">
+
+<label for="reveal7" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js">    <span class="hljs-keyword">let</span> bgParam = queryParams.bg;
+    response.write(<span class="hljs-string">`&lt;style&gt;
+    body {
+        background-color: <span class="hljs-subst">${bgParam}</span>;
+  }
+&lt;/style&gt;`</span>);
+</code></pre>
 <h2 id="background-color-links">Background Color Links</h2>
 <p>Instead of making the user type the query parameter into the URL, create links on the page that contain the query parameter for them!</p>
 <p>A link would look like this:</p>
@@ -811,6 +901,14 @@
 <li>Write the <code>&lt;p&gt;&lt;/p&gt;</code> element to the <code>response</code> object with <code>response.write</code> </li>
 <li>Repeat the steps above to create links for &quot;lavender&quot; and &quot;yellow&quot; in addition to orange</li>
 </ol>
+<input type="checkbox" id="reveal8" class="reveal-checkbox">
+
+<label for="reveal8" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js">response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?orange&quot;&gt;Make background orange&lt;/a&gt;&lt;p&gt;&apos;</span>);
+response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?lavender&quot;&gt;Make background lavender&lt;/a&gt;&lt;p&gt;&apos;</span>);
+response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?yellow&quot;&gt;Make background yellow&lt;/a&gt;&lt;p&gt;&apos;</span>);
+</code></pre>
 <h3 id="challenge">Challenge</h3>
 <ol>
 <li>Create an array of color strings, including <code>&apos;orange&apos;, &apos;lavender&apos;, &apos;yellow&apos;</code></li>
@@ -936,7 +1034,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-02T17:59:07.391Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T17:59:39.782Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-02T21:57:52.559Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T21:58:34.855Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
