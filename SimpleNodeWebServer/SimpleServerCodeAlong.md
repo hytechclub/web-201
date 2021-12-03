@@ -25,7 +25,7 @@ const port = 8080;
 console.log('Starting up...')
 ```
 
-## Creating the Server and Listening
+## Creating the Server
 Now, write the code to make a server!
 
 1. In the **server.js** file, define a new function named `handleRequest`
