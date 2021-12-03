@@ -742,16 +742,31 @@ app.listen(port, hostname, listenCallback);
 
 app.get(<span class="hljs-string">&apos;/info&apos;</span>, handleInfoRequest);
 </code></pre>
+<h3 id="linking-to-the-new-page">Linking to the New Page</h3>
+<p>There should be a link to the new endpoint from the homepage.</p>
+<ol>
+<li>Find the <code>handleHomeRequest</code> function</li>
+<li>Update the <code>response.send</code> to send an <code>&lt;a&gt;</code> element instead of &apos;Hello World!&apos;</li>
+<li>Make the <code>href</code> for the <code>&lt;a&gt;</code> point to the info page: <code>href=&quot;/info&quot;</code></li>
+<li>Run the program, and verify that it is possible to click the link on the homepage and go to the info page!</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleHomeRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    response.send(<span class="hljs-string">&apos;&lt;a href=&quot;/info&quot;&gt;Info page&lt;/a&gt;&apos;</span>);
+}
+</code></pre>
 <h2 id="sending-html-files">Sending HTML Files</h2>
 <p>So far the webpages are not very exciting, but it would be very annoying put a lot of HTML into a template string. Instead, Express makes it possible to send a whole HTML file as a response!</p>
 <ol>
 <li>Create a new file in the project directory named <strong>info.html</strong></li>
-<li>Fill out some basic HTML in the file</li>
+<li>Fill out some basic HTML in the file<ul>
+<li>Include an <code>&lt;a&gt;</code> link back to the home page: <code>href=&quot;/&quot;</code></li>
+</ul>
+</li>
 <li>At the top of the <strong>app.js</strong> file, import the <code>path</code> module and store it in a variable<pre><code class="lang-js"> <span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
 </code></pre>
 </li>
 <li>In the <code>handleInfoRequest</code> function, remove the <code>response.send</code> statement</li>
-<li>Use <code>path.join</code> to combine <code>__dirname</code> and <code>&apos;info.html&apos;</code> to get the absolute path of the HTML file and store it in a variable<pre><code class="lang-js"> <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
+<li>Create a new variable named <code>infoPath</code>, and use <code>path.join</code> to combine <code>__dirname</code> and <code>&apos;info.html&apos;</code> to get the absolute path of the HTML file<pre><code class="lang-js"> <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
 </code></pre>
 </li>
 <li>Use <code>response.sendFile</code> to pass HTML file to the response</li>
@@ -767,7 +782,7 @@ app.get(<span class="hljs-string">&apos;/info&apos;</span>, handleInfoRequest);
 <span class="hljs-keyword">let</span> app = express();
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleHomeRequest</span>(<span class="hljs-params">request, response</span>) </span>{
-    response.send(<span class="hljs-string">&apos;Hello World!&apos;</span>);
+    response.send(<span class="hljs-string">&apos;&lt;a href=&quot;/info&quot;&gt;Info page&lt;/a&gt;&apos;</span>);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleInfoRequest</span>(<span class="hljs-params">request, response</span>) </span>{
@@ -827,7 +842,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"next":{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},"previous":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectCodeAlong.md","mtime":"2021-12-03T15:25:38.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-03T15:26:08.027Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"next":{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},"previous":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectCodeAlong.md","mtime":"2021-12-03T16:24:38.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-03T16:25:24.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
