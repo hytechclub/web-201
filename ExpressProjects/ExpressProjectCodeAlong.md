@@ -68,17 +68,32 @@ function handleInfoRequest(request, response) {
 app.get('/info', handleInfoRequest);
 ```
 
+### Linking to the New Page
+There should be a link to the new endpoint from the homepage.
+
+1. Find the `handleHomeRequest` function
+1. Update the `response.send` to send an `<a>` element instead of 'Hello World!'
+1. Make the `href` for the `<a>` point to the info page: `href="/info"`
+1. Run the program, and verify that it is possible to click the link on the homepage and go to the info page!
+
+```js
+function handleHomeRequest(request, response) {
+    response.send('<a href="/info">Info page</a>');
+}
+```
+
 ## Sending HTML Files
 So far the webpages are not very exciting, but it would be very annoying put a lot of HTML into a template string. Instead, Express makes it possible to send a whole HTML file as a response!
 
 1. Create a new file in the project directory named **info.html**
 1. Fill out some basic HTML in the file
+    - Include an `<a>` link back to the home page: `href="/"`
 1. At the top of the **app.js** file, import the `path` module and store it in a variable
     ```js
     const path = require('path');
     ```
 1. In the `handleInfoRequest` function, remove the `response.send` statement
-1. Use `path.join` to combine `__dirname` and `'info.html'` to get the absolute path of the HTML file and store it in a variable
+1. Create a new variable named `infoPath`, and use `path.join` to combine `__dirname` and `'info.html'` to get the absolute path of the HTML file
     ```js
     let infoPath = path.join(__dirname, 'info.html');
     ```
@@ -96,7 +111,7 @@ const port = 8080;
 let app = express();
 
 function handleHomeRequest(request, response) {
-    response.send('Hello World!');
+    response.send('<a href="/info">Info page</a>');
 }
 
 function handleInfoRequest(request, response) {
