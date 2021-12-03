@@ -70,7 +70,11 @@ Now that the two pages have been filled out a little more, it's time to add anot
 1. In the body of the `else if`, add a `response.write`
   - Pass in `'<h1>World 2</h1>'`
 
-Run the program and open the website in a new tab. Add `?world=2` to the end of the URL, and verify that the new message appears!
+Run the program and open the website in a new tab.
+
+![](https://i.imgur.com/65ny5id.png)
+
+Add `?world=2` to the end of the URL, and verify that the new message appears!
 
 <input type="checkbox" id="reveal3" class="reveal-checkbox" />
 
@@ -201,7 +205,7 @@ The HTML/CSS to change the background color looks like this:
 
 1. In the `handleRequest` function, use the `queryParams` object to obtain the value of a query parameter `bg`, and store it in a variable
   - This is just like getting the value of the `msg` or `world` query parameter
-1. Create a new variable named `bgParam` containing the `<style></style>` tag within a template string (surrounded by `\``)
+1. Create a new variable named `bgParam` containing the `<style></style>` tag within a template string (surrounded by backticks)
 1. Update the template string so that instead of `red`, the color is whatever the user specified with `bg`
   - HINT: replace `red` in the `style` tag with `${bgParam}`
 1. Use `response.write` to write the _entire_ `<style></style>` tag to the response!
@@ -211,11 +215,11 @@ The HTML/CSS to change the background color looks like this:
 <label for="reveal7" class="reveal-label">Click to Reveal Code</label>
 
 ```js
-	let bgParam = queryParams.bg;
-	response.write(`<style>
-	body {
-		background-color: ${bgParam};
-  }
+let bgParam = queryParams.bg;
+response.write(`<style>
+body {
+	background-color: ${bgParam};
+}
 </style>`);
 ```
 

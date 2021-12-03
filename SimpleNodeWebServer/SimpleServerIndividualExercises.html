@@ -750,7 +750,9 @@
 </ul>
 </li>
 </ol>
-<p>Run the program and open the website in a new tab. Add <code>?world=2</code> to the end of the URL, and verify that the new message appears!</p>
+<p>Run the program and open the website in a new tab.</p>
+<p><img src="https://i.imgur.com/65ny5id.png" alt=""></p>
+<p>Add <code>?world=2</code> to the end of the URL, and verify that the new message appears!</p>
 <input type="checkbox" id="reveal3" class="reveal-checkbox">
 
 <label for="reveal3" class="reveal-label">Click to Reveal Code</label>
@@ -873,7 +875,7 @@ response.write(<span class="hljs-string">`&lt;p&gt;You said <span class="hljs-su
 <li>This is just like getting the value of the <code>msg</code> or <code>world</code> query parameter</li>
 </ul>
 </li>
-<li>Create a new variable named <code>bgParam</code> containing the <code>&lt;style&gt;&lt;/style&gt;</code> tag within a template string (surrounded by ```)</li>
+<li>Create a new variable named <code>bgParam</code> containing the <code>&lt;style&gt;&lt;/style&gt;</code> tag within a template string (surrounded by backticks)</li>
 <li>Update the template string so that instead of <code>red</code>, the color is whatever the user specified with <code>bg</code><ul>
 <li>HINT: replace <code>red</code> in the <code>style</code> tag with <code>${bgParam}</code></li>
 </ul>
@@ -884,11 +886,11 @@ response.write(<span class="hljs-string">`&lt;p&gt;You said <span class="hljs-su
 
 <label for="reveal7" class="reveal-label">Click to Reveal Code</label>
 
-<pre><code class="lang-js">    <span class="hljs-keyword">let</span> bgParam = queryParams.bg;
-    response.write(<span class="hljs-string">`&lt;style&gt;
-    body {
-        background-color: <span class="hljs-subst">${bgParam}</span>;
-  }
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> bgParam = queryParams.bg;
+response.write(<span class="hljs-string">`&lt;style&gt;
+body {
+    background-color: <span class="hljs-subst">${bgParam}</span>;
+}
 &lt;/style&gt;`</span>);
 </code></pre>
 <h2 id="background-color-links">Background Color Links</h2>
@@ -1034,7 +1036,7 @@ response.write(<span class="hljs-string">&apos;&lt;p&gt;&lt;a href=&quot;?yellow
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-02T21:57:52.559Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T21:58:34.855Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Simple Server Individual Exercises","level":"1.8.2","depth":2,"next":{"title":"L7 - Express","level":"1.9","depth":1,"path":"ExpressProjects/StudentDesc.md","ref":"ExpressProjects/StudentDesc.md","articles":[{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"path":"ExpressProjects/ExpressProjectIndividualExercises.md","ref":"ExpressProjects/ExpressProjectIndividualExercises.md","articles":[]},{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]}]},"previous":{"title":"Simple Server Code-Along","level":"1.8.1","depth":2,"path":"SimpleNodeWebServer/SimpleServerCodeAlong.md","ref":"SimpleNodeWebServer/SimpleServerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SimpleNodeWebServer/SimpleServerIndividualExercises.md","mtime":"2021-12-03T15:25:38.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-03T15:26:08.027Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
