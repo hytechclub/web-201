@@ -695,23 +695,81 @@
 <li>Run the server, open the site in a new tab, and append <code>/new</code> to the URL</li>
 <li>Verify that the message for the new page appears!</li>
 </ol>
+<input type="checkbox" id="reveal1" class="reveal-checkbox">
+
+<label for="reveal1" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleNewRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+  response.send(<span class="hljs-string">&apos;This is a new page!&apos;</span>);
+}
+
+app.get(<span class="hljs-string">&apos;/new&apos;</span>, handleNewRequest);
+</code></pre>
 <h2 id="a-new-home">A New &quot;Home&quot;</h2>
 <p>Using simple text responses can be helpful for testing, but for a real website, HTML can do a lot more. Update the homepage so that instead of simply sending text, it sends a whole HTML document.</p>
 <ol>
 <li>Create a new HTML file named <strong>home.html</strong> in the project directory</li>
 <li>In the <strong>home.html</strong> file, add some HTML to create a custom page welcoming the user<ul>
-<li>It should have a link to the &quot;info&quot; page and &quot;new&quot; page</li>
+<li>It should have a header that says &quot;Home&quot;</li>
+<li>It should have links to the <strong>Info</strong> page and <strong>New</strong> page</li>
 <li>It can also have pictures and introductory information</li>
 <li>Feel free to add anything at all!</li>
 </ul>
 </li>
-<li>Update the server code so that when the user hits the <code>&apos;/&apos;</code> endpoint, it sends the <strong>home.html</strong> page<ul>
-<li><em>HINT: Change the <code>handleHomeRequest</code> function</em></li>
-<li><em>HINT 2: This is similar to the <code>handleInfoRequest</code> function</em></li>
+<li>In the body of the <code>handleHomeRequest</code> function, replace the existing code with a new variable named <code>homePath</code></li>
+<li>Set the <code>homePath</code> variable to be a call to <code>path.join</code>, passing in <code>__dirname</code> and the filename<ul>
+<li><em>HINT: This is similar to the <code>handleInfoRequest</code> function</em></li>
 </ul>
 </li>
+<li>Under that, use <code>response.sendFile</code> to send the <code>homePath</code> file</li>
 <li>Run the server and test it out to make sure the homepage HTML appears!</li>
 </ol>
+<input type="checkbox" id="reveal2" class="reveal-checkbox">
+
+<label for="reveal2" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleHomeRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+  <span class="hljs-keyword">let</span> homePath = path.join(__dirname, <span class="hljs-string">&apos;home.html&apos;</span>); <span class="hljs-comment">// assuming a &apos;home.html&apos; file exists</span>
+  response.sendFile(homePath);
+}
+</code></pre>
+<h2 id="yet-another-page">Yet Another Page</h2>
+<p>Add another endpoint with another HTML page for the site! This will be similar to how the <strong>Home</strong> and <strong>Info</strong> pages work. This new page should be all about your favorite food.</p>
+<h3 id="creating-the-html">Creating the HTML</h3>
+<ol>
+<li>Create a new HTML file named <strong>food.html</strong> in the project directory</li>
+<li>In the <strong>food.html</strong> file, add some HTML to create a page<ul>
+<li>It should have a header with your favorite food</li>
+<li>It should have a picture of your favorite food</li>
+<li>It should have a link to the <strong>Home</strong> page</li>
+<li>It can have anything else you want on it too</li>
+</ul>
+</li>
+</ol>
+<h3 id="creating-the-handler-function">Creating the Handler Function</h3>
+<ol>
+<li>Open the <strong>app.js</strong> file for editing</li>
+<li>Under the <code>handleInfoRequest</code> function, define a new function<ul>
+<li>Name it <code>handleFoodRequest</code></li>
+<li>Give it two parameters: <code>request</code> and <code>response</code></li>
+</ul>
+</li>
+<li>In the body of the function, create a new variable named <code>foodPath</code></li>
+<li>Set the <code>foodPath</code> variable to <code>path.join</code>, passing in <code>__dirname</code> and the filename</li>
+<li>Under that, use <code>response.sendFile</code> to send the <code>foodPath</code> file</li>
+</ol>
+<h3 id="hooking-up-the-route">Hooking Up the Route</h3>
+<ol>
+<li>Find the <code>app.get</code> function calls in the <strong>app.js</strong> file</li>
+<li>Under those, make another <code>app.get</code> call</li>
+<li>Pass in <code>/food</code> for the route, and <code>handleFoodRequest</code> for the function</li>
+</ol>
+<h3 id="adding-a-link-from-home">Adding a Link from Home</h3>
+<ol>
+<li>Open the <strong>home.html</strong> file for editing</li>
+<li>Somewhere in the file, add an <code>&lt;a href=&quot;/food&quot;&gt;</code> to link to the <strong>Food</strong> page</li>
+</ol>
+<p>Run the server and verify that it is now possible to go to the <strong>Food</strong> page!</p>
 <h2 id="an-info-form">An Info Form</h2>
 <p>In the <strong>info.html</strong> file, there should be an HTML form that will allow the user to enter information to be received by the server.</p>
 <ol>
@@ -726,6 +784,10 @@
 </li>
 <li>Under the <code>input</code>, add another <code>&lt;input /&gt;</code> with type <code>submit</code> and value <code>Submit</code></li>
 </ol>
+<input type="checkbox" id="reveal3" class="reveal-checkbox">
+
+<label for="reveal3" class="reveal-label">Click to Reveal Code</label>
+
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/info&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>What type of information would you like?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;infoType&quot;</span> /&gt;</span>
@@ -750,20 +812,37 @@
 <li>Under that, use <code>console.log</code> to display the <code>queryParams</code> variable</li>
 <li>Load up the server, navigate to the <code>/info</code> page, and submit the form to see the <code>query</code> object in the console!</li>
 </ol>
-<h2 id="dynamic-pages">Dynamic Pages</h2>
+<input type="checkbox" id="reveal4" class="reveal-checkbox">
+
+<label for="reveal4" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleInfoRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
+    <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">let</span> queryParams = parsedUrl.query;
+    <span class="hljs-built_in">console</span>.log(queryParams);
+    response.sendFile(infoPath);
+}
+</code></pre>
+<h2 id="dynamic-pages---penguins">Dynamic Pages - Penguins</h2>
 <blockquote>
 <p>Note: This part will be fairly challenging.</p>
 </blockquote>
 <p>Now that the server is receiving the form data, it&apos;s possible to respond dynamically!</p>
+<h3 id="creating-the-penguin-page-html">Creating the Penguin Page HTML</h3>
+<p>Start by creating a new HTML document containing information about penguins.</p>
 <ol>
-<li>Create a new HTML file named <strong>coolInfo.html</strong> in the project directory</li>
-<li>Fill out the <strong>coolInfo.html</strong> file with some cool information</li>
+<li>Create a new HTML file named <strong>penguinInfo.html</strong> in the project directory</li>
+<li>Fill out the <strong>penguinInfo.html</strong> file with some information about penguins<ul>
+<li>For example, a group of penguins in the water is called a raft but on land they&#x2019;re called a waddle!</li>
+</ul>
+</li>
 <li>At the bottom of the HTML body, copy and paste the entire <code>form</code> element from <strong>info.html</strong><ul>
 <li>Copying and pasting like this is not ideal, but it works for now</li>
 </ul>
 </li>
 </ol>
-<h3 id="showing-the-cool-page">Showing the Cool Page</h3>
+<h3 id="showing-the-penguin-page">Showing the Penguin Page</h3>
 <ol>
 <li>Switch back to the <strong>app.js</strong> file, and find the <code>handleInfoRequest</code> function</li>
 <li>Under the <code>parsedUrl</code> variable declaration, create a variable named <code>infoType</code></li>
@@ -771,9 +850,51 @@
 <li>This should hold whatever the user entered in the form</li>
 </ul>
 </li>
-<li>Create an <code>if</code> statement to check whether the <code>infoType</code> query parameter was &quot;cool&quot;</li>
-<li>If the user <em>did</em> enter &quot;cool&quot;, set the <code>infoPath</code> to point to the new <strong>coolInfo.html</strong> file</li>
-<li>Load up the server and enter &quot;cool&quot; on the <code>/info</code> page to see the content change dynamically!</li>
+<li>Create an <code>if</code> statement to check whether the <code>infoType</code> query parameter was &quot;penguin&quot;</li>
+<li>If the user <em>did</em> enter &quot;penguin&quot;, set the <code>infoPath</code> to point to the new <strong>penguinInfo.html</strong> file</li>
+<li>Load up the server and enter &quot;penguin&quot; on the <code>/info</code> page to see the content change dynamically!</li>
+</ol>
+<input type="checkbox" id="reveal5" class="reveal-checkbox">
+
+<label for="reveal5" class="reveal-label">Click to Reveal Code</label>
+
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleInfoRequest</span>(<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> infoPath = path.join(__dirname, <span class="hljs-string">&apos;info.html&apos;</span>);
+
+    <span class="hljs-keyword">let</span> parsedUrl = url.parse(request.url, <span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">let</span> queryParams = parsedUrl.query;
+
+    <span class="hljs-keyword">let</span> infoType = queryParams.infoType;
+    <span class="hljs-keyword">if</span> (infoType == <span class="hljs-string">&apos;penguin&apos;</span>) {
+      infoPath = path.join(__dirname, <span class="hljs-string">&apos;penguinInfo.html&apos;</span>);
+    }
+
+    <span class="hljs-built_in">console</span>.log(queryParams);
+    response.sendFile(infoPath);
+}
+</code></pre>
+<h2 id="another-dynamic-page---giraffes">Another Dynamic Page - Giraffes</h2>
+<p>Next, create another dynamic info page - this one should be about giraffes.</p>
+<h3 id="creating-the-giraffe-page-html">Creating the Giraffe Page HTML</h3>
+<p>Start by creating a new HTML document containing information about giraffes.</p>
+<ol>
+<li>Create a new HTML file named <strong>giraffeInfo.html</strong> in the project directory</li>
+<li>Fill out the <strong>giraffeInfo.html</strong> file with some information about giraffes<ul>
+<li>For example, giraffes are the tallest mammals on earth</li>
+</ul>
+</li>
+<li>At the bottom of the HTML body, copy and paste the entire <code>form</code> element from <strong>info.html</strong><ul>
+<li>Copying and pasting like this is not ideal, but it works for now</li>
+</ul>
+</li>
+</ol>
+<h3 id="showing-the-giraffe-page">Showing the Giraffe Page</h3>
+<ol>
+<li>Switch back to the <strong>app.js</strong> file, and find the <code>handleInfoRequest</code> function</li>
+<li>Under the <code>if (infoType == penguin)</code> check, add an <code>else if</code></li>
+<li>For the <code>else if</code> condition, check if the query parameter was &quot;giraffe&quot;</li>
+<li>If the user <em>did</em> enter &quot;giraffe&quot;, set the <code>infoPath</code> to point to the new <strong>giraffeInfo.html</strong> file</li>
+<li>Load up the server and enter &quot;giraffe&quot; on the <code>/info</code> page to see the content change dynamically!</li>
 </ol>
 <h2 id="more-info-pages">More Info Pages</h2>
 <p>Create additional HTML pages, and make the <code>handleInfoRequest</code> function properly route to them based on input from the user! This could be information about any topic. Try to add as many info pages as possible.</p>
@@ -820,7 +941,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"next":{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]},"previous":{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectIndividualExercises.md","mtime":"2021-12-03T16:24:38.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-03T16:25:24.214Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Express Server Individual Exercises","level":"1.9.2","depth":2,"next":{"title":"Express POST Challenge","level":"1.9.3","depth":2,"path":"ExpressProjects/ExpressPostChallenge.md","ref":"ExpressProjects/ExpressPostChallenge.md","articles":[]},"previous":{"title":"Express Server Code-Along","level":"1.9.1","depth":2,"path":"ExpressProjects/ExpressProjectCodeAlong.md","ref":"ExpressProjects/ExpressProjectCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ExpressProjects/ExpressProjectIndividualExercises.md","mtime":"2021-12-06T18:27:34.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T18:28:05.627Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
