@@ -1,5 +1,5 @@
-# Databases Overview - Repl.it
-Learn how databases fit into the full-stack architecture, and how to use the built-in [Repl.it Database](https://blog.repl.it/database) and the [`async/await` pattern](https://blog.risingstack.com/mastering-async-await-in-nodejs/) to store data for a Node.js web application. Start by completing the **Databases Warm-up Activity** with a group. Then, review the **Databases Overview PowerPoint Presentation**. After that, complete the **Database Code-Along Activity**, and start working on the **Database Individual Exercises**.
+# Databases Overview - Replit
+Learn how databases fit into the full-stack architecture, and how to use the built-in [Replit Database](https://blog.replit.com/database) and the [`async/await` pattern](https://blog.risingstack.com/mastering-async-await-in-nodejs/) to store data for a Node.js web application. Start by completing the **Databases Warm-up Activity** with a group. Then, review the **Databases Overview PowerPoint Presentation**. After that, complete the **Database Code-Along Activity**, and start working on the **Database Individual Exercises**.
 
 ## Movie Reviews Warm-up Activity
 Follow the instructions on [this page](DatabasesWarmUp.md) as a group to start working with an existing database.
