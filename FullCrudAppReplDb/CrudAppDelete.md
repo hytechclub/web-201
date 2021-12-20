@@ -6,7 +6,7 @@ The last step for the CRUD app is allowing the user to delete objects from the d
 
 1. In the `module.exports` object in the **routes/player.js** file, define a new `deletePlayer` function with `request` and `response` parameters
 1. In the body of the `deletePlayer` function, log `request.params.id` to the console
-1. Under the log, use `request.redirect` to redirect to the homepage:
+1. Under the log, use `response.redirect` to redirect to the homepage:
     ```js
     deletePlayer: function (request, response) {
         console.log(request.params.id);
@@ -68,7 +68,9 @@ deletePlayer: async function (request, response) {
 }
 ```
 
-At this point, it should be possible to load up the homepage and delete a player! Click the "Delete" button next to one of the players, and verify that that player disappears.
+At this point, it should be possible to load up the homepage and delete a player! Click the "Delete" button next to one of the players, and verify that that player disappears. Try deleting _all_ players, and verify that the "No players found." message appears.
+
+Now all four of the CRUD operations should be working! Congratulations, you've built a CRUD app.
 
 ## Next Steps
 [Final Project](../FinalProject/FinalProject.md)

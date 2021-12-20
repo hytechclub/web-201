@@ -58,6 +58,8 @@ getPlayerById: async function(playerId) {
 ```
 
 ### Getting the Data
+Open the **routes/player.js** file to begin.
+
 1. Remove the code currently in the body of the `editPlayerPage` function
 1. Declare a new variable `playerId` and set it to `request.params.id`
 1. Under that, declare a new variable named `playerObj`
@@ -97,7 +99,7 @@ This is the tricky part. It's time to update the EJS to handle all of the data, 
 1. Set the `value` attribute to an EJS segment that takes the `first_name` property from the `player` object
 1. Using a [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), update the EJS segment so that if `add` is `true`, it returns an empty string:
     ```html
-    <%=add ? '' : player.first_name%>
+    <%= add ? '' : player.first_name %>
     ```
 1. Make similar updates for the "Last Name" and "Number" `input` elements
 1. For the "Position" `select`, create a new `option` with the `selected` attribute containing an EJS segment with `player.position`
@@ -108,13 +110,14 @@ This is the tricky part. It's time to update the EJS to handle all of the data, 
     ```
 1. In the main `form` element, update the `action` attribute so that it can either go to `/add` OR `/edit/{player.id}`:
     ```html
-    <%=add ? 'add' : `edit/${player.id}`%>
+    action="/<%= add ? 'add' : `edit/${player.id} `%>"
     ```
 1. Wrap the entire `form` element in an EJS scriptlet with an `if (add || player)`
     - This means if the user attempts to edit a player that does not exist, the form will not render
 1. Under the `form`, add an `else` EJS scriptlet with a `p` that says "Player Not Found."
     - Give it a class of `"text-center"`
 1. Load up the "Edit Player" page for a given `id`, and verify that the proper player information appears
+    - Note that the form will not be submittable yet!
 1. Load up the "Add Player" page, and verify that everything still works the same way
 
 #### **edit-player.ejs**

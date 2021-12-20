@@ -1,5 +1,5 @@
 # **C**RUD App - Create (GET)
-Add a form to the web app that will allow the user to insert a new player into the database. Create an "Add Player" page that will be accessible via a GET request.
+Add a form to the web app that will allow the user to insert a new player into the database. First, create an "Add Player" page that will be accessible via a GET request.
 
 ## Creating the GET Route Handler
 To properly handle the GET request for the "Add Player" page, it is necessary to build a handler function that renders the EJS.
@@ -69,9 +69,9 @@ The folder structure at this point should look something like this:
 Next, update the **edit-player.ejs** file so that it properly renders an HTML form that takes in Soccer Player information.
 
 1. Under the included header partial, create a `div` with a `class` of "container"
-1. Within the "container" `div`, create a `form` that will POST to `add/` on submit
+1. Within the "container" `div`, create a `form` that will POST to `/add/` on submit
     - Set its `method` to `"post"`
-    - Set its `action` to `"add/"`
+    - Set its `action` to `"/add/"`
 1. In the `form`, add a `div` element with a `class` of "form-row"
 1. In the "form-row" `div`, create a "form-group" `div` holding the `label` and `input` for First Name:
     ```html
@@ -104,7 +104,7 @@ Load up the "Add Player" page, and verify that the form appears and submits the 
 ```html
 <%- include('partials/header') %>
 <div class="container">
-    <form method="post" action="add/">
+    <form method="post" action="/add/">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="first-name">First Name</label>
