@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>L10 - Building a CRUD App · GitBook</title>
+        <title>Read · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CrudAppSetup.html" />
+    <link rel="next" href="CrudAppReadTable.html" />
     
     
-    <link rel="prev" href="../DatabasesReplit/DatabaseIndividualExercises.html" />
+    <link rel="prev" href="CrudAppCreatePost.html" />
     
 
     </head>
@@ -527,7 +527,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="CrudAppWalkthrough.html">
+        <li class="chapter " data-level="1.12" data-path="CrudAppWalkthrough.html">
             
                 <a href="CrudAppWalkthrough.html">
             
@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter " data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter active" data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter " data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -706,7 +693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >L10 - Building a CRUD App</a>
+        <a href=".." >Read</a>
     </h1>
 </div>
 
@@ -721,21 +708,83 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="crud-app-walkthrough">CRUD App Walkthrough</h1>
-<p>Follow the steps in this guide to build a CRUD app using Node.js, Express, EJS, and MySQL. Before beginning, make sure to <a href="../SoftwareSetup.md">properly set up the necessary software</a>.</p>
+                                <h1 id="crud-app---read">C<strong>R</strong>UD App - Read</h1>
+<p>Follow the steps below to allow the web app to display existing data from the database.</p>
+<h2 id="getting-the-data-from-the-database">Getting the Data from the Database</h2>
+<p>First, define a function to get all the player data from the database.</p>
 <ol>
-<li><a href="CrudAppSetup.html">Setup</a></li>
-<li><a href="CrudAppSetupCode.html">Setup (Code)</a></li>
-<li><a href="CrudAppRead.html">C<strong>R</strong>UD App - Read</a></li>
-<li><a href="CrudAppReadTable.html">C<strong>R</strong>UD App - Read (Table)</a></li>
-<li><a href="CrudAppCreateGet.html"><strong>C</strong>RUD App - Create (GET)</a></li>
-<li><a href="CrudAppCreatePost.html"><strong>C</strong>RUD App - Create (POST)</a></li>
-<li><a href="CrudAppUpdateGet.html">CR<strong>U</strong>D App - Update (GET)</a></li>
-<li><a href="CrudAppUpdatePost.html">CR<strong>U</strong>D App - Update (POST)</a></li>
-<li><a href="CrudAppDelete.html">CRU<strong>D</strong> App - Delete</a></li>
+<li>In the <strong>db.js</strong> file, add a new module export property named <code>getPlayersList</code><ul>
+<li>Make sure to add a comma after the <code>addPlayer</code> function</li>
+</ul>
+</li>
+<li>Set the value of <code>getPlayersList</code> to a new <code>async</code> function with no parameters</li>
+<li>In the body of the function, create a new variable named <code>playerKeys</code></li>
+<li>Use <code>db.list</code> to get all keys prefixed with <code>&quot;player&quot;</code><ul>
+<li>This will retrieve all the player objects inserted into the database</li>
+</ul>
+</li>
+<li>Add an <code>await</code> before <code>db.list</code> so that the code does not continue until the keys are retrieved</li>
+<li>Under that, create a new empty list variable named <code>players</code><ul>
+<li>This will store the nicely formed video objects</li>
+</ul>
+</li>
+<li>Create a <code>for</code> loop structure looping through <code>playerKeys</code></li>
+<li>In the body of the <code>for</code> loop, get the current key as <code>currentKey</code></li>
+<li>Retrieve the <em>value</em> for the current key using <code>await db.get</code><ul>
+<li>Store that in a variable named <code>currentPlayer</code></li>
+</ul>
+</li>
+<li>Set the <code>&quot;id&quot;</code> property of the <code>currentPlayer</code> object to <code>currentKey</code><ul>
+<li>This will come in handy later</li>
+</ul>
+</li>
+<li><code>push</code> the <code>currentPlayer</code> object to the <code>players</code> list</li>
+<li>Outside of the <code>for</code> loop, return the <code>players</code> list</li>
 </ol>
-<h2 id="final-code">Final Code</h2>
-<p><a href="https://github.com/markbrendanawicz/crud-app" target="_blank">CRUD App</a></p>
+<h3 id="code">Code</h3>
+<pre><code class="lang-js">getPlayersList: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> playerKeys = <span class="hljs-keyword">await</span> db.list(<span class="hljs-string">&quot;player_&quot;</span>);
+    <span class="hljs-keyword">let</span> players = [];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; playerKeys.length; i++) {
+        <span class="hljs-keyword">let</span> currentKey = playerKeys[i];
+        <span class="hljs-keyword">let</span> currentPlayer = <span class="hljs-keyword">await</span> db.get(currentKey);
+        currentPlayer[<span class="hljs-string">&quot;id&quot;</span>] = currentKey;
+
+        players.push(currentPlayer);
+    }
+
+    <span class="hljs-keyword">return</span> players;
+}
+</code></pre>
+<h2 id="passing-the-data-to-the-page">Passing the Data to the Page</h2>
+<p>Now that there is a way to get the data from the DB, it&apos;s time to show it on the homepage.</p>
+<h3 id="back-end-updates">Back-end Updates</h3>
+<p>Update the <strong>routes/index.js</strong> file to pass the data when rendering.</p>
+<ol>
+<li>At the top the <strong>index.js</strong> file, <code>require</code> the <strong>db.js</strong> module with <code>require(&apos;../db&apos;)</code><ul>
+<li>Store the value in a <code>const db</code></li>
+</ul>
+</li>
+<li>Add an <code>async</code> keyword in front of the <code>getHomePage</code> function to make it async</li>
+<li>In the body of the <code>getHomePage</code> function, above the <code>response.render</code>, create a new variable named <code>result</code></li>
+<li>Set the <code>result</code> variable to an <code>await</code>ed call to the <code>db.getPlayersList</code> function</li>
+<li>Under that, create a new variable named <code>renderData</code>, set to an empty object</li>
+<li>Add a <code>players</code> property to the <code>renderData</code> object, set to <code>result</code></li>
+<li>In the <code>response.render</code> call, pass in the <code>renderData</code> object</li>
+</ol>
+<p>Now the <strong>index.ejs</strong> file will be able to access the <code>players</code> data!</p>
+<h3 id="front-end-updates">Front-end Updates</h3>
+<p>For now, the front-end will just show all the data as a JSON string.</p>
+<ol>
+<li>Open the <strong>index.ejs</strong> file for editing</li>
+<li>Add code to display the data from <code>players</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">JSON.stringify</span>(<span class="hljs-attr">players</span>) %&gt;</span>
+</code></pre>
+</li>
+</ol>
+<p>Run the program, and verify that it is possible to view the data from the database! It may not look pretty, but it should be there.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p><a href="CrudAppReadTable.html">C<strong>R</strong>UD App - Read (Table)</a></p>
 
                                 
                                 </section>
@@ -763,12 +812,12 @@
 
             
                 
-                <a href="../DatabasesReplit/DatabaseIndividualExercises.html" class="navigation navigation-prev " aria-label="Previous page: Databases Individual Exercises">
+                <a href="CrudAppCreatePost.html" class="navigation navigation-prev " aria-label="Previous page: Create (POST)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CrudAppSetup.html" class="navigation navigation-next " aria-label="Next page: Setup">
+                <a href="CrudAppReadTable.html" class="navigation navigation-next " aria-label="Next page: Read (Table)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -779,7 +828,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"L10 - Building a CRUD App","level":"1.12","depth":1,"next":{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"previous":{"title":"Databases Individual Exercises","level":"1.11.3","depth":2,"path":"DatabasesReplit/DatabaseIndividualExercises.md","ref":"DatabasesReplit/DatabaseIndividualExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppWalkthrough.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Read","level":"1.12.4","depth":2,"next":{"title":"Read (Table)","level":"1.12.5","depth":2,"path":"FullCrudAppReplDb/CrudAppReadTable.md","ref":"FullCrudAppReplDb/CrudAppReadTable.md","articles":[]},"previous":{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppRead.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

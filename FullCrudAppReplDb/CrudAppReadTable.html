@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Setup · GitBook</title>
+        <title>Read (Table) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CrudAppSetupCode.html" />
+    <link rel="next" href="CrudAppUpdateGet.html" />
     
     
-    <link rel="prev" href="CrudAppWalkthrough.html" />
+    <link rel="prev" href="CrudAppRead.html" />
     
 
     </head>
@@ -541,7 +541,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.12.1" data-path="CrudAppSetup.html">
+        <li class="chapter " data-level="1.12.1" data-path="CrudAppSetup.html">
             
                 <a href="CrudAppSetup.html">
             
@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter " data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter " data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter " data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -706,7 +693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Setup</a>
+        <a href=".." >Read (Table)</a>
     </h1>
 </div>
 
@@ -721,99 +708,131 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="crud-app---setup">CRUD App - Setup</h1>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=PJ3kV8I8DSE&amp;list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&amp;index=31&amp;t=0s" target="_blank">Video</a></li>
-</ul>
-<h2 id="github-repository">GitHub Repository</h2>
+                                <h1 id="crud-app---read-table">C<strong>R</strong>UD App - Read (Table)</h1>
+<p>The goal of the homepage is to display all of the data in a nice tabular format. This is possible using an HTML <code>table</code> and some Bootstrap styles.</p>
+<h2 id="the-table-structure">The Table Structure</h2>
+<p>First, create the HTML table structure without using any actual data. This will make it easier to visualize the data. Open the <strong>views/index.ejs</strong> file and remove all the existing code to get started.</p>
 <ol>
-<li>Create a new empty GitHub repository at <a href="https://github.com/new" target="_blank">github.com/new</a><ul>
-<li>Fill out a proper name and description</li>
-<li>Make it public, and initialize the repo with a README</li>
+<li>Add an <code>include</code> to include the header<ul>
+<li><code>&lt;%- include(&apos;partials/header&apos;); %&gt;</code></li>
 </ul>
 </li>
-<li>On the repository, click &quot;Clone or download&quot; and copy the web URL</li>
-<li>Open Visual Studio Code</li>
-<li>Open the Command Prompt with <code>Ctrl</code>+<code>Shift</code>+<code>P</code>, and type in &quot;Git Clone&quot;</li>
-<li>Paste the web URL for the repository, and press <code>Enter</code></li>
-<li>Select an appropriate folder for the project, and click &quot;Select Repository Location&quot;<ul>
-<li>There is no need to create a specific folder for the project, that will happen automatically when cloned</li>
+<li>Under the <code>include</code>, create a <code>div</code></li>
+<li>Within the <code>div</code>, create a <code>table</code> with a <code>class</code> of &quot;table&quot;</li>
+<li>Within the <code>table</code>, create a <code>thead</code> with a <code>class</code> of &quot;thead-dark&quot;</li>
+<li>Within the <code>thead</code>, create a <code>tr</code></li>
+<li>Within the <code>tr</code>, create <code>th</code>s for:<ul>
+<li>First Name</li>
+<li>Last Name</li>
+<li>Position</li>
+<li>Number</li>
 </ul>
 </li>
-<li>When prompted, click &quot;Open&quot; to open the repository in VS Code</li>
+<li>Under the <code>thead</code> in the <code>table</code>, create a <code>tbody</code></li>
+<li>In the <code>tbody</code>, create a <code>tr</code></li>
+<li>In the <code>tr</code>, create <code>td</code>s containing:<ul>
+<li>Megan</li>
+<li>Rapinoe</li>
+<li>Midfielder</li>
+<li>15</li>
+</ul>
+</li>
+<li>At the bottom of the file, under the closing <code>div</code> tag, add closing tags for <code>div</code>, <code>body</code>, and <code>html</code><ul>
+<li>These were opened in the <strong>header.ejs</strong> file</li>
+</ul>
+</li>
+<li>Load up the homepage and verify that the table appears properly!</li>
 </ol>
-<h2 id="npm-project">NPM Project</h2>
-<ol>
-<li>In Visual Studio Code, in the project folder, open a Terminal</li>
-<li>Run the <code>npm init</code> command to create the NPM project<ul>
-<li>Set the entry point to <code>app.js</code></li>
-<li>Everything else should take the default value</li>
-</ul>
-</li>
-<li>Install <code>express</code>, <code>mysql</code>, and <code>ejs</code> using <code>npm install --save</code></li>
-<li>Create a file in the project folder named <code>.gitignore</code>, and add &quot;node_modules&quot; to the file<ul>
-<li>This will tell Git to ignore the &quot;node_modules&quot; folder</li>
-</ul>
-</li>
-<li>Install a new package named <code>nodemon</code> globally with <code>npm install -g nodemon</code><ul>
-<li><code>nodemon</code> is a magical command line tool that rebuilds a Node app with every change</li>
-</ul>
-</li>
-<li>Create a file in the project folder named <strong>app.js</strong></li>
-<li>For testing purposes, add a <code>console.log(&apos;Hello World&apos;)</code> in <strong>app.js</strong></li>
-<li>In the terminal, run the following command:<pre><code> nodemon
-</code></pre></li>
-<li>Make a change to the <strong>app.js</strong> code, and notice that the app is rebuilt automatically!</li>
-</ol>
-<p>The folder structure so far should look like this:</p>
-<p><img src="https://i.imgur.com/7qxPBLB.png" alt=""></p>
-<h2 id="database---mysql-workbench">Database - MySQL Workbench</h2>
-<ol>
-<li>Open MySQL Workbench</li>
-<li>Connect to the local MySQL server instance</li>
-<li>Create a new database schema named <code>soccer</code></li>
-</ol>
-<h3 id="the-players-table---primary-key">The <code>players</code> Table - Primary Key</h3>
-<p>This database should track information about soccer players. To ensure that each player is uniquely identifiable, they should each have an <code>id</code> that <strong>auto-increments</strong>. This means that, whenever a new player record is added to the table, it will automatically be given a unique <code>id</code>. The <code>id</code> can be a <strong>primary key</strong> because it uniquely identifies records in the table; no two records will have the same <code>id</code>. </p>
-<p>In the <code>soccer</code> database, create a new table named <code>players</code> with the following columns:</p>
-<ul>
-<li><code>id</code> (integer, auto-increment, primary key)</li>
-<li><code>first_name</code> (text)</li>
-<li><code>last_name</code> (text)</li>
-<li><code>position</code> (text)</li>
-<li><code>number</code> (integer)</li>
-</ul>
-<p><strong>SQL</strong></p>
-<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">DATABASE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> soccer;
-<span class="hljs-keyword">USE</span> soccer;
-<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> players (
-  <span class="hljs-keyword">id</span> <span class="hljs-built_in">INTEGER</span> AUTO_INCREMENT,
-  first_name <span class="hljs-built_in">TEXT</span>,
-  last_name <span class="hljs-built_in">TEXT</span>,
-  <span class="hljs-keyword">position</span> <span class="hljs-built_in">TEXT</span>,
-  <span class="hljs-built_in">number</span> <span class="hljs-built_in">INTEGER</span>,
-  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-keyword">id</span>)
-);
+<h3 id="indexejs"><strong>index.ejs</strong></h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">include</span>(&apos;<span class="hljs-attr">partials</span>/<span class="hljs-attr">header</span>&apos;); %&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;thead-dark&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Last Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Position<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Number<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Megan<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Rapino<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Midfielder<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>15<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<h3 id="adding-data">Adding Data</h3>
+<h2 id="using-the-data-in-the-table">Using the Data in the Table</h2>
+<p>Now that the table structure is in place, update the EJS code so that it actually uses the data from the database. It should loop through each player, and create a new table row HTML element with all of their information.</p>
 <ol>
-<li>Add some rows to the <code>players</code> table using <code>INSERT INTO</code><ul>
-<li>Do not specify an <code>id</code> when inserting - it will be generated automatically</li>
+<li>Under the <code>tbody</code> opening tag, create an EJS scriptlet containing a <code>for</code> loop that will loop through <code>players</code><ul>
+<li>Make sure to include the closing <code>&lt;% } %&gt;</code> for the loop under the <code>tr</code> closing tag!</li>
 </ul>
 </li>
-<li>After adding some rows, use <code>SELECT * FROM players</code> to make sure the players appear</li>
+<li>Within the <code>td</code> elements, replace the example data with EJS segments that have data from <code>players[i]</code></li>
+<li>Load up the homepage, and verify that the table is populated with data from the database!</li>
 </ol>
-<p><strong>SQL</strong></p>
-<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> players (first_name, last_name, <span class="hljs-keyword">position</span>, <span class="hljs-built_in">number</span>)
-<span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&quot;Megan&quot;</span>, <span class="hljs-string">&quot;Rapinoe&quot;</span>,  <span class="hljs-string">&quot;Midfielder&quot;</span>, <span class="hljs-number">15</span>);
+<h3 id="code">Code</h3>
+<pre><code class="lang-html">&lt;% for (let i = 0; i &lt; players.length; i++) { %&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;%= players[i].first_name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].last_name %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].position %&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;%= players[i].number %&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;% } %&gt;
 </code></pre>
-<h3 id="preparing-authentication">Preparing Authentication</h3>
-<p>In order to allow Node.js to interact with MySQL, it is necessary to update the user authentication. Run the following SQL statements to do so, assuming there is a <code>root</code> user with a password of <code>password</code>:</p>
-<pre><code class="lang-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;localhost&apos;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&apos;password&apos;</span>;
-<span class="hljs-keyword">flush</span> <span class="hljs-keyword">privileges</span>;
+<h2 id="conditional-display">Conditional Display</h2>
+<p>If there are no players in the database, a message saying &quot;No players found&quot; should appear instead of the table. Use EJS scriptlets with an <code>if</code>/<code>else</code> to accomplish this.</p>
+<ol>
+<li>Under the <code>div</code> opening tag, create an EJS scriptlet containing an <code>if</code> statement</li>
+<li>Set the condition of the <code>if</code> statement to check if there are any players in the <code>players</code> array</li>
+<li>Under the <code>table</code> closing tag, create an EJS scriptlet that closes the <code>if</code> statement, and starts an <code>else</code></li>
+<li>Under the <code>else</code> scriptlet, add a <code>p</code> with a <code>class</code> of &quot;text-center&quot; saying &quot;No players found.&quot;</li>
+<li>Under the <code>p</code>, create an EJS scriptlet that closes the <code>else</code></li>
+</ol>
+<p>Unfortunately, there is no way to test this without removing all keys from the database. Test out the feature after implementing the <strong>D</strong>elete functionality!</p>
+<p>The code in the <strong>index.ejs</strong> file should look something like this:</p>
+<pre><code class="lang-html">&lt;%- include(&apos;partials/header&apos;); %&gt;
+&lt;div&gt;
+&lt;% if (players.length &gt; 0) { %&gt;
+    &lt;table class=&quot;table&quot;&gt;
+        &lt;thead class=&quot;thead-dark&quot;&gt;
+            &lt;tr&gt;
+                &lt;th&gt;First Name&lt;/th&gt;
+                &lt;th&gt;Last Name&lt;/th&gt;
+                &lt;th&gt;Position&lt;/th&gt;
+                &lt;th&gt;Number&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;% for (let i = 0; i &lt; players.length; i++) { %&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;%= players[i].first_name %&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%= players[i].last_name %&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%= players[i].position %&gt;&lt;/td&gt;
+                &lt;td&gt;&lt;%= players[i].number %&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;% } %&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;% } else { %&gt;
+    &lt;p class=&quot;text-center&quot;&gt;No players found.&lt;/p&gt;
+&lt;% } %&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 <h2 id="next-steps">Next Steps</h2>
-<p><a href="CrudAppSetupCode.html">CRUD App Setup (Code)</a></p>
+<p><a href="CrudAppCreateGet.html"><strong>C</strong>RUD - Create (GET)</a></p>
 
                                 
                                 </section>
@@ -841,12 +860,12 @@
 
             
                 
-                <a href="CrudAppWalkthrough.html" class="navigation navigation-prev " aria-label="Previous page: L10 - Building a CRUD App">
+                <a href="CrudAppRead.html" class="navigation navigation-prev " aria-label="Previous page: Read">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CrudAppSetupCode.html" class="navigation navigation-next " aria-label="Next page: Setup (Code)">
+                <a href="CrudAppUpdateGet.html" class="navigation navigation-next " aria-label="Next page: Update (GET)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -857,7 +876,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup","level":"1.12.1","depth":2,"next":{"title":"Setup (Code)","level":"1.12.2","depth":2,"path":"FullCrudApp/CrudAppSetupCode.md","ref":"FullCrudApp/CrudAppSetupCode.md","articles":[]},"previous":{"title":"L10 - Building a CRUD App","level":"1.12","depth":1,"path":"FullCrudApp/CrudAppWalkthrough.md","ref":"FullCrudApp/CrudAppWalkthrough.md","articles":[{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},{"title":"Setup (Code)","level":"1.12.2","depth":2,"path":"FullCrudApp/CrudAppSetupCode.md","ref":"FullCrudApp/CrudAppSetupCode.md","articles":[]},{"title":"Read","level":"1.12.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},{"title":"Read (Table)","level":"1.12.4","depth":2,"path":"FullCrudApp/CrudAppReadTable.md","ref":"FullCrudApp/CrudAppReadTable.md","articles":[]},{"title":"Create (GET)","level":"1.12.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},{"title":"Create (POST)","level":"1.12.6","depth":2,"path":"FullCrudApp/CrudAppCreatePost.md","ref":"FullCrudApp/CrudAppCreatePost.md","articles":[]},{"title":"Update (GET)","level":"1.12.7","depth":2,"path":"FullCrudApp/CrudAppUpdateGet.md","ref":"FullCrudApp/CrudAppUpdateGet.md","articles":[]},{"title":"Update (POST)","level":"1.12.8","depth":2,"path":"FullCrudApp/CrudAppUpdatePost.md","ref":"FullCrudApp/CrudAppUpdatePost.md","articles":[]},{"title":"Delete","level":"1.12.9","depth":2,"path":"FullCrudApp/CrudAppDelete.md","ref":"FullCrudApp/CrudAppDelete.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetup.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Read (Table)","level":"1.12.5","depth":2,"next":{"title":"Update (GET)","level":"1.12.6","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdateGet.md","ref":"FullCrudAppReplDb/CrudAppUpdateGet.md","articles":[]},"previous":{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppReadTable.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

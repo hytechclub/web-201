@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Read · GitBook</title>
+        <title>Delete · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CrudAppReadTable.html" />
+    <link rel="next" href="../FinalProject/FinalProject.html" />
     
     
-    <link rel="prev" href="CrudAppSetupCode.html" />
+    <link rel="prev" href="CrudAppUpdatePost.html" />
     
 
     </head>
@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter " data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter " data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter active" data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -706,7 +693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Read</a>
+        <a href=".." >Delete</a>
     </h1>
 </div>
 
@@ -721,94 +708,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="crud-app---read">C<strong>R</strong>UD App - Read</h1>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=nC80SRCzRwU&amp;list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&amp;index=32" target="_blank">Video</a></li>
-</ul>
-<p>Follow the steps below to allow the web app to display data from the <code>soccer</code> database.</p>
-<h2 id="getting-the-homepage-data">Getting the Homepage Data</h2>
-<p>Update the <code>getHomePage</code> function in the <strong>index.js</strong> file so that it pulls data from the database and renders it in the response.</p>
+                                <h1 id="crud-app---delete">CRU<strong>D</strong> App - Delete</h1>
+<p>The last step for the CRUD app is allowing the user to delete objects from the database. Add this ability with a GET request that includes a player&apos;s <code>id</code> as a route parameter.</p>
+<h2 id="routing-the-get-handler">Routing the GET Handler</h2>
+<blockquote>
+<p>NOTE: It is not best practice to use an HTTP GET request to perform a DELETE operation. However, using a GET handler in this instance works fine, so it is used for the sake of simplicity.</p>
+</blockquote>
 <ol>
-<li>Remove the current body of the <code>getHomePage</code> function</li>
-<li>Create a new string variable named <code>query</code> that has SQL to find all players ordered by their <code>id</code>:<pre><code class="lang-sql"> <span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> players <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-keyword">id</span> <span class="hljs-keyword">ASC</span>;
+<li>In the <code>module.exports</code> object in the <strong>routes/player.js</strong> file, define a new <code>deletePlayer</code> function with <code>request</code> and <code>response</code> parameters</li>
+<li>In the body of the <code>deletePlayer</code> function, log <code>request.params.id</code> to the console</li>
+<li>Under the log, use <code>request.redirect</code> to redirect to the homepage:<pre><code class="lang-js"> deletePlayer: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+     <span class="hljs-built_in">console</span>.log(request.params.id);
+     response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+ }
 </code></pre>
 </li>
-<li>In the body of the <code>getHomePage</code> function, define a new function named <code>queryCallback</code> that takes <code>error</code> and <code>result</code> as parameters<ul>
-<li>Note, this is a function defined <em>within</em> another function!</li>
-</ul>
-</li>
-<li>In the body of the <code>queryCallback</code> function, check if <code>error</code> exists, and send a server error if it does:<pre><code class="lang-js"> <span class="hljs-keyword">return</span> response.status(<span class="hljs-number">500</span>).send(error);
-</code></pre>
-</li>
-<li>Beyond the <code>if (error)</code>, create a new variable named <code>renderData</code> with a <code>players</code> property that has a value of <code>result</code><ul>
-<li><code>result</code> contains the results of the <code>SELECT</code> query</li>
-</ul>
-</li>
-<li>Under <code>renderData</code>, use <code>response.render</code> to render the <strong>index.ejs</strong> page with the data from <code>renderData</code></li>
-<li>Outside of the body of the <code>queryCallback</code> function, use <code>db.query</code> to execute the <code>query</code> and pass in <code>queryCallback</code></li>
-<li>For testing purposes, update the <strong>index.ejs</strong> file so that it displays the data from <code>players</code><pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">JSON.stringify</span>(<span class="hljs-attr">players</span>) %&gt;</span>
-</code></pre>
-</li>
-<li>Load up the homepage, and verify that the data from the <code>players</code> table appears in JSON form!</li>
+<li>In the <strong>app.js</strong> file, under the <code>app.get</code> calls, add another <code>app.get</code> to hook up <code>/delete/:id</code> to <code>player.deletePlayer</code></li>
+<li>Run the app, navigate to the <code>/delete/5</code> route, and verify that <code>5</code> is properly logged in the console as the <code>id</code>!</li>
 </ol>
-<h3 id="indexjs"><strong>index.js</strong></h3>
-<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
-    getHomePage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
-        <span class="hljs-comment">// Query database to get all the players</span>
-        <span class="hljs-keyword">let</span> query = <span class="hljs-string">&apos;SELECT * FROM players ORDER BY id ASC&apos;</span>; 
-
-        <span class="hljs-comment">// Reponse to query</span>
-        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryCallback</span>(<span class="hljs-params">error, result</span>) </span>{
-            <span class="hljs-keyword">if</span> (error) {
-                <span class="hljs-comment">// Send server error</span>
-                <span class="hljs-keyword">return</span> response.status(<span class="hljs-number">500</span>).send(error);
-            }
-
-            <span class="hljs-keyword">let</span> renderData = {
-                players: result
-            }
-
-            response.render(<span class="hljs-string">&apos;index&apos;</span>, renderData);
-        }
-
-        <span class="hljs-comment">// Execute query</span>
-        db.query(query, queryCallback);
-    },
-};
-</code></pre>
-<h2 id="header-partial">Header Partial</h2>
-<p>Since this app will have multiple pages that share some HTML and CSS, it would be sensible to separate those repeated parts. Luckily, this is possible with EJS using <a href="https://medium.com/@henslejoseph/ejs-partials-f6f102cb7433" target="_blank"><strong>partials</strong></a>. Partials allow developers to pull the same blocks of template code into multiple templates!</p>
+<h2 id="adding-the-delete-buttons">Adding the Delete Buttons</h2>
+<p>Now that the &quot;Delete Player&quot; route exists, the user needs a way to navigate to it! Add &quot;Delete&quot; buttons for each player in the home page table.</p>
 <ol>
-<li>In the &quot;views&quot; folder, create a new folder named &quot;partials&quot;</li>
-<li>In the &quot;partials&quot; folder, create a new file named <strong>header.ejs</strong><ul>
-<li>This code will be shared between multiple pages</li>
-</ul>
-</li>
-<li>The header should contain a link to <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, some CSS, and a navigation bar<ul>
-<li>The code for <strong>header.ejs</strong> is provided below</li>
-</ul>
-</li>
-<li>Remove the current code from <strong>index.ejs</strong> and replace it by including the &quot;header&quot; partial:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">include</span>(&apos;<span class="hljs-attr">partials</span>/<span class="hljs-attr">header</span>&apos;); %&gt;</span>
+<li>In the <strong>views/index.ejs</strong> file, find the <code>for</code> loop <code>td</code> with the &quot;Edit&quot; button</li>
+<li>Within the <code>td</code>, add a new <code>a</code> with the text &quot;Delete&quot; that points the user to <code>/delete/</code> with the player&apos;s <code>id</code></li>
+<li>Set the <code>class</code> attribute of the <code>a</code> to &quot;btn btn-sm btn-danger&quot; to make it appear like a red button:<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/delete/&lt;%= players[i].id %&gt;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-sm btn-danger&quot;</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 </li>
-<li>Load up the homepage to make sure the HTML from <strong>header.ejs</strong> renders!</li>
+<li>Load up the homepage, and verify that the &quot;Delete&quot; button links to the &quot;Delete&quot; route for the proper player!</li>
 </ol>
-<h3 id="headerejs"><strong>header.ejs</strong></h3>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-wrapper&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;navbar-brand mb-0 h1&quot;</span> &gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>Soccer Players<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+<p>At this point, the player ID should simply be logged in the console. The program will end up using that ID to delete the player data.</p>
+<h2 id="deleting-the-player-from-the-db">Deleting the Player from the DB</h2>
+<p>The GET handler function should delete the player with the given <code>id</code> from the database.</p>
+<h3 id="db-function">DB Function</h3>
+<p>Start by creating a function that can delete a player from the database based on its ID.</p>
+<ol>
+<li>In the <strong>db.js</strong> file, add a new module export property named <code>deletePlayerById</code></li>
+<li>Set the value of <code>deletePlayerById</code> to be an <code>async</code> function with <code>playerId</code> as a parameter</li>
+<li>In the body of the <code>deletePlayerById</code> function, call <code>db.delete</code> on <code>playerId</code><ul>
+<li>This will delete the key and value from the database</li>
+</ul>
+</li>
+<li>Use the <code>await</code> keyword in front of the <code>db.delete</code> to properly wait for the result</li>
+</ol>
+<h4 id="code">Code</h4>
+<pre><code class="lang-js">deletePlayerById: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">playerId</span>) </span>{
+    <span class="hljs-keyword">await</span> db.delete(playerId);
+}
 </code></pre>
-<p>The folder structure at this point should look like this:</p>
-<p><img src="https://i.imgur.com/clKZ9LJ.png" alt=""></p>
+<h3 id="route-function">Route Function</h3>
+<p>Next, update the <code>/delete/:id</code> GET handler to use the DB function to delete the data in the DB. Open the <strong>routes/player.js</strong> file to begin.</p>
+<ol>
+<li>In the <code>deletePlayer</code> function, remove the <code>console.log</code></li>
+<li>In its place, create a new variable named <code>playerId</code></li>
+<li>Set <code>playerId</code> to <code>request.params.id</code></li>
+<li>Under that, add a call to <code>db.deletePlayerById</code>, passing in <code>playerId</code></li>
+<li>Put the <code>await</code> keyword in front of <code>db.deletePlayerById</code> to wait for it to return</li>
+<li>Add the <code>async</code> keyword in front of the <code>deletePlayer</code> function because it uses an <code>await</code></li>
+</ol>
+<h4 id="code">Code</h4>
+<pre><code class="lang-js">deletePlayer: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> playerId = request.params.id;
+    <span class="hljs-keyword">await</span> db.deletePlayerById(playerId);
+
+    response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+}
+</code></pre>
+<p>At this point, it should be possible to load up the homepage and delete a player! Click the &quot;Delete&quot; button next to one of the players, and verify that that player disappears.</p>
 <h2 id="next-steps">Next Steps</h2>
-<p><a href="CrudAppReadTable.html">C<strong>R</strong>UD App - Read (Table)</a></p>
+<p><a href="../FinalProject/FinalProject.html">Final Project</a></p>
 
                                 
                                 </section>
@@ -836,12 +803,12 @@
 
             
                 
-                <a href="CrudAppSetupCode.html" class="navigation navigation-prev " aria-label="Previous page: Setup (Code)">
+                <a href="CrudAppUpdatePost.html" class="navigation navigation-prev " aria-label="Previous page: Update (POST)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CrudAppReadTable.html" class="navigation navigation-next " aria-label="Next page: Read (Table)">
+                <a href="../FinalProject/FinalProject.html" class="navigation navigation-next " aria-label="Next page: Final Project">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -852,7 +819,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Read","level":"1.12.3","depth":2,"next":{"title":"Read (Table)","level":"1.12.4","depth":2,"path":"FullCrudApp/CrudAppReadTable.md","ref":"FullCrudApp/CrudAppReadTable.md","articles":[]},"previous":{"title":"Setup (Code)","level":"1.12.2","depth":2,"path":"FullCrudApp/CrudAppSetupCode.md","ref":"FullCrudApp/CrudAppSetupCode.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppRead.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Delete","level":"1.12.8","depth":2,"next":{"title":"Final Project","level":"1.13","depth":1,"path":"FinalProject/FinalProject.md","ref":"FinalProject/FinalProject.md","articles":[]},"previous":{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppDelete.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

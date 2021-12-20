@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Read (Table) · GitBook</title>
+        <title>Create (POST) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CrudAppCreateGet.html" />
+    <link rel="next" href="CrudAppRead.html" />
     
     
-    <link rel="prev" href="CrudAppRead.html" />
+    <link rel="prev" href="CrudAppCreateGet.html" />
     
 
     </head>
@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter active" data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter " data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter " data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -706,7 +693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Read (Table)</a>
+        <a href=".." >Create (POST)</a>
     </h1>
 </div>
 
@@ -721,138 +708,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="crud-app---read-table">C<strong>R</strong>UD App - Read (Table)</h1>
-<ul>
-<li><a href="https://youtu.be/nC80SRCzRwU?t=367" target="_blank">Video</a></li>
-</ul>
-<p>The goal of the homepage is to display all of the data in a nice tabular format. This is possible using an HTML <code>table</code> and some Bootstrap styles.</p>
-<h2 id="the-table-structure">The Table Structure</h2>
-<p>First, create the HTML table structure without using any actual data. This will make it easier to visualize the data.</p>
+                                <h1 id="crud-app---create-post"><strong>C</strong>RUD App - Create (POST)</h1>
+<p>Create a POST request handler that will take the data from the &quot;Add Player&quot; form and insert the new player into the database. </p>
+<p>When a user fills out the &quot;Add Player&quot; form and clicks the submit button, it will send a POST request to <code>/add</code> (as specified in the attributes of the form). The data will be labeled based on the <code>name</code> attributes of the <code>input</code> elements. The server should take that POST request, and use the data to insert a new player into the database.</p>
+<h2 id="hooking-up-an-add-player-request-handler">Hooking up an &quot;Add Player&quot; Request Handler</h2>
 <ol>
-<li>Under the <code>include</code>, create a <code>div</code></li>
-<li>Within the <code>div</code>, create a <code>table</code> with a <code>class</code> of &quot;table&quot;</li>
-<li>Within the <code>table</code>, create a <code>thead</code> with a <code>class</code> of &quot;thead-dark&quot;</li>
-<li>Within the <code>thead</code>, create a <code>tr</code></li>
-<li>Within the <code>tr</code>, create <code>th</code>s for:<ul>
-<li>ID</li>
-<li>First Name</li>
-<li>Last Name</li>
-<li>Position</li>
-<li>Number</li>
+<li>In the <strong>routes/player.js</strong> file, add a new module export property named <code>addPlayer</code><ul>
+<li>Make sure to add a comma after the <code>addPlayerPage</code> function</li>
 </ul>
 </li>
-<li>Under the <code>thead</code> in the <code>table</code>, create a <code>tbody</code></li>
-<li>In the <code>tbody</code>, create a <code>tr</code></li>
-<li>In the <code>tr</code>, create <code>td</code>s containing:<ul>
-<li>1</li>
-<li>Megan</li>
-<li>Rapinoe</li>
-<li>Midfielder</li>
-<li>15</li>
-</ul>
-</li>
-<li>At the bottom of the file, under the closing <code>div</code> tag, add closing tags for <code>div</code>, <code>body</code>, and <code>html</code><ul>
-<li>These were opened in the <strong>header.ejs</strong> file</li>
-</ul>
-</li>
-<li>Load up the homepage and verify that the table appears properly!</li>
-</ol>
-<h3 id="indexejs"><strong>index.ejs</strong></h3>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">include</span>(&apos;<span class="hljs-attr">partials</span>/<span class="hljs-attr">header</span>&apos;); %&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;thead-dark&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>ID<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Last Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Position<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Number<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Megan<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Rapino<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Midfielder<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>15<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+<li>Set the value of <code>addPlayer</code> to be a function with <code>request</code> and <code>response</code> as parameters</li>
+<li>In the body of the <code>addPlayer</code> function, log <code>request.body</code> to the console</li>
+<li>After the console log, redirect to the homepage with <code>response.redirect(&apos;/&apos;)</code></li>
+<li>In the <strong>app.js</strong> file, under the <code>app.set</code>, tell the <code>app</code> to use the proper middleware to handle POST data:<pre><code class="lang-js"> app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+ app.use(express.json());
 </code></pre>
-<h2 id="using-the-data-in-the-table">Using the Data in the Table</h2>
-<p>Now that the table structure is in place, update the EJS code so that it actually uses the data from the database. It should loop through each player, and create a new table row HTML element with all of their information.</p>
+</li>
+<li>In the <strong>app.js</strong> file, under the <code>app.get</code> routes, add an <code>app.post</code> to hook up the <code>addPlayer</code> function to the <code>/add</code> route:<pre><code class="lang-js"> app.post(<span class="hljs-string">&apos;/add&apos;</span>, player.addPlayer);
+</code></pre>
+</li>
+</ol>
+<p>Load up the &quot;Add Player&quot; page, submit the form, and verify that the form data is properly logged in the console!</p>
+<h2 id="handling-the-post-data">Handling the POST Data</h2>
+<p>Now that the data is properly in the back-end, it&apos;s time to put it in the database. Update the <strong>db.js</strong> and <strong>routes/player.js</strong> files to make this happen.</p>
+<h3 id="db-function">DB Function</h3>
+<p>Start by creating a function that can add a new player object to the database.</p>
 <ol>
-<li>Under the <code>tbody</code> opening tag, create an EJS scriptlet containing a <code>for</code> loop that will loop through <code>players</code><ul>
-<li>Make sure to include the closing <code>&lt;% } %&gt;</code> for the loop under the <code>tr</code> closing tag!</li>
+<li>In the <strong>db.js</strong> file, add a new module export property named <code>addPlayer</code></li>
+<li>Set the value of <code>addPlayer</code> to be an <code>async</code> function with <code>playerObj</code> as a parameter</li>
+<li>In the body of the <code>addPlayer</code> function, create a new variable named <code>newId</code></li>
+<li>Set <code>newId</code> to the &quot;player_&quot; prefix, plus a new UUID<ul>
+<li>This will be the unique key for the database</li>
 </ul>
 </li>
-<li>Within the <code>td</code> elements, replace the example data with EJS segments that have data from <code>players[i]</code></li>
-<li>Load up the homepage, and verify that the table is populated with data from the database!</li>
+<li>Under that, call <code>db.set</code> to set the key (<code>newId</code>) to the value (<code>playerObj</code>)</li>
+<li>Use the <code>await</code> keyword in front of the <code>db.set</code> because it returns a Promise object</li>
 </ol>
-<h3 id="code">Code</h3>
-<pre><code class="lang-html">&lt;% for (let i = 0; i &lt; players.length; i++) { %&gt;
-    &lt;tr&gt;
-        &lt;td&gt;&lt;%= players[i].id %&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;%= players[i].first_name %&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;%= players[i].last_name %&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;%= players[i].position %&gt;&lt;/td&gt;
-        &lt;td&gt;&lt;%= players[i].number %&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;% } %&gt;
+<h4 id="code">Code</h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    addPlayer: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">playerObj</span>) </span>{
+        <span class="hljs-keyword">let</span> newId = <span class="hljs-string">&quot;player_&quot;</span> + uuid.v4();
+        <span class="hljs-keyword">await</span> db.set(newId, playerObj);
+    }
+}
 </code></pre>
-<h2 id="conditional-display">Conditional Display</h2>
-<p>If there are no players in the database, a message saying &quot;No players found&quot; should appear instead of the table. Use EJS scriptlets with an <code>if</code>/<code>else</code> to accomplish this.</p>
+<h3 id="route-function">Route Function</h3>
+<p>Next, update the <code>/add</code> POST handler to use the DB function to insert the data into the database.</p>
 <ol>
-<li>Under the <code>div</code> opening tag, create an EJS scriptlet containing an <code>if</code> statement</li>
-<li>Set the condition of the <code>if</code> statement to check if there are any players in the <code>players</code> array</li>
-<li>Under the <code>table</code> closing tag, create an EJS scriptlet that closes the <code>if</code> statement, and starts an <code>else</code></li>
-<li>Under the <code>else</code> scriptlet, add a <code>p</code> with a <code>class</code> of &quot;text-center&quot; saying &quot;No players found.&quot;</li>
-<li>Under the <code>p</code>, create an EJS scriptlet that closes the <code>else</code></li>
-<li>Delete all players from the <code>players</code> table</li>
-<li>Load up the homepage again to verify that the table does not appear, and the message does!</li>
+<li>At the top the <strong>player.js</strong> file, <code>require</code> the <strong>db.js</strong> module with <code>require(&apos;../db&apos;)</code><ul>
+<li>Store the value in a <code>const db</code></li>
+</ul>
+</li>
+<li>In the <code>addPlayer</code> function, remove the <code>console.log</code></li>
+<li>In its place, add a call to <code>db.addPlayer</code>, passing in <code>request.body</code> for the player object</li>
+<li>Put the <code>await</code> keyword in front of <code>db.addPlayer</code> because it returns a Promise object</li>
+<li>Add the <code>async</code> keyword in front of the function because it uses an <code>await</code></li>
 </ol>
-<h3 id="indexejs"><strong>index.ejs</strong></h3>
-<pre><code class="lang-html">&lt;%- include(&apos;partials/header&apos;); %&gt;
-&lt;div&gt;
-&lt;% if (players.length &gt; 0) { %&gt;
-    &lt;table class=&quot;table&quot;&gt;
-        &lt;thead class=&quot;thead-dark&quot;&gt;
-            &lt;tr&gt;
-                &lt;th&gt;ID&lt;/th&gt;
-                &lt;th&gt;First Name&lt;/th&gt;
-                &lt;th&gt;Last Name&lt;/th&gt;
-                &lt;th&gt;Position&lt;/th&gt;
-                &lt;th&gt;Number&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-        &lt;% for (let i = 0; i &lt; players.length; i++) { %&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;%= players[i].id %&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;%= players[i].first_name %&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;%= players[i].last_name %&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;%= players[i].position %&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;%= players[i].number %&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;% } %&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;% } else { %&gt;
-    &lt;p class=&quot;text-center&quot;&gt;No players found.&lt;/p&gt;
-&lt;% } %&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<h4 id="code">Code</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> db = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../db.js&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = {
+  addPlayerPage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+    response.render(<span class="hljs-string">&apos;edit-player&apos;</span>);
+  },
+
+  addPlayer: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">await</span> db.addPlayer(request.body);
+    response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+  }
+}
 </code></pre>
+<h3 id="testing">Testing</h3>
+<p>At this point, it should be fully possible to add Player data to the database.</p>
+<ol>
+<li>Run the app, and go to the <code>/add</code> page</li>
+<li>Enter information about a new player</li>
+<li>Click the &quot;Add Player&quot; button</li>
+<li>Verify that the homepage loads</li>
+<li>In Repl, open the Database section on the left, and verify that there is some data in there!</li>
+</ol>
+<p><img src="https://i.imgur.com/S6jlU9U.png" alt=""></p>
 <h2 id="next-steps">Next Steps</h2>
-<p><a href="CrudAppCreateGet.html"><strong>C</strong>RUD - Create (GET)</a></p>
+<p><a href="CrudAppRead.html">C<strong>R</strong>UD - Read</a></p>
 
                                 
                                 </section>
@@ -880,12 +817,12 @@
 
             
                 
-                <a href="CrudAppRead.html" class="navigation navigation-prev " aria-label="Previous page: Read">
+                <a href="CrudAppCreateGet.html" class="navigation navigation-prev " aria-label="Previous page: Create (GET)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CrudAppCreateGet.html" class="navigation navigation-next " aria-label="Next page: Create (GET)">
+                <a href="CrudAppRead.html" class="navigation navigation-next " aria-label="Next page: Read">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -896,7 +833,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Read (Table)","level":"1.12.4","depth":2,"next":{"title":"Create (GET)","level":"1.12.5","depth":2,"path":"FullCrudApp/CrudAppCreateGet.md","ref":"FullCrudApp/CrudAppCreateGet.md","articles":[]},"previous":{"title":"Read","level":"1.12.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppReadTable.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create (POST)","level":"1.12.3","depth":2,"next":{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},"previous":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppCreatePost.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

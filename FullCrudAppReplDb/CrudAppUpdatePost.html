@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter " data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter " data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter active" data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter " data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -722,62 +709,68 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="crud-app---update-post">CR<strong>U</strong>D App - Update (POST)</h1>
-<ul>
-<li><a href="https://youtu.be/_UM73ykkxfU?t=737" target="_blank">Video</a></li>
-</ul>
-<p>Now that the &quot;Edit Player&quot; page loads properly, all that&apos;s left is making it actually update the player data. Create a handler function that updates the database, and hook it up to the <code>/edit/:id</code> endpoint.</p>
-<h2 id="creating-the-handler-function">Creating the Handler Function</h2>
+<p>Now that the &quot;Edit Player&quot; page loads properly, all that&apos;s left is making it actually update the player data. Create a handler function that updates the database, and hook it up to the <code>/edit/:id</code> POST endpoint.</p>
+<blockquote>
+<p>NOTE: Using a POST request instead of a PUT request here is kind of cheating, but it simplifies things and works just as well for our purposes.</p>
+</blockquote>
+<h2 id="hooking-up-an-edit-player-request-handler">Hooking up an &quot;Edit Player&quot; Request Handler</h2>
+<p>The &quot;Edit Player&quot; request handler will work very similarly to the &quot;Add Player&quot; handler, just with an existing player ID.</p>
 <ol>
-<li>In the <strong>player.js</strong> file, add a new function to the <code>module.exports</code> object named <code>editPlayer</code></li>
-<li>Make the function take in two parameters: <code>request</code> and <code>response</code></li>
-<li>In the body of the function, declare a new variable <code>playerId</code> and set it to <code>request.params.id</code><ul>
-<li>This will be the route parameter from the URL</li>
+<li>In the <strong>routes/player.js</strong> file, add a new module export property named <code>editPlayer</code><ul>
+<li>Make sure to add a comma after the <code>editPlayerPage</code> function</li>
 </ul>
 </li>
-<li>Declare variables for all of the form data, and set each of them to the corresponding values from <code>request.body</code></li>
-<li>Define a new string variable <code>query</code> that holds a SQL statement to update the proper player with the new data:<pre><code class="lang-sql"> <span class="hljs-keyword">UPDATE</span> players
- <span class="hljs-keyword">SET</span> first_name = <span class="hljs-string">&apos;${first_name}&apos;</span>, last_name = <span class="hljs-string">&apos;${last_name}&apos;</span>, <span class="hljs-keyword">position</span> = <span class="hljs-string">&apos;${position}&apos;</span>, <span class="hljs-built_in">number</span> = ${<span class="hljs-built_in">number</span>}
- <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span> = ${playerId};
+<li>Set the value of <code>editPlayer</code> to be a function with <code>request</code> and <code>response</code> as parameters</li>
+<li>In the body of the <code>editPlayer</code> function, log <code>request.body</code> to the console</li>
+<li>After the console log, redirect to the homepage with <code>response.redirect(&apos;/&apos;)</code></li>
+<li>In the <strong>app.js</strong> file, under the <code>app.post</code> routes add another <code>app.post</code> to hook up the <code>editPlayer</code> function to the <code>/edit/:id</code> route:<pre><code class="lang-js"> app.post(<span class="hljs-string">&apos;/edit/:id&apos;</span>, player.editPlayer);
 </code></pre>
 </li>
-<li>Call the <code>db.query</code> function to execute the statement, passing in <code>query</code> and a new anonymous function</li>
-<li>Give the anonymous function two parameters: <code>error</code> and <code>result</code></li>
-<li>In the body of the anonymous function, if there is an error, return a 500 server error with the error message</li>
-<li>If there is no error in the callback, that means the <code>UPDATE</code> was successful; redirect to the homepage with <code>response.redirect</code></li>
 </ol>
-<h3 id="code">Code</h3>
-<pre><code class="lang-js"><span class="hljs-comment">// Update a player in the database - POST</span>
-editPlayer: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
-    <span class="hljs-comment">// Get values from the request</span>
-    <span class="hljs-keyword">let</span> playerId = request.params.id;
-    <span class="hljs-keyword">let</span> first_name = request.body.first_name;
-    <span class="hljs-keyword">let</span> last_name = request.body.last_name;
-    <span class="hljs-keyword">let</span> position = request.body.position;
-    <span class="hljs-keyword">let</span> number = request.body.number;
-
-    <span class="hljs-comment">// Query to update the existing player</span>
-    <span class="hljs-keyword">let</span> query = <span class="hljs-string">`UPDATE players
-        SET first_name = &apos;<span class="hljs-subst">${first_name}</span>&apos;, last_name = &apos;<span class="hljs-subst">${last_name}</span>&apos;, position = &apos;<span class="hljs-subst">${position}</span>&apos;, number = <span class="hljs-subst">${number}</span>
-        WHERE id = <span class="hljs-subst">${playerId}</span>;`</span>;
-
-    <span class="hljs-comment">// Execute the query</span>
-    db.query(query, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, result</span>) </span>{
-        <span class="hljs-keyword">if</span> (error) {
-            <span class="hljs-comment">// Send server error</span>
-            <span class="hljs-keyword">return</span> response.status(<span class="hljs-number">500</span>).send(error);
-        }
-
-        <span class="hljs-comment">// Update successful, return to homepage</span>
-        response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
-    });
-},
-</code></pre>
-<h2 id="hooking-up-the-route">Hooking up the Route</h2>
+<p>Load up the &quot;Edit Player&quot; page for one of the players, submit the form, and verify that the form data is properly logged in the console!</p>
+<h2 id="handling-the-post-data">Handling the POST Data</h2>
+<p>Now that the data is properly in the back-end, it&apos;s time to put it in the database. Update the <strong>db.js</strong> and <strong>routes/player.js</strong> files to make this happen.</p>
+<h3 id="db-function">DB Function</h3>
+<p>Start by creating a function that can edit an existing player&apos;s data in the database.</p>
 <ol>
-<li>In the <strong>app.js</strong> file, under the <code>app.post</code> route, add another <code>app.post</code> to hook up the <code>editPlayer</code> function to the <code>/edit/:id</code> route:<pre><code class="lang-js"> app.post(<span class="hljs-string">&apos;/edit/:id&apos;</span>, player.editPlayer);
-</code></pre>
+<li>In the <strong>db.js</strong> file, add a new module export property named <code>editPlayerById</code></li>
+<li>Set the value of <code>editPlayerById</code> to be an <code>async</code> function with <code>playerId</code> and <code>playerObj</code> as parameters</li>
+<li>In the body of the <code>editPlayerById</code> function, call <code>db.set</code> on <code>playerId</code> and <code>playerObj</code><ul>
+<li>This will set the value in the DB to the new value</li>
+</ul>
 </li>
-<li>Load up the app, edit a player, and verify that the update happens in the database!</li>
+<li>Use the <code>await</code> keyword in front of the <code>db.set</code> to properly wait for the result</li>
+</ol>
+<h4 id="code">Code</h4>
+<pre><code class="lang-js">editPlayerById: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">playerId, newPlayerObj</span>) </span>{
+    <span class="hljs-keyword">await</span> db.set(playerId, newPlayerObj);
+}
+</code></pre>
+<h3 id="route-function">Route Function</h3>
+<p>Next, update the <code>/edit/:id</code> POST handler to use the DB function to update the data in the DB. Open the <strong>routes/player.js</strong> file to begin.</p>
+<ol>
+<li>In the <code>editPlayer</code> function, remove the <code>console.log</code></li>
+<li>In its place, create a new variable named <code>playerId</code></li>
+<li>Set <code>playerId</code> to <code>request.params.id</code></li>
+<li>Under that, add a call to <code>db.editPlayerById</code>, passing in <code>playerId</code> and <code>request.body</code></li>
+<li>Put the <code>await</code> keyword in front of <code>db.editPlayerById</code> to wait for it to return</li>
+<li>Add the <code>async</code> keyword in front of the <code>editPlayer</code> function because it uses an <code>await</code></li>
+</ol>
+<h4 id="code">Code</h4>
+<pre><code class="lang-js">editPlayer: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+    <span class="hljs-keyword">let</span> playerId = request.params.id;
+    <span class="hljs-keyword">await</span> db.editPlayerById(playerId, request.body);
+
+    response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+}
+</code></pre>
+<h3 id="testing">Testing</h3>
+<p>At this point, it should be fully possible to edit Player data in the database.</p>
+<ol>
+<li>Run the app, and click on the &quot;Edit&quot; button for an existing player</li>
+<li>Enter new information about the player</li>
+<li>Click the &quot;Update Player&quot; button</li>
+<li>Verify that the homepage loads with the new information!</li>
 </ol>
 <h2 id="next-steps">Next Steps</h2>
 <p><a href="CrudAppDelete.html">CRU<strong>D</strong> App - Delete</a></p>
@@ -824,7 +817,7 @@ editPlayer: <span class="hljs-function"><span class="hljs-keyword">function</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Update (POST)","level":"1.12.8","depth":2,"next":{"title":"Delete","level":"1.12.9","depth":2,"path":"FullCrudApp/CrudAppDelete.md","ref":"FullCrudApp/CrudAppDelete.md","articles":[]},"previous":{"title":"Update (GET)","level":"1.12.7","depth":2,"path":"FullCrudApp/CrudAppUpdateGet.md","ref":"FullCrudApp/CrudAppUpdateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppUpdatePost.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Update (POST)","level":"1.12.7","depth":2,"next":{"title":"Delete","level":"1.12.8","depth":2,"path":"FullCrudAppReplDb/CrudAppDelete.md","ref":"FullCrudAppReplDb/CrudAppDelete.md","articles":[]},"previous":{"title":"Update (GET)","level":"1.12.6","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdateGet.md","ref":"FullCrudAppReplDb/CrudAppUpdateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Setup (Code) · GitBook</title>
+        <title>Setup · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CrudAppRead.html" />
+    <link rel="next" href="CrudAppCreateGet.html" />
     
     
-    <link rel="prev" href="CrudAppSetup.html" />
+    <link rel="prev" href="CrudAppWalkthrough.html" />
     
 
     </head>
@@ -541,7 +541,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="CrudAppSetup.html">
+        <li class="chapter active" data-level="1.12.1" data-path="CrudAppSetup.html">
             
                 <a href="CrudAppSetup.html">
             
@@ -554,46 +554,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.2" data-path="CrudAppSetupCode.html">
-            
-                <a href="CrudAppSetupCode.html">
-            
-                    
-                    Setup (Code)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="CrudAppRead.html">
-            
-                <a href="CrudAppRead.html">
-            
-                    
-                    Read
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.4" data-path="CrudAppReadTable.html">
-            
-                <a href="CrudAppReadTable.html">
-            
-                    
-                    Read (Table)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.5" data-path="CrudAppCreateGet.html">
+        <li class="chapter " data-level="1.12.2" data-path="CrudAppCreateGet.html">
             
                 <a href="CrudAppCreateGet.html">
             
@@ -606,7 +567,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.6" data-path="CrudAppCreatePost.html">
+        <li class="chapter " data-level="1.12.3" data-path="CrudAppCreatePost.html">
             
                 <a href="CrudAppCreatePost.html">
             
@@ -619,7 +580,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdateGet.html">
+        <li class="chapter " data-level="1.12.4" data-path="CrudAppRead.html">
+            
+                <a href="CrudAppRead.html">
+            
+                    
+                    Read
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="CrudAppReadTable.html">
+            
+                <a href="CrudAppReadTable.html">
+            
+                    
+                    Read (Table)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="CrudAppUpdateGet.html">
             
                 <a href="CrudAppUpdateGet.html">
             
@@ -632,7 +619,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.8" data-path="CrudAppUpdatePost.html">
+        <li class="chapter " data-level="1.12.7" data-path="CrudAppUpdatePost.html">
             
                 <a href="CrudAppUpdatePost.html">
             
@@ -645,7 +632,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.9" data-path="CrudAppDelete.html">
+        <li class="chapter " data-level="1.12.8" data-path="CrudAppDelete.html">
             
                 <a href="CrudAppDelete.html">
             
@@ -706,7 +693,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Setup (Code)</a>
+        <a href=".." >Setup</a>
     </h1>
 </div>
 
@@ -721,29 +708,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="crud-app---setup-code">CRUD App - Setup (Code)</h1>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=NIVMyyBSM1k&amp;list=PL1P_sExxi-9PSNwmays_UE8JYllVu7P7u&amp;index=31" target="_blank">Video</a></li>
-</ul>
-<p>Open the <strong>app.js</strong> file, and write code for a basic boiler-plate Express web server.</p>
+                                <h1 id="crud-app---setup">CRUD App - Setup</h1>
+<p>Write code for a basic boiler-plate Express web server.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, get a basic Node.js app up and running.</p>
+<ol>
+<li>Create a new <a href="https://replit.com/new/nodejs" target="_blank">Node.js Repl project</a></li>
+<li>Name it &quot;CRUD App&quot;</li>
+<li>Create a new file named <strong>app.js</strong> in the current directory</li>
+<li>For test purposes, add a <code>console.log(&apos;hello&apos;)</code> statement to <strong>app.js</strong> </li>
+<li>Create another new file, this one named <strong>.replit</strong></li>
+<li>In the <strong>.replit</strong> file, add <code>run = &quot;node app.js&quot;</code></li>
+<li>Click the &quot;Run&quot; button to run the program, and make sure it works so far</li>
+</ol>
 <h2 id="basic-web-server">Basic Web Server</h2>
+<p>Next, it&apos;s time to create the bare-bones Express server. Open the <strong>app.js</strong> file</p>
 <ol>
 <li>Require the <code>express</code> module</li>
 <li>Create <code>const</code> variables for <code>hostname</code> and <code>port</code></li>
-<li>Use <code>express()</code> to create the <code>app</code></li>
-<li>Define a function named <code>getHomePage</code> that takes <code>request</code> and <code>response</code> as parameters, and sends a simple &quot;Hello World&quot; message as a response</li>
+<li>Use <code>express()</code> to create the <code>app</code> object</li>
+<li>Define a function named <code>getHomePage</code> that takes <code>request</code> and <code>response</code> as parameters, and sends a simple HTML &quot;Hello World&quot; message as a response</li>
 <li>Set up the <code>/</code> route to respond with the <code>getHomePage</code> function</li>
-<li>Define a function named <code>listenCallback</code> that logs the location of the server (hostname and port)</li>
+<li>Define a function named <code>listenCallback</code> that logs a &quot;Server Running&quot; message</li>
 <li>Use <code>app.listen</code> and pass in the <code>port</code>, <code>hostname</code>, and <code>listenCallback</code></li>
-<li>Use <code>nodemon</code> to run the server, open the <a href="http://127.0.0.1:3000" target="_blank">homepage</a>, and verify that the &quot;Hello World&quot; message appears!</li>
+<li>Click &quot;Run&quot; to run the server, open the homepage, and verify that the &quot;Hello World&quot; message appears!</li>
 </ol>
 <h3 id="code">Code</h3>
 <pre><code class="lang-js"><span class="hljs-comment">// Imports</span>
 <span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
 
 <span class="hljs-comment">// Set hosting information</span>
-<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;127.0.0.1&apos;</span>;
-<span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;
+<span class="hljs-keyword">const</span> hostname = <span class="hljs-string">&apos;0.0.0.0&apos;</span>;
+<span class="hljs-keyword">const</span> port = <span class="hljs-number">8080</span>;
 
 <span class="hljs-comment">// Initialize app</span>
 <span class="hljs-keyword">let</span> app = express();
@@ -757,7 +753,7 @@
 app.get(<span class="hljs-string">&apos;/&apos;</span>, getHomePage);
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listenCallback</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Listening on http://<span class="hljs-subst">${hostname}</span>:<span class="hljs-subst">${port}</span>`</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server Running&apos;</span>);
 }
 
 app.listen(port, hostname, listenCallback);
@@ -769,7 +765,8 @@ app.listen(port, hostname, listenCallback);
 <li>In the project folder, create a new folder named &quot;views&quot;</li>
 <li>In the &quot;views&quot; folder, create a new file named <strong>index.ejs</strong></li>
 <li>For now, put <code>&lt;h1&gt;TEST&lt;/h1&gt;</code> in <strong>index.ejs</strong> for testing purposes</li>
-<li>In the <strong>app.js</strong> file, set the app&apos;s view engine to EJS<pre><code class="lang-js"> app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
+<li>In the <strong>app.js</strong> file, import the <code>ejs</code> module and set the app&apos;s view engine to EJS<pre><code class="lang-js"> <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ejs&apos;</span>);
+ app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
 </code></pre>
 </li>
 <li>For now, in the <code>getHomePage</code> function, replace the <code>response.send</code> statement with <code>response.render(&apos;index&apos;);</code></li>
@@ -797,69 +794,28 @@ app.listen(port, hostname, listenCallback);
 <li>Load up the homepage and make sure it still works!</li>
 </ol>
 <p>The folder structure at this point should look like this:</p>
-<p><img src="https://i.imgur.com/ThGdU4z.png" alt=""></p>
-<h2 id="connecting-to-the-database-in-node">Connecting to the Database in Node</h2>
-<p>Update <strong>app.js</strong> so that it is able to connect to the <code>soccer</code> database.</p>
+<p><img src="https://i.imgur.com/tIp8165.png" alt=""></p>
+<h2 id="creating-the-database">Creating the Database</h2>
+<p>The next step is to create the Replit DB, and prepare for the various functions that will be needed to interact with it.</p>
 <ol>
-<li>At the top of the file, import the <code>mysql</code> module using <code>require</code></li>
-<li>Create a new <code>const</code> object named <code>dbConfig</code> with the following information:<ul>
-<li><code>host</code>: localhost</li>
-<li><code>user</code>: root</li>
-<li><code>password</code>: password</li>
-<li><code>database</code>: soccer</li>
-</ul>
-</li>
-<li>Create the database using <code>mysql.createConnection</code> and passing in <code>dbConfig</code><ul>
-<li>Store the database in a <code>const</code> named <code>db</code></li>
-</ul>
-</li>
-<li>Define a function named <code>connectCallback</code> that takes an <code>error</code> parameter.</li>
-<li>In the body of <code>connectCallback</code>, use <code>throw</code> to throw the <code>error</code> if there is one</li>
-<li>In the body of <code>connectCallback</code>, log a message saying the database connection was successful</li>
-<li>For testing purposes, in the body of <code>connectCallback</code>, send a <code>SELECT</code> query to the database, and log the results<pre><code class="lang-js"> <span class="hljs-comment">// test</span>
- db.query(<span class="hljs-string">&apos;SELECT * FROM players&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, results</span>) </span>{
-     <span class="hljs-built_in">console</span>.log(results);
- });
-</code></pre>
-</li>
-<li>Add a <code>db.connect()</code> call and pass in <code>connectCallback</code> as an argument to connect to the database</li>
-<li>Finally, set <code>db</code> to be a global variable using <code>global.db = db;</code></li>
-<li>Run <code>nodemon</code> and make sure the data from the <code>players</code> table appears!</li>
+<li>In the project folder, create a new file named <strong>db.js</strong></li>
+<li>In the <strong>db.js</strong> file, require <code>@replit/database</code>, and store it in a const named <code>Database</code></li>
+<li>Under that, require <code>uuid</code>, and store it in a const named <code>uuid</code></li>
+<li>Under that, create a new variable <code>db</code> and set it to a <code>new Database()</code> call</li>
+<li>Set <code>module.exports</code> to be an empty object</li>
 </ol>
-<h3 id="code">Code</h3>
-<pre><code class="lang-js"><span class="hljs-comment">// Configuration object</span>
-<span class="hljs-keyword">const</span> dbConfig = {
-    host: <span class="hljs-string">&apos;localhost&apos;</span>,
-    user: <span class="hljs-string">&apos;root&apos;</span>,
-    password: <span class="hljs-string">&apos;password&apos;</span>,
-    database: <span class="hljs-string">&apos;soccer&apos;</span>
+<p>The code in the <strong>db.js</strong> file should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> Database = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;@replit/database&quot;</span>);
+<span class="hljs-keyword">const</span> uuid = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;uuid&quot;</span>);
+<span class="hljs-keyword">let</span> db = <span class="hljs-keyword">new</span> Database();
+
+<span class="hljs-built_in">module</span>.exports = {
+
 }
-
-<span class="hljs-comment">// Create the database using the config</span>
-<span class="hljs-keyword">const</span> db = mysql.createConnection(dbConfig);
-
-<span class="hljs-comment">// Function to run on connect</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">connectCallback</span> (<span class="hljs-params">error</span>) </span>{
-    <span class="hljs-keyword">if</span> (error) {
-        <span class="hljs-keyword">throw</span> error;
-    }
-
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Connected to the database&apos;</span>);
-
-    <span class="hljs-comment">// test</span>
-    db.query(<span class="hljs-string">&apos;SELECT * FROM players&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error, results</span>) </span>{
-        <span class="hljs-built_in">console</span>.log(results);
-    });
-}
-
-<span class="hljs-comment">// Open the connection to the database</span>
-db.connect(connectCallback);
-
-<span class="hljs-comment">// Set global db variable</span>
-global.db = db;
 </code></pre>
+<p>Note that this should not do anything (yet). It will be used in the future for all database actions.</p>
 <h2 id="next-steps">Next Steps</h2>
-<p><a href="CrudAppRead.html">C<strong>R</strong>UD - Read</a></p>
+<p><a href="CrudAppCreateGet.html"><strong>C</strong>RUD - Create (GET)</a></p>
 
                                 
                                 </section>
@@ -887,12 +843,12 @@ global.db = db;
 
             
                 
-                <a href="CrudAppSetup.html" class="navigation navigation-prev " aria-label="Previous page: Setup">
+                <a href="CrudAppWalkthrough.html" class="navigation navigation-prev " aria-label="Previous page: L10 - Building a CRUD App">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CrudAppRead.html" class="navigation navigation-next " aria-label="Next page: Read">
+                <a href="CrudAppCreateGet.html" class="navigation navigation-next " aria-label="Next page: Create (GET)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -903,7 +859,7 @@ global.db = db;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup (Code)","level":"1.12.2","depth":2,"next":{"title":"Read","level":"1.12.3","depth":2,"path":"FullCrudApp/CrudAppRead.md","ref":"FullCrudApp/CrudAppRead.md","articles":[]},"previous":{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudApp/CrudAppSetup.md","ref":"FullCrudApp/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudApp/CrudAppSetupCode.md","mtime":"2021-12-08T16:39:16.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T16:39:49.553Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup","level":"1.12.1","depth":2,"next":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"previous":{"title":"L10 - Building a CRUD App","level":"1.12","depth":1,"path":"FullCrudAppReplDb/CrudAppWalkthrough.md","ref":"FullCrudAppReplDb/CrudAppWalkthrough.md","articles":[{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudAppReplDb/CrudAppSetup.md","ref":"FullCrudAppReplDb/CrudAppSetup.md","articles":[]},{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},{"title":"Read (Table)","level":"1.12.5","depth":2,"path":"FullCrudAppReplDb/CrudAppReadTable.md","ref":"FullCrudAppReplDb/CrudAppReadTable.md","articles":[]},{"title":"Update (GET)","level":"1.12.6","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdateGet.md","ref":"FullCrudAppReplDb/CrudAppUpdateGet.md","articles":[]},{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},{"title":"Delete","level":"1.12.8","depth":2,"path":"FullCrudAppReplDb/CrudAppDelete.md","ref":"FullCrudAppReplDb/CrudAppDelete.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppSetup.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

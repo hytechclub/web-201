@@ -28,7 +28,7 @@ Follow the links below to view each week of material.
 - Week 5 (??): [Express](ExpressProjects/StudentDesc.md)
 - Week 6 (??): [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
 - Week 7 (??): [Databases](DatabasesReplit/StudentDesc.md)
-- Week 8-11: [Building a CRUD App](FullCrudApp/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
+- Week 8-11: [Building a CRUD App](FullCrudAppReplDb/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
 
 ## Goals
 By the end of this course, each student should:
