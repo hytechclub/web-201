@@ -717,7 +717,7 @@
 <ol>
 <li>In the <code>module.exports</code> object in the <strong>routes/player.js</strong> file, define a new <code>deletePlayer</code> function with <code>request</code> and <code>response</code> parameters</li>
 <li>In the body of the <code>deletePlayer</code> function, log <code>request.params.id</code> to the console</li>
-<li>Under the log, use <code>request.redirect</code> to redirect to the homepage:<pre><code class="lang-js"> deletePlayer: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
+<li>Under the log, use <code>response.redirect</code> to redirect to the homepage:<pre><code class="lang-js"> deletePlayer: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
      <span class="hljs-built_in">console</span>.log(request.params.id);
      response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
  }
@@ -773,7 +773,8 @@
     response.redirect(<span class="hljs-string">&apos;/&apos;</span>);
 }
 </code></pre>
-<p>At this point, it should be possible to load up the homepage and delete a player! Click the &quot;Delete&quot; button next to one of the players, and verify that that player disappears.</p>
+<p>At this point, it should be possible to load up the homepage and delete a player! Click the &quot;Delete&quot; button next to one of the players, and verify that that player disappears. Try deleting <em>all</em> players, and verify that the &quot;No players found.&quot; message appears.</p>
+<p>Now all four of the CRUD operations should be working! Congratulations, you&apos;ve built a CRUD app.</p>
 <h2 id="next-steps">Next Steps</h2>
 <p><a href="../FinalProject/FinalProject.html">Final Project</a></p>
 
@@ -819,7 +820,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Delete","level":"1.12.8","depth":2,"next":{"title":"Final Project","level":"1.13","depth":1,"path":"FinalProject/FinalProject.md","ref":"FinalProject/FinalProject.md","articles":[]},"previous":{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppDelete.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Delete","level":"1.12.8","depth":2,"next":{"title":"Final Project","level":"1.13","depth":1,"path":"FinalProject/FinalProject.md","ref":"FinalProject/FinalProject.md","articles":[]},"previous":{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppDelete.md","mtime":"2021-12-20T20:40:08.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T20:40:39.911Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

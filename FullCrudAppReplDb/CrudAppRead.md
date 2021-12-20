@@ -66,7 +66,7 @@ For now, the front-end will just show all the data as a JSON string.
     <%= JSON.stringify(players) %>
     ```
 
-Run the program, and verify that it is possible to view the data from the database! It may not look pretty, but it should be there.
+Run the program, and verify that it is possible to view the data from the database! It may not look pretty, but it should be there. Try adding another player and make sure they appear in the data too!
 
 ## Next Steps
 [C**R**UD App - Read (Table)](CrudAppReadTable.md)

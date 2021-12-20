@@ -742,7 +742,7 @@
 </ul>
 </li>
 <li>Under that, call <code>db.set</code> to set the key (<code>newId</code>) to the value (<code>playerObj</code>)</li>
-<li>Use the <code>await</code> keyword in front of the <code>db.set</code> because it returns a Promise object</li>
+<li>Use the <code>await</code> keyword in front of the <code>db.set</code> so it returns properly</li>
 </ol>
 <h4 id="code">Code</h4>
 <pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
@@ -755,13 +755,13 @@
 <h3 id="route-function">Route Function</h3>
 <p>Next, update the <code>/add</code> POST handler to use the DB function to insert the data into the database.</p>
 <ol>
-<li>At the top the <strong>player.js</strong> file, <code>require</code> the <strong>db.js</strong> module with <code>require(&apos;../db&apos;)</code><ul>
+<li>At the top the <strong>routes/player.js</strong> file, <code>require</code> the <strong>db.js</strong> module with <code>require(&apos;../db&apos;)</code><ul>
 <li>Store the value in a <code>const db</code></li>
 </ul>
 </li>
 <li>In the <code>addPlayer</code> function, remove the <code>console.log</code></li>
 <li>In its place, add a call to <code>db.addPlayer</code>, passing in <code>request.body</code> for the player object</li>
-<li>Put the <code>await</code> keyword in front of <code>db.addPlayer</code> because it returns a Promise object</li>
+<li>Put the <code>await</code> keyword in front of <code>db.addPlayer</code> so it returns properly</li>
 <li>Add the <code>async</code> keyword in front of the function because it uses an <code>await</code></li>
 </ol>
 <h4 id="code">Code</h4>
@@ -833,7 +833,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create (POST)","level":"1.12.3","depth":2,"next":{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},"previous":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppCreatePost.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create (POST)","level":"1.12.3","depth":2,"next":{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},"previous":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppCreatePost.md","mtime":"2021-12-20T20:40:08.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T20:40:39.911Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

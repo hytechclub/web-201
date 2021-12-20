@@ -7,6 +7,7 @@ First, get a basic Node.js app up and running.
 1. Create a new [Node.js Repl project](https://replit.com/new/nodejs)
 1. Name it "CRUD App"
 1. Create a new file named **app.js** in the current directory
+    - Delete the **index.js** file
 1. For test purposes, add a `console.log('hello')` statement to **app.js** 
 1. Create another new file, this one named **.replit**
 1. In the **.replit** file, add `run = "node app.js"`
@@ -15,7 +16,7 @@ First, get a basic Node.js app up and running.
 ## Basic Web Server
 Next, it's time to create the bare-bones Express server. Open the **app.js** file
 
-1. Require the `express` module
+1. Require the `express` module, and store it in a `const` named `express`
 1. Create `const` variables for `hostname` and `port`
 1. Use `express()` to create the `app` object
 1. Define a function named `getHomePage` that takes `request` and `response` as parameters, and sends a simple HTML "Hello World" message as a response
@@ -68,6 +69,8 @@ With a larger app, it can be helpful to organize the code in multiple folders an
 
 ### Routes Folder
 With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use `module.exports` in the separate files, and `require` in the **app.js** file.
+
+>[**Module exports**](https://stackify.com/node-js-module-exports/) are the instruction that tells Node.js which bits of code (functions, objects, strings, etc.) to _export_ from a given file so other files are allowed to access the exported code.
 
 1. In the project folder, create a new folder named "routes"
 1. In the "routes" folder, create a new file named **index.js**

@@ -33,7 +33,7 @@ Start by creating a function that can add a new player object to the database.
 1. Set `newId` to the "player_" prefix, plus a new UUID
     - This will be the unique key for the database
 1. Under that, call `db.set` to set the key (`newId`) to the value (`playerObj`)
-1. Use the `await` keyword in front of the `db.set` because it returns a Promise object
+1. Use the `await` keyword in front of the `db.set` so it returns properly
 
 #### Code
 ```js
@@ -48,11 +48,11 @@ module.exports = {
 ### Route Function
 Next, update the `/add` POST handler to use the DB function to insert the data into the database.
 
-1. At the top the **player.js** file, `require` the **db.js** module with `require('../db')`
+1. At the top the **routes/player.js** file, `require` the **db.js** module with `require('../db')`
     - Store the value in a `const db`
 1. In the `addPlayer` function, remove the `console.log`
 1. In its place, add a call to `db.addPlayer`, passing in `request.body` for the player object
-1. Put the `await` keyword in front of `db.addPlayer` because it returns a Promise object
+1. Put the `await` keyword in front of `db.addPlayer` so it returns properly
 1. Add the `async` keyword in front of the function because it uses an `await`
 
 #### Code

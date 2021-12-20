@@ -709,7 +709,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="crud-app---create-get"><strong>C</strong>RUD App - Create (GET)</h1>
-<p>Add a form to the web app that will allow the user to insert a new player into the database. Create an &quot;Add Player&quot; page that will be accessible via a GET request.</p>
+<p>Add a form to the web app that will allow the user to insert a new player into the database. First, create an &quot;Add Player&quot; page that will be accessible via a GET request.</p>
 <h2 id="creating-the-get-route-handler">Creating the GET Route Handler</h2>
 <p>To properly handle the GET request for the &quot;Add Player&quot; page, it is necessary to build a handler function that renders the EJS.</p>
 <ol>
@@ -776,9 +776,9 @@
 <p>Next, update the <strong>edit-player.ejs</strong> file so that it properly renders an HTML form that takes in Soccer Player information.</p>
 <ol>
 <li>Under the included header partial, create a <code>div</code> with a <code>class</code> of &quot;container&quot;</li>
-<li>Within the &quot;container&quot; <code>div</code>, create a <code>form</code> that will POST to <code>add/</code> on submit<ul>
+<li>Within the &quot;container&quot; <code>div</code>, create a <code>form</code> that will POST to <code>/add/</code> on submit<ul>
 <li>Set its <code>method</code> to <code>&quot;post&quot;</code></li>
-<li>Set its <code>action</code> to <code>&quot;add/&quot;</code></li>
+<li>Set its <code>action</code> to <code>&quot;/add/&quot;</code></li>
 </ul>
 </li>
 <li>In the <code>form</code>, add a <code>div</code> element with a <code>class</code> of &quot;form-row&quot;</li>
@@ -814,7 +814,7 @@
 <p><strong>edit-player.ejs</strong></p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%-</span> <span class="hljs-attr">include</span>(&apos;<span class="hljs-attr">partials</span>/<span class="hljs-attr">header</span>&apos;) %&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;add/&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/add/&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-row&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form-group col-md-6&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;first-name&quot;</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -892,7 +892,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Create (GET)","level":"1.12.2","depth":2,"next":{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},"previous":{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudAppReplDb/CrudAppSetup.md","ref":"FullCrudAppReplDb/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppCreateGet.md","mtime":"2021-12-20T18:35:09.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T18:35:42.219Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create (GET)","level":"1.12.2","depth":2,"next":{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},"previous":{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudAppReplDb/CrudAppSetup.md","ref":"FullCrudAppReplDb/CrudAppSetup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppCreateGet.md","mtime":"2021-12-20T20:40:08.019Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-20T20:40:39.911Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

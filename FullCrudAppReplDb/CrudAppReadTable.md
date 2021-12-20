@@ -121,4 +121,4 @@ The code in the **index.ejs** file should look something like this:
 ```
 
 ## Next Steps
-[**C**RUD - Create (GET)](CrudAppCreateGet.md)
+[CR**U**D - Update (GET)](CrudAppUpdateGet.md)
