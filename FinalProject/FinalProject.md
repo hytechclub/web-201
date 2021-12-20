@@ -1,8 +1,8 @@
 # Final Project
-Build a CRUD App using Node.js, Express, EJS, and MySQL.
+Build a CRUD App using Node.js, Express, EJS, and a database.
 
 ## Background
-Before starting the final project, complete the [CRUD App Walkthrough](../FullCrudApp/CrudAppWalkthrough.md). Feel free to use the final code from the walkthrough as a starting point for the project. However, **the app should keep track of a different type of data**.
+Before starting the final project, complete the [CRUD App Walkthrough](../FullCrudAppReplDb/CrudAppWalkthrough.md). Feel free to use the final code from the walkthrough as a starting point for the project. However, **the app should keep track of a different type of data**.
 
 ## Requirements
 A user should be able to:

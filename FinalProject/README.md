@@ -1,5 +1,5 @@
 # Final Project
-The students should have some time to create a final project of their choosing. It can be similar to the [Full CRUD App](../FullCrudApp/) with some updates. They can choose to track whatever type of data they would like.
+The students should have some time to create a final project of their choosing. It can be similar to the [Full CRUD App](../FullCrudAppReplDb/) with some updates. They can choose to track whatever type of data they would like.
 
 ## GitHub
 Students should create a new GitHub repository for their new project.
