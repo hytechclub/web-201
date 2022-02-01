@@ -4,31 +4,23 @@ Welcome to the Web 201 Hy-Tech Club course!
 ## Repl Setup
 The Web 201 course will use [Replit](https://replit.com). Please complete the [Replit setup steps](ReplSetup.md) before the course begins.
 
-## Zoom Meetings
-The course will meet weekly on TODO via **Zoom** from TODO to TODO ET.
-
-The meeting ID is **TODO**, and the password is **TODO**.
-
-- [Click Here to join from PC, Mac, Linux, iOS or Android](TODO).
-- To join by phone: Dial [TODO](tel:+1TODO) and enter the meeting ID and password.
-
 ## Discord
 Use **Discord** to ask questions, view announcements, and chat with fellow students. Note that students are **NOT** required to use Discord.
 
-- [Course Server](TODO)
+- [Club Server](https://discord.gg/pBeXuRekmd)
 - [Usage Guidelines & Setup Instructions](https://hylandtechclub.com/DiscordUse)
 
 ## Schedule
 Follow the links below to view each week of material.
 
-- Week 1 (??): [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Template Literals](TemplateLiterals/StudentDesc.md)
-- Week 2 (??): [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
-- Week 3 (??): [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
-- Week 4 (??): [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
-- Week 5 (??): [Express](ExpressProjects/StudentDesc.md)
-- Week 6 (??): [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
-- Week 7 (??): [Databases](DatabasesReplit/StudentDesc.md)
-- Week 8-11: [Building a CRUD App](FullCrudAppReplDb/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
+- Week 1 (3/1): [Full-stack Web Development Overview](FullStackOverview/StudentDesc.md) + [Template Literals](TemplateLiterals/StudentDesc.md)
+- Week 2 (3/8): [JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
+- Week 3 (3/15): [JavaScript Objects / JSON](JavaScriptObjects/StudentDesc.md)
+- Week 4 (3/22): [HTTP Overview](HttpOverview/StudentDesc.md) + [Simple Node Web Server](SimpleNodeWebServer/StudentDesc.md)
+- Week 5 (3/29): [Express](ExpressProjects/StudentDesc.md)
+- Week 6 (4/5): [Creating Page Templates (EJS)](EjsTemplates/StudentDesc.md)
+- Week 7 (4/12): [Databases](DatabasesReplit/StudentDesc.md)
+- Week 8-12: [Building a CRUD App](FullCrudAppReplDb/CrudAppWalkthrough.md) + [Final Project](FinalProject/FinalProject.md)
 
 ## Goals
 By the end of this course, each student should:
