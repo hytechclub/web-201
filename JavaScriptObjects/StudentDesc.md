@@ -4,11 +4,11 @@ Learn how JavaScript uses [objects](https://developer.mozilla.org/en-US/docs/Web
 ## JavaScript Objects PowerPoint Presentation
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/JavaScriptObjects/JavaScriptObjects.pptx' width='100%' height='450px' frameborder='0'></iframe>
 
-## Objects Code-Along Activity
-Follow the instructions on [this page](ObjectsCodeAlong.md) to create a simple Node.js application storing information about a car.
-
 ## JavaScript Arrays PowerPoint Presentation
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/JavaScriptObjects/JavaScriptArrays.pptx' width='100%' height='450px' frameborder='0'></iframe>
+
+## Objects Code-Along Activity
+Follow the instructions on [this page](ObjectsCodeAlong.md) to create a simple Node.js application storing information about a car.
 
 ## Individual Practice
 After reviewing, complete the activities on [this page](ObjectsIndividualExercises.md) to practice working with objects and arrays.
