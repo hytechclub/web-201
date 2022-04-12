@@ -16,7 +16,7 @@ First, get a basic Node.js app up and running.
 Next, create a basic web server using Express and EJS.
 
 ### EJS Page
-In the Repl project, start by creating a new folder named **templates**. Then, within that folder, create a new file named **index.ejs**. Open the **index.ejs** file, and add the following code:
+In the Repl project, start by creating a new folder named **views**. Then, within that folder, create a new file named **index.ejs**. Open the **index.ejs** file, and add the following code:
 
 ```html
 <html>
