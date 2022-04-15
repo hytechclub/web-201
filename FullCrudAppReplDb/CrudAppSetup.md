@@ -6,15 +6,11 @@ First, get a basic Node.js app up and running.
 
 1. Create a new [Node.js Repl project](https://replit.com/new/nodejs)
 1. Name it "CRUD App"
-1. Create a new file named **app.js** in the current directory
-    - Delete the **index.js** file
-1. For test purposes, add a `console.log('hello')` statement to **app.js** 
-1. Create another new file, this one named **.replit**
-1. In the **.replit** file, add `run = "node app.js"`
+1. For test purposes, add a `console.log('hello')` statement to **index.js** 
 1. Click the "Run" button to run the program, and make sure it works so far
 
 ## Basic Web Server
-Next, it's time to create the bare-bones Express server. Open the **app.js** file
+Next, it's time to create the bare-bones Express server. Open the **index.js** file to begin.
 
 1. Require the `express` module, and store it in a `const` named `express`
 1. Create `const` variables for `hostname` and `port`
@@ -59,7 +55,7 @@ With a larger app, it can be helpful to organize the code in multiple folders an
 1. In the project folder, create a new folder named "views"
 1. In the "views" folder, create a new file named **index.ejs**
 1. For now, put `<h1>TEST</h1>` in **index.ejs** for testing purposes
-1. In the **app.js** file, import the `ejs` module and set the app's view engine to EJS
+1. In the **index.js** file, import the `ejs` module and set the app's view engine to EJS
     ```js
     require('ejs');
     app.set('view engine', 'ejs');
@@ -68,7 +64,7 @@ With a larger app, it can be helpful to organize the code in multiple folders an
 1. Load up the homepage in a browser, and verify that the "TEST" message appears!
 
 ### Routes Folder
-With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use `module.exports` in the separate files, and `require` in the **app.js** file.
+With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use `module.exports` in the separate files, and `require` in the **index.js** file.
 
 >[**Module exports**](https://stackify.com/node-js-module-exports/) are the instruction that tells Node.js which bits of code (functions, objects, strings, etc.) to _export_ from a given file so other files are allowed to access the exported code.
 
@@ -76,7 +72,7 @@ With many different routes, it is much easier to organize functions in multiple 
 1. In the "routes" folder, create a new file named **index.js**
 1. In the **index.js** file, set the `module.exports` property to an empty object
 1. Add a property named `getHomePage` to the `module.exports` object, and set its value to a function
-1. Make the function the same as the `getHomePage` function from **app.js**
+1. Make the function the same as the `getHomePage` function from **index.js**
     ```js
     module.exports = {
         getHomePage: function (request, response) {
@@ -84,7 +80,7 @@ With many different routes, it is much easier to organize functions in multiple 
         }
     };
     ```
-1. In the **app.js** file, remove the `getHomePage` function definition
+1. In the **index.js** file, remove the `getHomePage` function definition
 1. In the place of the `getHomePage` function definition, use `require` to pull in the **index.js** module
     ```js
     const index = require('./routes/index');

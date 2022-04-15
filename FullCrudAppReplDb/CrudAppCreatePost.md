@@ -9,12 +9,12 @@ When a user fills out the "Add Player" form and clicks the submit button, it wil
 1. Set the value of `addPlayer` to be a function with `request` and `response` as parameters
 1. In the body of the `addPlayer` function, log `request.body` to the console
 1. After the console log, redirect to the homepage with `response.redirect('/')`
-1. In the **app.js** file, under the `app.set`, tell the `app` to use the proper middleware to handle POST data:
+1. In the **index.js** file, under the `app.set`, tell the `app` to use the proper middleware to handle POST data:
     ```js
     app.use(express.urlencoded({ extended: false }));
     app.use(express.json());
     ```
-1. In the **app.js** file, under the `app.get` routes, add an `app.post` to hook up the `addPlayer` function to the `/add` route:
+1. In the **index.js** file, under the `app.get` routes, add an `app.post` to hook up the `addPlayer` function to the `/add` route:
     ```js
     app.post('/add', player.addPlayer);
     ```
