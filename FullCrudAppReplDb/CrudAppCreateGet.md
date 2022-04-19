@@ -25,7 +25,7 @@ module.exports = {
 ## Hooking up the Route
 Update the app so that `/add` loads up the "Add Player" page.
 
-1. In the **index.js** file, under the `index` module, `require` the `./routes/player` module and put it in `const player`
+1. In the **app.js** file, under the `index` module, `require` the `./routes/player` module and put it in `const player`
 1. Under the existing `app.get` call, add another `app.get` to hook up `/add` to `player.addPlayerPage`
 1. Run the app in a new tab, go to `/add`, and verify that the route loads the HTML from **edit-player.ejs**!
 

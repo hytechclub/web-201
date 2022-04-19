@@ -715,11 +715,14 @@
 <ol>
 <li>Create a new <a href="https://replit.com/new/nodejs" target="_blank">Node.js Repl project</a></li>
 <li>Name it &quot;CRUD App&quot;</li>
-<li>For test purposes, add a <code>console.log(&apos;hello&apos;)</code> statement to <strong>index.js</strong> </li>
+<li>Rename <strong>index.js</strong> to <strong>app.js</strong></li>
+<li>In the Files area, select Show hidden files<br> <img src="https://i.imgur.com/RCRHBoo.png" alt=""></li>
+<li>In the <strong>.replit</strong> file, change the <code>entrypoint</code> from <code>&quot;index.js&quot;</code> to <code>&quot;app.js&quot;</code></li>
+<li>For test purposes, add a <code>console.log(&apos;hello&apos;)</code> statement to <strong>app.js</strong> </li>
 <li>Click the &quot;Run&quot; button to run the program, and make sure it works so far</li>
 </ol>
 <h2 id="basic-web-server">Basic Web Server</h2>
-<p>Next, it&apos;s time to create the bare-bones Express server. Open the <strong>index.js</strong> file to begin.</p>
+<p>Next, it&apos;s time to create the bare-bones Express server. Open the <strong>app.js</strong> file to begin.</p>
 <ol>
 <li>Require the <code>express</code> module, and store it in a <code>const</code> named <code>express</code></li>
 <li>Create <code>const</code> variables for <code>hostname</code> and <code>port</code></li>
@@ -762,7 +765,7 @@ app.listen(port, hostname, listenCallback);
 <li>In the project folder, create a new folder named &quot;views&quot;</li>
 <li>In the &quot;views&quot; folder, create a new file named <strong>index.ejs</strong></li>
 <li>For now, put <code>&lt;h1&gt;TEST&lt;/h1&gt;</code> in <strong>index.ejs</strong> for testing purposes</li>
-<li>In the <strong>index.js</strong> file, import the <code>ejs</code> module and set the app&apos;s view engine to EJS<pre><code class="lang-js"> <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ejs&apos;</span>);
+<li>In the <strong>app.js</strong> file, import the <code>ejs</code> module and set the app&apos;s view engine to EJS<pre><code class="lang-js"> <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ejs&apos;</span>);
  app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
 </code></pre>
 </li>
@@ -770,7 +773,7 @@ app.listen(port, hostname, listenCallback);
 <li>Load up the homepage in a browser, and verify that the &quot;TEST&quot; message appears!</li>
 </ol>
 <h3 id="routes-folder">Routes Folder</h3>
-<p>With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use <code>module.exports</code> in the separate files, and <code>require</code> in the <strong>index.js</strong> file.</p>
+<p>With many different routes, it is much easier to organize functions in multiple files. To do this, it is necessary to use <code>module.exports</code> in the separate files, and <code>require</code> in the <strong>app.js</strong> file.</p>
 <blockquote>
 <p><a href="https://stackify.com/node-js-module-exports/" target="_blank"><strong>Module exports</strong></a> are the instruction that tells Node.js which bits of code (functions, objects, strings, etc.) to <em>export</em> from a given file so other files are allowed to access the exported code.</p>
 </blockquote>
@@ -779,14 +782,14 @@ app.listen(port, hostname, listenCallback);
 <li>In the &quot;routes&quot; folder, create a new file named <strong>index.js</strong></li>
 <li>In the <strong>index.js</strong> file, set the <code>module.exports</code> property to an empty object</li>
 <li>Add a property named <code>getHomePage</code> to the <code>module.exports</code> object, and set its value to a function</li>
-<li>Make the function the same as the <code>getHomePage</code> function from <strong>index.js</strong><pre><code class="lang-js"> <span class="hljs-built_in">module</span>.exports = {
+<li>Make the function the same as the <code>getHomePage</code> function from <strong>app.js</strong><pre><code class="lang-js"> <span class="hljs-built_in">module</span>.exports = {
      getHomePage: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">request, response</span>) </span>{
          response.render(<span class="hljs-string">&apos;index&apos;</span>);
      }
  };
 </code></pre>
 </li>
-<li>In the <strong>index.js</strong> file, remove the <code>getHomePage</code> function definition</li>
+<li>In the <strong>app.js</strong> file, remove the <code>getHomePage</code> function definition</li>
 <li>In the place of the <code>getHomePage</code> function definition, use <code>require</code> to pull in the <strong>index.js</strong> module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> index = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/index&apos;</span>);
 </code></pre>
 </li>
@@ -859,7 +862,7 @@ app.listen(port, hostname, listenCallback);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Setup","level":"1.12.1","depth":2,"next":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"previous":{"title":"L10 - Building a CRUD App","level":"1.12","depth":1,"path":"FullCrudAppReplDb/CrudAppWalkthrough.md","ref":"FullCrudAppReplDb/CrudAppWalkthrough.md","articles":[{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudAppReplDb/CrudAppSetup.md","ref":"FullCrudAppReplDb/CrudAppSetup.md","articles":[]},{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},{"title":"Read (Table)","level":"1.12.5","depth":2,"path":"FullCrudAppReplDb/CrudAppReadTable.md","ref":"FullCrudAppReplDb/CrudAppReadTable.md","articles":[]},{"title":"Update (GET)","level":"1.12.6","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdateGet.md","ref":"FullCrudAppReplDb/CrudAppUpdateGet.md","articles":[]},{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},{"title":"Delete","level":"1.12.8","depth":2,"path":"FullCrudAppReplDb/CrudAppDelete.md","ref":"FullCrudAppReplDb/CrudAppDelete.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppSetup.md","mtime":"2022-04-15T13:33:20.659Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-15T13:33:52.263Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Setup","level":"1.12.1","depth":2,"next":{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},"previous":{"title":"L10 - Building a CRUD App","level":"1.12","depth":1,"path":"FullCrudAppReplDb/CrudAppWalkthrough.md","ref":"FullCrudAppReplDb/CrudAppWalkthrough.md","articles":[{"title":"Setup","level":"1.12.1","depth":2,"path":"FullCrudAppReplDb/CrudAppSetup.md","ref":"FullCrudAppReplDb/CrudAppSetup.md","articles":[]},{"title":"Create (GET)","level":"1.12.2","depth":2,"path":"FullCrudAppReplDb/CrudAppCreateGet.md","ref":"FullCrudAppReplDb/CrudAppCreateGet.md","articles":[]},{"title":"Create (POST)","level":"1.12.3","depth":2,"path":"FullCrudAppReplDb/CrudAppCreatePost.md","ref":"FullCrudAppReplDb/CrudAppCreatePost.md","articles":[]},{"title":"Read","level":"1.12.4","depth":2,"path":"FullCrudAppReplDb/CrudAppRead.md","ref":"FullCrudAppReplDb/CrudAppRead.md","articles":[]},{"title":"Read (Table)","level":"1.12.5","depth":2,"path":"FullCrudAppReplDb/CrudAppReadTable.md","ref":"FullCrudAppReplDb/CrudAppReadTable.md","articles":[]},{"title":"Update (GET)","level":"1.12.6","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdateGet.md","ref":"FullCrudAppReplDb/CrudAppUpdateGet.md","articles":[]},{"title":"Update (POST)","level":"1.12.7","depth":2,"path":"FullCrudAppReplDb/CrudAppUpdatePost.md","ref":"FullCrudAppReplDb/CrudAppUpdatePost.md","articles":[]},{"title":"Delete","level":"1.12.8","depth":2,"path":"FullCrudAppReplDb/CrudAppDelete.md","ref":"FullCrudAppReplDb/CrudAppDelete.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"FullCrudAppReplDb/CrudAppSetup.md","mtime":"2022-04-19T22:35:03.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-19T22:35:34.601Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

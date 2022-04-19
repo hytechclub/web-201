@@ -13,7 +13,7 @@ The last step for the CRUD app is allowing the user to delete objects from the d
         response.redirect('/');
     }
     ```
-1. In the **index.js** file, under the `app.get` calls, add another `app.get` to hook up `/delete/:id` to `player.deletePlayer`
+1. In the **app.js** file, under the `app.get` calls, add another `app.get` to hook up `/delete/:id` to `player.deletePlayer`
 1. Run the app, navigate to the `/delete/5` route, and verify that `5` is properly logged in the console as the `id`!
 
 ## Adding the Delete Buttons
