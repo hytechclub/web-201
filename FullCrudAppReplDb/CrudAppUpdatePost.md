@@ -11,7 +11,7 @@ The "Edit Player" request handler will work very similarly to the "Add Player" h
 1. Set the value of `editPlayer` to be a function with `request` and `response` as parameters
 1. In the body of the `editPlayer` function, log `request.body` to the console
 1. After the console log, redirect to the homepage with `response.redirect('/')`
-1. In the **index.js** file, under the `app.post` routes add another `app.post` to hook up the `editPlayer` function to the `/edit/:id` route:
+1. In the **app.js** file, under the `app.post` routes add another `app.post` to hook up the `editPlayer` function to the `/edit/:id` route:
     ```js
     app.post('/edit/:id', player.editPlayer);
     ```
