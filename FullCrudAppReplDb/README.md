@@ -3,12 +3,14 @@ Allow the students to individually work on building CRUD apps by following the [
 
 When the students finish building the CRUD app, they can start on their [Final Projects](../FinalProject/).
 
+## Review Activity
+At some point during the self-paced portion, take a break with a review activity.
+
 ## Final Code
 [CRUD App](https://replit.com/@JosephMaxwell/CrudAppReplDB#app.js)
 
 ## New Things to Learn
 ### Routes
-1. `db.query`
 1. `module.exports`
 1. Route parameters
 1. Anonymous functions
