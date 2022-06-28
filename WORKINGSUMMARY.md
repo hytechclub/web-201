@@ -1,6 +1,8 @@
 - [Club Content](ClubContent.md)
 - [Software Setup](SoftwareSetup.md)
 - [L1 - Full-stack Overview](FullStackOverview/StudentDesc.md)
+- [L1.5 - Command Line](CommandLine/StudentDesc.md)
+    - [More Commands](CommandLine/MoreCommands.md)
 - [L2 - Introduction to the Command Line](CommandLine/StudentDesc.md)
 - [L3 - JavaScript Functions (Callbacks)](JavaScriptFunctions/StudentDesc.md)
     - [Callbacks Code-Along](JavaScriptFunctions/CallbacksCodeAlong.md)
