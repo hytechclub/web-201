@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>File Reader Challenge · GitBook</title>
+        <title>Command Line · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScriptObjects/StudentDesc.html" />
+    <link rel="next" href="MoreCommands.html" />
     
     
-    <link rel="prev" href="CallbacksIndividualExercises.html" />
+    <link rel="prev" href="../FinalProject/FinalProject.html" />
     
 
     </head>
@@ -179,9 +179,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.5" data-path="../JavaScriptFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../JavaScriptFunctions/StudentDesc.html">
             
                     
                     L3 - JavaScript Functions (Callbacks)
@@ -193,9 +193,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="CallbacksCodeAlong.html">
+        <li class="chapter " data-level="1.5.1" data-path="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
-                <a href="CallbacksCodeAlong.html">
+                <a href="../JavaScriptFunctions/CallbacksCodeAlong.html">
             
                     
                     Callbacks Code-Along
@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="CallbacksIndividualExercises.html">
+        <li class="chapter " data-level="1.5.2" data-path="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
-                <a href="CallbacksIndividualExercises.html">
+                <a href="../JavaScriptFunctions/CallbacksIndividualExercises.html">
             
                     
                     Callbacks Individual Exercises
@@ -219,9 +219,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="FileReaderChallenge.html">
+        <li class="chapter " data-level="1.5.3" data-path="../JavaScriptFunctions/FileReaderChallenge.html">
             
-                <a href="FileReaderChallenge.html">
+                <a href="../JavaScriptFunctions/FileReaderChallenge.html">
             
                     
                     File Reader Challenge
@@ -663,9 +663,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14" data-path="../CommandLine/StudentDesc.html">
+        <li class="chapter active" data-level="1.14" data-path="StudentDesc.html">
             
-                <a href="../CommandLine/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Command Line
@@ -677,9 +677,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../CommandLine/MoreCommands.html">
+        <li class="chapter " data-level="1.14.1" data-path="MoreCommands.html">
             
-                <a href="../CommandLine/MoreCommands.html">
+                <a href="MoreCommands.html">
             
                     
                     More Commands
@@ -725,7 +725,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >File Reader Challenge</a>
+        <a href=".." >Command Line</a>
     </h1>
 </div>
 
@@ -740,76 +740,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="file-reader-challenge">File Reader Challenge</h1>
-<p>Create a Node.js app that reads from a text file and manipulates the data. This challenge illustrates the need for callbacks, because the <code>fs</code> module requires a callback to receive the data from a file!</p>
-<h3 id="examples">Examples</h3>
-<p>Review the examples <a href="https://www.w3schools.com/nodejs/nodejs_filesystem.asp" target="_blank">here</a> before starting the challenge. Note how <code>fs.readFile</code> works.</p>
-<h2 id="setup-replit">Setup (Repl.it)</h2>
-<ol>
-<li>Create a new <a href="https://repl.it/new/nodejs" target="_blank">Node.js Repl Project</a></li>
-<li>In the new project, create a file named <strong>.replit</strong></li>
-<li>In the <strong>.replit</strong> file, add the following text:  <pre><code class="lang-js"> run = <span class="hljs-string">&quot;node FileReader.js&quot;</span>
-</code></pre>
-</li>
-</ol>
-<h2 id="creating-files">Creating Files</h2>
-<ol>
-<li>Create a new text file named <code>TextInfo.txt</code></li>
-<li>Edit <code>TextInfo.txt</code> so it contains some interesting text</li>
-<li>In the same folder as <code>TextInfo.txt</code>, create a new JavaScript file named <code>FileReader.js</code></li>
-</ol>
-<h2 id="preparing-to-read-files">Preparing to Read Files</h2>
-<p>Open the <code>FileReader.js</code> file for editing.</p>
-<ol>
-<li>At the top of the file, use the following command to include the File System module<pre><code class="lang-js"> <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
-</code></pre>
-</li>
-<li>Underneath the <code>require</code>, define a new function named <code>yellFile</code></li>
-<li>The <code>yellFile</code> function should take two parameters: <code>error</code> and <code>dataString</code><ul>
-<li>For now, simply use <code>console.log</code> in the body of the <code>yellFile</code> function to say &quot;here&quot;</li>
-</ul>
-</li>
-<li>Underneath the <code>yellFile</code> function definition, use <code>fs.readFile</code> to read the text file<ul>
-<li>The <code>path</code> argument should be <code>&apos;TextInfo.txt&apos;</code></li>
-<li>The <code>options</code> argument should be <code>&apos;utf-8&apos;</code></li>
-<li>The <code>callback</code> argument should be <code>yellFile</code></li>
-</ul>
-</li>
-<li>Run the code and make sure &quot;here&quot; appears!</li>
-</ol>
-<h2 id="yelling-the-file-contents">Yelling the File Contents</h2>
-<p>The <code>yellFile</code> function should take the contents of the text file (as long as it can successfully open the file), and display them to the user in all caps.</p>
-<ol>
-<li>Remove the <code>console.log</code> from the body of the <code>yellFile</code> function</li>
-<li>If there is an error (stored in the <code>error</code> parameter) reading the file, display a message to the user using <code>console.error</code></li>
-<li>If there is NOT an error, convert text from the file (stored in the <code>dataString</code> parameter) to all uppercase</li>
-<li>Display the uppercase text to the user with <code>console.log</code></li>
-<li>Run the code to see the text file contents in all caps!</li>
-</ol>
-<h2 id="elmer-fudd-translator">Elmer Fudd Translator</h2>
-<p>Define a new function named <code>elmerFudd</code> that takes a string and converts it to &quot;Elmer Fudd Speak.&quot; Take a look at <a href="https://funtranslations.com/fudd" target="_blank">funtranslations.com/fudd</a> to see it in action. The translation should apply the following changes to the text:</p>
-<ul>
-<li>Replace every &apos;th&apos; with a &apos;d&apos;</li>
-<li>Replace every &apos;r&apos; with a &apos;w&apos;</li>
-<li>Replace every &apos;l&apos; with a &apos;w&apos;</li>
-</ul>
-<p>Use the <code>elmerFudd</code> function in the <code>fs.readFile</code> call to hook it up to the text file!</p>
-<h2 id="writing-a-file-translation">Writing a File Translation</h2>
-<blockquote>
-<p>Reference: <a href="https://nodejs.dev/learn/writing-files-with-nodejs" target="_blank">https://nodejs.dev/learn/writing-files-with-nodejs</a></p>
-</blockquote>
-<p>Use <code>fs.writeFile</code> to write the file translation into a new file. After the file has been successfully written, write a message to the console telling the user the operation was successful.</p>
-<h2 id="dealing-with-user-input">Dealing with User Input</h2>
-<blockquote>
-<p>Reference: <a href="https://nodejs.org/api/readline.html" target="_blank">https://nodejs.org/api/readline.html</a></p>
-</blockquote>
-<p>Use the <code>readline</code> module to receive input from the user. Ask the user for the following information:</p>
-<ul>
-<li>Path to the file to read</li>
-<li>Path to the file to write</li>
-<li>Which function to perform (yelling or Elmer Fudd translation)</li>
-</ul>
-<p>Then, use the information the user enters to execute the program.</p>
+                                <h1 id="introduction-to-the-command-line">Introduction to the Command Line</h1>
+<p>Learn how to use the command line. Review the PowerPoint, and then play through the Terminus game. Optionally, try to complete the <strong>More Commands</strong> challenge.</p>
+<h2 id="powerpoint-presentation">PowerPoint Presentation</h2>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-201/CommandLine/CommandLine.pptx" width="100%" height="450px" frameborder="0"></iframe>
+
+<h2 id="terminus-game">Terminus Game</h2>
+<p><a href="http://www.mprat.org/Terminus/" target="_blank">Click here to play the Terminus game!</a> It will help you practice using the command line.</p>
+<h2 id="more-commands-optional">More Commands (Optional)</h2>
+<p><a href="MoreCommands.html">Click here to check out some more commands you can use!</a></p>
 
                                 
                                 </section>
@@ -837,12 +776,12 @@
 
             
                 
-                <a href="CallbacksIndividualExercises.html" class="navigation navigation-prev " aria-label="Previous page: Callbacks Individual Exercises">
+                <a href="../FinalProject/FinalProject.html" class="navigation navigation-prev " aria-label="Previous page: Final Project">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScriptObjects/StudentDesc.html" class="navigation navigation-next " aria-label="Next page: L4 - JavaScript Objects / JSON">
+                <a href="MoreCommands.html" class="navigation navigation-next " aria-label="Next page: More Commands">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -853,7 +792,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"File Reader Challenge","level":"1.5.3","depth":2,"next":{"title":"L4 - JavaScript Objects / JSON","level":"1.6","depth":1,"path":"JavaScriptObjects/StudentDesc.md","ref":"JavaScriptObjects/StudentDesc.md","articles":[{"title":"Objects Code-Along","level":"1.6.1","depth":2,"path":"JavaScriptObjects/ObjectsCodeAlong.md","ref":"JavaScriptObjects/ObjectsCodeAlong.md","articles":[]},{"title":"Objects Individual Exercises","level":"1.6.2","depth":2,"path":"JavaScriptObjects/ObjectsIndividualExercises.md","ref":"JavaScriptObjects/ObjectsIndividualExercises.md","articles":[]},{"title":"Food JSON Challenges","level":"1.6.3","depth":2,"path":"JavaScriptObjects/FoodJsonChallenges.md","ref":"JavaScriptObjects/FoodJsonChallenges.md","articles":[]}]},"previous":{"title":"Callbacks Individual Exercises","level":"1.5.2","depth":2,"path":"JavaScriptFunctions/CallbacksIndividualExercises.md","ref":"JavaScriptFunctions/CallbacksIndividualExercises.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JavaScriptFunctions/FileReaderChallenge.md","mtime":"2022-10-11T16:03:13.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-11T16:03:59.309Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Command Line","level":"1.14","depth":1,"next":{"title":"More Commands","level":"1.14.1","depth":2,"path":"CommandLine/MoreCommands.md","ref":"CommandLine/MoreCommands.md","articles":[]},"previous":{"title":"Final Project","level":"1.13","depth":1,"path":"FinalProject/FinalProject.md","ref":"FinalProject/FinalProject.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters"],"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"BOOKREADME.md","glossary":"GLOSSARY.md","summary":"COMPLETESUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CommandLine/StudentDesc.md","mtime":"2022-10-11T16:03:13.651Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-11T16:03:59.309Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
