@@ -37,3 +37,5 @@
     - [Update (POST)](FullCrudAppReplDb/CrudAppUpdatePost.md)
     - [Delete](FullCrudAppReplDb/CrudAppDelete.md)
 - [Final Project](FinalProject/FinalProject.md)
+- [Command Line](CommandLine/StudentDesc.md)
+    - [More Commands](CommandLine/MoreCommands.md)
